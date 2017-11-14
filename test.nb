@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    957585,      16056]
-NotebookOptionsPosition[    952763,      15955]
-NotebookOutlinePosition[    953111,      15970]
-CellTagsIndexPosition[    953068,      15967]
+NotebookDataLength[    959759,      16096]
+NotebookOptionsPosition[    954708,      15991]
+NotebookOutlinePosition[    955056,      16006]
+CellTagsIndexPosition[    955013,      16003]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -70,8 +70,9 @@ Paclets\\\\Repository\\\\a-0.0.1\"\>"}], ",",
    3.719659841103082*^9}, {3.7196599173691616`*^9, 3.719659931339386*^9}, {
    3.719659969324545*^9, 3.719659976929239*^9}, 3.719660469460617*^9, 
    3.7196619374435997`*^9, {3.7196657895613985`*^9, 3.7196658092958794`*^9}, 
-   3.7196660561243773`*^9},ExpressionUUID->"b539f893-78ce-416b-89d8-\
-7968739050b7"]
+   3.7196660561243773`*^9, 
+   3.7196688740310173`*^9},ExpressionUUID->"55bb7fad-5a13-4256-b90e-\
+cbd804a25160"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -97,21 +98,22 @@ Cell[BoxData[
     DynamicModuleBox[{
      TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
       Data`UnorderedAssociation[
-       "RowCount" -> 15, "Length" -> 15, "InitialType" -> TypeSystem`Assoc[
+       "RowCount" -> 16, "Length" -> 16, "InitialType" -> TypeSystem`Assoc[
           TypeSystem`Atom[
            TypeSystem`Enumeration[
            "DatasetImport", "DatasetImportFiles", "DatasetMap", 
             "DirectoryByteCount", "DirectorySize", "ExportFiles", "GetFiles", 
             "ImageLandscapeQ", "ImagePortraitQ", "ImageSquareQ", 
             "ImageStrictlyLandscapeQ", "ImageStrictlyPortraitQ", 
-            "ImportFiles", "InformationDataset", "RandomGeoPosition"]], 
-          TypeSystem`Atom[String], 15], "Shape" -> 
+            "ImportDirectory", "ImportFiles", "InformationDataset", 
+            "RandomGeoPosition"]], 
+          TypeSystem`Atom[String], 16], "Shape" -> 
         TypeSystem`PackageScope`Limited[
           TypeSystem`PackageScope`ColumnShape[
            TypeSystem`PackageScope`KeyValueShape[
             TypeSystem`PackageScope`AtomShape[207.], 
-            TypeSystem`PackageScope`AtomShape[480.00000000000006`]]], 15, {}],
-         "InitialData" -> TypeSystem`PackageScope`CacheHandle[357431815], 
+            TypeSystem`PackageScope`AtomShape[480.00000000000006`]]], 16, {}],
+         "InitialData" -> TypeSystem`PackageScope`CacheHandle[1252376064], 
         "Type" -> TypeSystem`Assoc[
           TypeSystem`Atom[
            TypeSystem`Enumeration[
@@ -119,9 +121,10 @@ Cell[BoxData[
             "DirectoryByteCount", "DirectorySize", "ExportFiles", "GetFiles", 
             "ImageLandscapeQ", "ImagePortraitQ", "ImageSquareQ", 
             "ImageStrictlyLandscapeQ", "ImageStrictlyPortraitQ", 
-            "ImportFiles", "InformationDataset", "RandomGeoPosition"]], 
-          TypeSystem`Atom[String], 15], "HandleQ" -> True, "RowTarget" -> 20, 
-        "Data" -> TypeSystem`PackageScope`CacheHandle[357431815]], 
+            "ImportDirectory", "ImportFiles", "InformationDataset", 
+            "RandomGeoPosition"]], 
+          TypeSystem`Atom[String], 16], "HandleQ" -> True, "RowTarget" -> 20, 
+        "Data" -> TypeSystem`PackageScope`CacheHandle[1252376064]], 
       TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
       TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
       TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
@@ -144,10 +147,9 @@ Cell[BoxData[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["DatasetImport"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["DatasetImport"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -156,7 +158,7 @@ Cell[BoxData[
                 Annotation[
                 "DatasetImport[file, ...] evaluates as Dataset[Import[ file, \
 ...]]", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["DatasetImport"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -176,10 +178,9 @@ Cell[BoxData[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["DatasetImportFiles"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["DatasetImportFiles"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -188,7 +189,7 @@ Cell[BoxData[
                 Annotation[
                 "DatasetImportFiles[files, ...] evaluates as Map[Dataset, \
 ImportFiles[files, ...]]", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["DatasetImportFiles"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -208,10 +209,9 @@ ImportFiles[files, ...]]",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["DatasetMap"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["DatasetMap"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -220,7 +220,7 @@ ImportFiles[files, ...]]",
                 Annotation[
                 "DatasetMap[func, expr] evaluates as \
 Dataset[AssociationMap[func, expr]]", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["DatasetMap"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -240,10 +240,9 @@ Dataset[AssociationMap[func, expr]]",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["DirectoryByteCount"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["DirectoryByteCount"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -252,7 +251,7 @@ Dataset[AssociationMap[func, expr]]",
                 Annotation[
                 "DirectoryByteCount[dir] returns the byte count for directory \
 'dir'", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["DirectoryByteCount"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -272,10 +271,9 @@ Dataset[AssociationMap[func, expr]]",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["DirectorySize"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["DirectorySize"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -284,7 +282,7 @@ Dataset[AssociationMap[func, expr]]",
                 Annotation[
                 "DirectorySize[dir] returns the byte count for 'dir' as a \
 quantity", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["DirectorySize"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -304,10 +302,9 @@ quantity",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["ExportFiles"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["ExportFiles"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -315,7 +312,7 @@ quantity",
                Pane[
                 Annotation[
                 "ExportFiles files, ...] evaluates as Map[Export, files]", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["ExportFiles"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -335,17 +332,16 @@ quantity",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["GetFiles"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["GetFiles"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
                 GrayLevel[0.95], Alignment -> {Left, Baseline}], 
                Pane[
                 Annotation["GetFiles[files] evaluates as Map[Get, files]", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["GetFiles"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -365,10 +361,9 @@ quantity",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["ImageLandscapeQ"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["ImageLandscapeQ"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -377,7 +372,7 @@ quantity",
                 Annotation[
                 "ImageStrictlyPortraitQ[image] returns True if the image \
 width is greater than or \[DescendingEllipsis] ", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["ImageLandscapeQ"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -397,10 +392,9 @@ width is greater than or \[DescendingEllipsis] ",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["ImagePortraitQ"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["ImagePortraitQ"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -409,7 +403,7 @@ width is greater than or \[DescendingEllipsis] ",
                 Annotation[
                 "ImageStrictlyPortraitQ[image] returns True if the image \
 width is less than or eq \[DescendingEllipsis] ", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["ImagePortraitQ"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -429,10 +423,9 @@ width is less than or eq \[DescendingEllipsis] ",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["ImageSquareQ"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["ImageSquareQ"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -441,7 +434,7 @@ width is less than or eq \[DescendingEllipsis] ",
                 Annotation[
                 "ImageStrictlyPortraitQ[image] returns True if the image \
 width is equal to the image height", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["ImageSquareQ"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -461,10 +454,9 @@ width is equal to the image height",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["ImageStrictlyLandscapeQ"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["ImageStrictlyLandscapeQ"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -473,7 +465,7 @@ width is equal to the image height",
                 Annotation[
                 "ImageStrictlyPortraitQ[image] returns True if the image \
 width is greater than the image height", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["ImageStrictlyLandscapeQ"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -493,10 +485,9 @@ width is greater than the image height",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["ImageStrictlyPortraitQ"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["ImageStrictlyPortraitQ"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -505,9 +496,40 @@ width is greater than the image height",
                 Annotation[
                 "ImageStrictlyPortraitQ[image] returns True if the image \
 width is less than the image height", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["ImageStrictlyPortraitQ"]]], "Mouse"], 
+                ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  EventHandler[
+                   MouseAppearance[
+                    Mouseover["ImportDirectory", 
+                    Style[
+                    "ImportDirectory", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                   TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
+                    Key["ImportDirectory"]}]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
+                   GeneralUtilities`Slice[
+                    Key["ImportDirectory"]]], "Mouse"], 
+                 ImageSize -> {{207., Full}, Automatic}], Background -> 
+                GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                "ImportDirectory[dir] imports all files in 'dir'. \
+ImportDirectory[dir,patt] impor \[DescendingEllipsis] ", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
+                  GeneralUtilities`Slice[
+                   Key["ImportDirectory"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
                 Alignment -> {Left, Baseline}]}, {
                Item[
@@ -525,10 +547,9 @@ width is less than the image height",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["ImportFiles"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["ImportFiles"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -536,7 +557,7 @@ width is less than the image height",
                Pane[
                 Annotation[
                 "ImportFiles[files, ...] evaluates as Map[Import, files]", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["ImportFiles"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -556,10 +577,9 @@ width is less than the image height",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["InformationDataset"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["InformationDataset"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
@@ -568,7 +588,7 @@ width is less than the image height",
                 Annotation[
                 "InformationDataset[ pattern ] gives usage information for \
 functions matching the string pattern", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["InformationDataset"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -588,17 +608,16 @@ functions matching the string pattern",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][{
                     Key["RandomGeoPosition"]}]], 
-                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                  2146202100][
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                    GeneralUtilities`Slice[
                     Key["RandomGeoPosition"]]], "Mouse"], 
                  ImageSize -> {{207., Full}, Automatic}], Background -> 
                 GrayLevel[0.95], Alignment -> {Left, Baseline}], 
                Pane[
                 Annotation["RandomGeoPosition[] picks a random geo position", 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
                   GeneralUtilities`Slice[
                    Key["RandomGeoPosition"]]], "Mouse"], 
                 ImageSize -> {{480.00000000000006`, Full}, Automatic}, 
@@ -649,7 +668,7 @@ functions matching the string pattern",
                 TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                  TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                  TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100][
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405][
                 TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
                Not[
                 FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
@@ -680,14 +699,14 @@ functions matching the string pattern",
            TypeSystem`NestedGrid`PackagePrivate`$state$$, 
             TypeSystem`NestedGrid`PackagePrivate`$path$$, 
             TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2146202100]]]], 
+            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 899361405]]]], 
         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
       TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
         Dynamic[
          Replace[
           MouseAnnotation[Null], {
-          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][Null] -> 
-           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2146202100][
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[899361405][
              Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
               Blank[]]] :> (
             TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
@@ -721,7 +740,7 @@ functions matching the string pattern",
            TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]]}], Spacings -> 
         If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
           0, {{}, {0, 0.05, 0}}]], StandardForm], 
-      ImageSizeCache -> {826., {192., 198.}}, 
+      ImageSizeCache -> {826., {205., 211.}}, 
       TrackedSymbols :> {
        TypeSystem`NestedGrid`PackagePrivate`$state$$, 
         TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
@@ -735,9 +754,10 @@ functions matching the string pattern",
   DisplayFunction->(#& ),
   InterpretationFunction->("Dataset[<>]"& )]], "Output",
  CellChangeTimes->{3.7196658224837976`*^9, 3.7196661316398516`*^9, 
-  3.719666162743532*^9, 3.719667177271715*^9, 
-  3.7196673517266955`*^9},ExpressionUUID->"4148cab7-d9c5-40b0-b86d-\
-3b64b3c60a92"]
+  3.719666162743532*^9, 3.719667177271715*^9, 3.7196673517266955`*^9, 
+  3.719668876168621*^9, 
+  3.7196689592355204`*^9},ExpressionUUID->"83afb00a-abdc-45d7-8d98-\
+28ab2eab780d"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -791,6 +811,22 @@ Cell[BoxData[
   3.7196672269878693`*^9}},ExpressionUUID->"f8086e45-3a2f-4226-8177-\
 cecda9ecffff"]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ImportDirectory", "Subsubsection",
+ CellChangeTimes->{{3.7196690532833004`*^9, 
+  3.719669056282954*^9}},ExpressionUUID->"7ec55878-2984-4854-9e9b-\
+b19b334cc6bc"],
+
+Cell[BoxData[
+ RowBox[{"ImportDirectory", "[", 
+  RowBox[{"$HomeDirectory", ",", "\"\<*.png\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.719668975758634*^9, 3.7196689804844847`*^9}, {
+  3.719669034139202*^9, 
+  3.7196690383227386`*^9}},ExpressionUUID->"594b28f7-2147-468b-9920-\
+ade753bae5ec"]
 }, Open  ]]
 }, Open  ]],
 
@@ -15954,7 +15990,7 @@ U1O/zyfI5pP/n1/+B+Jptms=
 }, Open  ]]
 },
 WindowSize->{775, 872},
-WindowMargins->{{308, Automatic}, {22, Automatic}},
+WindowMargins->{{Automatic, 300}, {25, Automatic}},
 FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -15973,87 +16009,91 @@ Cell[CellGroupData[{
 Cell[580, 22, 229, 4, 96, "Title",ExpressionUUID->"d9f06502-f513-4505-bb30-966e3e4ff6bc"],
 Cell[CellGroupData[{
 Cell[834, 30, 360, 6, 28, "Input",ExpressionUUID->"757a257d-f6cf-4f24-9955-23105aba1aa7"],
-Cell[1197, 38, 2025, 35, 109, "Output",ExpressionUUID->"b539f893-78ce-416b-89d8-7968739050b7"]
+Cell[1197, 38, 2053, 36, 109, "Output",ExpressionUUID->"55bb7fad-5a13-4256-b90e-cbd804a25160"]
 }, Open  ]],
-Cell[3237, 76, 396, 7, 28, "Input",ExpressionUUID->"bc0729e5-e4e0-4581-8cd2-4a92f1a57625"],
+Cell[3265, 77, 396, 7, 28, "Input",ExpressionUUID->"bc0729e5-e4e0-4581-8cd2-4a92f1a57625"],
 Cell[CellGroupData[{
-Cell[3658, 87, 260, 5, 28, "Input",ExpressionUUID->"07693ea3-d383-4635-b29a-b07c252fac4e"],
-Cell[3921, 94, 34069, 645, 409, "Output",ExpressionUUID->"4148cab7-d9c5-40b0-b86d-3b64b3c60a92"]
+Cell[3686, 88, 260, 5, 28, "Input",ExpressionUUID->"07693ea3-d383-4635-b29a-b07c252fac4e"],
+Cell[3949, 95, 35483, 664, 435, "Output",ExpressionUUID->"83afb00a-abdc-45d7-8d98-28ab2eab780d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38027, 744, 154, 3, 53, "Subsection",ExpressionUUID->"421c4755-2fd7-4616-9da2-44577fc9179b"],
+Cell[39469, 764, 154, 3, 53, "Subsection",ExpressionUUID->"421c4755-2fd7-4616-9da2-44577fc9179b"],
 Cell[CellGroupData[{
-Cell[38206, 751, 170, 3, 44, "Subsubsection",ExpressionUUID->"3d6875ef-3b12-4b8f-87ac-8ddb18036528"],
+Cell[39648, 771, 170, 3, 44, "Subsubsection",ExpressionUUID->"3d6875ef-3b12-4b8f-87ac-8ddb18036528"],
 Cell[CellGroupData[{
-Cell[38401, 758, 220, 4, 28, "Input",ExpressionUUID->"497c7465-1709-4228-9355-85e941754ce3"],
-Cell[38624, 764, 139, 3, 32, "Output",ExpressionUUID->"be1ac95e-1dd7-4ab0-b113-921dcfef85bb"]
+Cell[39843, 778, 220, 4, 28, "Input",ExpressionUUID->"497c7465-1709-4228-9355-85e941754ce3"],
+Cell[40066, 784, 139, 3, 32, "Output",ExpressionUUID->"be1ac95e-1dd7-4ab0-b113-921dcfef85bb"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38812, 773, 168, 3, 44, "Subsubsection",ExpressionUUID->"829e15e7-446e-49a7-978e-5d8e3efe84c9"],
+Cell[40254, 793, 168, 3, 44, "Subsubsection",ExpressionUUID->"829e15e7-446e-49a7-978e-5d8e3efe84c9"],
 Cell[CellGroupData[{
-Cell[39005, 780, 215, 4, 28, "Input",ExpressionUUID->"2c3fe617-8e4d-4dd6-a95c-6e3e4b82bb81"],
-Cell[39223, 786, 226, 5, 40, "Output",ExpressionUUID->"f8086e45-3a2f-4226-8177-cecda9ecffff"]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[39510, 798, 157, 3, 53, "Subsection",ExpressionUUID->"6934719b-5893-4922-bc5d-153c79f3ec49"],
-Cell[CellGroupData[{
-Cell[39692, 805, 166, 3, 44, "Subsubsection",ExpressionUUID->"5d051743-70ef-4c5f-8ca6-b15e23279b5c"],
-Cell[39861, 810, 187, 4, 28, "Input",ExpressionUUID->"0b20aa97-c1d8-45af-95d6-01bf18260321"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[40085, 819, 165, 3, 44, "Subsubsection",ExpressionUUID->"5ff4a326-8791-4cea-9c1e-f8ec210ffd23"],
-Cell[CellGroupData[{
-Cell[40275, 826, 333, 8, 28, "Input",ExpressionUUID->"23185713-0358-45da-a521-4698cb93c3cb"],
-Cell[40611, 836, 12748, 241, 113, "Output",ExpressionUUID->"c9883086-a0b1-473d-be9a-5504f04716f6"]
-}, Open  ]]
+Cell[40447, 800, 215, 4, 28, "Input",ExpressionUUID->"2c3fe617-8e4d-4dd6-a95c-6e3e4b82bb81"],
+Cell[40665, 806, 226, 5, 40, "Output",ExpressionUUID->"f8086e45-3a2f-4226-8177-cecda9ecffff"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[53420, 1084, 157, 3, 53, "Subsection",ExpressionUUID->"b7144ade-41df-4df6-9409-629aed6a0ff1"],
-Cell[CellGroupData[{
-Cell[53602, 1091, 170, 3, 44, "Subsubsection",ExpressionUUID->"3a7bad05-2b4d-4a12-90fd-945a0e1e361b"],
-Cell[CellGroupData[{
-Cell[53797, 1098, 313, 8, 28, "Input",ExpressionUUID->"1b219566-8dc8-43bd-a560-74d3aec4692e"],
-Cell[54113, 1108, 136, 3, 32, "Output",ExpressionUUID->"57cf95a5-8cfd-4eca-8604-3e6f908edfd6"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[54286, 1116, 315, 8, 28, "Input",ExpressionUUID->"d46e66f8-17ba-433b-8808-7f4cc9c8fedd"],
-Cell[54604, 1126, 135, 3, 32, "Output",ExpressionUUID->"6485d4f7-50bb-4b23-aad3-1f8e1852d106"]
+Cell[40940, 817, 168, 3, 44, "Subsubsection",ExpressionUUID->"7ec55878-2984-4854-9e9b-b19b334cc6bc"],
+Cell[41111, 822, 295, 6, 28, "Input",ExpressionUUID->"594b28f7-2147-468b-9920-ade753bae5ec"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[54788, 1135, 167, 3, 44, "Subsubsection",ExpressionUUID->"926a0134-adf4-42c8-881d-5960340a0655"],
+Cell[41455, 834, 157, 3, 53, "Subsection",ExpressionUUID->"6934719b-5893-4922-bc5d-153c79f3ec49"],
 Cell[CellGroupData[{
-Cell[54980, 1142, 313, 8, 28, "Input",ExpressionUUID->"d4a47d2f-dd15-4494-aaea-19f077dd6b72"],
-Cell[55296, 1152, 136, 3, 32, "Output",ExpressionUUID->"2bb90ee7-5fcc-4895-8daa-2e8401aa12b6"]
+Cell[41637, 841, 166, 3, 44, "Subsubsection",ExpressionUUID->"5d051743-70ef-4c5f-8ca6-b15e23279b5c"],
+Cell[41806, 846, 187, 4, 28, "Input",ExpressionUUID->"0b20aa97-c1d8-45af-95d6-01bf18260321"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[55469, 1160, 315, 8, 28, "Input",ExpressionUUID->"d69724c3-193f-476d-8937-27998af9d79f"],
-Cell[55787, 1170, 135, 3, 32, "Output",ExpressionUUID->"3466ebba-e2fb-4346-8ae4-4eaba483580a"]
-}, Open  ]]
-}, Open  ]],
+Cell[42030, 855, 165, 3, 44, "Subsubsection",ExpressionUUID->"5ff4a326-8791-4cea-9c1e-f8ec210ffd23"],
 Cell[CellGroupData[{
-Cell[55971, 1179, 165, 3, 44, "Subsubsection",ExpressionUUID->"7a26e850-8918-4098-8bc4-b773f82936de"],
-Cell[CellGroupData[{
-Cell[56161, 1186, 310, 8, 28, "Input",ExpressionUUID->"60ca75d3-91d8-48dc-a92a-9baf6e2c920b"],
-Cell[56474, 1196, 133, 3, 32, "Output",ExpressionUUID->"93a81d26-07b4-49f1-ae94-aa87273b9421"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[56644, 1204, 311, 8, 28, "Input",ExpressionUUID->"07c0d9b7-3384-4a9b-99c0-9e2f26e10331"],
-Cell[56958, 1214, 136, 3, 32, "Output",ExpressionUUID->"86ceee0a-ecad-42cd-afca-80b83c768914"]
+Cell[42220, 862, 333, 8, 28, "Input",ExpressionUUID->"23185713-0358-45da-a521-4698cb93c3cb"],
+Cell[42556, 872, 12748, 241, 113, "Output",ExpressionUUID->"c9883086-a0b1-473d-be9a-5504f04716f6"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[57155, 1224, 154, 3, 53, "Subsection",ExpressionUUID->"f32832be-9c0a-4c31-8953-c55e73814507"],
+Cell[55365, 1120, 157, 3, 53, "Subsection",ExpressionUUID->"b7144ade-41df-4df6-9409-629aed6a0ff1"],
 Cell[CellGroupData[{
-Cell[57334, 1231, 172, 3, 44, "Subsubsection",ExpressionUUID->"f67a026a-5bce-49cc-8418-096360d7e88d"],
+Cell[55547, 1127, 170, 3, 44, "Subsubsection",ExpressionUUID->"3a7bad05-2b4d-4a12-90fd-945a0e1e361b"],
 Cell[CellGroupData[{
-Cell[57531, 1238, 461, 12, 28, "Input",ExpressionUUID->"dbee47aa-7c8f-47d4-a830-a388bdbee8d3"],
-Cell[57995, 1252, 894716, 14697, 402, "Output",ExpressionUUID->"84bca491-7bbf-450e-846b-0ba2db27f5ad"]
+Cell[55742, 1134, 313, 8, 28, "Input",ExpressionUUID->"1b219566-8dc8-43bd-a560-74d3aec4692e"],
+Cell[56058, 1144, 136, 3, 32, "Output",ExpressionUUID->"57cf95a5-8cfd-4eca-8604-3e6f908edfd6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56231, 1152, 315, 8, 28, "Input",ExpressionUUID->"d46e66f8-17ba-433b-8808-7f4cc9c8fedd"],
+Cell[56549, 1162, 135, 3, 32, "Output",ExpressionUUID->"6485d4f7-50bb-4b23-aad3-1f8e1852d106"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56733, 1171, 167, 3, 44, "Subsubsection",ExpressionUUID->"926a0134-adf4-42c8-881d-5960340a0655"],
+Cell[CellGroupData[{
+Cell[56925, 1178, 313, 8, 28, "Input",ExpressionUUID->"d4a47d2f-dd15-4494-aaea-19f077dd6b72"],
+Cell[57241, 1188, 136, 3, 32, "Output",ExpressionUUID->"2bb90ee7-5fcc-4895-8daa-2e8401aa12b6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57414, 1196, 315, 8, 28, "Input",ExpressionUUID->"d69724c3-193f-476d-8937-27998af9d79f"],
+Cell[57732, 1206, 135, 3, 32, "Output",ExpressionUUID->"3466ebba-e2fb-4346-8ae4-4eaba483580a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57916, 1215, 165, 3, 44, "Subsubsection",ExpressionUUID->"7a26e850-8918-4098-8bc4-b773f82936de"],
+Cell[CellGroupData[{
+Cell[58106, 1222, 310, 8, 28, "Input",ExpressionUUID->"60ca75d3-91d8-48dc-a92a-9baf6e2c920b"],
+Cell[58419, 1232, 133, 3, 32, "Output",ExpressionUUID->"93a81d26-07b4-49f1-ae94-aa87273b9421"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58589, 1240, 311, 8, 28, "Input",ExpressionUUID->"07c0d9b7-3384-4a9b-99c0-9e2f26e10331"],
+Cell[58903, 1250, 136, 3, 32, "Output",ExpressionUUID->"86ceee0a-ecad-42cd-afca-80b83c768914"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59100, 1260, 154, 3, 53, "Subsection",ExpressionUUID->"f32832be-9c0a-4c31-8953-c55e73814507"],
+Cell[CellGroupData[{
+Cell[59279, 1267, 172, 3, 44, "Subsubsection",ExpressionUUID->"f67a026a-5bce-49cc-8418-096360d7e88d"],
+Cell[CellGroupData[{
+Cell[59476, 1274, 461, 12, 48, "Input",ExpressionUUID->"dbee47aa-7c8f-47d4-a830-a388bdbee8d3"],
+Cell[59940, 1288, 894716, 14697, 402, "Output",ExpressionUUID->"84bca491-7bbf-450e-846b-0ba2db27f5ad"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
