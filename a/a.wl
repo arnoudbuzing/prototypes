@@ -22,9 +22,9 @@ GetFiles[ files_List ] := Map[ Get, files ]
 
 DatasetMap[ func_ , expr_ ] := Dataset[ AssociationMap[ func, expr ] ]
 
-DatasetImport[ file_, a___] := Dataset[ Import[ files, a ] ]
+DatasetImport[ file_, a___] := Dataset[ Import[ file, a ] ]
 
-DatasetImportFiles[ files, a___] := Map[ Dataset, ImportFiles[ files, a]]
+DatasetImportFiles[ files_, a___] := Map[ Dataset, ImportFiles[ files, a]]
 
 End[]
 
