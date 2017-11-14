@@ -3,7 +3,6 @@ BeginPackage["a`"]
 InformationDataset::usage = "InformationDataset[ pattern ] gives usage information for functions matching the string pattern";
 
 ImportFiles::usage = "ImportFiles[files, ...] evaluates as Map[Import, files]";
-ExportFiles::usage = "ExportFiles files, ...] evaluates as Map[Export, files]";
 GetFiles::usage = "GetFiles[files] evaluates as Map[Get, files]";
 DirectoryByteCount::usage = "DirectoryByteCount[dir] returns the byte count for directory 'dir'";
 DirectorySize::usage = "DirectorySize[dir] returns the byte count for 'dir' as a quantity";
@@ -30,7 +29,10 @@ InformationDataset[pattern_] :=  Dataset[Association[ Map[ Function[ # -> ToExpr
 
 ImportFiles[ files_List, a___ ] := Map[ Function[ Import[ #, a ] ], files ]
 
-ExportFiles[ files_List, a___ ] := Map[ Function[ Export[ #, a ] ], files ]
+ImportDirectory[ dir /; DirectoryQ[dir], patt_:True ] := Module[{files},
+  files = Select[ FileNames["*",dir], TrueQ[patt] || StringMatchQ[ FileExtension[#], patt ] ];
+  ImportFiles[ files ];
+  ]
 
 GetFiles[ files_List ] := Map[ Get, files ]
 
