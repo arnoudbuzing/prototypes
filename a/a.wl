@@ -36,7 +36,7 @@ GetFiles[ files_List ] := Map[ Get, files ]
 
 DirectoryByteCount = Internal`DirectoryByteCount;
 
-DirectorySize[ dir_ /; DirectoryQ[dir] ] := Quantity[ DirectoryByteCount[dir] ];
+DirectorySize[ dir_ /; DirectoryQ[dir] ] := Quantity[ DirectoryByteCount[dir], "Bytes" ];
 
 (* dataset extensions *)
 
