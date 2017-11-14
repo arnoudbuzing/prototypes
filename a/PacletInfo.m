@@ -1,6 +1,6 @@
 Paclet[
   Name -> "a",
-  Description -> "A paclet for misc. functions",
+  Description -> "A paclet for miscellaneous functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
   Version -> "0.0.1",
