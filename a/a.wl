@@ -8,6 +8,11 @@ GetFiles::usage = "GetFiles[files] evaluates as Map[Get, files]";
 DirectoryByteCount::usage = "DirectoryByteCount[dir] returns the byte count for directory 'dir'";
 DirectorySize::usage = "DirectorySize[dir] returns the byte count for 'dir' as a quantity";
 
+$ExtensionToFormat::usage = "$ExtensionToFormat associates file extensions with their format name";
+$FormatToExtension::usage = "$FormatToExtension associates a file format with its list of supported file extensions";
+
+SystemStringOpen::usage = "SystemStringOpen[string] determines the file format for 'string' and opens it with the default application"
+
 DatasetMap::usage = "DatasetMap[func, expr] evaluates as Dataset[AssociationMap[func, expr]]";
 DatasetImport::usage = "DatasetImport[file, ...] evaluates as Dataset[Import[ file, ...]]";
 DatasetImportFiles::usage = "DatasetImportFiles[files, ...] evaluates as Map[Dataset, ImportFiles[files, ...]]";
@@ -41,6 +46,14 @@ DirectoryByteCount = Internal`DirectoryByteCount;
 
 DirectorySize[ dir_ /; DirectoryQ[dir] ] := Quantity[ DirectoryByteCount[dir], "Bytes" ];
 
+$ExtensionToFormat = GroupBy[MapAt[StringDrop[#, 1] &, System`ConvertersDump`$extensionMappings, {All, 1}], First, #[[All, 2]] &]
+
+$FormatToExtension = GroupBy[Reverse /@ MapAt[StringDrop[#, 1] &, System`ConvertersDump`$extensionMappings, {All, 1}], First, #[[All, 2]] &]
+
+SystemStringOpen[s_?StringQ] := With[ {filename = FileNameJoin[{$TemporaryDirectory, CreateUUID[] <> First[$FormatToExtension[StringFormat[s]]] } ]},
+    WriteString[filename, s];
+    SystemOpen[File[filename]]
+  ]
 (* dataset extensions *)
 
 DatasetMap[ func_ , expr_ ] := Dataset[ AssociationMap[ func, expr ] ]
