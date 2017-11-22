@@ -1,4 +1,4 @@
-BeginPackage["a`"]
+BeginPackage["Sugar`"]
 
 InformationDataset::usage = "InformationDataset[ pattern ] gives usage information for functions matching the string pattern";
 

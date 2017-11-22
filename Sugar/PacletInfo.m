@@ -1,5 +1,5 @@
 Paclet[
-  Name -> "a",
+  Name -> "Sugar",
   Description -> "A paclet for miscellaneous functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
@@ -8,6 +8,6 @@ Paclet[
   Loading -> Automatic,
   Extensions -> {
    { "Documentation", Language -> "English"},
-   { "Application", Context -> "a`" }
+   { "Application", Context -> "Sugar`" }
   }
 ]
