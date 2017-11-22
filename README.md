@@ -1,2 +1,3 @@
-# a
-miscellaneous wolfram language functions
+# Sugar
+
+Syntactic sugar to sweeten the Wolfram Language
