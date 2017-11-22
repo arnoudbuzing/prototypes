@@ -8,6 +8,7 @@ GetFiles::usage = "GetFiles[files] evaluates as Map[Get, files]";
 DirectoryByteCount::usage = "DirectoryByteCount[dir] returns the byte count for directory 'dir'";
 DirectorySize::usage = "DirectorySize[dir] returns the byte count for 'dir' as a quantity";
 
+$InputDirectoryName::usage = "$InputDirectoryName is the directory name for the current value of $InputFileName";
 $ExtensionToFormat::usage = "$ExtensionToFormat associates file extensions with their format name";
 $FormatToExtension::usage = "$FormatToExtension associates a file format with its list of supported file extensions";
 
@@ -32,6 +33,8 @@ Begin["`Private`"]
 InformationDataset[pattern_] :=  Dataset[Association[ Map[ Function[ # -> ToExpression[# <> "::usage"] ],  Names[pattern]]]]
 
 (* file extensions *)
+
+$InputDirectoryName := DirectoryName[$InputDirectoryName];
 
 ImportFiles[ files_List, a___ ] := Map[ Function[ Import[ #, a ] ], files ]
 
