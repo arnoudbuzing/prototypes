@@ -80,6 +80,16 @@ ImageLandscapeQ[image_] := GreaterEqual @@ ImageDimensions[image]
 
 ImageSquareQ[image_] := Equal @@ ImageDimensions[image]
 
+(* date *)
+
+Sugar::warning = "Warning: Changing function definition for ``.";
+Message[Sugar::warning,"DateObject"];
+Message[Sugar::warning,"Quantity"];
+
+Unprotect[DateObject];
+Unprotect[Quantity];
+Round[d_DateObject, q_Quantity] ^:=  DateObject[  Round[AbsoluteTime[d], QuantityMagnitude@UnitConvert[q, "Seconds"]]]
+
 End[]
 
 EndPackage[]
