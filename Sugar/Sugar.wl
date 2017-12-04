@@ -26,6 +26,7 @@ ImageStrictlyLandscapeQ::usage = "ImageStrictlyPortraitQ[image] returns True if 
 ImageLandscapeQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is greater than or equal to the image height";
 ImageSquareQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is equal to the image height";
 
+CreateWikiDocumentation::usage = "CreateWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context"
 Begin["`Private`"]
 
 (* general extensions *)
@@ -89,6 +90,33 @@ Message[Sugar::warning,"Quantity"];
 Unprotect[DateObject];
 Unprotect[Quantity];
 Round[d_DateObject, q_Quantity] ^:=  DateObject[  Round[AbsoluteTime[d], QuantityMagnitude@UnitConvert[q, "Seconds"]]]
+
+
+CreateWikiDocumentation[directory_String, context_String] :=
+ Module[{names, file},
+  names = Names[context <> "`*"];
+  (* write the index page *)
+  file = OpenWrite[FileNameJoin[{directory, context <> ".md"}]];
+  Scan[
+   Function[{name},
+    WriteString[file, "[`" <> name <> "`](" <> name <> ")\n\n"];
+    WriteString[file, ToExpression[name <> "::usage"]];
+    WriteString[file, "\n\n"]
+    ], names];
+  Close[file];
+  (* write the function pages *)
+  Scan[
+   Function[{name},
+    file = OpenWrite[FileNameJoin[{directory, name <> ".md"}]];
+    WriteString[file, "# " <> name <> "\n\n"];
+    WriteString[file, ToExpression[name <> "::usage"]];
+    WriteString[file, "\n\n"];
+    Close[file]
+    ],
+   names
+   ]
+  ]
+
 
 End[]
 
