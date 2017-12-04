@@ -96,7 +96,7 @@ CreateWikiDocumentation[directory_String, context_String] :=
  Module[{names, file},
   names = Names[context <> "`*"];
   (* write the index page *)
-  file = OpenWrite[FileNameJoin[{directory, context <> ".md"}]];
+  file = OpenWrite[FileNameJoin[{directory, "Home.md"}]];
   Scan[
    Function[{name},
     WriteString[file, "[`" <> name <> "`](" <> name <> ")\n\n"];
