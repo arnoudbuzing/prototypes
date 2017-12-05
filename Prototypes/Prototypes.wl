@@ -1,4 +1,4 @@
-BeginPackage["Sugar`", {"PacletManager`"}]
+BeginPackage["Prototypes`", {"PacletManager`"}]
 
 InformationDataset::usage = "InformationDataset[ pattern ] gives usage information for functions matching the string pattern";
 
@@ -104,9 +104,9 @@ AlphaChannelQ[___] := False
 
 (* date *)
 
-Sugar::warning = "Warning: Changing function definition for ``.";
-Message[Sugar::warning,"DateObject"];
-Message[Sugar::warning,"Quantity"];
+Prototypes::warning = "Warning: Changing function definition for ``.";
+Message[Prototypes::warning,"DateObject"];
+Message[Prototypes::warning,"Quantity"];
 
 Unprotect[DateObject];
 Unprotect[Quantity];

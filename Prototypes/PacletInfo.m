@@ -1,6 +1,6 @@
 Paclet[
-  Name -> "Sugar",
-  Description -> "A paclet for miscellaneous functions",
+  Name -> "Prototypes",
+  Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
   Version -> "0.0.2",
@@ -8,6 +8,6 @@ Paclet[
   Loading -> Automatic,
   Extensions -> {
    { "Documentation", Language -> "English"},
-   { "Application", Context -> "Sugar`" }
+   { "Application", Context -> "Prototypes`" }
   }
 ]
