@@ -1,4 +1,4 @@
-BeginPackage["Sugar`"]
+BeginPackage["Sugar`", {"PacletManager`"}]
 
 InformationDataset::usage = "InformationDataset[ pattern ] gives usage information for functions matching the string pattern";
 
@@ -28,8 +28,13 @@ ImageSquareQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image w
 Image3DCubeQ::usage = "Image3DCubeQ[image] returns True if the image width, height, and depth are all equal";
 AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an alpha channel";
 
+(* paclet build utilities *)
+
+PacletInformationDataset::usage = "PacletInformationDataset[paclet] returns paclet information as a dataset";
+BuildPaclet::usage = "BuildPaclet[directory,context] builds a new version of the paclet in directory";
+
 (* github utilities *)
-CreateWikiDocumentation::usage = "CreateWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context";
+BuildWikiDocumentation::usage = "BuildWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context";
 
 Begin["`Private`"]
 
@@ -107,8 +112,21 @@ Unprotect[DateObject];
 Unprotect[Quantity];
 Round[d_DateObject, q_Quantity] ^:=  DateObject[  Round[AbsoluteTime[d], QuantityMagnitude@UnitConvert[q, "Seconds"]]]
 
+(* paclet build utilities *)
 
-CreateWikiDocumentation[directory_String, context_String] :=
+PacletInformationDataset[paclet_String] := Dataset @ Association @ PacletInformation[paclet]
+
+BuildPaclet[directory_, context_String] := Module[{paclet},
+    Scan[ DeleteFile, FileNames["*.paclet",directory] ];
+    paclet=PackPaclet[FileNameJoin[{directory,context}]];
+    Scan[ PacletUninstall, PacletFind[context] ];
+    paclet=Last@Sort@FileNames["*.paclet",directory];
+    PacletInstall[paclet]
+    ]
+
+(* gihub utilities *)
+
+BuildWikiDocumentation[directory_String, context_String] :=
  Module[{names, file},
   names = Names[context <> "`*"];
   (* write the index page *)
