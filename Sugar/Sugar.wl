@@ -25,8 +25,12 @@ ImagePortraitQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image
 ImageStrictlyLandscapeQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is greater than the image height";
 ImageLandscapeQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is greater than or equal to the image height";
 ImageSquareQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is equal to the image height";
+Image3DCubeQ::usage = "Image3DCubeQ[image] returns True if the image width, height, and depth are all equal";
+AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an alpha channel";
 
-CreateWikiDocumentation::usage = "CreateWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context"
+(* github utilities *)
+CreateWikiDocumentation::usage = "CreateWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context";
+
 Begin["`Private`"]
 
 (* general extensions *)
@@ -71,15 +75,27 @@ RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180
 
 (* image extensions *)
 
-ImageStrictlyPortraitQ[image_] := Less @@ ImageDimensions[image]
+ImageStrictlyPortraitQ[image_Image] := Less @@ ImageDimensions[image]
+ImageStrictlyPortraitQ[___] := False
 
-ImagePortraitQ[image_] := LessEqual @@ ImageDimensions[image]
+ImagePortraitQ[image_Image] := LessEqual @@ ImageDimensions[image]
+ImagePortraitQ[___] := False
 
-ImageStrictlyLandscapeQ[image_] := Greater @@ ImageDimensions[image]
+ImageStrictlyLandscapeQ[image_Image] := Greater @@ ImageDimensions[image]
+ImageStrictlyLandscapeQ[___] := False
 
-ImageLandscapeQ[image_] := GreaterEqual @@ ImageDimensions[image]
+ImageLandscapeQ[image_Image] := GreaterEqual @@ ImageDimensions[image]
+ImageLandscapeQ[___] := False
 
-ImageSquareQ[image_] := Equal @@ ImageDimensions[image]
+ImageSquareQ[image_Image] := Equal @@ ImageDimensions[image]
+ImageSquareQ[___] := False
+
+Image3DCubeQ[image_Image3D] := Equal @@ ImageDimensions[image]
+Image3DCubeQ[___] := False
+
+AlphaChannelQ[image_Image] := If[RemoveAlphaChannel[image] == image, False, True]
+AlphaChannelQ[image_Image3D] := If[RemoveAlphaChannel[image] == image, False, True]
+AlphaChannelQ[___] := False
 
 (* date *)
 
