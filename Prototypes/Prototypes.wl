@@ -8,6 +8,8 @@ GetFiles::usage = "GetFiles[files] evaluates as Map[Get, files]";
 DirectoryByteCount::usage = "DirectoryByteCount[dir] returns the byte count for directory 'dir'";
 DirectorySize::usage = "DirectorySize[dir] returns the byte count for 'dir' as a quantity";
 
+URLHash::usage = "URLHash[url] gives the hash for the content stored at the url";
+
 $InputDirectoryName::usage = "$InputDirectoryName is the directory name for the current value of $InputFileName";
 $ExtensionToFormat::usage = "$ExtensionToFormat associates file extensions with their format name";
 $FormatToExtension::usage = "$FormatToExtension associates a file format with its list of supported file extensions";
@@ -26,6 +28,7 @@ ImageStrictlyLandscapeQ::usage = "ImageStrictlyPortraitQ[image] returns True if 
 ImageLandscapeQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is greater than or equal to the image height";
 ImageSquareQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is equal to the image height";
 Image3DCubeQ::usage = "Image3DCubeQ[image] returns True if the image width, height, and depth are all equal";
+ImageCropResize::usage = "ImageCropResize[image, dims] crops and resize an image to the specified dimensions";
 AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an alpha channel";
 
 (* paclet build utilities *)
@@ -58,6 +61,14 @@ GetFiles[ files_List ] := Map[ Get, files ]
 DirectoryByteCount = Internal`DirectoryByteCount;
 
 DirectorySize[ dir_ /; DirectoryQ[dir] ] := Quantity[ DirectoryByteCount[dir], "Bytes" ];
+
+URLHash[url : (_String | _URL), args___] := Module[{file, result},
+  file = CreateTemporary[];
+  URLDownload[url, file];
+  result = FileHash[file, args];
+  DeleteFile[file];
+  result
+  ]
 
 $ExtensionToFormat = GroupBy[MapAt[StringDrop[#, 1] &, System`ConvertersDump`$extensionMappings, {All, 1}], First, #[[All, 2]] &]
 
@@ -97,6 +108,9 @@ ImageSquareQ[___] := False
 
 Image3DCubeQ[image_Image3D] := Equal @@ ImageDimensions[image]
 Image3DCubeQ[___] := False
+
+ImageCropResize[image_Image, dims_List] := First[ ConformImages[ {image}, dims, "Fill"]]
+ImageCropResize[___] := $Failed
 
 AlphaChannelQ[image_Image] := If[RemoveAlphaChannel[image] == image, False, True]
 AlphaChannelQ[image_Image3D] := If[RemoveAlphaChannel[image] == image, False, True]
