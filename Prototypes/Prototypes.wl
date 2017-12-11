@@ -18,6 +18,8 @@ SystemStringOpen::usage = "SystemStringOpen[string] determines the file format f
 
 (* statistics *)
 MeanBy::usage = "MeanBy[data, func] computes the mean of 'data' by using 'func'"
+StandardDeviationBy::usage = "StandardDeviationBy[data, func] computes the standard deviation of 'data' by using 'func'"
+MedianBy::usage = "MedianBy[data, func] computes the median of 'data' by using 'func'"
 
 (* data science *)
 DatasetMap::usage = "DatasetMap[func, expr] evaluates as Dataset[AssociationMap[func, expr]]";
@@ -88,6 +90,8 @@ SystemStringOpen[s_?StringQ] := With[ {filename = FileNameJoin[{$TemporaryDirect
 (* statistics *)
 
 MeanBy[ data_, func_ ] := Mean[ Map[func, data] ]
+
+MedianBy[ data_, func_ ] := Median[ Map[func, data] ]
 
 StandardDeviationBy[ data_, func_ ] := StandardDeviation[ Map[func, data] ]
 
