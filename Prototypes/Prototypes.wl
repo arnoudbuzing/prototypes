@@ -25,6 +25,8 @@ By::usage = "By[head, data, func] evaluates as head[Map[func,data]]"
 MeanBy::usage = "MeanBy[data, func] computes the mean of 'data' by using 'func'"
 StandardDeviationBy::usage = "StandardDeviationBy[data, func] computes the standard deviation of 'data' by using 'func'"
 MedianBy::usage = "MedianBy[data, func] computes the median of 'data' by using 'func'"
+VarianceBy::usage = "VarianceBy[data, func] computes the variance of 'data' by using 'func'"
+CommonestBy::usage = "CommonestBy[data, func] computes the commonest value of 'data' by using 'func'"
 
 (* data science *)
 
@@ -101,11 +103,12 @@ By[head_, data_, func_] := head[ Map[func,data] ]
 
 (* statistics *)
 
-MeanBy[ data_, func_ ] := Mean[ Map[func, data] ]
+MeanBy[ data_, func_ ] := By[ Mean, data, func]
+MedianBy[ data_, func_ ] := By[ Median, data, func]
+StandardDeviationBy[ data_, func_ ] := By[ StandardDeviation, data, func ]
+VarianceBy[ data_, func_ ] := By[ Variance, data, func ]
+CommonestBy[ data_, func_ ] := By[ Commonest, data, func ]
 
-MedianBy[ data_, func_ ] := Median[ Map[func, data] ]
-
-StandardDeviationBy[ data_, func_ ] := StandardDeviation[ Map[func, data] ]
 
 (* dataset extensions *)
 
