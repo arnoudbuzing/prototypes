@@ -16,20 +16,28 @@ $FormatToExtension::usage = "$FormatToExtension associates a file format with it
 
 SystemStringOpen::usage = "SystemStringOpen[string] determines the file format for 'string' and opens it with the default application"
 
+(* general language *)
+
+By::usage = "By[head, data, func] evaluates as head[Map[func,data]]"
+
 (* statistics *)
+
 MeanBy::usage = "MeanBy[data, func] computes the mean of 'data' by using 'func'"
 StandardDeviationBy::usage = "StandardDeviationBy[data, func] computes the standard deviation of 'data' by using 'func'"
 MedianBy::usage = "MedianBy[data, func] computes the median of 'data' by using 'func'"
 
 (* data science *)
+
 DatasetMap::usage = "DatasetMap[func, expr] evaluates as Dataset[AssociationMap[func, expr]]";
 DatasetImport::usage = "DatasetImport[file, ...] evaluates as Dataset[Import[ file, ...]]";
 DatasetImportFiles::usage = "DatasetImportFiles[files, ...] evaluates as Map[Dataset, ImportFiles[files, ...]]";
 
 (* geographics *)
+
 RandomGeoPosition::usage = "RandomGeoPosition[] picks a random geo position";
 
 (* image processing *)
+
 ImageStrictlyPortraitQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is less than the image height";
 ImagePortraitQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is less than or equal to the image height";
 ImageStrictlyLandscapeQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is greater than the image height";
@@ -86,6 +94,10 @@ SystemStringOpen[s_?StringQ] := With[ {filename = FileNameJoin[{$TemporaryDirect
     WriteString[filename, s];
     SystemOpen[File[filename]]
   ]
+
+(* language *)
+
+By[head_, data_, func_] := head[ Map[func,data] ]
 
 (* statistics *)
 
