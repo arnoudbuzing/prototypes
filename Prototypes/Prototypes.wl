@@ -27,6 +27,11 @@ StandardDeviationBy::usage = "StandardDeviationBy[data, func] computes the stand
 MedianBy::usage = "MedianBy[data, func] computes the median of 'data' by using 'func'"
 VarianceBy::usage = "VarianceBy[data, func] computes the variance of 'data' by using 'func'"
 CommonestBy::usage = "CommonestBy[data, func] computes the commonest value of 'data' by using 'func'"
+MinBy::usage = "MinBy[data, func] computes the minimum value of 'data' by using 'func'"
+MaxBy::usage = "MaxBy[data, func] computes the maximum value of 'data' by using 'func'"
+RarestBy::usage = "RarestBy[data, func] computes the rarest (least common) values of 'data' by using 'func'"
+
+Rarest::usage = "Rarest[data] computes the rarest (least common) values of 'data'"
 
 (* data science *)
 
@@ -108,7 +113,11 @@ MedianBy[ data_, func_ ] := By[ Median, data, func]
 StandardDeviationBy[ data_, func_ ] := By[ StandardDeviation, data, func ]
 VarianceBy[ data_, func_ ] := By[ Variance, data, func ]
 CommonestBy[ data_, func_ ] := By[ Commonest, data, func ]
+MaxBy[ data_, func_ ] := By[ Max, data, func ]
+MinBy[ data_, func_ ] := By[ Min, data, func ]
 
+Rarest[ data_ ] := Flatten[Take[MinimalBy[Tally[data], Last], All, 1]]
+RarestBy[ data_, func_ ] := By[ Rarest, data, func]
 
 (* dataset extensions *)
 
