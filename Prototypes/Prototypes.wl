@@ -116,7 +116,7 @@ CommonestBy[ data_, func_ ] := By[ Commonest, data, func ]
 MaxBy[ data_, func_ ] := By[ Max, data, func ]
 MinBy[ data_, func_ ] := By[ Min, data, func ]
 
-Rarest[ data_ ] := Flatten[Take[MinimalBy[Tally[data], Last], All, 1]]
+Rarest[ data_ ] := MinimalBy[Tally[list], Last][[All, 1]]
 RarestBy[ data_, func_ ] := By[ Rarest, data, func]
 
 (* dataset extensions *)
