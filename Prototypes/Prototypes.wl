@@ -58,7 +58,6 @@ AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an al
 (* paclet build utilities *)
 
 PacletInformationDataset::usage = "PacletInformationDataset[paclet] returns paclet information as a dataset";
-BuildPaclet::usage = "BuildPaclet[directory,context] builds a new version of the paclet in directory";
 
 (* github utilities *)
 BuildWikiDocumentation::usage = "BuildWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context";
@@ -119,7 +118,7 @@ CommonestBy[ data_, func_ ] := By[ Commonest, data, func ]
 MaxBy[ data_, func_ ] := By[ Max, data, func ]
 MinBy[ data_, func_ ] := By[ Min, data, func ]
 
-Rarest[ data_ ] := MinimalBy[Tally[list], Last][[All, 1]]
+Rarest[ data_ ] := MinimalBy[Tally[data], Last][[All, 1]]
 RarestBy[ data_, func_ ] := By[ Rarest, data, func]
 
 (* dataset extensions *)
@@ -162,6 +161,7 @@ AlphaChannelQ[___] := False
 
 (* date *)
 
+(*
 Prototypes::warning = "Warning: Changing function definition for ``.";
 Message[Prototypes::warning,"DateObject"];
 Message[Prototypes::warning,"Quantity"];
@@ -169,18 +169,11 @@ Message[Prototypes::warning,"Quantity"];
 Unprotect[DateObject];
 Unprotect[Quantity];
 Round[d_DateObject, q_Quantity] ^:=  DateObject[  Round[AbsoluteTime[d], QuantityMagnitude@UnitConvert[q, "Seconds"]]]
+*)
 
 (* paclet build utilities *)
 
 PacletInformationDataset[paclet_String] := Dataset @ Association @ PacletInformation[paclet]
-
-BuildPaclet[directory_, context_String] := Module[{paclet},
-    Scan[ DeleteFile, FileNames["*.paclet",directory] ];
-    paclet=PackPaclet[FileNameJoin[{directory,context}]];
-    Scan[ PacletUninstall, PacletFind[context] ];
-    paclet=Last@Sort@FileNames["*.paclet",directory];
-    PacletInstall[paclet]
-    ]
 
 (* gihub utilities *)
 
