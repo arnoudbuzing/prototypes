@@ -45,7 +45,6 @@ Paclet[
      "Prototypes`ImageCropResize",
      "Prototypes`AlphaChannelQ",
      "Prototypes`PacletInformationDataset",
-     "Prototypes`BuildPaclet",
      "Prototypes`BuildWikiDocumentation"
      },
      Context -> {"Prototypes`"} }
