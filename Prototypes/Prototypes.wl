@@ -7,6 +7,7 @@ ImportDirectory::usage = "ImportDirectory[dir] imports all files in 'dir'. Impor
 GetFiles::usage = "GetFiles[files] evaluates as Map[Get, files]";
 DirectoryByteCount::usage = "DirectoryByteCount[dir] returns the byte count for directory 'dir'";
 DirectorySize::usage = "DirectorySize[dir] returns the byte count for 'dir' as a quantity";
+ToStringFileName::usage = "ToStringFileName[file] rewrites file as a classical string filename";
 
 URLHash::usage = "URLHash[url] gives the hash for the content stored at the url";
 
@@ -84,6 +85,8 @@ GetFiles[ files_List ] := Map[ Get, files ]
 DirectoryByteCount = Internal`DirectoryByteCount;
 
 DirectorySize[ dir_ /; DirectoryQ[dir] ] := Quantity[ DirectoryByteCount[dir], "Bytes" ];
+
+ToStringFileName[file_] := FileNameJoin[DeleteCases[FileNameSplit[file], "file:" | ""]]
 
 URLHash[url : (_String | _URL), args___] := Module[{file, result},
   file = CreateTemporary[];
