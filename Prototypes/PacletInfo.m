@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.0.2",
+  Version -> "0.0.4",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Extensions -> {
@@ -44,6 +44,7 @@ Paclet[
      "Prototypes`Image3DCubeQ",
      "Prototypes`ImageCropResize",
      "Prototypes`AlphaChannelQ",
+     "Prototypes`Uniconize",
      "Prototypes`PacletInformationDataset",
      "Prototypes`BuildWikiDocumentation"
      },

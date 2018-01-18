@@ -55,6 +55,10 @@ Image3DCubeQ::usage = "Image3DCubeQ[image] returns True if the image width, heig
 ImageCropResize::usage = "ImageCropResize[image, dims] crops and resize an image to the specified dimensions";
 AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an alpha channel";
 
+(* typesetting *)
+
+Uniconize::usage = "Uniconize[icon] turns IconizedObject icon and returns the associated expression";
+
 (* paclet build utilities *)
 
 PacletInformationDataset::usage = "PacletInformationDataset[paclet] returns paclet information as a dataset";
@@ -170,6 +174,12 @@ Unprotect[DateObject];
 Unprotect[Quantity];
 Round[d_DateObject, q_Quantity] ^:=  DateObject[  Round[AbsoluteTime[d], QuantityMagnitude@UnitConvert[q, "Seconds"]]]
 *)
+
+
+(* typesetting *)
+
+Uniconize[icon_IconizedObject] := First[icon]
+
 
 (* paclet build utilities *)
 
