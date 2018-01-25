@@ -40,6 +40,11 @@ DatasetMap::usage = "DatasetMap[func, expr] evaluates as Dataset[AssociationMap[
 DatasetImport::usage = "DatasetImport[file, ...] evaluates as Dataset[Import[ file, ...]]";
 DatasetImportFiles::usage = "DatasetImportFiles[files, ...] evaluates as Map[Dataset, ImportFiles[files, ...]]";
 
+(* strings *)
+
+StringRest::usage = "StringRest[string] returns string with the first character removed";
+StringMost::usage = "StringMost[string] returns string with the last character removed";
+
 (* geographics *)
 
 RandomGeoPosition::usage = "RandomGeoPosition[] picks a random geo position";
@@ -133,6 +138,12 @@ DatasetImport[ file_, a___] := Dataset[ Import[ file, a ] ]
 
 DatasetImportFiles[ files_, a___] := Map[ Dataset, ImportFiles[ files, a]]
 
+(* strings *)
+
+StringRest[string_String] := StringTake[string,{2,-1}]
+
+StringMost[string_String] := StringTake[string,{1,-2}]
+
 (* random extensions *)
 RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}]
 
@@ -212,6 +223,16 @@ BuildWikiDocumentation[directory_String, context_String] :=
    ]
   ]
 
+BuildInfo[] := Module[ {text},
+  text = "Kernel:\n\tSystem id - " <> SystemInformation["Kernel", "SystemID"] <>
+  "\n\tRelease id - " <> SystemInformation["Kernel", "ReleaseID"] <>
+  "\n\tCreation date - " <> TextString[SystemInformation["Kernel", "CreationDate"]] <>
+  "\nFrontEnd:\n\tOperating system - " <> SystemInformation["FrontEnd", "OperatingSystem"] <>
+  "\n\tRelease id - " <> SystemInformation["FrontEnd", "ReleaseID"] <>
+  "\n\tCreation date - " <> TextString[SystemInformation["FrontEnd", "CreationDate"]];
+  CopyToClipboard[text];
+  Button[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}],CopyToClipboard[text]]
+  ]
 
 End[]
 

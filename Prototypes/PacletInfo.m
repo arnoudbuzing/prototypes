@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.0.4",
+  Version -> "0.0.5",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Extensions -> {
@@ -35,6 +35,8 @@ Paclet[
      "Prototypes`DatasetMap",
      "Prototypes`DatasetImport",
      "Prototypes`DatasetImportFiles",
+     "Prototypes`StringRest",
+     "Prototypes`StringMost",
      "Prototypes`RandomGeoPosition",
      "Prototypes`ImageStrictlyPortraitQ",
      "Prototypes`ImagePortraitQ",
@@ -46,7 +48,8 @@ Paclet[
      "Prototypes`AlphaChannelQ",
      "Prototypes`Uniconize",
      "Prototypes`PacletInformationDataset",
-     "Prototypes`BuildWikiDocumentation"
+     "Prototypes`BuildWikiDocumentation",
+     "Prototypes`BuildInfo"
      },
      Context -> {"Prototypes`"} }
   }
