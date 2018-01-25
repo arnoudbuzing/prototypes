@@ -71,6 +71,7 @@ PacletInformationDataset::usage = "PacletInformationDataset[paclet] returns pacl
 (* github utilities *)
 BuildWikiDocumentation::usage = "BuildWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context";
 
+BuildInfo::usage = "BuildInfo[] copies build information to the clipboard and returns a button which does the same copy operation"
 Begin["`Private`"]
 
 (* general extensions *)
