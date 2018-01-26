@@ -47,6 +47,7 @@ Paclet[
      "Prototypes`ImageCropResize",
      "Prototypes`AlphaChannelQ",
      "Prototypes`Uniconize",
+     "Prototypes`BoxSyntaxQ",
      "Prototypes`PacletInformationDataset",
      "Prototypes`BuildWikiDocumentation",
      "Prototypes`BuildInfo"

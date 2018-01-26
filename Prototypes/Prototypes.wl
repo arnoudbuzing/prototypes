@@ -63,6 +63,7 @@ AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an al
 (* typesetting *)
 
 Uniconize::usage = "Uniconize[icon] turns IconizedObject icon and returns the associated expression";
+BoxSyntaxQ::usage = "BoxSyntaxQ[boxes] returns True if the gives boxes can be transformed into an expression without errors, and False otherwise";
 
 (* paclet build utilities *)
 
@@ -132,6 +133,8 @@ MinBy[ data_, func_ ] := By[ Min, data, func ]
 Rarest[ data_ ] := MinimalBy[Tally[data], Last][[All, 1]]
 RarestBy[ data_, func_ ] := By[ Rarest, data, func]
 
+(* load frontend prototype functions *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "FrontEnd.wl"}] ]
 
 (* load dataset prototype functions *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dataset.wl"}] ]
