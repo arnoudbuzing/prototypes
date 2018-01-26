@@ -71,7 +71,8 @@ PacletInformationDataset::usage = "PacletInformationDataset[paclet] returns pacl
 (* github utilities *)
 BuildWikiDocumentation::usage = "BuildWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context";
 
-BuildInfo::usage = "BuildInfo[] copies build information to the clipboard and returns a button which does the same copy operation"
+BuildInfo::usage = "BuildInfo[] copies build information to the clipboard and returns a button which does the same copy operation";
+
 Begin["`Private`"]
 
 (* general extensions *)
@@ -80,7 +81,7 @@ InformationDataset[pattern_] :=  Dataset[Association[ Map[ Function[ # -> ToExpr
 
 (* file extensions *)
 
-$InputDirectoryName := DirectoryName[$InputDirectoryName];
+$InputDirectoryName := DirectoryName[$InputFileName];
 
 ImportFiles[ files_List, a___ ] := Map[ Function[ Import[ #, a ] ], files ]
 
@@ -131,49 +132,24 @@ MinBy[ data_, func_ ] := By[ Min, data, func ]
 Rarest[ data_ ] := MinimalBy[Tally[data], Last][[All, 1]]
 RarestBy[ data_, func_ ] := By[ Rarest, data, func]
 
-(* dataset extensions *)
 
-DatasetMap[ func_ , expr_ ] := Dataset[ AssociationMap[ func, expr ] ]
+(* load dataset prototype functions *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dataset.wl"}] ]
 
-DatasetImport[ file_, a___] := Dataset[ Import[ file, a ] ]
+(* load string prototype functions *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dataset.wl"}] ]
 
-DatasetImportFiles[ files_, a___] := Map[ Dataset, ImportFiles[ files, a]]
+(* load image processing prototype functions *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Image.wl"}] ]
 
-(* strings *)
+(* load paclet prototype functions *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Image.wl"}] ]
 
-StringRest[string_String] := StringTake[string,{2,-1}]
 
-StringMost[string_String] := StringTake[string,{1,-2}]
 
 (* random extensions *)
 RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}]
 
-(* image extensions *)
-
-ImageStrictlyPortraitQ[image_Image] := Less @@ ImageDimensions[image]
-ImageStrictlyPortraitQ[___] := False
-
-ImagePortraitQ[image_Image] := LessEqual @@ ImageDimensions[image]
-ImagePortraitQ[___] := False
-
-ImageStrictlyLandscapeQ[image_Image] := Greater @@ ImageDimensions[image]
-ImageStrictlyLandscapeQ[___] := False
-
-ImageLandscapeQ[image_Image] := GreaterEqual @@ ImageDimensions[image]
-ImageLandscapeQ[___] := False
-
-ImageSquareQ[image_Image] := Equal @@ ImageDimensions[image]
-ImageSquareQ[___] := False
-
-Image3DCubeQ[image_Image3D] := Equal @@ ImageDimensions[image]
-Image3DCubeQ[___] := False
-
-ImageCropResize[image_Image, dims_List] := First[ ConformImages[ {image}, dims, "Fill"]]
-ImageCropResize[___] := $Failed
-
-AlphaChannelQ[image_Image] := If[RemoveAlphaChannel[image] == image, False, True]
-AlphaChannelQ[image_Image3D] := If[RemoveAlphaChannel[image] == image, False, True]
-AlphaChannelQ[___] := False
 
 (* date *)
 
@@ -193,11 +169,10 @@ Round[d_DateObject, q_Quantity] ^:=  DateObject[  Round[AbsoluteTime[d], Quantit
 Uniconize[icon_IconizedObject] := First[icon]
 
 
-(* paclet build utilities *)
 
-PacletInformationDataset[paclet_String] := Dataset @ Association @ PacletInformation[paclet]
 
-(* gihub utilities *)
+
+(* github utilities *)
 
 BuildWikiDocumentation[directory_String, context_String] :=
  Module[{names, file},
