@@ -46,6 +46,9 @@ DatasetImportFiles::usage = "DatasetImportFiles[files, ...] evaluates as Map[Dat
 
 (* strings *)
 
+MakeString::usage = "MakeString[expr] turns the unevaluated form of 'expr' into an InputForm string";
+StringFirst::usage = "StringFirst[string] returns the first character of 'string'";
+StringLast::usage = "StringLast[string] returns the last character of 'string'";
 StringRest::usage = "StringRest[string] returns string with the first character removed";
 StringMost::usage = "StringMost[string] returns string with the last character removed";
 
@@ -148,13 +151,13 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "FrontEnd.wl"}] ]
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dataset.wl"}] ]
 
 (* load string prototype functions *)
-Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dataset.wl"}] ]
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "String.wl"}] ]
 
 (* load image processing prototype functions *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Image.wl"}] ]
 
 (* load paclet prototype functions *)
-Get[ FileNameJoin[{DirectoryName[$InputFileName], "Image.wl"}] ]
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Paclet.wl"}] ]
 
 
 
