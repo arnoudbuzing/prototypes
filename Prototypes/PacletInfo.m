@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.0.7",
+  Version -> "0.0.8",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Extensions -> {
