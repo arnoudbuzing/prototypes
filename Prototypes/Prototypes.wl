@@ -17,6 +17,10 @@ $FormatToExtension::usage = "$FormatToExtension associates a file format with it
 
 SystemStringOpen::usage = "SystemStringOpen[string] determines the file format for 'string' and opens it with the default application"
 
+(* patterns *)
+
+UnmatchQ::usage = "UnmatchQ[expr,form] is the same as Not[MatchQ[expr,form]]"
+
 (* general language *)
 
 By::usage = "By[head, data, func] evaluates as head[Map[func,data]]"
@@ -115,6 +119,10 @@ SystemStringOpen[s_?StringQ] := With[ {filename = FileNameJoin[{$TemporaryDirect
     WriteString[filename, s];
     SystemOpen[File[filename]]
   ]
+
+(* patterns *)
+
+UnmatchQ[expr___] := Not[MatchQ[expr]]
 
 (* language *)
 

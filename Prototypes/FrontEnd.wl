@@ -11,4 +11,4 @@ FrontEndExecute[
     Global`MenuKey["'", Global`Modifiers -> {"Command"}]
     ]}]]
 
-BoxSyntaxQ[boxes_] := UnsameQ[ErrorBox, Head[MakeExpression[boxes, StandardForm]]]
+BoxSyntaxQ[boxes_,form_:StandardForm] := Not[MatchQ[MakeExpression[boxes, form],_ErrorBox]]

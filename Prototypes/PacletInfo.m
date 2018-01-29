@@ -22,6 +22,7 @@ Paclet[
      "Prototypes`$ExtensionToFormat",
      "Prototypes`$FormatToExtension",
      "Prototypes`SystemStringOpen",
+     "Prototypes`UnmatchQ",
      "Prototypes`By",
      "Prototypes`MeanBy",
      "Prototypes`StandardDeviationBy",
