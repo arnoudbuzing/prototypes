@@ -54,6 +54,7 @@ Paclet[
      "Prototypes`BoxSyntaxQ",
      "Prototypes`PacletInformationDataset",
      "Prototypes`BuildWikiDocumentation",
+     "Prototype`$BuildInfo",
      "Prototypes`BuildInfo"
      },
      Context -> {"Prototypes`"} }

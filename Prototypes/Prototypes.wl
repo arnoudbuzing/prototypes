@@ -79,6 +79,7 @@ PacletInformationDataset::usage = "PacletInformationDataset[paclet] returns pacl
 (* github utilities *)
 BuildWikiDocumentation::usage = "BuildWikiDocumentation[directory,context] creates wiki pages for the symbols in the given context";
 
+$BuildInfo::usage = "$BuildInfo gives build and version information as a textual string";
 BuildInfo::usage = "BuildInfo[] copies build information to the clipboard and returns a button which does the same copy operation";
 
 Begin["`Private`"]
@@ -213,15 +214,16 @@ BuildWikiDocumentation[directory_String, context_String] :=
    ]
   ]
 
-BuildInfo[] := Module[ {text},
-  text = "Kernel:\n\tSystem id - " <> SystemInformation["Kernel", "SystemID"] <>
-  "\n\tRelease id - " <> SystemInformation["Kernel", "ReleaseID"] <>
-  "\n\tCreation date - " <> TextString[SystemInformation["Kernel", "CreationDate"]] <>
-  "\nFrontEnd:\n\tOperating system - " <> SystemInformation["FrontEnd", "OperatingSystem"] <>
-  "\n\tRelease id - " <> SystemInformation["FrontEnd", "ReleaseID"] <>
-  "\n\tCreation date - " <> TextString[SystemInformation["FrontEnd", "CreationDate"]];
-  CopyToClipboard[text];
-  Button[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}],CopyToClipboard[text]]
+$BuildInfo = "Kernel:\n\tSystem id - " <> SystemInformation["Kernel", "SystemID"] <>
+"\n\tRelease id - " <> SystemInformation["Kernel", "ReleaseID"] <>
+"\n\tCreation date - " <> TextString[SystemInformation["Kernel", "CreationDate"]] <>
+"\nFrontEnd:\n\tOperating system - " <> SystemInformation["FrontEnd", "OperatingSystem"] <>
+"\n\tRelease id - " <> SystemInformation["FrontEnd", "ReleaseID"] <>
+"\n\tCreation date - " <> TextString[SystemInformation["FrontEnd", "CreationDate"]];
+
+BuildInfo[] := Module[ {},
+  CopyToClipboard[$BuildInfo];
+  Button[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}],CopyToClipboard[$BuildInfo]]
   ]
 
 End[]
