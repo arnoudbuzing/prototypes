@@ -15,28 +15,32 @@ $InputDirectoryName::usage = "$InputDirectoryName is the directory name for the 
 $ExtensionToFormat::usage = "$ExtensionToFormat associates file extensions with their format name";
 $FormatToExtension::usage = "$FormatToExtension associates a file format with its list of supported file extensions";
 
-SystemStringOpen::usage = "SystemStringOpen[string] determines the file format for 'string' and opens it with the default application"
+SystemStringOpen::usage = "SystemStringOpen[string] determines the file format for 'string' and opens it with the default application";
+
+(* animation *)
+
+CreateGIFAnimation::usage = "CreateGIFAnimation[name,list] creates a GIF from 'list' and saves it in the Wolfram Cloud";
 
 (* patterns *)
 
-UnmatchQ::usage = "UnmatchQ[expr,form] is the same as Not[MatchQ[expr,form]]"
+UnmatchQ::usage = "UnmatchQ[expr,form] is the same as Not[MatchQ[expr,form]]";
 
 (* general language *)
 
-By::usage = "By[head, data, func] evaluates as head[Map[func,data]]"
+By::usage = "By[head, data, func] evaluates as head[Map[func,data]]";
 
 (* statistics *)
 
-MeanBy::usage = "MeanBy[data, func] computes the mean of 'data' by using 'func'"
-StandardDeviationBy::usage = "StandardDeviationBy[data, func] computes the standard deviation of 'data' by using 'func'"
-MedianBy::usage = "MedianBy[data, func] computes the median of 'data' by using 'func'"
-VarianceBy::usage = "VarianceBy[data, func] computes the variance of 'data' by using 'func'"
-CommonestBy::usage = "CommonestBy[data, func] computes the commonest value of 'data' by using 'func'"
-MinBy::usage = "MinBy[data, func] computes the minimum value of 'data' by using 'func'"
-MaxBy::usage = "MaxBy[data, func] computes the maximum value of 'data' by using 'func'"
-RarestBy::usage = "RarestBy[data, func] computes the rarest (least common) values of 'data' by using 'func'"
+MeanBy::usage = "MeanBy[data, func] computes the mean of 'data' by using 'func'";
+StandardDeviationBy::usage = "StandardDeviationBy[data, func] computes the standard deviation of 'data' by using 'func'";
+MedianBy::usage = "MedianBy[data, func] computes the median of 'data' by using 'func'";
+VarianceBy::usage = "VarianceBy[data, func] computes the variance of 'data' by using 'func'";
+CommonestBy::usage = "CommonestBy[data, func] computes the commonest value of 'data' by using 'func'";
+MinBy::usage = "MinBy[data, func] computes the minimum value of 'data' by using 'func'";
+MaxBy::usage = "MaxBy[data, func] computes the maximum value of 'data' by using 'func'";
+RarestBy::usage = "RarestBy[data, func] computes the rarest (least common) values of 'data' by using 'func'";
 
-Rarest::usage = "Rarest[data] computes the rarest (least common) values of 'data'"
+Rarest::usage = "Rarest[data] computes the rarest (least common) values of 'data'";
 
 (* data science *)
 
@@ -122,6 +126,18 @@ $FormatToExtension = GroupBy[Reverse /@ MapAt[StringDrop[#, 1] &, System`Convert
 SystemStringOpen[s_?StringQ] := With[ {filename = FileNameJoin[{$TemporaryDirectory, CreateUUID[] <> First[$FormatToExtension[StringFormat[s]]] } ]},
     WriteString[filename, s];
     SystemOpen[File[filename]]
+  ]
+
+
+(* animations *)
+
+CreateGIFAnimation[
+  name_String /; StringEndsQ[name, ".gif"],
+  list_List] := Module[{object},
+  object = CloudObject["animations/" <> name];
+  Export[object, list, "GIF"];
+  SetPermissions[object, "Public"];
+  object
   ]
 
 (* patterns *)
