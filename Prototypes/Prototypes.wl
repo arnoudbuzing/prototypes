@@ -86,6 +86,11 @@ BuildWikiDocumentation::usage = "BuildWikiDocumentation[directory,context] creat
 $BuildInfo::usage = "$BuildInfo gives build and version information as a textual string";
 BuildInfo::usage = "BuildInfo[] copies build information to the clipboard and returns a button which does the same copy operation";
 
+(* dock *)
+
+DockButton::usage = "DockButton[name] represents a button that can be added to the Prototype dock";
+$DockButtons::usage = "$DockButtons is a list of defined dock buttons";
+
 Begin["`Private`"]
 
 (* general extensions *)
@@ -176,6 +181,9 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Image.wl"}] ]
 (* load paclet prototype functions *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Paclet.wl"}] ]
 
+(* load dock prototype functions *)
+
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dock.wl"}] ]
 
 
 (* random extensions *)

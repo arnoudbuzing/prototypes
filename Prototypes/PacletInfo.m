@@ -56,7 +56,9 @@ Paclet[
      "Prototypes`PacletInformationDataset",
      "Prototypes`BuildWikiDocumentation",
      "Prototype`$BuildInfo",
-     "Prototypes`BuildInfo"
+     "Prototypes`BuildInfo",
+     "Prototype`DockButton",
+     "Prototype`$DockButtons",
      },
      Context -> {"Prototypes`"} }
   }
