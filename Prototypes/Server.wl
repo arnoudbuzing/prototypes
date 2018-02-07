@@ -7,10 +7,6 @@ ExpressionServer[host_String,port_] := Module[{ socket, listener },
       Module[{client,data,request,line,input,expr,result,len},
         {client,data}=Lookup[assoc,{"SourceSocket","Data"}];
         request=ImportString[data,"HTTPRequest"];
-        (*
-        line=First@StringSplit[data,"\n"];
-        input=StringTake[line,{6,-10}];
-        *)
         input=Last[request["Path"]];
         If[
           input=="favicon.ico"
