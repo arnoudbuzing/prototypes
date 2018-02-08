@@ -59,7 +59,8 @@ Paclet[
      "Prototypes`BuildInfo",
      "Prototypes`DockButton",
      "Prototypes`$DockButtons",
-     "Prototypes`ExpressionServer"
+     "Prototypes`ExpressionServer",
+     "Prototypes`ExpressionEvaluate"
      },
      Context -> {"Prototypes`"} }
   }
