@@ -60,7 +60,10 @@ Paclet[
      "Prototypes`DockButton",
      "Prototypes`$DockButtons",
      "Prototypes`ExpressionServer",
-     "Prototypes`ExpressionEvaluate"
+     "Prototypes`ExpressionEvaluate",
+     "Prototypes`$LocalResourceObjects",
+     "Prototypes`ResourceObjectManager",
+     "Prototypes`ResourceObjectDataset"
      },
      Context -> {"Prototypes`"} }
   }

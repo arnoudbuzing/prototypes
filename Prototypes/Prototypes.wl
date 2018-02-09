@@ -1,4 +1,4 @@
-Print["Loading Prototypes paclet"];
+PrintTemporary["Loading Prototypes paclet"];
 
 BeginPackage["Prototypes`", {"PacletManager`"}];
 
@@ -66,6 +66,10 @@ $DockButtons::usage = "$DockButtons is a list of defined dock buttons";
 (* server *)
 ExpressionServer::usage = "ExpressionServer[host,port] starts a Wolfram expression server on host:port";
 ExpressionEvaluate::usage = "ExpressionEvaluate[host,port,expr] evaluates 'expr' on the kernel listening at host:port";
+(* resources *)
+$LocalResourceObjects::usage = "$LocalResourceObjects gives the current local resource objects on your machine";
+ResourceObjectManager::usage = "ResourceObjectManager[objects] gives an interface to manage resource objects";
+ResourceObjectDataset::usage = "ResourceObjectDataset[objects] gives resource 'objects' as a dataset";
 
 Begin["`Private`"];
 
@@ -163,6 +167,10 @@ If[ Head[$FrontEnd] === FrontEndObject ,
 
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Server.wl"}] ];
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Client.wl"}] ];
+
+(* load resource prototype functions *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Resources.wl"}] ];
+
 
 (* random extensions *)
 RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}];
