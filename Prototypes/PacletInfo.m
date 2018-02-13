@@ -63,7 +63,21 @@ Paclet[
      "Prototypes`ExpressionEvaluate",
      "Prototypes`$LocalResourceObjects",
      "Prototypes`ResourceObjectManager",
-     "Prototypes`ResourceObjectDataset"
+     "Prototypes`ResourceObjectDataset",
+     "Prototypes`Second",
+     "Prototypes`Third",
+     "Prototypes`Fourth",
+     "Prototypes`Fifth",
+     "Prototypes`Sixth",
+     "Prototypes`Seventh",
+     "Prototypes`Eighth",
+     "Prototypes`Ninth",
+     "Prototypes`Tenth",
+     "Prototypes`NextToLast",
+     "Prototypes`Ultimate",
+     "Prototypes`Penultimate",
+     "Prototypes`Antepenultimate",
+     "Prototypes`ElapsedTime"
      },
      Context -> {"Prototypes`"} }
   }

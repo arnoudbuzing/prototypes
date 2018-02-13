@@ -71,6 +71,23 @@ $LocalResourceObjects::usage = "$LocalResourceObjects gives the current local re
 ResourceObjectManager::usage = "ResourceObjectManager[objects] gives an interface to manage resource objects";
 ResourceObjectDataset::usage = "ResourceObjectDataset[objects] gives resource 'objects' as a dataset";
 
+(* ordinal parts *)
+Second::usage = "Second[expr] gives Part[expr,2]";
+Third::usage = "Third[expr] gives Part[expr,3]";
+Fourth::usage = "Fourth[expr] gives Part[expr,4]";
+Fifth::usage = "Fifth[expr] gives Part[expr,5]";
+Sixth::usage = "Sixth[expr] gives Part[expr,6]";
+Seventh::usage = "Seventh[expr] gives Part[expr,7]";
+Eighth::usage = "Eighth[expr] gives Part[expr,8]";
+Ninth::usage = "Ninth[expr] gives Part[expr,9]";
+Tenth::usage = "Tenth[expr] gives Part[expr,10]";
+NextToLast::usage = "NextToLast[expr] gives Part[expr,-2]";
+Ultimate::usage = "Ultimate[expr] gives Part[expr,-1]";
+Penultimate::usage = "Penultimate[expr] gives Part[expr,-2]";
+Antepenultimate::usage = "Antepenultimate[expr] gives Part[expr,-3]";
+
+ElapsedTime::usage = "ElapsedTime[unit,expr] evaluates 'expr' and returns the elapsed time in the specified unit";
+
 Begin["`Private`"];
 
 (* general extensions *)
@@ -229,6 +246,24 @@ BuildInfo[] := Module[ {},
   CopyToClipboard[$BuildInfo];
   Button[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}],CopyToClipboard[$BuildInfo]]
   ];
+
+(* more parts *)
+Second[expr_] := Part[expr,2];
+Third[expr_] := Part[expr,3];
+Fourth[expr_] := Part[expr,4];
+Fifth[expr_] := Part[expr,5];
+Sixth[expr_] := Part[expr,6];
+Seventh[expr_] := Part[expr,7];
+Eighth[expr_] := Part[expr,8];
+Ninth[expr_] := Part[expr,9];
+Tenth[expr_] := Part[expr,10];
+NextToLast[expr_] := Part[expr,-2];
+Ultimate[expr_] := Part[expr,-1];
+Penultimate[expr_] := Part[expr,-2];
+Antepenultimate[expr_] := Part[expr,-3];
+
+Attributes[ElapsedTime] = {HoldRest};
+ElapsedTime[unit_,expr_] := UnitConvert[ Quantity[First[AbsoluteTiming[expr]], "Seconds"], unit];
 
 End[];
 EndPackage[];
