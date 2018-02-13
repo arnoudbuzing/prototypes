@@ -77,7 +77,8 @@ Paclet[
      "Prototypes`Ultimate",
      "Prototypes`Penultimate",
      "Prototypes`Antepenultimate",
-     "Prototypes`ElapsedTime"
+     "Prototypes`ElapsedTime",
+     "Prototypes`CreateNotebookIndex"
      },
      Context -> {"Prototypes`"} }
   }

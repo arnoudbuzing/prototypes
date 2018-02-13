@@ -88,6 +88,8 @@ Antepenultimate::usage = "Antepenultimate[expr] gives Part[expr,-3]";
 
 ElapsedTime::usage = "ElapsedTime[unit,expr] evaluates 'expr' and returns the elapsed time in the specified unit";
 
+CreateNotebookIndex::usage = "CreateNotebookIndex[] creates a SearchIndexObject of all notebooks located in $InstallationDirectory";
+
 Begin["`Private`"];
 
 (* general extensions *)
@@ -188,6 +190,8 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Client.wl"}] ];
 (* load resource prototype functions *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Resources.wl"}] ];
 
+(* load search utilities *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Search.wl"}] ];
 
 (* random extensions *)
 RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}];
