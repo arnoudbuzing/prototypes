@@ -89,7 +89,7 @@ Antepenultimate::usage = "Antepenultimate[expr] gives Part[expr,-3]";
 ElapsedTime::usage = "ElapsedTime[unit,expr] evaluates 'expr' and returns the elapsed time in the specified unit";
 
 CreateNotebookIndex::usage = "CreateNotebookIndex[] creates a SearchIndexObject of all notebooks located in $InstallationDirectory";
-
+QuickSearch::usage = "QuickSearch[] provides a quick interactive way to search all notebooks under $InstallationDirectory. You need to run CreateNotebookIndex[] once before using this function";
 Begin["`Private`"];
 
 (* general extensions *)
