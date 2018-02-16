@@ -2,7 +2,7 @@
 
 Low-hanging syntactic sugar beets to sweeten the Wolfram Language
 
-Install with the following command (replace 0.0.0 with the latest version digits):
+Install with the following command (replace 0.0.0 with the [latest version digits](https://github.com/arnoudbuzing/prototypes/releases)):
 
 ```
 PacletInstall["https://github.com/arnoudbuzing/prototypes/releases/download/v0.0.0/Prototypes-0.0.0.paclet"]
