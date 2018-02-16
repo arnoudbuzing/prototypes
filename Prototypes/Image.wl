@@ -24,3 +24,15 @@ ImageCropResize[___] := $Failed
 AlphaChannelQ[image_Image] := If[RemoveAlphaChannel[image] == image, False, True]
 AlphaChannelQ[image_Image3D] := If[RemoveAlphaChannel[image] == image, False, True]
 AlphaChannelQ[___] := False
+
+
+(* animations *)
+
+CreateGIFAnimation[
+  name_String /; StringEndsQ[name, ".gif"],
+  list_List] := Module[{object},
+  object = CloudObject["animations/" <> name];
+  Export[object, list, "GIF"];
+  SetPermissions[object, "Public"];
+  object
+  ];

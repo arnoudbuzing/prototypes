@@ -92,45 +92,11 @@ QuickSearch::usage = "QuickSearch[] provides a quick interactive way to search a
 
 Begin["`Private`"];
 
-(* general extensions *)
-
-InformationDataset[pattern_] :=  Dataset[Association[ Map[ Function[ # -> ToExpression[# <> "::usage"] ],  Names[pattern]]]];
-
 (* load dataset prototype functions *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Files.wl"}] ];
 
-
-(* animations *)
-
-CreateGIFAnimation[
-  name_String /; StringEndsQ[name, ".gif"],
-  list_List] := Module[{object},
-  object = CloudObject["animations/" <> name];
-  Export[object, list, "GIF"];
-  SetPermissions[object, "Public"];
-  object
-  ];
-
-(* patterns *)
-
-UnmatchQ[expr___] := Not[MatchQ[expr]];
-
-(* language *)
-
-By[head_, data_, func_] := head[ Map[func,data] ];
-
-(* statistics *)
-
-MeanBy[ data_, func_ ] := By[ Mean, data, func];
-MedianBy[ data_, func_ ] := By[ Median, data, func];
-StandardDeviationBy[ data_, func_ ] := By[ StandardDeviation, data, func ];
-VarianceBy[ data_, func_ ] := By[ Variance, data, func ];
-CommonestBy[ data_, func_ ] := By[ Commonest, data, func ];
-MaxBy[ data_, func_ ] := By[ Max, data, func ];
-MinBy[ data_, func_ ] := By[ Min, data, func ];
-
-Rarest[ data_ ] := MinimalBy[Tally[data], Last][[All, 1]];
-RarestBy[ data_, func_ ] := By[ Rarest, data, func];
+(* load language functions *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Language.wl"}] ];
 
 (* load dataset prototype functions *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dataset.wl"}] ];
@@ -144,13 +110,7 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Image.wl"}] ];
 (* load paclet prototype functions *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Paclet.wl"}] ];
 
-If[ Head[$FrontEnd] === FrontEndObject ,
-  (* load dock prototype functions *)
-  Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dock.wl"}] ];
-  (* load frontend prototype functions *)
-  Get[ FileNameJoin[{DirectoryName[$InputFileName], "FrontEnd.wl"}] ];
-]
-
+(* expression server *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Server.wl"}] ];
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Client.wl"}] ];
 
@@ -160,81 +120,17 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Resources.wl"}] ];
 (* load search utilities *)
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Search.wl"}] ];
 
-(* random extensions *)
-RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}];
+(* load search utilities *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Build.wl"}] ];
 
-(* date *)
-
-(*
-Prototypes::warning = "Warning: Changing function definition for ``.";
-Message[Prototypes::warning,"DateObject"];
-Message[Prototypes::warning,"Quantity"];
-
-Unprotect[DateObject];
-Unprotect[Quantity];
-Round[d_DateObject, q_Quantity] ^:=  DateObject[  Round[AbsoluteTime[d], QuantityMagnitude@UnitConvert[q, "Seconds"]]]
-*)
-
-(* typesetting *)
-
-Uniconize[icon_IconizedObject] := First[icon];
-
-(* github utilities *)
-
-BuildWikiDocumentation[directory_String, context_String] :=
- Module[{names, file},
-  names = Names[context <> "`*"];
-  (* write the index page *)
-  file = OpenWrite[FileNameJoin[{directory, "Home.md"}]];
-  Scan[
-   Function[{name},
-    WriteString[file, "[`" <> name <> "`](" <> name <> ")\n\n"];
-    WriteString[file, ToExpression[name <> "::usage"]];
-    WriteString[file, "\n\n"]
-    ], names];
-  Close[file];
-  (* write the function pages *)
-  Scan[
-   Function[{name},
-    file = OpenWrite[FileNameJoin[{directory, name <> ".md"}]];
-    WriteString[file, "# " <> name <> "\n\n"];
-    WriteString[file, ToExpression[name <> "::usage"]];
-    WriteString[file, "\n\n"];
-    Close[file]
-    ],
-   names
-   ]
-  ];
-
-$BuildInfo := "Kernel:\n\tSystem id - " <> SystemInformation["Kernel", "SystemID"] <>
-"\n\tRelease id - " <> SystemInformation["Kernel", "ReleaseID"] <>
-"\n\tCreation date - " <> TextString[SystemInformation["Kernel", "CreationDate"]] <>
-"\nFrontEnd:\n\tOperating system - " <> SystemInformation["FrontEnd", "OperatingSystem"] <>
-"\n\tRelease id - " <> SystemInformation["FrontEnd", "ReleaseID"] <>
-"\n\tCreation date - " <> TextString[SystemInformation["FrontEnd", "CreationDate"]];
-
-BuildInfo[] := Module[ {},
-  CopyToClipboard[$BuildInfo];
-  Button[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}],CopyToClipboard[$BuildInfo]]
-  ];
-
-(* more parts *)
-Second[expr_] := Part[expr,2];
-Third[expr_] := Part[expr,3];
-Fourth[expr_] := Part[expr,4];
-Fifth[expr_] := Part[expr,5];
-Sixth[expr_] := Part[expr,6];
-Seventh[expr_] := Part[expr,7];
-Eighth[expr_] := Part[expr,8];
-Ninth[expr_] := Part[expr,9];
-Tenth[expr_] := Part[expr,10];
-NextToLast[expr_] := Part[expr,-2];
-Ultimate[expr_] := Part[expr,-1];
-Penultimate[expr_] := Part[expr,-2];
-Antepenultimate[expr_] := Part[expr,-3];
-
-Attributes[ElapsedTime] = {HoldRest};
-ElapsedTime[unit_,expr_] := UnitConvert[ Quantity[First[AbsoluteTiming[expr]], "Seconds"], unit];
+(* frontend only things *)
+If[ Head[$FrontEnd] === FrontEndObject ,
+  (* load dock prototype functions *)
+  Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dock.wl"}] ];
+  (* load frontend prototype functions *)
+  Get[ FileNameJoin[{DirectoryName[$InputFileName], "FrontEnd.wl"}] ];
+]
 
 End[];
+
 EndPackage[];
