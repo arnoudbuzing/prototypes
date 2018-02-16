@@ -42,7 +42,7 @@ If[ Head[$FrontEnd] === FrontEndObject ,
   (* load dock prototype functions *)
   Get[ FileNameJoin[{DirectoryName[$InputFileName], "Dock.wl"}] ];
   (* load frontend prototype functions *)
-  Get[ FileNameJoin[{DirectoryName[$InputFileName], "FrontEnd.wl"}] ];
+  Get[ FileNameJoin[{DirectoryName[$InputFileName], "NotebookInterface.wl"}] ];
 ]
 
 End[];
