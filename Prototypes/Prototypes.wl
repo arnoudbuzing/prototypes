@@ -6,6 +6,7 @@ InformationDataset::usage = "InformationDataset[ pattern ] gives usage informati
 ImportFiles::usage = "ImportFiles[files, ...] evaluates as Map[Import, files]";
 ImportDirectory::usage = "ImportDirectory[dir] imports all files in 'dir'. ImportDirectory[dir,patt] imports all files that match string pattern 'patt'";
 GetFiles::usage = "GetFiles[files] evaluates as Map[Get, files]";
+DirectoryFileList::usage = "DirectoryFileList[dir] returns all files under directory 'dir' and all its subdirectories";
 DirectoryByteCount::usage = "DirectoryByteCount[dir] returns the byte count for directory 'dir'";
 DirectorySize::usage = "DirectorySize[dir] returns the byte count for 'dir' as a quantity";
 ToStringFileName::usage = "ToStringFileName[file] rewrites file as a classical string filename";
@@ -85,52 +86,18 @@ NextToLast::usage = "NextToLast[expr] gives Part[expr,-2]";
 Ultimate::usage = "Ultimate[expr] gives Part[expr,-1]";
 Penultimate::usage = "Penultimate[expr] gives Part[expr,-2]";
 Antepenultimate::usage = "Antepenultimate[expr] gives Part[expr,-3]";
-
 ElapsedTime::usage = "ElapsedTime[unit,expr] evaluates 'expr' and returns the elapsed time in the specified unit";
-
 CreateNotebookIndex::usage = "CreateNotebookIndex[] creates a SearchIndexObject of all notebooks located in $InstallationDirectory";
 QuickSearch::usage = "QuickSearch[] provides a quick interactive way to search all notebooks under $InstallationDirectory. You need to run CreateNotebookIndex[] once before using this function";
+
 Begin["`Private`"];
 
 (* general extensions *)
 
 InformationDataset[pattern_] :=  Dataset[Association[ Map[ Function[ # -> ToExpression[# <> "::usage"] ],  Names[pattern]]]];
 
-(* file extensions *)
-
-$InputDirectoryName := DirectoryName[$InputFileName];
-
-ImportFiles[ files_List, a___ ] := Map[ Function[ Import[ #, a ] ], files ];
-
-ImportDirectory[ dir_ /; DirectoryQ[dir], patt_:True ] := Module[{files},
-  files = Select[ FileNames["*",dir], Function[ TrueQ[patt] || StringMatchQ[ #, patt ] ] ];
-  ImportFiles[ files ]
-  ];
-
-GetFiles[ files_List ] := Map[ Get, files ];
-
-DirectoryByteCount = Internal`DirectoryByteCount;
-
-DirectorySize[ dir_ /; DirectoryQ[dir] ] := Quantity[ DirectoryByteCount[dir], "Bytes" ];
-
-ToStringFileName[file_] := FileNameJoin[DeleteCases[FileNameSplit[file], "file:" | ""]];
-
-URLHash[url : (_String | _URL), args___] := Module[{file, result},
-  file = CreateTemporary[];
-  URLDownload[url, file];
-  result = FileHash[file, args];
-  DeleteFile[file];
-  result
-  ];
-
-$ExtensionToFormat = GroupBy[MapAt[StringDrop[#, 1] &, System`ConvertersDump`$extensionMappings, {All, 1}], First, #[[All, 2]] &];
-
-$FormatToExtension = GroupBy[Reverse /@ MapAt[StringDrop[#, 1] &, System`ConvertersDump`$extensionMappings, {All, 1}], First, #[[All, 2]] &];
-
-SystemStringOpen[s_?StringQ] := With[ {filename = FileNameJoin[{$TemporaryDirectory, CreateUUID[] <> First[$FormatToExtension[StringFormat[s]]] } ]},
-    WriteString[filename, s];
-    SystemOpen[File[filename]]
-  ];
+(* load dataset prototype functions *)
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Files.wl"}] ];
 
 
 (* animations *)

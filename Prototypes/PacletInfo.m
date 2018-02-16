@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.1.0",
+  Version -> "0.1.1",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Extensions -> {
@@ -14,6 +14,7 @@ Paclet[
      "Prototypes`ImportFiles",
      "Prototypes`ImportDirectory",
      "Prototypes`GetFiles",
+     "Prototypes`DirectoryFileList",
      "Prototypes`DirectoryByteCount",
      "Prototypes`DirectorySize",
      "Prototypes`ToStringFileName",
