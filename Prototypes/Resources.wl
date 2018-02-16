@@ -22,3 +22,10 @@ ResourceObjectDataset[resources_] := Dataset[
     resources
   ]
 ];
+
+
+DeletePersistentObjects[] := Module[{objects},
+  objects = PersistentObjects[All, #] & /@ {"KernelSession", "FrontEndSession", "Notebook", "Local", "LocalShared", "Cloud"};
+  PrintTemporary["Found: " <> ToString[Length[Flatten[objects]]] <> " persistent objects"];
+  Map[Map[DeleteObject, #] &, objects];
+];

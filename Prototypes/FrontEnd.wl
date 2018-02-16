@@ -46,6 +46,14 @@ QuickSearch[] := DynamicModule[{index, input = "", result = ConstantArray["",5],
   }]
 ]
 
+ClickToCopy[expr_] := DynamicModule[{},
+  Button[
+   Framed[Row[{" ", icon, " ", expr}, Alignment -> Top],
+    FrameMargins -> None,
+    RoundingRadius -> 1,
+    FrameStyle -> {Thickness[0.45], Dashed, GrayLevel[0.8]}],
+   CopyToClipboard[expr], Appearance -> "Frameless"]]
+   
 
 BoxSyntaxQ[boxes_,form_:StandardForm] := Not[MatchQ[MakeExpression[boxes, form],_ErrorBox]]
 
