@@ -46,6 +46,9 @@ QuickSearch[] := DynamicModule[{index, input = "", result = ConstantArray["",5],
   }]
 ]
 
+file = FileNameJoin[{ $InputDirectoryName, "icons", "click-to-copy.png" }];
+icon = Import[ file, "PNG" ];
+
 ClickToCopy[expr_] := DynamicModule[{},
   Button[
    Framed[Row[{" ", icon, " ", expr}, Alignment -> Top],
@@ -53,7 +56,7 @@ ClickToCopy[expr_] := DynamicModule[{},
     RoundingRadius -> 1,
     FrameStyle -> {Thickness[0.45], Dashed, GrayLevel[0.8]}],
    CopyToClipboard[expr], Appearance -> "Frameless"]]
-   
+
 
 BoxSyntaxQ[boxes_,form_:StandardForm] := Not[MatchQ[MakeExpression[boxes, form],_ErrorBox]]
 
