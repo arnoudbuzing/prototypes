@@ -1,13 +1,13 @@
-ExpressionServer[host_IPAddress,port_String] := ExpressionServer[First[host],port];
+EvaluationServer[host_IPAddress,port_String] := EvaluationServer[First[host],port];
 
-ExpressionServer[host_String,port_] := Module[{ socket, listener },
+EvaluationServer[host_String,port_] := Module[{ socket, listener },
   socket = SocketOpen[ {host,port} ];
   listener = SocketListen[ socket,
     Function[{assoc},
       Module[{client,data,request,line,input,expr,result,len},
         {client,data}=Lookup[assoc,{"SourceSocket","Data"}];
         request=ImportString[data,"HTTPRequest"];
-        input="q"/.request["Query"];
+        input=StringTrim[request["Body"]];
         If[
           input=="favicon.ico"
           ,

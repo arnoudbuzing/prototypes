@@ -62,7 +62,7 @@ BoxSyntaxQ[boxes_,form_:StandardForm] := Not[MatchQ[MakeExpression[boxes, form],
 
 
 (* Set some better options for the notebook interface *)
-SetOptions[ $FrontEnd, SpellingOptions->{"MaxSuggestions"->10}]
+SetOptions[ $FrontEnd, SpellingOptions->{"AutoSpellCheckDelay" -> 0, "AutoSpellCheckPopupDelay" -> 0,"MaxSuggestions"->10}]
 
 
 

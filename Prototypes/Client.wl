@@ -1,8 +1,9 @@
-Attributes[ExpressionEvaluate]={HoldAllComplete};
+Attributes[EvaluationRequest2]={HoldAllComplete};
 
-ExpressionEvaluate[host_,port_,expr_] := Module[{query, request,response,result},
+EvaluationRequest[host_,port_,expr_] := Module[{query, request,response,result},
   query = MakeString[expr];
-  request = HTTPRequest[ URLBuild[<|"Scheme" -> "http", "Domain" -> host, "Port" -> port, "Query" -> {"q"->query}|>] ];
+  url = URLBuild[<|"Scheme" -> "http", "Domain" -> host, "Port" -> port |>];
+  request = HTTPRequest[ url, <| Method -> "POST", "Body" -> query |> ];
   response = URLRead[request];
   result = response["Body"];
   result
