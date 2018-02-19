@@ -60,6 +60,12 @@ ClickToCopy[expr_] := DynamicModule[{},
 
 BoxSyntaxQ[boxes_,form_:StandardForm] := Not[MatchQ[MakeExpression[boxes, form],_ErrorBox]]
 
+
+(* Set some better options for the notebook interface *)
+SetOptions[ $FrontEnd, SpellingOptions->{"MaxSuggestions"->10}]
+
+
+
 (*
 
 CreatePalette[
