@@ -1,4 +1,4 @@
-Blockchain is Copyright (C) 2017, Wolfram Research, Inc.
+Prototypes is Copyright (C) 2017, Wolfram Research, Inc.
 
 ---
 
