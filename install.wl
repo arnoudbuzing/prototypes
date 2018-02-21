@@ -2,7 +2,7 @@ Print[];
 
 (* uninstall old paclets first *)
 paclets = PacletFind["Prototypes"];
-Print["Found the following old paclets: ", Map[ #["Location"]&, paclets]];
+Print["Found the following old paclets (uninstalling): ", Map[ #["Location"]&, paclets]];
 Map[ PacletUninstall, paclets ];
 
 (* install new version *)

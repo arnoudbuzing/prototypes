@@ -33,6 +33,5 @@ $BuildInfo := "Kernel:\n\tSystem id - " <> SystemInformation["Kernel", "SystemID
 "\n\tCreation date - " <> TextString[SystemInformation["FrontEnd", "CreationDate"]];
 
 BuildInfo[] := Module[ {},
-  CopyToClipboard[$BuildInfo];
-  Button[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}],CopyToClipboard[$BuildInfo]]
+  ClickToCopy[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}], $BuildInfo ]
   ];

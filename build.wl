@@ -1,8 +1,9 @@
-Print[$InputFileName];
+Print[];
 directory = DirectoryName[$InputFileName];
-Print[directory];
+Print["Using directory: ", directory];
 files = FileNames["*.paclet", directory];
-Print[files];
+Print["Found paclets (to be deleted): ", files];
 DeleteFile /@ files;
+Print["Building new paclet"];
 paclet = PackPaclet[FileNameJoin[{directory, "Prototypes"}]];
-Print[paclet];
+Print["New paclet: ", paclet];
