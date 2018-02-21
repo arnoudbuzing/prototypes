@@ -1,7 +1,15 @@
+Print[];
+
+(* uninstall old paclets first *)
+paclets = PacletFind["Prototypes"];
+Print["Found the following old paclets: ", Map[ #["Location"]&, paclets]];
+Map[ PacletUninstall, paclets ];
+
+(* install new version *)
 directory = DirectoryName[$InputFileName];
-Print[directory];
+Print["Using directory: ", directory];
 files = FileNames["*.paclet", directory];
-Print[files];
-paclet = First @ files;
-Print[paclet];
+Print["Paclet file(s) found: ", files];
+paclet = Last @ Sort @ files;
+Print["Selecting paclet: ",paclet];
 PacletInstall[paclet, IgnoreVersion -> True];
