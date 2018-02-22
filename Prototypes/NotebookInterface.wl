@@ -55,7 +55,7 @@ ClickToCopy[expr_] := ClickToCopy[expr,expr];
 ClickToCopy[expr1_,expr2_] := DynamicModule[{},
   Button[
    Framed[Row[{" ", icon, " ", expr1}, Alignment -> Top],
-    FrameMargins -> None,
+    FrameMargins -> 2,
     RoundingRadius -> 1,
     FrameStyle -> {Thickness[0.45], Dashed, GrayLevel[0.8]}],
    CopyToClipboard[expr2], Appearance -> "Frameless"]]

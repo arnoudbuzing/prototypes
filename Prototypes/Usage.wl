@@ -63,6 +63,7 @@ DockButton::usage = "DockButton[name] represents a button that can be added to t
 $DockButtons::usage = "$DockButtons is a list of defined dock buttons";
 (* server *)
 EvaluationServer::usage = "EvaluationServer[host,port] starts a Wolfram expression server on host:port";
+EvaluationServerObject::usage = "EvaluationServerObject[...] is the object for the given evaluation server";
 EvaluationRequest::usage = "EvaluationRequest[host,port,expr] evaluates 'expr' on the kernel listening at host:port";
 (* resources *)
 $LocalResourceObjects::usage = "$LocalResourceObjects gives the current local resource objects on your machine";

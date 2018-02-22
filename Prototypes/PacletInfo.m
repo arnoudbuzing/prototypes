@@ -7,7 +7,7 @@ Paclet[
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Extensions -> {
-   { "Documentation", Language -> "English"},
+   { "Documentation", MainPage -> "Guides/Prototypes", Language -> "English"},
    { "Kernel",
    Symbols -> {
      "Prototypes`InformationDataset",
@@ -62,6 +62,7 @@ Paclet[
      "Prototypes`DockButton",
      "Prototypes`$DockButtons",
      "Prototypes`EvaluationServer",
+     "Prototypes`EvaluationServerObject",
      "Prototypes`EvaluationRequest",
      "Prototypes`$LocalResourceObjects",
      "Prototypes`ResourceObjectManager",
