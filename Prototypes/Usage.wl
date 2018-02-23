@@ -37,6 +37,7 @@ StringFirst::usage = "StringFirst[string] returns the first character of 'string
 StringLast::usage = "StringLast[string] returns the last character of 'string'";
 StringRest::usage = "StringRest[string] returns string with the first character removed";
 StringMost::usage = "StringMost[string] returns string with the last character removed";
+$UUIDStringPattern::usage = "$UUIDStringPattern will StringMatchQ a valid UUID";
 (* geographics *)
 RandomGeoPosition::usage = "RandomGeoPosition[] picks a random geo position";
 (* image processing *)
