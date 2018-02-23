@@ -64,6 +64,20 @@ ClickToCopy[expr1_,expr2_] := DynamicModule[{},
 BoxSyntaxQ[boxes_,form_:StandardForm] := Not[MatchQ[MakeExpression[boxes, form],_ErrorBox]]
 
 
+
+Attributes[CopyAsBitmap] = {HoldAllComplete};
+CopyAsBitmap[expr_] := Module[{nb},
+  nb = CreateDocument[ExpressionCell[Defer[expr], "Input"],
+    Visible -> True,
+    WindowMargins -> {{-10000, Automatic}, {Automatic, -10000}}];
+  SelectionMove[nb, All, Notebook];
+  FrontEndExecute[
+   FrontEndToken[InputNotebook[], "CopySpecial", "MGF"]];
+  NotebookClose[nb];
+  ]
+
+
+
 (* Set some better options for the notebook interface *)
 SetOptions[ $FrontEnd, SpellingOptions->{"AutoSpellCheckDelay" -> 0, "AutoSpellCheckPopupDelay" -> 0,"MaxSuggestions"->10}]
 

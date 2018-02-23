@@ -52,6 +52,7 @@ AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an al
 Uniconize::usage = "Uniconize[icon] turns IconizedObject icon and returns the associated expression";
 BoxSyntaxQ::usage = "BoxSyntaxQ[boxes] returns True if the gives boxes can be transformed into an expression without errors, and False otherwise";
 ClickToCopy::usage = "ClickToCopy[expr] gives a button which puts 'expr' on the clipboard when clicked";
+CopyAsBitmap::usage = "CopyAsBitmap[expr] copies 'expr' as a bitmap";
 (* paclet build utilities *)
 PacletInformationDataset::usage = "PacletInformationDataset[paclet] returns paclet information as a dataset";
 (* github utilities *)

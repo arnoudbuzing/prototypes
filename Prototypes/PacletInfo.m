@@ -28,7 +28,7 @@ Paclet[
      "Prototypes`Fourth", "Prototypes`Fifth", "Prototypes`Sixth", "Prototypes`Seventh",
      "Prototypes`Eighth", "Prototypes`Ninth", "Prototypes`Tenth", "Prototypes`NextToLast",
      "Prototypes`Ultimate", "Prototypes`Penultimate", "Prototypes`Antepenultimate", "Prototypes`ElapsedTime",
-     "Prototypes`CreateNotebookIndex", "Prototypes`QuickSearch"
+     "Prototypes`CreateNotebookIndex", "Prototypes`QuickSearch", "Prototypes`CopyAsBitmap"
      },
      Context -> {"Prototypes`"} }
   }
