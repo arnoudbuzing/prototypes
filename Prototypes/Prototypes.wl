@@ -6,14 +6,13 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Usage.wl"}] ];
 
 Begin["`Private`"];
 
-files = {"Build.wl", "Client.wl", "Dataset.wl", "Dock.wl", "Files.wl",
+Module[ {files},
+  files = {"Build.wl", "Client.wl", "Dataset.wl", "Dock.wl", "Files.wl",
 "Image.wl", "Language.wl", "Notebook.wl", "Paclet.wl",
 "Resources.wl", "Search.wl", "Server.wl", "String.wl"};
+  Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], #}] ] &, files ];
+];
 
-Map[
-  Get[ FileNameJoin[{DirectoryName[$InputFileName], #}] ] &,
-  files
-]
 End[];
 
 EndPackage[];
