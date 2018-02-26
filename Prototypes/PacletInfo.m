@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.1.4",
+  Version -> "0.1.5",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Extensions -> {
@@ -45,7 +45,8 @@ Paclet[
 "Prototypes`VarianceBy", "Prototypes`$BuildInfo",
 "Prototypes`$DockButtons", "Prototypes`$ExtensionToFormat",
 "Prototypes`$FormatToExtension", "Prototypes`$InputDirectoryName",
-"Prototypes`$LocalResourceObjects", "Prototypes`$UUIDStringPattern"},
+"Prototypes`$LocalResourceObjects", "Prototypes`$UUIDStringPattern",
+"Prototypes`RGBColor255"},
      Context -> {"Prototypes`"} }
   }
 ]

@@ -41,6 +41,8 @@ CapitalizeSentences::usage = "CapitalizeSentences[string] capitalizes sentences 
 $UUIDStringPattern::usage = "$UUIDStringPattern will StringMatchQ a valid UUID";
 (* geographics *)
 RandomGeoPosition::usage = "RandomGeoPosition[] picks a random geo position";
+(* color *)
+RGBColor255::usage = "RGBColor[r,g,b] specifies color using RGB values from the range 0-255";
 (* image processing *)
 ImageStrictlyPortraitQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is less than the image height";
 ImagePortraitQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image width is less than or equal to the image height";
