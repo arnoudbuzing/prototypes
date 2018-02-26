@@ -1,3 +1,9 @@
+If[
+  Head[$FrontEnd] === FrontEndObject
+  ,
+
+
+
 (* add Alt-' keyboard shortcut to insert matching parentheses into a notebook *)
 
 FrontEndExecute[
@@ -9,7 +15,7 @@ FrontEndExecute[
       Placeholder]; NotebookDelete[EvaluationNotebook[]]],
     MenuEvaluator -> "System",
     Global`MenuKey["'", Global`Modifiers -> {"Command"}]
-    ]}]]
+    ]}]];
 
 (* Alt-/ shortcut to insert matching comment delimiters in a notebook *)
 
@@ -20,7 +26,7 @@ FrontEndExecute[
        NotebookWrite[EvaluationNotebook[], "(* \[Placeholder] *)",
         Placeholder]; NotebookDelete[EvaluationNotebook[]]],
       MenuEvaluator -> "System",
-      Global`MenuKey["/", Global`Modifiers -> {"Command"}]]}]]
+      Global`MenuKey["/", Global`Modifiers -> {"Command"}]]}]];
 
 
 QuickSearch[] := DynamicModule[{index, input = "", result = ConstantArray["",5], type},
@@ -44,7 +50,7 @@ QuickSearch[] := DynamicModule[{index, input = "", result = ConstantArray["",5],
       Column[result]
     ]]
   }]
-]
+];
 
 file = FileNameJoin[{ $InputDirectoryName, "icons", "click-to-copy.png" }];
 icon = Import[ file, "PNG" ];
@@ -58,10 +64,10 @@ ClickToCopy[expr1_,expr2_] := DynamicModule[{},
     FrameMargins -> 2,
     RoundingRadius -> 1,
     FrameStyle -> {Thickness[0.45], Dashed, GrayLevel[0.8]}],
-   CopyToClipboard[expr2], Appearance -> "Frameless"]]
+   CopyToClipboard[expr2], Appearance -> "Frameless"]];
 
 
-BoxSyntaxQ[boxes_,form_:StandardForm] := Not[MatchQ[MakeExpression[boxes, form],_ErrorBox]]
+BoxSyntaxQ[boxes_,form_:StandardForm] := Not[MatchQ[MakeExpression[boxes, form],_ErrorBox]];
 
 
 
@@ -74,14 +80,14 @@ CopyAsBitmap[expr_] := Module[{nb},
   FrontEndExecute[
    FrontEndToken[InputNotebook[], "CopySpecial", "MGF"]];
   NotebookClose[nb];
-  ]
+  ];
 
 
 
 (* Set some better options for the notebook interface *)
-SetOptions[ $FrontEnd, SpellingOptions->{"AutoSpellCheckDelay" -> 0, "AutoSpellCheckPopupDelay" -> 0,"MaxSuggestions"->10}]
+SetOptions[ $FrontEnd, SpellingOptions->{"AutoSpellCheckDelay" -> 0, "AutoSpellCheckPopupDelay" -> 0,"MaxSuggestions"->10}];
 
-
+]
 
 (*
 
