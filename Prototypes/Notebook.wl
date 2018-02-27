@@ -89,6 +89,17 @@ SetOptions[ $FrontEnd, SpellingOptions->{"AutoSpellCheckDelay" -> 0, "AutoSpellC
 
 ]
 
+(*)
+
+DocumentWrite[nb_NotebookObject, e_ExpressionCell] := Module[{cell},
+  cell = First[ToBoxes[e]];
+  NotebookWrite[nb, cell]
+]
+
+*)
+
+
+
 (*
 
 CreatePalette[

@@ -1,7 +1,7 @@
 (* strings *)
 
 Attributes[MakeString] = {HoldAllComplete};
-MakeString[e_] := ToString[HoldForm[e]]
+MakeString[e_] := ToString[Unevaluated[e],InputForm]
 
 StringFirst[string_String] := StringTake[string,1]
 
@@ -20,4 +20,4 @@ $UUIDStringPattern =
   Repeated[HexadecimalCharacter, 12];
 
 
-CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, TextSentences[string]]]  
+CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, TextSentences[string]]]
