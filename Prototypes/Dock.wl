@@ -6,7 +6,7 @@ CreateDockButton[ assoc_Association ] := Module[{db},
   db
 ]
 
-Map[
+buttons := Map[
   CreateDockButton,
   {
     <|
@@ -32,13 +32,13 @@ Map[
       "Icon" -> Import[FileNameJoin[{ $InputDirectoryName, "icons", "github.png" }]] ,
       "Action" :> SystemOpen["https://github.com/arnoudbuzing/prototypes"],
       "Tooltip" -> "Open Prototypes Repository"
-    |>,
+    |>
   }
 ]
 
-CreateDock[] := CreateDock[ $DockButtons ];
+CreateDock[] := (Once[buttons]; CreateDock[ $DockButtons ]);
 
-CreateDock[ buttons_ ] := SetOptions[ $FrontEndSession , DockedCells -> {Cell[ BoxData@ToBoxes@Row[buttons], "Text",CellFrameMargins -> 0, CellMargins -> 0]}]
+CreateDock[ buttons_ ] := (Once[buttons]; SetOptions[ $FrontEndSession , DockedCells -> {Cell[ BoxData@ToBoxes@Row[buttons], "Text",CellFrameMargins -> 0, CellMargins -> 0]}]);
 
 (*
 

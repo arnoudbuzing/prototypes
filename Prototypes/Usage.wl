@@ -67,6 +67,10 @@ BuildInfo::usage = "BuildInfo[] copies build information to the clipboard and re
 DockButton::usage = "DockButton[name] represents a button that can be added to the Prototype dock";
 $DockButtons::usage = "$DockButtons is a list of defined dock buttons";
 CreateDock::usage = "CreateDock[] adds a dock with useful buttons to your notebook session";
+CreateDockButton::usage = "CreateDockButton[ assoc ] creates a new dock button from association 'assoc' and add it to $DockButtons";
+(* support *)
+CrashDumps::usage = "CrashDumps[] returns the list of crash dumps in $CrashDumpsDirectory. CrashDumps[dir] returns the list of crash dumps in directory 'dir'";
+ReportCrashDump::usage = "ReportCrashDump[assoc] emails a crash report to support@wolfram.com, using association 'assoc'";
 (* server *)
 EvaluationServer::usage = "EvaluationServer[host,port] starts a Wolfram expression server on host:port";
 EvaluationServerObject::usage = "EvaluationServerObject[...] is the object for the given evaluation server";
@@ -78,9 +82,10 @@ ResourceObjectDataset::usage = "ResourceObjectDataset[objects] gives resource 'o
 DeletePersistentObjects::usage = "DeletePersistentObjects[] locates and permanently deletes all persistent objects on your local file system (this can not be undone)";
 (* shortcut directory names *)
 $AppDataDirectory::usage = "$AppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData";
-$LocalAppDataDirectory::usage = "$AppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData\\Local";
-$RoamingAppDataDirectory::usage = "$AppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData\\Roaming";
-$CrashDumpsDirectory::usage = "$AppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData\\Local\\CrashDumps";
+$LocalAppDataDirectory::usage = "$LocalAppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData\\Local";
+$RoamingAppDataDirectory::usage = "$RoamingAppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData\\Roaming";
+$CrashDumpsDirectory::usage = "$CrashDumpsDirectory points to the crash dump directory for your operating system";
+$DiagnosticReportsDirectory::usage = "$DiagnosticReportsDirectory (MacOSX only) typically points to $HomeDirectory/Library/Logs/DiagnosticReports";
 (* ordinal parts *)
 Second::usage = "Second[expr] gives Part[expr,2]";
 Third::usage = "Third[expr] gives Part[expr,3]";
