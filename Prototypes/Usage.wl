@@ -66,6 +66,7 @@ BuildInfo::usage = "BuildInfo[] copies build information to the clipboard and re
 (* dock *)
 DockButton::usage = "DockButton[name] represents a button that can be added to the Prototype dock";
 $DockButtons::usage = "$DockButtons is a list of defined dock buttons";
+CreateDock::usage = "CreateDock[] adds a dock with useful buttons to your notebook session";
 (* server *)
 EvaluationServer::usage = "EvaluationServer[host,port] starts a Wolfram expression server on host:port";
 EvaluationServerObject::usage = "EvaluationServerObject[...] is the object for the given evaluation server";
@@ -75,6 +76,11 @@ $LocalResourceObjects::usage = "$LocalResourceObjects gives the current local re
 ResourceObjectManager::usage = "ResourceObjectManager[objects] gives an interface to manage resource objects";
 ResourceObjectDataset::usage = "ResourceObjectDataset[objects] gives resource 'objects' as a dataset";
 DeletePersistentObjects::usage = "DeletePersistentObjects[] locates and permanently deletes all persistent objects on your local file system (this can not be undone)";
+(* shortcut directory names *)
+$AppDataDirectory::usage = "$AppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData";
+$LocalAppDataDirectory::usage = "$AppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData\\Local";
+$RoamingAppDataDirectory::usage = "$AppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData\\Roaming";
+$CrashDumpsDirectory::usage = "$AppDataDirectory (Windows only) typically points to $HomeDirectory\\AppData\\Local\\CrashDumps";
 (* ordinal parts *)
 Second::usage = "Second[expr] gives Part[expr,2]";
 Third::usage = "Third[expr] gives Part[expr,3]";

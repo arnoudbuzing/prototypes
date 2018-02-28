@@ -1,8 +1,3 @@
-If[
-  Head[$FrontEnd] === FrontEndObject
-  ,
-
-
 
 (* add Alt-' keyboard shortcut to insert matching parentheses into a notebook *)
 
@@ -87,7 +82,7 @@ CopyAsBitmap[expr_] := Module[{nb},
 (* Set some better options for the notebook interface *)
 SetOptions[ $FrontEnd, SpellingOptions->{"AutoSpellCheckDelay" -> 0, "AutoSpellCheckPopupDelay" -> 0,"MaxSuggestions"->10}];
 
-]
+
 
 (*)
 

@@ -35,3 +35,10 @@ SystemStringOpen[s_?StringQ] := With[ {filename = FileNameJoin[{$TemporaryDirect
   ];
 
 DirectoryFileList[dir_] := FileNames["*",ToStringFileName[dir],Infinity];
+
+If[ $SystemID === "Windows-x86-64",
+  $AppDataDirectory = FileNameJoin[{$HomeDirectory, "AppData"}];
+  $LocalAppDataDirectory = FileNameJoin[{$AppDataDirectory, "Local"}];
+  $RoamingAppDataDirectory = FileNameJoin[{$AppDataDirectory, "Roaming"}];
+  $CrashDumpsDirectory = FileNameJoin[{$LocalAppDataDirectory,"CrashDumps"}];
+]

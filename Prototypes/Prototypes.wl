@@ -7,10 +7,19 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Usage.wl"}] ];
 Begin["`Private`"];
 
 Module[ {files},
-  files = {"Build.wl", "Client.wl", "Dataset.wl", "Dock.wl", "Files.wl",
-"Image.wl", "Language.wl", "Notebook.wl", "Paclet.wl",
-"Resources.wl", "Search.wl", "Server.wl", "String.wl", "Color.wl"};
+
+  (* load in any session *)
+  files = {"Build.wl", "Client.wl", "Dataset.wl", "Files.wl",
+  "Image.wl", "Language.wl", "Paclet.wl",
+  "Resources.wl", "Search.wl", "Server.wl", "String.wl", "Color.wl"};
   Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], #}] ] &, files ];
+
+  (* only load in a notebook session *)
+  If[ Head[$FrontEnd] === FrontEndObject,
+    files = {"Dock.wl","Notebook.wl"};
+    Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], #}] ] &, files ];
+  ]
+
 ];
 
 End[];

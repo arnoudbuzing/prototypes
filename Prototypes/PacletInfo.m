@@ -46,7 +46,10 @@ Paclet[
 "Prototypes`$DockButtons", "Prototypes`$ExtensionToFormat",
 "Prototypes`$FormatToExtension", "Prototypes`$InputDirectoryName",
 "Prototypes`$LocalResourceObjects", "Prototypes`$UUIDStringPattern",
-"Prototypes`RGBColor255"},
+"Prototypes`RGBColor255", "Prototypes`$AppDataDirectory", "Prototypes`$LocalAppDataDirectory",
+"Prototypes`$RoamingAppDataDirectory", "Prototypes`$CrashDumpsDirectory",
+"Prototypes`DockButton", "Prototypes`$DockButtons", "Prototypes`CreateDock"
+},
      Context -> {"Prototypes`"} }
   }
 ]
