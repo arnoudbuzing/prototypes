@@ -12,13 +12,15 @@ CrashDumps[] := CrashDumps[ $CrashDumpsDirectory ];
 CrashDumps[ directory_ ] := FileNames[ $CrashDumpPattern, directory ];
 
 
-ReportCrashDump[ assoc_Association ] := Module[{},
+ReportCrashDump[ assoc_Association ] := Module[{attached={}},
+  If[ StringQ[assoc["Notebook"]] && FileType[assoc["Notebook"]]===File, AppendTo[attached,assoc["Notebook"]] ];
+  If[ StringQ[assoc["CrashDump"]] && FileType[assoc["CrashDump"]]===File, AppendTo[attached,assoc["CrashDump"]] ];
   SendMail[
  <|
   "To" -> assoc["Recipient"],
   "Subject" -> "Crash report",
   "TextBody" -> assoc["Message"] <> "\n\n\n" <> $BuildInfo,
-  "AttachedFiles" -> {assoc["Notebook"], assoc["CrashDump"]}
+  "AttachedFiles" -> attached
   |>
  ]
 ]

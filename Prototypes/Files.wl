@@ -44,6 +44,6 @@ If[ $SystemID === "Windows-x86-64",
 ]
 
 If[ $SystemID === "MacOSX-x86-64",
-  $CrashDumpsDirectory = FileNameJoin[{$$HomeDirectory,"Library","Logs","DiagnosticReports"}];
+  $CrashDumpsDirectory = FileNameJoin[{$HomeDirectory,"Library","Logs","DiagnosticReports"}];
   $DiagnosticReportsDirectory = $CrashDumpsDirectory;
 ]
