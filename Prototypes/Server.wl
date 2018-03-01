@@ -8,9 +8,10 @@ EvaluationServer[host_String,port_] := Module[{ socket, listener },
     Function[{assoc},
       Module[{client,data,request,response,line,input,expr,result,len},
         {client,data}=Lookup[assoc,{"SourceSocket","Data"}];
-        Print["Request from: ", First[client["SourceIPAddress"]]];
+        Print["\nRequest from: ", First[client["SourceIPAddress"]]];
         request=ImportString[data,"HTTPRequest"];
         input=StringTrim[request["Body"]];
+        Print["Evaluation request: ",input];
         If[
           input=="favicon.ico"
           ,
