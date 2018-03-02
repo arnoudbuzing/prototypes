@@ -21,10 +21,17 @@ EvaluationServer[host_String,port_] := Module[{ socket, listener },
           ,
           (* the normal case *)
           expr=ToExpression[input];
+          result=BinarySerialize[expr];
+          len=Length[result];
+          response=ExportString[HTTPResponse[result,<|"StatusCode"->200,"ContentType"->"application/octet-stream","Headers"->{"Content-Length"->len}|>],"HTTPResponse"];
+          WriteString[client,response];
+          (*
+          expr=ToExpression[input];
           result=ToString[expr];
           len=ToString[StringLength[result]];
           response = ExportString[ HTTPResponse[ ToCharacterCode[result,"UTF8"], <| "StatusCode"->200, "ContentType"->"text/plain;charset=utf-8", "Headers" ->{"Content-Length"->len} |> ], "HTTPResponse" ];
           WriteString[ client, response ];
+          *)
         ];
         Close[client]
       ]
