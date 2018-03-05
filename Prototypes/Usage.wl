@@ -71,10 +71,6 @@ CreateDockButton::usage = "CreateDockButton[ assoc ] creates a new dock button f
 (* support *)
 CrashDumps::usage = "CrashDumps[] returns the list of crash dumps in $CrashDumpsDirectory. CrashDumps[dir] returns the list of crash dumps in directory 'dir'";
 ReportCrashDump::usage = "ReportCrashDump[assoc] emails a crash report to support@wolfram.com, using association 'assoc'";
-(* server *)
-EvaluationServer::usage = "EvaluationServer[host,port] starts a Wolfram expression server on host:port";
-EvaluationServerObject::usage = "EvaluationServerObject[...] is the object for the given evaluation server";
-EvaluationRequest::usage = "EvaluationRequest[host,port,expr] evaluates 'expr' on the kernel listening at host:port";
 (* resources *)
 $LocalResourceObjects::usage = "$LocalResourceObjects gives the current local resource objects on your machine";
 ResourceObjectManager::usage = "ResourceObjectManager[objects] gives an interface to manage resource objects";
