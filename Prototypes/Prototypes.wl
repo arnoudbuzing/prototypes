@@ -11,7 +11,7 @@ Module[ {files},
   (* load in any session *)
   files = {"Build.wl", "Dataset.wl", "Files.wl",
   "Image.wl", "Language.wl", "Paclet.wl",
-  "Resources.wl", "Search.wl", "String.wl", "Color.wl", "Support.wl"};
+  "Resources.wl", "Search.wl", "String.wl", "Color.wl", "Entities.wl"};
   Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], #}] ] &, files ];
 
   (* only load in a notebook session *)

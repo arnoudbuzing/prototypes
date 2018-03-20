@@ -48,7 +48,7 @@ Paclet[
 "Prototypes`RGBColor255", "Prototypes`$AppDataDirectory", "Prototypes`$LocalAppDataDirectory",
 "Prototypes`$RoamingAppDataDirectory",
 "Prototypes`DockButton", "Prototypes`$DockButtons", "Prototypes`CreateDock",
-"Prototypes`CreateDockButton"
+"Prototypes`CreateDockButton", "Prototypes`EntityPropertiesDataset"
 },
      Context -> {"Prototypes`"} }
   }
