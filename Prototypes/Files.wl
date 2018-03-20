@@ -40,10 +40,4 @@ If[ $SystemID === "Windows-x86-64",
   $AppDataDirectory = FileNameJoin[{$HomeDirectory, "AppData"}];
   $LocalAppDataDirectory = FileNameJoin[{$AppDataDirectory, "Local"}];
   $RoamingAppDataDirectory = FileNameJoin[{$AppDataDirectory, "Roaming"}];
-  $CrashDumpsDirectory = FileNameJoin[{$LocalAppDataDirectory,"CrashDumps"}];
-]
-
-If[ $SystemID === "MacOSX-x86-64",
-  $CrashDumpsDirectory = FileNameJoin[{$HomeDirectory,"Library","Logs","DiagnosticReports"}];
-  $DiagnosticReportsDirectory = $CrashDumpsDirectory;
 ]
