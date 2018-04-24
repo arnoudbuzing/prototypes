@@ -6,6 +6,7 @@ Paclet[
   Version -> "0.2.2",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
+  Thumbnail -> "icons/icon.png",
   Extensions -> {
    { "Documentation", MainPage -> "Guides/Prototypes", Language -> "English"},
    { "Kernel",
