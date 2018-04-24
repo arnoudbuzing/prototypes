@@ -1,6 +1,6 @@
 Print[];
-directory = DirectoryName[$InputFileName];
-Print["Using directory: ", directory];
+directory = DirectoryName[ First @ $ScriptCommandLine ];
+Print["Directory: ", directory];
 files = FileNames["*.paclet", directory];
 Print["Found paclets (to be deleted): ", files];
 DeleteFile /@ files;
