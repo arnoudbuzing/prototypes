@@ -96,3 +96,5 @@ CreateNotebookIndex::usage = "CreateNotebookIndex[] creates a SearchIndexObject 
 QuickSearch::usage = "QuickSearch[] provides a quick interactive way to search all notebooks under $InstallationDirectory. You need to run CreateNotebookIndex[] once before using this function";
 (* entities *)
 EntityPropertiesDataset::usage = "EntityPropertiesDataset[entity] creates a dataset for the supported properties for 'entity'";
+(* wolfram alpha *)
+WolframBeta::usage = "WolframBeta[input] translates 'input' to English, then calls WolframAlpha with the translation";
