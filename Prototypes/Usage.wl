@@ -99,3 +99,4 @@ EntityPropertiesDataset::usage = "EntityPropertiesDataset[entity] creates a data
 (* wolfram alpha *)
 WolframBeta::usage = "WolframBeta[input] translates 'input' to English, then calls WolframAlpha with the translation";
 NotebookTranslate::usage = "NotebookTranslate[nb, lang] translates 'nb' to the specified language 'lang' using TextTranslation";
+FileTranslate::usage = "FileTranslate[file,lang] translates 'file' to the specified langugage 'lang' using TextTranslation";
