@@ -1,5 +1,6 @@
-FileTranslate[ file_String, opts___ ] := Module[ {text},
+FileTranslate[ file:(_String|_File|_URL), opts___ ] := Module[ {text,sentences,translation},
  text = Import[file,"Text"];
- translation = TextTranslation[text,opts];
+ sentences = TextSentences[text];
+ translation = TextTranslation[#,opts]& /@ sentences;
  translation
  ]
