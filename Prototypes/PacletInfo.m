@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.2.3",
+  Version -> "0.2.4",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
@@ -49,7 +49,8 @@ Paclet[
 "Prototypes`RGBColor255", "Prototypes`$AppDataDirectory", "Prototypes`$LocalAppDataDirectory",
 "Prototypes`$RoamingAppDataDirectory",
 "Prototypes`DockButton", "Prototypes`$DockButtons", "Prototypes`CreateDock",
-"Prototypes`CreateDockButton", "Prototypes`EntityPropertiesDataset", "Prototypes`WolframBeta"
+"Prototypes`CreateDockButton", "Prototypes`EntityPropertiesDataset", "Prototypes`WolframBeta",
+"Prototypes`NotebookTranslate"
 },
      Context -> {"Prototypes`"} }
   }

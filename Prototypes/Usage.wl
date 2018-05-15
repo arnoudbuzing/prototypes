@@ -98,3 +98,4 @@ QuickSearch::usage = "QuickSearch[] provides a quick interactive way to search a
 EntityPropertiesDataset::usage = "EntityPropertiesDataset[entity] creates a dataset for the supported properties for 'entity'";
 (* wolfram alpha *)
 WolframBeta::usage = "WolframBeta[input] translates 'input' to English, then calls WolframAlpha with the translation";
+NotebookTranslate::usage = "NotebookTranslate[nb, lang] translates 'nb' to the specified language 'lang' using TextTranslation";

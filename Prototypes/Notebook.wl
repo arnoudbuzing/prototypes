@@ -83,6 +83,16 @@ CopyAsBitmap[expr_] := Module[{nb},
 SetOptions[ $FrontEnd, SpellingOptions->{"AutoSpellCheckDelay" -> 0, "AutoSpellCheckPopupDelay" -> 0,"MaxSuggestions"->10}];
 
 
+NotebookTranslate[nb_NotebookObject, opts___] := Module[{nbe},
+  nbe = NotebookGet[nb];
+  nbe = nbe /.
+    Cell[s_String, args___] :>
+     Cell[TextTranslation[s, opts ], args];
+  NotebookPut[nbe]
+  ]
+
+
+
 
 (*)
 
