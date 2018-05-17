@@ -49,7 +49,7 @@ GeoService = <|
      "http://b.tile.thunderforest.com/outdoors/`1`/`2`/`3`.png",
      "http://c.tile.thunderforest.com/outdoors/`1`/`2`/`3`.png"
      }],
-  "Öpnvkarte" ->
+  "Opnvkarte" ->
    "https://tileserver.memomaps.de/tilegen/`1`/`2`/`3`.png",
   "OpenPtMap" -> "http://www.openptmap.org/tiles/`1`/`2`/`3`.png",
   {"Carto", "Dark"} ->
