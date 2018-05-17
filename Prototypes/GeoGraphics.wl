@@ -74,7 +74,8 @@ GeoService = <|
      "http://a.tiles.openrailwaymap.org/signals/`1`/`2`/`3`.png",
      "http://b.tiles.openrailwaymap.org/signals/`1`/`2`/`3`.png",
      "http://c.tiles.openrailwaymap.org/signals/`1`/`2`/`3`.png"
-     }]
+     }],
+  {"ArcGIS","UnitedStatesTopographical"} -> "https://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer/tile/`1`/`3`/`2`"   
   |>;
 
   GeoService["Properties"] = Keys[GeoService];
