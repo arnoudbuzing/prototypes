@@ -94,6 +94,73 @@ NotebookTranslate[nb_NotebookObject, opts___] := Module[{nbe},
 
 
 
+(* Translation Cell *)
+
+attach[selection_, tag_, label_, function_] := MathLink`CallFrontEnd[
+  With[{buttonfunction = function},
+   FrontEnd`AttachCell[
+    selection,
+    Cell[BoxData[
+      ButtonBox[label, ButtonFunction :> buttonfunction,
+       ButtonData -> tag, Appearance -> Automatic,
+       Evaluator -> Automatic, Method -> "Queued"]], "Text"],
+    {Automatic, {Left, Top}},
+    {Right, Top},
+    "ClosingActions" -> {"EvaluatorQuit"}]]];
+
+
+buttonfunction1 = Function[{source, data},
+      Module[{selection, tag, cell, original, translation, language},
+       tag = data;
+       NotebookLocate[tag];
+       selection = NotebookSelection[];
+       cell = First[Cells[selection]];
+       original = First[NotebookRead[cell]];
+       language = CurrentValue[cell, {TaggingRules, "language"}];
+       SetOptions[cell,
+        TaggingRules -> {"original" -> original, "language" -> language}];
+       translation =
+        TextTranslation[original, "English" -> language,
+         Method -> "Google"];
+       NotebookWrite[cell, Cell[translation, "Text", Options[cell]]];
+       NotebookLocate[tag];
+       selection = First[Cells[NotebookSelection[]]];
+       attach[selection, tag, "Original", buttonfunction2];
+       ]
+]
+
+buttonfunction2 = Function[{source, data},
+  Module[{selection, tag, cell, language, original, translation},
+   tag = data;
+   NotebookLocate[tag];
+   selection = NotebookSelection[];
+   cell = First[Cells[selection]];
+   original = CurrentValue[cell, {TaggingRules, "original"}];
+   language = CurrentValue[cell, {TaggingRules, "language"}];
+   NotebookWrite[cell, Cell[original, "Text", Options[cell]]];
+   NotebookLocate[tag];
+   selection = First[Cells[NotebookSelection[]]];
+   attach[selection, tag, "Translate\n(" <> language <> ")",
+    buttonfunction1];
+   ]
+]
+
+TranslationCell[text_, language_] :=
+ Module[{selection, cell, label, tag},
+  tag = First@StringSplit[CreateUUID[], "-"];
+  cell = Cell[text, "Text", CellTags -> tag,
+    TaggingRules -> {"language" -> language}];
+  CellPrint[cell];
+  NotebookLocate[tag];
+  selection = First[Cells[NotebookSelection[]]];
+  attach[selection, tag, "Translate\n(" <> language <> ")",
+   buttonfunction1];
+  SelectionMove[EvaluationNotebook[], After, Cell];
+]    
+
+
+
+
 (*)
 
 DocumentWrite[nb_NotebookObject, e_ExpressionCell] := Module[{cell},
