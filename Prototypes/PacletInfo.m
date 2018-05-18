@@ -50,7 +50,8 @@ Paclet[
 "Prototypes`$RoamingAppDataDirectory",
 "Prototypes`DockButton", "Prototypes`$DockButtons", "Prototypes`CreateDock",
 "Prototypes`CreateDockButton", "Prototypes`EntityPropertiesDataset", "Prototypes`WolframBeta",
-"Prototypes`NotebookTranslate","Prototypes`FileTranslate", "Prototypes`TranslationCell","Prototypes`GeoService"
+"Prototypes`NotebookTranslate","Prototypes`FileTranslate", "Prototypes`TranslationCell","Prototypes`GeoService",
+"Prototypes`FormatDetect"
 },
      Context -> {"Prototypes`"} }
   }
