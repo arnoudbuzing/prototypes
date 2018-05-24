@@ -53,8 +53,8 @@ Paclet[
 "Prototypes`$FormatToExtension", "Prototypes`$InputDirectoryName",
 "Prototypes`$LocalAppDataDirectory",
 "Prototypes`$LocalResourceObjects",
-"Prototypes`$RoamingAppDataDirectory", 
-"Prototypes`$UUIDStringPattern"},
+"Prototypes`$RoamingAppDataDirectory",
+"Prototypes`$UUIDStringPattern", "Prototypes`LayeredGeoGraphics"},
      Context -> {"Prototypes`"} }
   }
 ]

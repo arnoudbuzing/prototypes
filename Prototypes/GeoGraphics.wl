@@ -1,3 +1,11 @@
+
+LayeredGeoGraphics[primitives_, geoservicelayers_, options___] := Overlay[
+  Map[
+   GeoGraphics[primitives, options, GeoServer -> GeoService[#]] &,
+   geoservicelayers]
+  ]
+
+
 GeoService = <|
   "OpenStreetMap" :> RandomChoice[{
      "http://a.tile.openstreetmap.org/`1`/`2`/`3`.png",
@@ -75,7 +83,7 @@ GeoService = <|
      "http://b.tiles.openrailwaymap.org/signals/`1`/`2`/`3`.png",
      "http://c.tiles.openrailwaymap.org/signals/`1`/`2`/`3`.png"
      }],
-  {"ArcGIS","UnitedStatesTopographical"} -> "https://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer/tile/`1`/`3`/`2`"   
+  {"ArcGIS","UnitedStatesTopographical"} -> "https://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer/tile/`1`/`3`/`2`"
   |>;
 
   GeoService["Properties"] = Keys[GeoService];

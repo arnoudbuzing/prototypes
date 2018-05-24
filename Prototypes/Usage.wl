@@ -103,4 +103,5 @@ FileTranslate::usage = "FileTranslate[file,lang] translates 'file' to the specif
 TranslationCell::usage = "TranslationCell[text,lang] prints a \"Text\" cell containing 'text' with an attached button which lets you toggle between English and language 'lang'";
 (* geographics *)
 GeoService::usage = "GeoService[name] provides GeoServer 'name' for geographical functions. Use GeoService[\"Properties\"] for a list. Use with GeoServer option.";
+LayeredGeoGraphics::usage = "LayeredGeoGraphics[primitives,layers] creates a layered GeoGraphics map for the specified GeoService layers";
 FormatDetect::usage = "FormatDetect[format,data] checks if 'data' (String/List/ByteArray) matches 'format' (PNG/JPG/GIF)";
