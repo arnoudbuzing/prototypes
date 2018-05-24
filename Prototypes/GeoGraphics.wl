@@ -39,14 +39,17 @@ GeoService = <|
      "http://a.tile2.opencyclemap.org/transport/`1`/`2`/`3`.png",
      "http://a.tile2.opencyclemap.org/transport/`1`/`2`/`3`.png"
      }],
-  {"Mapnik", "Grayscale"} ->
-   "https://tiles.wmflabs.org/bw-mapnik/`1`/`2`/`3`.png",
-  {"Mapnik", "LabelFree"} ->
-   "https://tiles.wmflabs.org/osm-no-labels/`1`/`2`/`3`.png",
-  {"Stamen", "Toner"} ->
-   "http://a.tile.stamen.com/toner/`1`/`2`/`3`.png",
-  {"Stamen", "Watercolor"} ->
-   "http://a.tile.stamen.com/watercolor/`1`/`2`/`3`.png",
+
+{"Mapnik", "Grayscale"} -> "https://tiles.wmflabs.org/bw-mapnik/`1`/`2`/`3`.png",
+{"Mapnik", "LabelFree"} -> "https://tiles.wmflabs.org/osm-no-labels/`1`/`2`/`3`.png",
+
+{"Stamen","Attribution", "Terrain"} -> Row[{"Map tiles by ",Hyperlink["Stamen Design","http://maps.stamen.com"],", under ",Hyperlink["CC BY 3.0","https://creativecommons.org/licenses/by/3.0/"], ". Data by ",Hyperlink["OpenStreetMap","http://openstreetmap.org/"],", under ", Hyperlink["ODbL","http://www.openstreetmap.org/copyright"]}],
+{"Stamen", "Terrain"} -> "http://tile.stamen.com/terrain/`1`/`2`/`3`.png",
+{"Stamen","Attribution", "Toner"} -> Row[{"Map tiles by ",Hyperlink["Stamen Design","http://maps.stamen.com"],", under ",Hyperlink["CC BY 3.0","https://creativecommons.org/licenses/by/3.0/"], ". Data by ",Hyperlink["OpenStreetMap","http://openstreetmap.org/"],", under ", Hyperlink["ODbL","http://www.openstreetmap.org/copyright"]}],
+{"Stamen", "Toner"} -> "http://tile.stamen.com/toner/`1`/`2`/`3`.png",
+{"Stamen","Attribution", "Watercolor"} -> Row[{"Map tiles by ",Hyperlink["Stamen Design","http://maps.stamen.com"],", under ",Hyperlink["CC BY 3.0","https://creativecommons.org/licenses/by/3.0/"], ". Data by ",Hyperlink["OpenStreetMap","http://openstreetmap.org/"],", under ", Hyperlink["CC BY SA","http://creativecommons.org/licenses/by-sa/3.0"]}],
+{"Stamen", "Watercolor"} -> "http://tile.stamen.com/watercolor/`1`/`2`/`3`.png",
+
   {"ThunderForest", "Landscape"} :> RandomChoice[{
      "http://a.tile.thunderforest.com/landscape/`1`/`2`/`3`.png",
      "http://b.tile.thunderforest.com/landscape/`1`/`2`/`3`.png",
