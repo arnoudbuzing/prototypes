@@ -9,7 +9,7 @@ Begin["`Private`"];
 Module[ {files},
 
   (* load in any session *)
-  files = {"Build.wl", "Dataset.wl", "Files.wl",
+  files = {"Build.wl", "Dataset.wl", "Files.wl", "Cloud.wl",
   "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl",
   "Resources.wl", "Search.wl", "String.wl", "Color.wl",
   "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl"};

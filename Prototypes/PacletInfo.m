@@ -54,7 +54,8 @@ Paclet[
 "Prototypes`$LocalAppDataDirectory",
 "Prototypes`$LocalResourceObjects",
 "Prototypes`$RoamingAppDataDirectory",
-"Prototypes`$UUIDStringPattern", "Prototypes`LayeredGeoGraphics"},
+"Prototypes`$UUIDStringPattern", "Prototypes`LayeredGeoGraphics",
+"Prototypes`RenderOnlineNotebook","Prototypes`CreateNotebookRenderAPI"},
      Context -> {"Prototypes`"} }
   }
 ]
