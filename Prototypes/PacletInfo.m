@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.2.8",
+  Version -> "0.2.9",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
@@ -55,7 +55,8 @@ Paclet[
 "Prototypes`$LocalResourceObjects",
 "Prototypes`$RoamingAppDataDirectory",
 "Prototypes`$UUIDStringPattern", "Prototypes`LayeredGeoGraphics",
-"Prototypes`RenderOnlineNotebook","Prototypes`CreateNotebookRenderAPI"},
+"Prototypes`RenderOnlineNotebook","Prototypes`CreateNotebookRenderAPI",
+"Prototypes`CaptureFromIPCamera"},
      Context -> {"Prototypes`"} }
   }
 ]

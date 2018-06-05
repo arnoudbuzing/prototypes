@@ -36,3 +36,13 @@ CreateGIFAnimation[
   SetPermissions[object, "Public"];
   object
   ];
+
+
+CaptureFromIPCamera[ffmpeg_String, rtsp_String] := 
+ Module[{tmp, result},
+  tmp = CreateFile[CreateUUID[] <> ".jpg"];
+  RunProcess[{ffmpeg, "-y", "-i", rtsp, "-vframes", "1", tmp}];
+  result = Import[tmp];
+  DeleteFile[tmp];
+  result
+  ]

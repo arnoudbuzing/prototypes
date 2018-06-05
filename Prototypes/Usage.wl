@@ -52,6 +52,7 @@ ImageSquareQ::usage = "ImageStrictlyPortraitQ[image] returns True if the image w
 Image3DCubeQ::usage = "Image3DCubeQ[image] returns True if the image width, height, and depth are all equal";
 ImageCropResize::usage = "ImageCropResize[image, dims] crops and resize an image to the specified dimensions";
 AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an alpha channel";
+CaptureFromIPCamera::usage = "CaptureFromIPCamera[ffmpeg,rtsp] captures a single image from 'rtsp' stream, using external 'ffmpeg' tool";
 (* typesetting *)
 Uniconize::usage = "Uniconize[icon] turns IconizedObject icon and returns the associated expression";
 BoxSyntaxQ::usage = "BoxSyntaxQ[boxes] returns True if the gives boxes can be transformed into an expression without errors, and False otherwise";
