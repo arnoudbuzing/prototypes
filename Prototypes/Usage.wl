@@ -109,3 +109,5 @@ FormatDetect::usage = "FormatDetect[format,data] checks if 'data' (String/List/B
 (* cloud *)
 CreateNotebookRenderAPI::usage = "CreateNotebookRenderAPI[] creates the cloud api functions used by RenderOnlineNotebook";
 RenderOnlineNotebook::usage = "RenderOnlineNotebook[url] reads 'url' and opens a private editable copy";
+(* prototype *)
+Prototype::usage = "Prototype[\"symbol\"] modifies System 'symbol' in a custom way. The modified behavior is printed to the session"
