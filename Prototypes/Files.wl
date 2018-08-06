@@ -41,3 +41,43 @@ If[ $SystemID === "Windows-x86-64",
   $LocalAppDataDirectory = FileNameJoin[{$AppDataDirectory, "Local"}];
   $RoamingAppDataDirectory = FileNameJoin[{$AppDataDirectory, "Roaming"}];
 ]
+
+
+FilePartition[file_String, size_] :=
+ Module[{n, dir, filesize, count, in, uuid, partdir, out, bytes, done},
+  count =
+   If[IntegerQ[size], size,
+    QuantityMagnitude[UnitConvert[size, "Bytes"]]];
+  dir = DirectoryName[file];
+  in = OpenRead[file, BinaryFormat -> True];
+  uuid = CreateUUID[];
+  partdir = CreateDirectory[FileNameJoin[{dir, uuid}]];
+  i = 0;
+  While[Length[bytes = BinaryReadList[in, "Byte", count]] > 0,
+   out = OpenWrite[
+     FileNameJoin[{partdir,
+       "part-" <> IntegerString[(i++), 10, 16] <> ".data"}],
+     BinaryFormat -> True];
+   BinaryWrite[out, bytes, "Byte"];
+   ];
+  Close[out];
+  Close[in];
+  partdir
+  ]
+
+  FileJoin[partdir_String, name_String] :=
+   Module[{parts, dir, file, out, in, bytes},
+    parts = Sort[FileNames["part-*.data", partdir]];
+    dir = DirectoryName[partdir];
+    file = FileNameJoin[{dir, name}];
+    out = OpenWrite[file, BinaryFormat -> True];
+    Map[
+     Function[{f},
+      in = OpenRead[f, BinaryFormat -> True];
+      bytes = BinaryReadList[in, "Byte"];
+      BinaryWrite[out, bytes, "Byte"];
+      Close[in];
+      ], parts];
+    Close[out];
+    file
+    ]

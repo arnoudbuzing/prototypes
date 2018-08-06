@@ -111,3 +111,5 @@ CreateNotebookRenderAPI::usage = "CreateNotebookRenderAPI[] creates the cloud ap
 RenderOnlineNotebook::usage = "RenderOnlineNotebook[url] reads 'url' and opens a private editable copy";
 (* prototype *)
 Prototype::usage = "Prototype[\"symbol\"] modifies System 'symbol' in a custom way. The modified behavior is printed to the session"
+FilePartition::usage = "FilePartition[file,size] partitions 'file' into chunks with the given 'size' and places them in a new directory"
+FileJoin::usage = "FileJoin[dir,file] combines binary part files in 'dir' into a single 'file'"
