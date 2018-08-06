@@ -56,7 +56,8 @@ Paclet[
 "Prototypes`$RoamingAppDataDirectory",
 "Prototypes`$UUIDStringPattern", "Prototypes`LayeredGeoGraphics",
 "Prototypes`RenderOnlineNotebook","Prototypes`CreateNotebookRenderAPI",
-"Prototypes`CaptureFromIPCamera","Prototypes`Prototype", "Prototypes`FilePartition", "Prototypes`FileJoin"},
+"Prototypes`CaptureFromIPCamera","Prototypes`Prototype", "Prototypes`FilePartition", "Prototypes`FileJoin",
+"Prototypes`FilePattern"},
      Context -> {"Prototypes`"} }
   }
 ]

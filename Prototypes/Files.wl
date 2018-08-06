@@ -65,19 +65,28 @@ FilePartition[file_String, size_] :=
   partdir
   ]
 
-  FileJoin[partdir_String, name_String] :=
-   Module[{parts, dir, file, out, in, bytes},
-    parts = Sort[FileNames["part-*.data", partdir]];
-    dir = DirectoryName[partdir];
-    file = FileNameJoin[{dir, name}];
-    out = OpenWrite[file, BinaryFormat -> True];
-    Map[
-     Function[{f},
-      in = OpenRead[f, BinaryFormat -> True];
-      bytes = BinaryReadList[in, "Byte"];
-      BinaryWrite[out, bytes, "Byte"];
-      Close[in];
-      ], parts];
-    Close[out];
-    file
-    ]
+Options[FileJoin] = {FilePattern -> Automatic}
+
+FileJoin[ parts_List, file_String, OptionsPattern[] ] :=  Module[{out, in, bytes},
+out = OpenWrite[file, BinaryFormat -> True];
+Map[
+  Function[{f},
+    in = OpenRead[f, BinaryFormat -> True];
+    bytes = BinaryReadList[in, "Byte"];
+    BinaryWrite[out, bytes, "Byte"];
+    Close[in];
+  ], parts];
+  Close[out];
+  file
+]
+
+
+
+FileJoin[partdir_String, name_String, OptionsPattern[] ] := Module[{parts, dir, file, out, in, bytes,pattern},
+  pattern = OptionValue[FilePattern];
+  If[ pattern === Automatic, pattern = "part-*.data"];
+  parts = Sort[FileNames[pattern, partdir]];
+  dir = DirectoryName[partdir];
+  file = FileNameJoin[{dir, name}];
+  FileJoin[parts,file]
+  ]

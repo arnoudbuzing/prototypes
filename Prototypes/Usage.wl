@@ -113,3 +113,4 @@ RenderOnlineNotebook::usage = "RenderOnlineNotebook[url] reads 'url' and opens a
 Prototype::usage = "Prototype[\"symbol\"] modifies System 'symbol' in a custom way. The modified behavior is printed to the session"
 FilePartition::usage = "FilePartition[file,size] partitions 'file' into chunks with the given 'size' and places them in a new directory"
 FileJoin::usage = "FileJoin[dir,file] combines binary part files in 'dir' into a single 'file'"
+FilePattern::usage = "FilePattern is an option to FileJoin which specifies which files to include"
