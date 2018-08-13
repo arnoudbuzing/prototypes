@@ -21,3 +21,5 @@ $UUIDStringPattern =
 
 
 CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, TextSentences[string]]]
+
+StringFlip[string_String, a_String <-> b_String] :=  StringReplace[string, {a -> b, b -> a}]
