@@ -58,7 +58,8 @@ Paclet[
 "Prototypes`RenderOnlineNotebook","Prototypes`CreateNotebookRenderAPI",
 "Prototypes`CaptureFromIPCamera","Prototypes`Prototype", "Prototypes`FilePartition", "Prototypes`FileJoin",
 "Prototypes`FilePattern", "Prototypes`StringFlip","Prototypes`Antonyms","Prototypes`Synonyms",
-"Prototypes`NounQ", "Prototypes`VerbQ", "Prototypes`AdjectiveQ", "Prototypes`AdverbQ"},
+"Prototypes`NounQ", "Prototypes`VerbQ", "Prototypes`AdjectiveQ",
+"Prototypes`AdverbQ"},
      Context -> {"Prototypes`"} }
   }
 ]
