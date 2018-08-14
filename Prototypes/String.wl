@@ -22,8 +22,11 @@ $UUIDStringPattern =
 
 CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, TextSentences[string]]]
 
-StringSwap[string_String, a_String <-> b_String] :=  If[
-  StringDisjointQ[a,b],
+StringSwap[string_String, a_String <-> b_String] :=  Module[{i1,i2,ok},
+  i1 = Interval /@ StringPosition[string,a];
+  i2 = Interval /@ StringPosition[string,b];
+  ok = SameQ[ {Interval[]}, Union @ Flatten @ Outer[IntervalIntersection,i1,i2]];
+  If[ ok,
   StringReplace[string, {a -> b, b -> a}],
   $Failed (* swapping can be problematic with things like "ab" <-> "bc"; give up on those cases for now *)
   ]
