@@ -38,7 +38,7 @@ StringLast::usage = "StringLast[string] returns the last character of 'string'";
 StringRest::usage = "StringRest[string] returns string with the first character removed";
 StringMost::usage = "StringMost[string] returns string with the last character removed";
 CapitalizeSentences::usage = "CapitalizeSentences[string] capitalizes sentences in the given 'string'";
-StringFlip::usage = "StringFlip[string, a<->b] replaces 'a' with 'b' and 'b' with 'a' in 'string'";
+StringSwap::usage = "StringSwap[string, a<->b] swaps 'a' and 'b' in 'string'";
 $UUIDStringPattern::usage = "$UUIDStringPattern will StringMatchQ a valid UUID";
 (* geographics *)
 RandomGeoPosition::usage = "RandomGeoPosition[] picks a random geo position";

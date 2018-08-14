@@ -57,7 +57,7 @@ Paclet[
 "Prototypes`$UUIDStringPattern", "Prototypes`LayeredGeoGraphics",
 "Prototypes`RenderOnlineNotebook","Prototypes`CreateNotebookRenderAPI",
 "Prototypes`CaptureFromIPCamera","Prototypes`Prototype", "Prototypes`FilePartition", "Prototypes`FileJoin",
-"Prototypes`FilePattern", "Prototypes`StringFlip","Prototypes`Antonyms","Prototypes`Synonyms",
+"Prototypes`FilePattern", "Prototypes`StringSwap","Prototypes`Antonyms","Prototypes`Synonyms",
 "Prototypes`NounQ", "Prototypes`VerbQ", "Prototypes`AdjectiveQ",
 "Prototypes`AdverbQ"},
      Context -> {"Prototypes`"} }
