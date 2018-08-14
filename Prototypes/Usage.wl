@@ -126,3 +126,4 @@ StringComplement::usage = "StringComplement[s1,s2] gives the string containing c
 StringUnion::usage = "StringUnion[s1,s2] gives the string of characters in either 's1' or 's2'";
 StringDisjointQ::usage = "StringDisjointQ[s1,s2] gives True if 's1' and 's2' have no characters in common and False otherwise";
 StringIntersectingQ::usage = "StringIntersectingQ[s1,s2] gives True if 's1' and 's2' have characters in common and False otherwise";
+StringSort::usage = "StringSort[s1] gives a sorted string of the characters in 's1'";

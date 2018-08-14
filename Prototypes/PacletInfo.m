@@ -60,7 +60,7 @@ Paclet[
 "Prototypes`FilePattern", "Prototypes`StringSwap","Prototypes`Antonyms","Prototypes`Synonyms",
 "Prototypes`NounQ", "Prototypes`VerbQ", "Prototypes`AdjectiveQ",
 "Prototypes`AdverbQ", "Prototypes`StringComplement", "Prototypes`StringIntersection", "Prototypes`StringUnion",
-"Prototypes`StringDisjointQ", "Prototypes`StringIntersectingQ"},
+"Prototypes`StringDisjointQ", "Prototypes`StringIntersectingQ", "Prototypes`StringSort"},
      Context -> {"Prototypes`"} }
   }
 ]

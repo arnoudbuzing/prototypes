@@ -28,12 +28,14 @@ StringSwap[string_String, a_String <-> b_String] :=  If[
   $Failed (* swapping can be problematic with things like "ab" <-> "bc"; give up on those cases for now *)
   ]
 
-StringComplement[s1_String, s2_String] := StringJoin@Complement[Characters[s1], Characters[s2]]
+StringComplement[args___String] := StringJoin[Complement @@ Map[Characters, {args}]]
 
-StringIntersection[s1_String, s2_String] := StringJoin@Intersection[Characters[s1], Characters[s2]]
+StringIntersection[args___String] := StringJoin[Intersection @@ Map[Characters, {args}]]
 
-StringUnion[s1_String, s2_String] := StringJoin@Union[Characters[s1], Characters[s2]]
+StringUnion[args___String] := StringJoin[Union @@ Map[Characters, {args}]]
 
 StringDisjointQ[s1_String, s2_String] := DisjointQ[Characters[s1],Characters[s2]]
 
 StringIntersectingQ[s1_String, s2_String] :=IntersectingQ[Characters[s1],Characters[s2]]
+
+StringSort[s1_String] := StringJoin@Sort[Characters[s1]]
