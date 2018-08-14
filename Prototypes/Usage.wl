@@ -111,7 +111,9 @@ FormatDetect::usage = "FormatDetect[format,data] checks if 'data' (String/List/B
 CreateNotebookRenderAPI::usage = "CreateNotebookRenderAPI[] creates the cloud api functions used by RenderOnlineNotebook";
 RenderOnlineNotebook::usage = "RenderOnlineNotebook[url] reads 'url' and opens a private editable copy";
 (* prototype *)
-Prototype::usage = "Prototype[\"symbol\"] modifies System 'symbol' in a custom way. The modified behavior is printed to the session"
-FilePartition::usage = "FilePartition[file,size] partitions 'file' into chunks with the given 'size' and places them in a new directory"
-FileJoin::usage = "FileJoin[dir,file] combines binary part files in 'dir' into a single 'file'"
-FilePattern::usage = "FilePattern is an option to FileJoin which specifies which files to include"
+Prototype::usage = "Prototype[\"symbol\"] modifies System 'symbol' in a custom way. The modified behavior is printed to the session";
+FilePartition::usage = "FilePartition[file,size] partitions 'file' into chunks with the given 'size' and places them in a new directory";
+FileJoin::usage = "FileJoin[dir,file] combines binary part files in 'dir' into a single 'file'";
+FilePattern::usage = "FilePattern is an option to FileJoin which specifies which files to include";
+Antonyms::usage = "Antonyms[word] gives the list of antonyms for 'word'";
+Synonyms::usage = "Synonyms[word] gives the list of synonyms for 'word'";
