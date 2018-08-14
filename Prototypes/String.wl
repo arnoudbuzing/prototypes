@@ -25,7 +25,7 @@ CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, 
 StringSwap[string_String, a_String <-> b_String] :=  If[
   StringDisjointQ[a,b],
   StringReplace[string, {a -> b, b -> a}],
-  $Failed (* swapping can be problematic with things like "ab" <-> "bc"; give up on those cases for now *) 
+  $Failed (* swapping can be problematic with things like "ab" <-> "bc"; give up on those cases for now *)
   ]
 
 StringComplement[s1_String, s2_String] := StringJoin@Complement[Characters[s1], Characters[s2]]
