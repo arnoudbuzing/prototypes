@@ -23,3 +23,9 @@ $UUIDStringPattern =
 CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, TextSentences[string]]]
 
 StringSwap[string_String, a_String <-> b_String] :=  StringReplace[string, {a -> b, b -> a}]
+
+StringComplement[s1_String, s2_String] := StringJoin@Complement[Characters[s1], Characters[s2]]
+
+StringIntersection[s1_String, s2_String] := StringJoin@Intersection[Characters[s1], Characters[s2]]
+
+StringUnion[s1_String, s2_String] := StringJoin@Union[Characters[s1], Characters[s2]]

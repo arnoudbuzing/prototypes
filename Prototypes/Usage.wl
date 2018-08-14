@@ -121,3 +121,6 @@ NounQ::usage = "NounQ[word] gives True if 'word' is a noun and False otherwise";
 VerbQ::usage = "VerbQ[word] gives True if 'word' is a verb and False otherwise";
 AdjectiveQ::usage = "AdjectiveQ[word] gives True if 'word' is an adjective and False otherwise";
 AdverbQ::usage = "AdverbQ[word] gives True if 'word' is an adverb and False otherwise";
+StringIntersection::usage = "StringIntersection[s1,s2] gives a string containing only the characters that are both in 's1' and 's2'";
+StringComplement::usage = "StringComplement[s1,s2] gives the string containing characters in 's1' but not in 's2'";
+StringUnion::usage = "StringUnion[s1,s2] gives the string of characters in either 's1' or 's2'";

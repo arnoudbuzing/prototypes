@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.3.3",
+  Version -> "0.3.4",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
@@ -59,7 +59,7 @@ Paclet[
 "Prototypes`CaptureFromIPCamera","Prototypes`Prototype", "Prototypes`FilePartition", "Prototypes`FileJoin",
 "Prototypes`FilePattern", "Prototypes`StringSwap","Prototypes`Antonyms","Prototypes`Synonyms",
 "Prototypes`NounQ", "Prototypes`VerbQ", "Prototypes`AdjectiveQ",
-"Prototypes`AdverbQ"},
+"Prototypes`AdverbQ", "Prototypes`StringComplement", "Prototypes`StringIntersection", "Prototypes`StringUnion"},
      Context -> {"Prototypes`"} }
   }
 ]
