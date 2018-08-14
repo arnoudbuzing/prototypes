@@ -124,3 +124,5 @@ AdverbQ::usage = "AdverbQ[word] gives True if 'word' is an adverb and False othe
 StringIntersection::usage = "StringIntersection[s1,s2] gives a string containing only the characters that are both in 's1' and 's2'";
 StringComplement::usage = "StringComplement[s1,s2] gives the string containing characters in 's1' but not in 's2'";
 StringUnion::usage = "StringUnion[s1,s2] gives the string of characters in either 's1' or 's2'";
+StringDisjointQ::usage = "StringDisjointQ[s1,s2] gives True if 's1' and 's2' have no characters in common and False otherwise";
+StringIntersectingQ::usage = "StringIntersectingQ[s1,s2] gives True if 's1' and 's2' have charactars in common and False otherwise";

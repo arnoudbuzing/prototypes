@@ -59,7 +59,8 @@ Paclet[
 "Prototypes`CaptureFromIPCamera","Prototypes`Prototype", "Prototypes`FilePartition", "Prototypes`FileJoin",
 "Prototypes`FilePattern", "Prototypes`StringSwap","Prototypes`Antonyms","Prototypes`Synonyms",
 "Prototypes`NounQ", "Prototypes`VerbQ", "Prototypes`AdjectiveQ",
-"Prototypes`AdverbQ", "Prototypes`StringComplement", "Prototypes`StringIntersection", "Prototypes`StringUnion"},
+"Prototypes`AdverbQ", "Prototypes`StringComplement", "Prototypes`StringIntersection", "Prototypes`StringUnion",
+"Prototypes`StringDisjointQ", "Prototypes`StringIntersectingQ"},
      Context -> {"Prototypes`"} }
   }
 ]
