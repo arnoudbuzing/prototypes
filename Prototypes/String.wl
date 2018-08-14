@@ -22,14 +22,19 @@ $UUIDStringPattern =
 
 CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, TextSentences[string]]]
 
+StringSwap::noswap = "Unable to swap, because \"`1`\" and \"`2`\" were found in overlapping positions in \"`3`\".";
+
 StringSwap[string_String, a_String <-> b_String] :=  Module[{i1,i2,ok},
+  If[ Or[Not[StringContainsQ[string,a]],Not[StringContainsQ[string,b]]], Return[string]];
   i1 = Interval /@ StringPosition[string,a];
   i2 = Interval /@ StringPosition[string,b];
   ok = SameQ[ {Interval[]}, Union @ Flatten @ Outer[IntervalIntersection,i1,i2]];
   If[ ok,
   StringReplace[string, {a -> b, b -> a}],
-  $Failed (* swapping can be problematic with things like "ab" <-> "bc"; give up on those cases for now *)
+  Message[ StringSwap::noswap, a,b,string];
+  string (* swapping can be problematic with things like "ab" <-> "bc"; give up on those cases for now *)
   ]
+]
 
 StringComplement[args___String] := StringJoin[Complement @@ Map[Characters, {args}]]
 
