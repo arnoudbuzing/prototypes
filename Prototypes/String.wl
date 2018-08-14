@@ -47,3 +47,6 @@ StringDisjointQ[s1_String, s2_String] := DisjointQ[Characters[s1],Characters[s2]
 StringIntersectingQ[s1_String, s2_String] :=IntersectingQ[Characters[s1],Characters[s2]]
 
 StringSort[s1_String] := StringJoin@Sort[Characters[s1]]
+
+
+(* TODO: StringContainsAll, etc. *)
