@@ -117,3 +117,7 @@ FileJoin::usage = "FileJoin[dir,file] combines binary part files in 'dir' into a
 FilePattern::usage = "FilePattern is an option to FileJoin which specifies which files to include";
 Antonyms::usage = "Antonyms[word] gives the list of antonyms for 'word'";
 Synonyms::usage = "Synonyms[word] gives the list of synonyms for 'word'";
+NounQ::usage = "NounQ[word] gives True if 'word' is a noun and False otherwise";
+VerbQ::usage = "VerbQ[word] gives True if 'word' is a verb and False otherwise";
+AdjectiveQ::usage = "AdjectiveQ[word] gives True if 'word' is an adjective and False otherwise";
+AdverbQ::usage = "AdverbQ[word] gives True if 'word' is an adverb and False otherwise";

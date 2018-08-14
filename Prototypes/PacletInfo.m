@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.3.2",
+  Version -> "0.3.3",
   MathematicaVersion -> "11.2+",
   Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
@@ -57,7 +57,8 @@ Paclet[
 "Prototypes`$UUIDStringPattern", "Prototypes`LayeredGeoGraphics",
 "Prototypes`RenderOnlineNotebook","Prototypes`CreateNotebookRenderAPI",
 "Prototypes`CaptureFromIPCamera","Prototypes`Prototype", "Prototypes`FilePartition", "Prototypes`FileJoin",
-"Prototypes`FilePattern", "Prototypes`StringFlip","Prototypes`Antonyms","Prototypes`Synonyms"},
+"Prototypes`FilePattern", "Prototypes`StringFlip","Prototypes`Antonyms","Prototypes`Synonyms",
+"Prototypes`NounQ", "Prototypes`VerbQ", "Prototypes`AdjectiveQ", "Prototypes`AdverbQ"},
      Context -> {"Prototypes`"} }
   }
 ]
