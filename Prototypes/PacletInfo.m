@@ -3,9 +3,9 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.3.4",
+  Version -> "0.3.5",
   MathematicaVersion -> "11.2+",
-  Loading -> Automatic,
+  Loading -> "Startup",
   Thumbnail -> "icons/icon.png",
   Extensions -> {
    { "Documentation", MainPage -> "Guides/Prototypes", Language -> "English"},
