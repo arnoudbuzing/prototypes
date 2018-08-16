@@ -1,4 +1,5 @@
 PrintTemporary["Loading ",ToString[Length[Names["Prototypes`*"]]], " prototype functions"];
+SetOptions[ $FrontEndSession, Background -> RGBColor[0.92,0.92,0.92]];
 
 BeginPackage["Prototypes`", {"PacletManager`"}];
 
