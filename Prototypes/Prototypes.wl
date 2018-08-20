@@ -1,5 +1,9 @@
-PrintTemporary["Loading ",ToString[Length[Names["Prototypes`*"]]], " prototype functions"];
-SetOptions[ $FrontEndSession, Background -> RGBColor[0.92,0.92,0.92]];
+PrintTemporary["Loading prototype functions ..."];
+
+If[ Head[$FrontEnd] === FrontEndObject,
+  SetOptions[ $FrontEndSession, Background -> RGBColor[0.94,0.94,0.94]];
+  ResourceFunction["SetContextStyle"]["Prototypes`", {Darker[Green, 0.75]}];
+]
 
 BeginPackage["Prototypes`", {"PacletManager`"}];
 
