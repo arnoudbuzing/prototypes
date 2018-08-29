@@ -11,3 +11,5 @@ RandomWikipediaData[] := Module[ {response, topic},
   topic = Last[ FileNameSplit[Association[response["Headers"]]["location"]]];
   WikipediaData[topic]
 ]
+
+RandomRomanNumeral[args___] := RomanNumeral[RandomInteger[args]];

@@ -130,3 +130,4 @@ StringSort::usage = "StringSort[s1] gives a sorted string of the characters in '
 
 (* random *)
 RandomWikipediaData::usage = "RandomWikipediaData[] gives a randomly selected Wikipedia article";
+RandomRomanNumeral::usage = "RandomRomanNumeral[...] gives a random Roman numeral, using the same usage as RandomInteger";

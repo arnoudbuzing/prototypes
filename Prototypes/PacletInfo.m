@@ -65,7 +65,8 @@ Paclet[
 "Prototypes`$LocalAppDataDirectory",
 "Prototypes`$LocalResourceObjects",
 "Prototypes`$RoamingAppDataDirectory",
-"Prototypes`$UUIDStringPattern"},
+"Prototypes`$UUIDStringPattern",
+"Prototypes`RandomRomanNumeral"},
      Context -> {"Prototypes`"} }
   }
 ]
