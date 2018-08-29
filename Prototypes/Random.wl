@@ -4,3 +4,13 @@ RandomRealPoints[list_, n_Integer: 1] :=  Table[Map[RandomReal, list], n]
 
 
 RandomCircle[list_] := Circle[ RandomRealPoints[list] ]
+
+
+RandomWikipediaData::usage = "RandomWikipediaData[] gives a randomly selected Wikipedia article";
+
+(* get a random Wikipedia article *)
+RandomWikipediaData[] := Module[ {response, topic},
+  response = URLRead["https://en.wikipedia.org/wiki/Special:Random", FollowRedirects -> False];
+  topic = Last[ FileNameSplit[Association[response["Headers"]]["location"]]];
+  WikipediaData[topic]
+]
