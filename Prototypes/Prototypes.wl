@@ -12,7 +12,7 @@ If[ Head[$FrontEnd] === FrontEndObject,
 
 BeginPackage["Prototypes`", {"PacletManager`"}];
 
-Get[ FileNameJoin[{DirectoryName[$InputFileName], "Usage.wl"}] ];
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", "Usage.wl"}] ];
 
 Begin["`Private`"];
 
@@ -23,12 +23,12 @@ Module[ {files},
   "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl",
   "Resources.wl", "Search.wl", "String.wl", "System.wl", "Color.wl",
   "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl", "Words.wl", "Packages.wl", "Random.wl"};
-  Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], #}] ] &, files ];
+  Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ] &, files ];
 
   (* only load in a notebook session *)
   If[ Head[$FrontEnd] === FrontEndObject,
     files = {"Dock.wl","Notebook.wl"};
-    Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], #}] ] &, files ];
+    Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ] &, files ];
   ]
 
 ];
