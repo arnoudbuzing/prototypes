@@ -2,10 +2,9 @@ PrintTemporary["Loading prototype functions ..."];
 
 If[ Head[$FrontEnd] === FrontEndObject,
 
-  SetOptions[ $FrontEndSession, Background -> RGBColor[0.94,0.94,0.94]];
+  SetOptions[$FrontEndSession, WindowStatusArea -> "Note: Prototypes` functions loaded"];
 
-  If[ $CloudConnected,
-    ResourceFunction["SetContextStyle"]["Prototypes`", {Darker[Green, 0.75]}];
+  If[ $CloudConnected, ResourceFunction["SetContextStyle"]["Prototypes`", {Darker[Green, 0.75]}];
   ];
 
 ];
