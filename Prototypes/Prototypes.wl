@@ -1,5 +1,4 @@
 PrintTemporary["Loading prototype functions ..."];
-PrintTemporary["Start time (s): ", Prototypes`Private`timing01 = N@SessionTime[] ];
 
 If[ Head[$FrontEnd] === FrontEndObject,
 
@@ -16,6 +15,9 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", "Usage.wl"}] ];
 
 Begin["`Private`"];
 
+timings = <||>;
+AppendTo[ timings, "Start" ->N@SessionTime[] ];
+
 Module[ {files},
 
   (* load in any session *)
@@ -23,23 +25,25 @@ Module[ {files},
   "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl",
   "Resources.wl", "Search.wl", "String.wl", "System.wl", "Color.wl",
   "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl", "Words.wl", "Packages.wl", "Random.wl"};
-  Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ] &, files ];
+  Map[
+    Function[ {file},
+      Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", file}] ];
+      AppendTo[ timings, file -> N@SessionTime[] ];
+      ], files ];
 
-  PrintTemporary["Loaded WL files (s): ", Prototypes`Private`timing02 = N@SessionTime[] ];
 
   (* only load in a notebook session *)
   If[ Head[$FrontEnd] === FrontEndObject,
     files = {"Dock.wl","Notebook.wl"};
-    Map[ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ] &, files ];
+    Map[
+      Function[ {file},
+        Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ];
+        AppendTo[ timings, file -> N@SessionTime[] ];
+        ], files ];
   ];
-
-  PrintTemporary["Loaded UI files (s): ", Prototypes`Private`timing03 = N@SessionTime[] ];
 
 ];
 
 End[];
 
 EndPackage[];
-
-PrintTemporary["End time (s): ", Prototypes`Private`timing04 = N@SessionTime[] ];
-PrintTemporary["Elapsed time (ms): ", Prototypes`Private`totaltiming = Round[ 1000 * (Prototypes`Private`timing04 - Prototypes`Private`timing01) ] ];
