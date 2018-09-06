@@ -20,29 +20,35 @@ AppendTo[ timings, "Start" ->N@SessionTime[] ];
 
 Module[ {files},
 
-  (* load in any session *)
-  files = {"Build.wl", "Dataset.wl", "Files.wl", "Cloud.wl",
-  "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl",
-  "Resources.wl", "Search.wl", "String.wl", "System.wl", "Color.wl",
-  "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl", "Words.wl", "Packages.wl", "Random.wl"};
-  Map[
-    Function[ {file},
-      Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", file}] ];
-      AppendTo[ timings, file -> N@SessionTime[] ];
-      ], files ];
+  If[ Not @ StringQ @ FrontEnd`Private`$KernelName || FrontEnd`Private`KernelName === "Local" ,
 
-
-  (* only load in a notebook session *)
-  If[ Head[$FrontEnd] === FrontEndObject,
-    files = {"Dock.wl","Notebook.wl"};
+    (* load in any session *)
+    files = {"Build.wl", "Dataset.wl", "Files.wl", "Cloud.wl",
+    "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl",
+    "Resources.wl", "Search.wl", "String.wl", "System.wl", "Color.wl",
+    "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl", "Words.wl", "Packages.wl", "Random.wl"};
     Map[
       Function[ {file},
-        Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ];
-        AppendTo[ timings, file -> N@SessionTime[] ];
+        AppendTo[ timings, file<>"-Before" -> N@SessionTime[] ];
+        Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", file}] ];
+        AppendTo[ timings, file<>"-After" -> N@SessionTime[] ];
         ], files ];
-  ];
 
+
+    (* only load in a notebook session *)
+    If[ Head[$FrontEnd] === FrontEndObject,
+      files = {"Dock.wl","Notebook.wl"};
+      Map[
+        Function[ {file},
+          Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ];
+          AppendTo[ timings, file -> N@SessionTime[] ];
+          ], files
+      ];
+    ];
+  ];
 ];
+
+AppendTo[ timings, "End" ->N@SessionTime[] ];
 
 End[];
 
