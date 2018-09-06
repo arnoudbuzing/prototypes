@@ -40,8 +40,9 @@ Module[ {files},
       files = {"Dock.wl","Notebook.wl"};
       Map[
         Function[ {file},
-          Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ];
-          AppendTo[ timings, file -> N@SessionTime[] ];
+          AppendTo[ timings, file<>"-Before" -> N@SessionTime[] ];
+          Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", file}] ];
+          AppendTo[ timings, file<>"-After" -> N@SessionTime[] ];
           ], files
       ];
     ];

@@ -47,7 +47,7 @@ QuickSearch[] := DynamicModule[{index, input = "", result = ConstantArray["",5],
   }]
 ];
 
-file = FileNameJoin[{ $InputDirectoryName, "icons", "click-to-copy.png" }];
+file = FileNameJoin[{ ParentDirectory[$InputDirectoryName], "icons", "click-to-copy.png" }];
 icon = Import[ file, "PNG" ];
 
 
@@ -156,7 +156,7 @@ TranslationCell[text_, language_] :=
   attach[selection, tag, "Translate\n(" <> language <> ")",
    buttonfunction1];
   SelectionMove[EvaluationNotebook[], After, Cell];
-]    
+]
 
 
 
