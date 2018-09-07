@@ -50,14 +50,5 @@ Antepenultimate[expr_] := Part[expr,-3];
 Attributes[ElapsedTime] = {HoldRest};
 ElapsedTime[unit_,expr_] := UnitConvert[ Quantity[First[AbsoluteTiming[expr]], "Seconds"], unit];
 
-(* date *)
 
-(*
-Prototypes::warning = "Warning: Changing function definition for ``.";
-Message[Prototypes::warning,"DateObject"];
-Message[Prototypes::warning,"Quantity"];
-
-Unprotect[DateObject];
-Unprotect[Quantity];
-Round[d_DateObject, q_Quantity] ^:=  DateObject[  Round[AbsoluteTime[d], QuantityMagnitude@UnitConvert[q, "Seconds"]]]
-*)
+Deconstruct[e_] := Level[e, {-1}, Heads -> True]

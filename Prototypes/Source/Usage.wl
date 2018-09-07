@@ -17,6 +17,7 @@ CreateGIFAnimation::usage = "CreateGIFAnimation[name,list] creates a GIF from 'l
 UnmatchQ::usage = "UnmatchQ[expr,form] is the same as Not[MatchQ[expr,form]]";
 (* general language *)
 By::usage = "By[head, data, func] evaluates as head[Map[func,data]]";
+Deconstruct::usage = "Deconstruct[expr] returns the head and arguments of 'expr' as a list; Equivalent to Level[expr,{-1},Heads->True]";
 (* statistics *)
 MeanBy::usage = "MeanBy[data, func] computes the mean of 'data' by using 'func'";
 StandardDeviationBy::usage = "StandardDeviationBy[data, func] computes the standard deviation of 'data' by using 'func'";
