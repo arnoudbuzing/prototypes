@@ -1,5 +1,7 @@
 PrintTemporary["Loading prototype functions ..."];
 
+(*
+
 If[ Head[$FrontEnd] === FrontEndObject,
 
   SetOptions[$FrontEndSession, WindowStatusArea -> "Note: Prototypes` functions loaded"];
@@ -8,6 +10,8 @@ If[ Head[$FrontEnd] === FrontEndObject,
   ];
 
 ];
+
+*)
 
 BeginPackage["Prototypes`", {"PacletManager`"}];
 
