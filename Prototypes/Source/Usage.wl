@@ -132,3 +132,5 @@ StringSort::usage = "StringSort[s1] gives a sorted string of the characters in '
 (* random *)
 RandomWikipediaData::usage = "RandomWikipediaData[] gives a randomly selected Wikipedia article";
 RandomRomanNumeral::usage = "RandomRomanNumeral[...] gives a random Roman numeral, using the same usage as RandomInteger";
+RandomDelete::usage = "RandomDelete[expr,pattern] randomly deletes positions of 'expr' which match 'pattern'";
+RandomPosition::usage = "RandomPosition[expr,pattern] gives a randomly selected position of 'expr' which matches 'pattern'";

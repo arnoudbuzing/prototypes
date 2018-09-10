@@ -13,3 +13,9 @@ RandomWikipediaData[] := Module[ {response, topic},
 ]
 
 RandomRomanNumeral[args___] := RomanNumeral[RandomInteger[args]];
+
+
+
+RandomDelete[expr_, pattern_, opts___] := Delete[expr, RandomChoice[Position[expr, pattern, opts]]]
+
+RandomPosition[expr_, pattern_, opts___] := RandomChoice[Position[expr, pattern, opts]]
