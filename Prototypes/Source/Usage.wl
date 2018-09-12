@@ -134,3 +134,6 @@ RandomWikipediaData::usage = "RandomWikipediaData[] gives a randomly selected Wi
 RandomRomanNumeral::usage = "RandomRomanNumeral[...] gives a random Roman numeral, using the same usage as RandomInteger";
 RandomDelete::usage = "RandomDelete[expr,pattern] randomly deletes positions of 'expr' which match 'pattern'";
 RandomPosition::usage = "RandomPosition[expr,pattern] gives a randomly selected position of 'expr' which matches 'pattern'";
+
+(* Service *)
+What3Words::usage = "What3Words[location] and What3Words[words] use the What3Words service to turn words into geographical locations and vice versa";
