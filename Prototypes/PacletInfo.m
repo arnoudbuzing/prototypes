@@ -8,9 +8,15 @@ Paclet[
   Loading -> "Startup",
   Thumbnail -> "icons/icon.png",
   Extensions -> {
-   { "Documentation", MainPage -> "Guides/Prototypes", Language -> "English"},
-   { "Kernel",
-   Symbols ->{"Prototypes`AdjectiveQ", "Prototypes`AdverbQ",
+    {
+      "Documentation",
+      MainPage -> "Guides/Prototypes",
+      Language -> "English"
+    },
+    {
+      "Kernel",
+      Context -> {"Prototypes`"}
+      Symbols -> { "Prototypes`AdjectiveQ", "Prototypes`AdverbQ",
 "Prototypes`AlphaChannelQ", "Prototypes`Antepenultimate",
 "Prototypes`Antonyms", "Prototypes`BoxSyntaxQ",
 "Prototypes`BuildInfo", "Prototypes`BuildWikiDocumentation",
@@ -68,6 +74,6 @@ Paclet[
 "Prototypes`$UUIDStringPattern",
 "Prototypes`RandomRomanNumeral", "Prototypes`Deconstruct", "Prototypes`RandomDelete",
 "Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes"},
-     Context -> {"Prototypes`"} }
+    }
   }
 ]
