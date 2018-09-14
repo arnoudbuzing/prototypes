@@ -15,7 +15,7 @@ Paclet[
     },
     {
       "Kernel",
-      Context -> {"Prototypes`"}
+      Context -> {"Prototypes`"},
       Symbols -> { "Prototypes`AdjectiveQ", "Prototypes`AdverbQ",
 "Prototypes`AlphaChannelQ", "Prototypes`Antepenultimate",
 "Prototypes`Antonyms", "Prototypes`BoxSyntaxQ",
@@ -73,7 +73,7 @@ Paclet[
 "Prototypes`$RoamingAppDataDirectory",
 "Prototypes`$UUIDStringPattern",
 "Prototypes`RandomRomanNumeral", "Prototypes`Deconstruct", "Prototypes`RandomDelete",
-"Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes"},
+"Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes"}
     }
   }
 ]
