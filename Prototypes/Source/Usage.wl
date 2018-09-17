@@ -143,3 +143,4 @@ $HashTypes::usage = "$HashTypes gives the list of supported hash types";
 
 (* Primes *)
 PrimeCount::usage = "PrimeCount[n] gives the number of primes less than or equal to 'n'. Uses binaries from: https://github.com/kimwalisch/primecount";
+PrimeSum::usage = "PrimeSum[n] gives the sum of primes less than or equal to 'n'. Uses binaries from: https://github.com/kimwalisch/primesum";
