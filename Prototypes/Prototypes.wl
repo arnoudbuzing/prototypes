@@ -19,6 +19,10 @@ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", "Usage.wl"}] ];
 
 Begin["`Private`"];
 
+applicationDataDirectory = FileNameJoin[{$UserBaseDirectory, "ApplicationData", "Prototypes"}];
+
+If[ FileType[applicationDataDirectory] === None, CreateDirectory[applicationDataDirectory] ];
+
 timings = <||>;
 AppendTo[ timings, "Start" ->N@SessionTime[] ];
 

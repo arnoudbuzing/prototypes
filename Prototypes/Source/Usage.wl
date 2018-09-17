@@ -144,3 +144,6 @@ $HashTypes::usage = "$HashTypes gives the list of supported hash types";
 (* Primes *)
 PrimeCount::usage = "PrimeCount[n] gives the number of primes less than or equal to 'n'. Uses binaries from: https://github.com/kimwalisch/primecount";
 PrimeSum::usage = "PrimeSum[n] gives the sum of primes less than or equal to 'n'. Uses binaries from: https://github.com/kimwalisch/primesum";
+
+(* words *)
+$EnglishWords::usage = "$EnglishWords is a list of over 450,000 words found in the English language. Uses data from: https://github.com/dwyl/english-words";
