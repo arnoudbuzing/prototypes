@@ -31,7 +31,7 @@ Module[ {files},
     "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl",
     "Resources.wl", "Search.wl", "String.wl", "System.wl", "Color.wl",
     "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl", "Words.wl", "Packages.wl", "Random.wl",
-    "Cryptography.wl", "Service/What3Words.wl"};
+    "Cryptography.wl", "Service/What3Words.wl", "Primes/Primes.wl"};
     Map[
       Function[ {file},
         AppendTo[ timings, file<>"-Before" -> N@SessionTime[] ];

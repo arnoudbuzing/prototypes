@@ -140,3 +140,6 @@ What3Words::usage = "What3Words[location] and What3Words[words] use the What3Wor
 
 (* Crypto *)
 $HashTypes::usage = "$HashTypes gives the list of supported hash types";
+
+(* Primes *)
+PrimeCount::usage = "PrimeCount[n] gives the number of primes less than or equal to 'n'. Uses binaries from: https://github.com/kimwalisch/primecount";
