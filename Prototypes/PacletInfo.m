@@ -73,7 +73,7 @@ Paclet[
 "Prototypes`$RoamingAppDataDirectory",
 "Prototypes`$UUIDStringPattern",
 "Prototypes`RandomRomanNumeral", "Prototypes`Deconstruct", "Prototypes`RandomDelete",
-"Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes"}
+"Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes", "Prototypes`PrimeCount"}
     }
   }
 ]
