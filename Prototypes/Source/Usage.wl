@@ -137,7 +137,7 @@ RandomPosition::usage = "RandomPosition[expr,pattern] gives a randomly selected 
 
 (* Service *)
 What3Words::usage = "What3Words[location] and What3Words[words] use the What3Words service to turn words into geographical locations and vice versa";
-
+OpenSky::usage = "OpenSky[location,range] gives a map of airplanes within 'range' of 'location'";
 (* Crypto *)
 $HashTypes::usage = "$HashTypes gives the list of supported hash types";
 

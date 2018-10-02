@@ -74,7 +74,7 @@ Paclet[
 "Prototypes`$UUIDStringPattern",
 "Prototypes`RandomRomanNumeral", "Prototypes`Deconstruct", "Prototypes`RandomDelete",
 "Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes",
-"Prototypes`PrimeCount", "Prototypes`PrimeSum", "Prototypes`$EnglishWords"}
+"Prototypes`PrimeCount", "Prototypes`PrimeSum", "Prototypes`$EnglishWords", "Prototypes`OpenSky"}
     }
   }
 ]
