@@ -1,5 +1,5 @@
 plane = Import[ FileNameJoin[ { ParentDirectory[$InputDirectoryName,2], "icons", "plane.png"} ] ];
-plane = Rotate[SetAlphaChannel[plane, ColorNegate@Binarize[plane]], Quantity[90, "Degrees"]];
+plane = SetAlphaChannel[plane, ColorNegate@Binarize[plane]];
 
 
 OpenSky[location_, range_, opts___] := Module[{latlongs, response, result, geopos},
@@ -22,5 +22,5 @@ ProcessFlightInformation[state_] := Module[{
     longitude, latitude, geoAltitude, onGround, velocity, trueTrack,
     verticalRate, sensors, baroAltitude, squawk, spi,
     positionSource} = state;
-  GeoMarker[GeoPosition[{latitude, longitude}], Rotate[plane, Quantity[trueTrack, "Degrees"]]]
+  GeoMarker[GeoPosition[{latitude, longitude}], Rotate[plane, Quantity[-trueTrack, "Degrees"]]]
 ]
