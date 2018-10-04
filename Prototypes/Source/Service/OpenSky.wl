@@ -1,5 +1,4 @@
 plane = Import[ FileNameJoin[ { ParentDirectory[$InputDirectoryName,2], "icons", "plane.png"} ] ];
-plane = SetAlphaChannel[plane, ColorNegate@Binarize[plane]];
 
 
 OpenSky[location_, range_, opts___] := Module[{latlongs, response, result, geopos},
@@ -7,7 +6,7 @@ OpenSky[location_, range_, opts___] := Module[{latlongs, response, result, geopo
   response = URLRead[TemplateApply[ StringTemplate[ "https://opensky-network.org/api/states/all?lamin=`1`&lomin=`2`&lamax=`3`&lomax=`4`"], latlongs]];
   result = ImportString[response["Body"], "RawJSON"];
   geopos = ProcessFlightInformation /@ result["states"];
-  GeoGraphics[geopos, opts]
+  GeoGraphics[geopos, opts, GeoCenter -> location, GeoRange -> range]
 ]
 
 
