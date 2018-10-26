@@ -108,6 +108,8 @@ TranslationCell::usage = "TranslationCell[text,lang] prints a \"Text\" cell cont
 GeoService::usage = "GeoService[name] provides GeoServer 'name' for geographical functions. Use GeoService[\"Properties\"] for a list. Use with GeoServer option.";
 LayeredGeoGraphics::usage = "LayeredGeoGraphics[primitives,layers] creates a layered GeoGraphics map for the specified GeoService layers";
 FormatDetect::usage = "FormatDetect[format,data] checks if 'data' (String/List/ByteArray) matches 'format' (PNG/JPG/GIF)";
+GeoContourMap::usage = "GeoContourMap[location,contours] draws a contour map over a relief map for 'location' using a list of 'contours'";
+
 (* cloud *)
 CreateNotebookRenderAPI::usage = "CreateNotebookRenderAPI[] creates the cloud api functions used by RenderOnlineNotebook";
 RenderOnlineNotebook::usage = "RenderOnlineNotebook[url] reads 'url' and opens a private editable copy";

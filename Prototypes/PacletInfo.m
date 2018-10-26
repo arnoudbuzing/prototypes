@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.4.6",
+  Version -> "0.4.7",
   MathematicaVersion -> "11.2+",
   Loading -> "Startup",
   Thumbnail -> "icons/icon.png",
@@ -71,7 +71,7 @@ Paclet[
 "Prototypes`$LocalAppDataDirectory",
 "Prototypes`$LocalResourceObjects",
 "Prototypes`$RoamingAppDataDirectory",
-"Prototypes`$UUIDStringPattern",
+"Prototypes`$UUIDStringPattern","Prototypes`GeoContourMap",
 "Prototypes`RandomRomanNumeral", "Prototypes`Deconstruct", "Prototypes`RandomDelete",
 "Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes",
 "Prototypes`PrimeCount", "Prototypes`PrimeSum", "Prototypes`$EnglishWords", "Prototypes`OpenSky"}

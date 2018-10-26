@@ -89,4 +89,25 @@ GeoService = <|
   {"ArcGIS","UnitedStatesTopographical"} -> "https://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer/tile/`1`/`3`/`2`"
   |>;
 
-  GeoService["Properties"] = Keys[GeoService];
+GeoService["Properties"] = Keys[GeoService];
+
+
+
+GeoContourMap[input_, contours_List] := Module[{geobounds, reliefmap, projection, geogridrange, 
+   geoelevationdata, contour},
+  geobounds = GeoBounds[input];
+  reliefmap =
+   GeoGraphics[input, GeoBackground -> "ReliefMap", ImageSize -> 800,
+    Frame -> True];
+  projection = GeoProjection /. Options[reliefmap, GeoProjection];
+  geogridrange = GeoGridRange /. Options[reliefmap, GeoGridRange];
+  geoelevationdata =
+   GeoElevationData[GeoProjection -> projection,
+    GeoGridRange -> geogridrange, UnitSystem -> "Imperial"];
+  contour =
+   ListContourPlot[Reverse[geoelevationdata["Magnitudes"]],
+    Contours -> contours, PlotLegends -> Automatic, ImageSize -> 800,
+    ContourShading -> None, DataRange -> geogridrange,
+    AspectRatio -> Automatic, Frame -> True, PlotRangePadding -> None];
+  Show[First[reliefmap], contour]
+  ]

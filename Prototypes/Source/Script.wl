@@ -7,4 +7,4 @@ $ScriptExecutionEnvironment := Module[{checks},
   {False,False,True,False}, "Running in wolframscript.exe",
   {False,False,False,False}, "Running directly from .wls"
  ]
-]
+] 
