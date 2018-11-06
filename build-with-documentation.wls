@@ -11,6 +11,8 @@ CopyDirectory[source, build];
 
 (* build documentation *)
 
+PrependTo[$Path,"D:\\git\\pubs"];
+
 Get["DocumentationBuild`"];
 files = FileNames["*.nb", FileNameJoin[{build, "Documentation"}], Infinity];
 Print["files: ", files];

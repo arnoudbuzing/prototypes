@@ -149,3 +149,5 @@ PrimeSum::usage = "PrimeSum[n] gives the sum of primes less than or equal to 'n'
 
 (* words *)
 $EnglishWords::usage = "$EnglishWords is a list of over 450,000 words found in the English language. Uses data from: https://github.com/dwyl/english-words";
+
+SetAutoStyleOptions::usage = "SetAutoStyleOptions[n] uses ColorData[n] to set syntax coloring styles";
