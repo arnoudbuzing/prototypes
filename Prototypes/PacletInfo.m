@@ -74,7 +74,8 @@ Paclet[
 "Prototypes`$UUIDStringPattern","Prototypes`GeoContourMap",
 "Prototypes`RandomRomanNumeral", "Prototypes`Deconstruct", "Prototypes`RandomDelete",
 "Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes",
-"Prototypes`PrimeCount", "Prototypes`PrimeSum", "Prototypes`$EnglishWords", "Prototypes`OpenSky","Prototypes`SetAutoStyleOptions"}
+"Prototypes`PrimeCount", "Prototypes`PrimeSum", "Prototypes`$EnglishWords", "Prototypes`OpenSky","Prototypes`SetAutoStyleOptions",
+"Prototypes`ExternalInstall", "Prototypes`ExternalUninstall"}
     }
   }
 ]

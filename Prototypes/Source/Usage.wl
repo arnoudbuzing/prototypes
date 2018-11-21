@@ -151,3 +151,7 @@ PrimeSum::usage = "PrimeSum[n] gives the sum of primes less than or equal to 'n'
 $EnglishWords::usage = "$EnglishWords is a list of over 450,000 words found in the English language. Uses data from: https://github.com/dwyl/english-words";
 
 SetAutoStyleOptions::usage = "SetAutoStyleOptions[n] uses ColorData[n] to set syntax coloring styles";
+
+(* external *)
+ExternalInstall::usage = "ExternalInstall[\"Python\", package] installs 'package' for Python using 'pip install'";
+ExternalUninstall::usage = "ExternalUninstall[\"Python\", package] uninstalls 'package' for Python using 'pip uninstall -y'";
