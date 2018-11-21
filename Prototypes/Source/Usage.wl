@@ -153,5 +153,7 @@ $EnglishWords::usage = "$EnglishWords is a list of over 450,000 words found in t
 SetAutoStyleOptions::usage = "SetAutoStyleOptions[n] uses ColorData[n] to set syntax coloring styles";
 
 (* external *)
-ExternalInstall::usage = "ExternalInstall[\"Python\", package] installs 'package' for Python using 'pip install'";
-ExternalUninstall::usage = "ExternalUninstall[\"Python\", package] uninstalls 'package' for Python using 'pip uninstall -y'";
+ExternalInstall::usage = "ExternalInstall[language, package] installs 'package' for 'language' using its default package manager";
+ExternalUninstall::usage = "ExternalUninstall[language, package] uninstalls 'package' for 'language' using its default package manager";
+ExternalPackageList::usage = "ExternalPackageList[language] lists installed packages for 'language'";
+ExternalPackageInformation::usage = "ExternalPackageInformation[language,package] gives information about 'package' for 'language'";

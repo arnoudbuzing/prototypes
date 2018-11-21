@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.4.8",
+  Version -> "0.5.0",
   MathematicaVersion -> "11.2+",
   Loading -> "Startup",
   Thumbnail -> "icons/icon.png",
@@ -75,7 +75,7 @@ Paclet[
 "Prototypes`RandomRomanNumeral", "Prototypes`Deconstruct", "Prototypes`RandomDelete",
 "Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes",
 "Prototypes`PrimeCount", "Prototypes`PrimeSum", "Prototypes`$EnglishWords", "Prototypes`OpenSky","Prototypes`SetAutoStyleOptions",
-"Prototypes`ExternalInstall", "Prototypes`ExternalUninstall"}
+"Prototypes`ExternalInstall", "Prototypes`ExternalUninstall", "ExternalPackageList", "ExternalPackageInformation"}
     }
   }
 ]
