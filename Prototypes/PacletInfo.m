@@ -5,7 +5,7 @@ Paclet[
   Publisher -> "Wolfram Research",
   Version -> "0.5.0",
   MathematicaVersion -> "11.2+",
-  Loading -> "Startup",
+  Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
   Extensions -> {
     {
