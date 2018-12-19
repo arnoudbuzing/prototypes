@@ -1,4 +1,4 @@
-BeginPackage["Prototypes`", {"PacletManager`"}];
+BeginPackage["Prototypes`", {"PacletManager`", "JLink`"}];
 
 Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", "Usage.wl"}] ];
 
@@ -20,7 +20,8 @@ Module[ {files},
     "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl",
     "Resources.wl", "Search.wl", "String.wl", "System.wl", "Color.wl", "Styles.wl",
     "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl", "Words.wl", "Packages.wl", "Random.wl",
-    "Cryptography.wl", "External.wl", "Service/What3Words.wl", "Service/OpenSky.wl", "Primes/Primes.wl"};
+    "Cryptography.wl", "External.wl", "Service/What3Words.wl", "Service/OpenSky.wl", "Primes/Primes.wl",
+    "Java/Runtime.wl"};
     Map[
       Function[ {file},
         AppendTo[ timings, file<>"-Before" -> N@SessionTime[] ];
