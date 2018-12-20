@@ -5,6 +5,5 @@ files = FileNames["*.paclet", directory];
 Print["Found paclets (to be deleted): ", files];
 DeleteFile /@ files;
 Print["Building new paclet"];
-BuildCompilerLibraries[FileNameJoin[{directory,"Prototypes","Source","Compiler"}]];
 paclet = PackPaclet[FileNameJoin[{directory, "Prototypes"}]];
 Print["New paclet: ", paclet];

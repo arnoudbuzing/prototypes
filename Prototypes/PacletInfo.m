@@ -55,7 +55,7 @@ Paclet[
       "Prototypes`$DockButtons","Prototypes`$EnglishWords","Prototypes`$ExtensionToFormat",
       "Prototypes`$FormatToExtension","Prototypes`$HashTypes","Prototypes`$InputDirectoryName",
       "Prototypes`$LocalAppDataDirectory","Prototypes`$LocalResourceObjects",
-      "Prototypes`$RoamingAppDataDirectory","Prototypes`$UUIDStringPattern","Prototypes`Integer64Identity"}
+      "Prototypes`$RoamingAppDataDirectory","Prototypes`$UUIDStringPattern"}
     }
   }
 ]
