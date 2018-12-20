@@ -13,7 +13,7 @@ AppendTo[ timings, "Start" ->N@SessionTime[] ];
 
 Module[ {files},
 
-  If[ Not @ StringQ @ FrontEnd`Private`$KernelName || FrontEnd`Private`KernelName === "Local" ,
+  If[ Not @ StringQ @ FrontEnd`Private`$KernelName || FrontEnd`Private`$KernelName === "Local" ,
 
     (* load in any session *)
     files = {"Build.wl", "Dataset.wl", "Files.wl", "Cloud.wl",
