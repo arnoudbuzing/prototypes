@@ -4,7 +4,7 @@ $PrototypesCompilerDirectory = DirectoryName @ $InputFileName;
 BuildCompilerLibraries[directory_] := Module[ {files,ext},
   ext = <|"Windows-x86-64" -> ".dll", "MacOSX-x86-64" -> ".dylib", "Linux-x86-64" -> ".so"|>;
   files = FileNames[ "*.wl", FileNameJoin[{directory,"Source"}] ];
-  Map[
+  Scan[
     Function[ {file},
       Echo @ file;
       function = Import[ file, "Package" ];
@@ -17,11 +17,10 @@ BuildCompilerLibraries[directory_] := Module[ {files,ext},
 LoadCompilerLibraries[directory_] := Module[{files},
   files = FileNames[ "*.dll", FileNameJoin[{directory,"Libraries",$SystemID}] ];
   Begin["Prototypes`"];
-  Map[
+  Scan[
     Function[{file},
       Echo @ file;
-      With[{n=ToExpression[FileBaseName[file]]},
-        Set[n,LibraryFunctionLoad[file]];
+      With[{n=ToExpression[FileBaseName[file]]}, Set[n,LibraryFunctionLoad[file]];
       ]
     ],
     files
