@@ -76,7 +76,7 @@ Paclet[
 "Prototypes`RandomPosition", "Prototypes`What3Words", "Prototypes`$HashTypes",
 "Prototypes`PrimeCount", "Prototypes`PrimeSum", "Prototypes`$EnglishWords", "Prototypes`OpenSky","Prototypes`SetAutoStyleOptions",
 "Prototypes`ExternalInstall", "Prototypes`ExternalUninstall", "Prototypes`ExternalPackageList", "Prototypes`ExternalPackageInformation",
-"Prototypes`Runtime"}
+"Prototypes`Runtime","Prototypes`BuildCompilerLibraries", "Prototypes`LoadCompilerLibraries"}
     }
   }
 ]
