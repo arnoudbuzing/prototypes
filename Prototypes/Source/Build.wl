@@ -28,9 +28,11 @@ BuildWikiDocumentation[directory_String, context_String] :=
 $BuildInfo := "Kernel:\n\tSystem id - " <> SystemInformation["Kernel", "SystemID"] <>
 "\n\tRelease id - " <> SystemInformation["Kernel", "ReleaseID"] <>
 "\n\tCreation date - " <> TextString[SystemInformation["Kernel", "CreationDate"]] <>
-"\nFrontEnd:\n\tOperating system - " <> SystemInformation["FrontEnd", "OperatingSystem"] <>
-"\n\tRelease id - " <> SystemInformation["FrontEnd", "ReleaseID"] <>
-"\n\tCreation date - " <> TextString[SystemInformation["FrontEnd", "CreationDate"]];
+If[ Head[$FrontEnd]===FrontEndObject,
+ "\nFrontEnd:\n\tOperating system - " <> SystemInformation["FrontEnd", "OperatingSystem"] <>
+ "\n\tRelease id - " <> SystemInformation["FrontEnd", "ReleaseID"] <>
+ "\n\tCreation date - " <> TextString[SystemInformation["FrontEnd", "CreationDate"]],
+ ""];
 
 BuildInfo[] := Module[ {},
   ClickToCopy[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}], $BuildInfo ]
