@@ -44,6 +44,14 @@ Module[ {files},
   ];
 ];
 
+If[
+  $VersionNumber > 11.3,
+  Remove[Prototypes`RandomGeoPosition];
+  Remove[Prototypes`Antonyms];
+  Remove[Prototypes`Synonyms];
+]
+
+
 AppendTo[ timings, "End" ->N@SessionTime[] ];
 
 End[];

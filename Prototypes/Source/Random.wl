@@ -19,3 +19,12 @@ RandomRomanNumeral[args___] := RomanNumeral[RandomInteger[args]];
 RandomDelete[expr_, pattern_, opts___] := Delete[expr, RandomChoice[Position[expr, pattern, opts]]]
 
 RandomPosition[expr_, pattern_, opts___] := RandomChoice[Position[expr, pattern, opts]]
+
+
+(* random extensions *)
+
+(*
+
+RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}];
+
+*)

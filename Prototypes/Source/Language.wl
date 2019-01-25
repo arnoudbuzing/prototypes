@@ -23,11 +23,6 @@ MinBy[ data_, func_ ] := By[ Min, data, func ];
 Rarest[ data_ ] := MinimalBy[Tally[data], Last][[All, 1]];
 RarestBy[ data_, func_ ] := By[ Rarest, data, func];
 
-
-(* random extensions *)
-RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}];
-
-
 (* typesetting *)
 
 Uniconize[icon_IconizedObject] := First[icon];
