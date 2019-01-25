@@ -18,11 +18,4 @@ RandomDelete[expr_, pattern_, opts___] := Delete[expr, RandomChoice[Position[exp
 
 RandomPosition[expr_, pattern_, opts___] := RandomChoice[Position[expr, pattern, opts]]
 
-
-(* random extensions *)
-
-(*
-
 RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}];
-
-*)
