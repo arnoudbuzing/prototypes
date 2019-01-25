@@ -46,9 +46,10 @@ Module[ {files},
 
 If[
   $VersionNumber > 11.3,
-  Remove[Prototypes`RandomGeoPosition];
-  Remove[Prototypes`Antonyms];
-  Remove[Prototypes`Synonyms];
+  (* functions which have become System functions *)
+  Prototypes`RandomGeoPosition=System`RandomGeoPosition;
+  Prototypes`Antonyms=System`Antonyms;
+  Prototypes`Synonyms=System`Synonyms;
 ]
 
 
