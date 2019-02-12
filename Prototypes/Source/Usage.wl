@@ -159,4 +159,10 @@ ExternalPackageList::usage = "ExternalPackageList[language] lists installed pack
 ExternalPackageInformation::usage = "ExternalPackageInformation[language,package] gives information about 'package' for 'language'";
 
 (* *)
-CachedDownload::usage = "CachedDownload[url | urls ] downloads uncached url(s) to a cache location";
+$CacheLocation::usage = "$CacheDirectory is the cache directory for the Prototypes paclet";
+CacheDownload::usage = "CachedDownload[url | urls ] downloads uncached url(s) to a cache location";
+CacheClear::usage = "CacheClear[] clears the Prototypes paclet cache";
+
+GOESAnimate::usage = "GOESAnimate[ assoc ] animates GOES imagery";
+GOESImages::usage = "GOESImage[ assoc ] gives a list of GOES imagery";
+GOESExport::usage = "GOESAnimate[ assoc ] exports GOES imagery";

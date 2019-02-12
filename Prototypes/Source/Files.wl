@@ -92,13 +92,16 @@ FileJoin[partdir_String, name_String, OptionsPattern[] ] := Module[{parts, dir, 
   ]
 
 
-  CachedURLDownload[url : (_String | _URL)] := Module[{parsedUrl, file},
+$CacheDirectory = FileNameJoin[{$TemporaryDirectory,"WolframCache"}];
+
+CacheDownload[url : (_String | _URL)] := Module[{parsedUrl, file},
     parsedUrl = URLParse[url];
-    file = FileNameJoin[{$TemporaryDirectory, "WolframCache",
-       parsedUrl["Domain"], Sequence @@ parsedUrl["Path"]}];
+    file = FileNameJoin[{$CacheDirectory, parsedUrl["Domain"], Sequence @@ parsedUrl["Path"]}];
     If[FileType[file] === None,
      URLDownload[url, file, CreateIntermediateDirectories -> True]];
     file
     ]
 
-  CachedURLDownload[urls_List] := Map[CachedURLDownload, urls]  
+CacheDownload[urls_List] := Map[CacheDownload, urls]
+
+CacheClear[] := DeleteDirectory[$CacheDirectory, DeleteContents->True];

@@ -55,7 +55,9 @@ Paclet[
       "Prototypes`$DockButtons","Prototypes`$EnglishWords","Prototypes`$ExtensionToFormat",
       "Prototypes`$FormatToExtension","Prototypes`$HashTypes","Prototypes`$InputDirectoryName",
       "Prototypes`$LocalAppDataDirectory","Prototypes`$LocalResourceObjects",
-      "Prototypes`$RoamingAppDataDirectory","Prototypes`$UUIDStringPattern","Prototypes`CachedDownload"}
+      "Prototypes`$RoamingAppDataDirectory","Prototypes`$UUIDStringPattern","Prototypes`CacheDownload",
+      "Prototypes`GOESAnimate", "Prototypes`GOESImages" ,"Prototypes`GOESExport", "Prototypes`$CacheDirectory",
+      "Prototypes`CacheClear"}
     }
   }
 ]
