@@ -157,3 +157,6 @@ ExternalInstall::usage = "ExternalInstall[language, package] installs 'package' 
 ExternalUninstall::usage = "ExternalUninstall[language, package] uninstalls 'package' for 'language' using its default package manager";
 ExternalPackageList::usage = "ExternalPackageList[language] lists installed packages for 'language'";
 ExternalPackageInformation::usage = "ExternalPackageInformation[language,package] gives information about 'package' for 'language'";
+
+(* *)
+CachedDownload::usage = "CachedDownload[url | urls ] downloads uncached url(s) to a cache location";

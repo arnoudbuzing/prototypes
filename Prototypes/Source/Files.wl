@@ -90,3 +90,15 @@ FileJoin[partdir_String, name_String, OptionsPattern[] ] := Module[{parts, dir, 
   file = FileNameJoin[{dir, name}];
   FileJoin[parts,file]
   ]
+
+
+  CachedURLDownload[url : (_String | _URL)] := Module[{parsedUrl, file},
+    parsedUrl = URLParse[url];
+    file = FileNameJoin[{$TemporaryDirectory, "WolframCache",
+       parsedUrl["Domain"], Sequence @@ parsedUrl["Path"]}];
+    If[FileType[file] === None,
+     URLDownload[url, file, CreateIntermediateDirectories -> True]];
+    file
+    ]
+
+  CachedURLDownload[urls_List] := Map[CachedURLDownload, urls]  
