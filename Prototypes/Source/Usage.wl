@@ -164,5 +164,6 @@ CacheDownload::usage = "CachedDownload[url | urls ] downloads uncached url(s) to
 CacheClear::usage = "CacheClear[] clears the Prototypes paclet cache";
 
 GOESAnimate::usage = "GOESAnimate[ assoc ] animates GOES imagery";
-GOESImages::usage = "GOESImage[ assoc ] gives a list of GOES imagery";
+GOESImages::usage = "GOESImages[ assoc ] gives a list of GOES imagery for one day";
+SatelliteImage::usage = "SatelliteImage[ assoc ] gives a satellite image as specified by 'assoc'";
 GOESExport::usage = "GOESAnimate[ assoc ] exports GOES imagery";
