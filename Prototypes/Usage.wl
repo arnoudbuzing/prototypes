@@ -55,6 +55,7 @@ Image3DCubeQ::usage = "Image3DCubeQ[image] returns True if the image width, heig
 ImageCropResize::usage = "ImageCropResize[image, dims] crops and resize an image to the specified dimensions";
 AlphaChannelQ::usage = "AlphaChannelQ[image] returns True if the image has an alpha channel";
 CaptureFromIPCamera::usage = "CaptureFromIPCamera[ffmpeg,rtsp] captures a single image from 'rtsp' stream, using external 'ffmpeg' tool";
+PlaceholderImage::usage = "PlaceholderImage[rows,cols] creates a placeholder image of size 'rows' x 'cols'";
 (* typesetting *)
 Uniconize::usage = "Uniconize[icon] turns IconizedObject icon and returns the associated expression";
 BoxSyntaxQ::usage = "BoxSyntaxQ[boxes] returns True if the gives boxes can be transformed into an expression without errors, and False otherwise";
@@ -163,7 +164,5 @@ $CacheLocation::usage = "$CacheDirectory is the cache directory for the Prototyp
 CacheDownload::usage = "CachedDownload[url | urls ] downloads uncached url(s) to a cache location";
 CacheClear::usage = "CacheClear[] clears the Prototypes paclet cache";
 
-GOESAnimate::usage = "GOESAnimate[ assoc ] animates GOES imagery";
-GOESImages::usage = "GOESImages[ assoc ] gives a list of GOES imagery for one day";
 SatelliteImage::usage = "SatelliteImage[ assoc ] gives a satellite image as specified by 'assoc'";
-GOESExport::usage = "GOESAnimate[ assoc ] exports GOES imagery";
+SatelliteImageList::usage = "SatelliteImageList[ assoc ] give a list of satellite image as specified by 'assoc'";

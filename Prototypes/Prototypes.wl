@@ -1,6 +1,6 @@
 BeginPackage["Prototypes`", {"PacletManager`", "JLink`"}];
 
-Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", "Usage.wl"}] ];
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Usage.wl"}] ];
 
 Begin["`Private`"];
 

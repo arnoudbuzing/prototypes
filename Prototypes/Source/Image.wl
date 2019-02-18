@@ -38,7 +38,7 @@ CreateGIFAnimation[
   ];
 
 
-CaptureFromIPCamera[ffmpeg_String, rtsp_String] := 
+CaptureFromIPCamera[ffmpeg_String, rtsp_String] :=
  Module[{tmp, result},
   tmp = CreateFile[CreateUUID[] <> ".jpg"];
   RunProcess[{ffmpeg, "-y", "-i", rtsp, "-vframes", "1", tmp}];
@@ -46,3 +46,12 @@ CaptureFromIPCamera[ffmpeg_String, rtsp_String] :=
   DeleteFile[tmp];
   result
   ]
+
+PlaceholderImage[rows_Integer, cols_Integer] :=
+  ImageCompose[
+    Image[ConstantArray[0.5, {rows, cols}]],
+    Graphics[Text[
+    Style[ToString[rows] <> "x" <> ToString[cols], White,
+     FontFamily -> "Arial", FontSize -> 0.2*Min[{rows, cols}]]]]]
+
+     
