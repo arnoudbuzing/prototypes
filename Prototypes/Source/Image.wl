@@ -47,11 +47,10 @@ CaptureFromIPCamera[ffmpeg_String, rtsp_String] :=
   result
   ]
 
-PlaceholderImage[rows_Integer, cols_Integer] :=
-  ImageCompose[
-    Image[ConstantArray[0.5, {rows, cols}]],
-    Graphics[Text[
-    Style[ToString[rows] <> "x" <> ToString[cols], White,
-     FontFamily -> "Arial", FontSize -> 0.2*Min[{rows, cols}]]]]]
-
-     
+  PlaceholderImage[width_Integer, height_Integer, col_: Gray] :=
+   ImageCompose[
+    ConstantImage[col, {width, height}],
+    Graphics[
+     Text[Style[ToString[width] <> "x" <> ToString[height],
+       ResourceFunction["FontColorFromBackgroundColor"][col],
+       FontFamily -> "Arial", FontSize -> 0.2*Min[{width, height}]]]]]
