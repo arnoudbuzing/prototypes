@@ -57,7 +57,7 @@ Paclet[
       "Prototypes`$LocalAppDataDirectory","Prototypes`$LocalResourceObjects",
       "Prototypes`$RoamingAppDataDirectory","Prototypes`$UUIDStringPattern","Prototypes`CacheDownload",
       "Prototypes`SatelliteImageList", "Prototypes`$CacheDirectory",
-      "Prototypes`CacheClear", "Prototypes`SatelliteImage","Prototypes`PlaceholderImage"}
+      "Prototypes`CacheClear", "Prototypes`SatelliteImage","Prototypes`PlaceholderImage","Prototypes`ResourceFunctionSearch"}
     }
   }
 ]

@@ -29,3 +29,7 @@ DeletePersistentObjects[] := Module[{objects},
   PrintTemporary["Found: " <> ToString[Length[Flatten[objects]]] <> " persistent objects"];
   Map[Map[DeleteObject, #] &, objects];
 ];
+
+ResourceFunctionSearch[form_] :=
+ Normal[ResourceSearch[form][Select[#ResourceType == "Function" &],
+   ResourceFunction[#Name] &]]

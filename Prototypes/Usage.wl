@@ -166,3 +166,5 @@ CacheClear::usage = "CacheClear[] clears the Prototypes paclet cache";
 
 SatelliteImage::usage = "SatelliteImage[ assoc ] gives a satellite image as specified by 'assoc'";
 SatelliteImageList::usage = "SatelliteImageList[ assoc ] give a list of satellite image as specified by 'assoc'";
+
+ResourceFunctionSearch::usage = "ResourceFunctionSearch[query] searches the resource system for resource functions matching 'query'";
