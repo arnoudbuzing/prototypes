@@ -1,37 +1,3 @@
-
-(* add Alt-' keyboard shortcut to insert matching parentheses into a notebook *)
-
-(*
-
-FrontEndExecute[
- FrontEnd`AddMenuCommands["InsertMatchingParentheses",
-  {MenuItem[
-    "Matching \"\"",
-    FrontEndExecute[
-     NotebookWrite[EvaluationNotebook[], "\"\[Placeholder]\"",
-      Placeholder]; NotebookDelete[EvaluationNotebook[]]],
-    MenuEvaluator -> "System",
-    Global`MenuKey["'", Global`Modifiers -> {"Command"}]
-    ]}]];
-
-*)
-
-(* Alt-/ shortcut to insert matching comment delimiters in a notebook *)
-
-(*
-
-FrontEndExecute[
-   FrontEnd`AddMenuCommands[
-    "InsertMatchingParentheses", {MenuItem["Matching (* *)",
-      FrontEndExecute[
-       NotebookWrite[EvaluationNotebook[], "(* \[Placeholder] *)",
-        Placeholder]; NotebookDelete[EvaluationNotebook[]]],
-      MenuEvaluator -> "System",
-      Global`MenuKey["/", Global`Modifiers -> {"Command"}]]}]];
-
-*)
-
-
 QuickSearch[] := DynamicModule[{index, input = "", result = ConstantArray["",5], type},
   index = SearchIndexObject["NotebookIndex"];
   Column[{
@@ -167,9 +133,10 @@ TranslationCell[text_, language_] :=
 ]
 
 
+SetOptions[$FrontEnd, InputAliases -> {"rg" -> "»"}];
 
 
-(*)
+(*
 
 DocumentWrite[nb_NotebookObject, e_ExpressionCell] := Module[{cell},
   cell = First[ToBoxes[e]];

@@ -57,7 +57,9 @@ Paclet[
       "Prototypes`$LocalAppDataDirectory","Prototypes`$LocalResourceObjects",
       "Prototypes`$RoamingAppDataDirectory","Prototypes`$UUIDStringPattern","Prototypes`CacheDownload",
       "Prototypes`SatelliteImageList", "Prototypes`$CacheDirectory",
-      "Prototypes`CacheClear", "Prototypes`SatelliteImage","Prototypes`PlaceholderImage","Prototypes`ResourceFunctionSearch"}
+      "Prototypes`CacheClear", "Prototypes`SatelliteImage","Prototypes`PlaceholderImage","Prototypes`ResourceFunctionSearch",
+      "Prototypes`Redder","Prototypes`Bluer", "Prototypes`Greener", "Prototypes`Yellower", "Prototypes`Oranger",
+      "Prototypes`Pinker", "Prototypes`Purpler", "Prototypes`Blacker", "Prototypes`Grayer", "Prototypes`Whiter"}
     }
   }
 ]

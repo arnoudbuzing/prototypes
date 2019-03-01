@@ -168,3 +168,14 @@ SatelliteImage::usage = "SatelliteImage[ assoc ] gives a satellite image as spec
 SatelliteImageList::usage = "SatelliteImageList[ assoc ] give a list of satellite image as specified by 'assoc'";
 
 ResourceFunctionSearch::usage = "ResourceFunctionSearch[query] searches the resource system for resource functions matching 'query'";
+
+Redder::usage = "Redder[color] makes 'color' a little redder. Redder[color, fraction] makes 'color' redder using 'fraction' and Blend";
+Bluer::usage = "Redder[color] makes 'color' a little bluer. Redder[color, fraction] makes 'color' bluer using 'fraction' and Blend";
+Greener::usage = "Redder[color] makes 'color' a little greener. Redder[color, fraction] makes 'color' greener using 'fraction' and Blend";
+Yellower::usage = "Redder[color] makes 'color' a little yellower. Redder[color, fraction] makes 'color' yellower using 'fraction' and Blend";
+Oranger::usage = "Redder[color] makes 'color' a little oranger. Redder[color, fraction] makes 'color' oranger using 'fraction' and Blend";
+Pinker::usage = "Redder[color] makes 'color' a little pinker. Redder[color, fraction] makes 'color' pinker using 'fraction' and Blend";
+Purpler::usage = "Redder[color] makes 'color' a little purpler. Redder[color, fraction] makes 'color' purpler using 'fraction' and Blend";
+Blacker::usage = "Redder[color] makes 'color' a little blacker. Redder[color, fraction] makes 'color' blacker using 'fraction' and Blend";
+Grayer::usage = "Redder[color] makes 'color' a little grayer. Redder[color, fraction] makes 'color' grayer using 'fraction' and Blend";
+Whiter::usage = "Redder[color] makes 'color' a little whiter. Redder[color, fraction] makes 'color' whiter using 'fraction' and Blend";
