@@ -53,6 +53,15 @@ CopyAsBitmap[expr_] := Module[{nb},
 
 
 
+  AddCodeCompletion[function_String][args___] := Module[{processed},
+    processed = {args} /. {None -> 0, "AbsoluteFileName" -> 2,
+       "RelativeFileName" -> 3, "Color" -> 4, "PackageName" -> 7,
+       "DirectoryName" -> 8, "InterpreterType" -> 9};
+    Function[FE`Evaluate[FEPrivate`AddSpecialArgCompletion[#]]][
+     function -> processed]
+    ]
+
+
 (* Set some better options for the notebook interface *)
 SetOptions[ $FrontEnd, SpellingOptions->{"AutoSpellCheckDelay" -> 0, "AutoSpellCheckPopupDelay" -> 0,"MaxSuggestions"->10}];
 
