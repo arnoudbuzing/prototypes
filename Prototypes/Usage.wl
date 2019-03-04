@@ -179,3 +179,5 @@ Purpler::usage = "Redder[color] makes 'color' a little purpler. Redder[color, fr
 Blacker::usage = "Redder[color] makes 'color' a little blacker. Redder[color, fraction] makes 'color' blacker using 'fraction' and Blend";
 Grayer::usage = "Redder[color] makes 'color' a little grayer. Redder[color, fraction] makes 'color' grayer using 'fraction' and Blend";
 Whiter::usage = "Redder[color] makes 'color' a little whiter. Redder[color, fraction] makes 'color' whiter using 'fraction' and Blend";
+
+AddCodeCompletion::usage = "AddCodeCompletion["function"][arg1, arg2, ...] adds code completions for \"function\" for each given argument";

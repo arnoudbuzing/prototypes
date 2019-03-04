@@ -59,7 +59,8 @@ Paclet[
       "Prototypes`SatelliteImageList", "Prototypes`$CacheDirectory",
       "Prototypes`CacheClear", "Prototypes`SatelliteImage","Prototypes`PlaceholderImage","Prototypes`ResourceFunctionSearch",
       "Prototypes`Redder","Prototypes`Bluer", "Prototypes`Greener", "Prototypes`Yellower", "Prototypes`Oranger",
-      "Prototypes`Pinker", "Prototypes`Purpler", "Prototypes`Blacker", "Prototypes`Grayer", "Prototypes`Whiter"}
+      "Prototypes`Pinker", "Prototypes`Purpler", "Prototypes`Blacker", "Prototypes`Grayer", "Prototypes`Whiter",
+      "Prototypes`AddCodeCompletion"}
     }
   }
 ]
