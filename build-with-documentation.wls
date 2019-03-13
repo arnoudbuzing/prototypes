@@ -2,23 +2,33 @@ PacletUninstall["Prototypes"];
 
 (* copy source files to build directory *)
 
+Print["\n================================================================================"];
+Print["Setting Up Build"];
+Print["================================================================================\n"];
+
+
 source = FileNameJoin[{ DirectoryName[ First @ $ScriptCommandLine ], "Prototypes"}];
-Print["source: ", source];
+Print["Source directory: ", source];
 build = "D:\\output\\Prototypes";
-Print["build: ", build];
+Print["Build directory: ", build];
 DeleteDirectory[build, DeleteContents->True];
 CopyDirectory[source, build];
 
 (* build documentation *)
 
+Print["\n================================================================================"];
+Print["Building Documentation"];
+Print["================================================================================\n"];
+
 PrependTo[$Path,"D:\\git\\pubs"];
 
 Get["DocumentationBuild`"];
 files = FileNames["*.nb", FileNameJoin[{build, "Documentation"}], Infinity];
-Print["files: ", files];
+Print["Number of files: ", Length @ files];
 Scan[
  Function[{file},
   Module[{source},
+   Print["Processing file: ", file];
    source = RenameFile[file, file <> "-source"];
    MakeNotebook[source, "RasterizeOutput" -> False, "outfile" -> file];
    DeleteFile[source];
@@ -27,10 +37,14 @@ Scan[
 
 (* create index *)
 
+Print["\n================================================================================"];
+Print["Index Documentation"];
+Print["================================================================================\n"];
+
 Needs["DocumentationSearch`"];
 
 index = FileNameJoin[{build, "Documentation", "English", "SearchIndex", "2"}];
-Print["index: ", index];
+Print["Indexing: ", index];
 CreateDirectory[index];
 DocumentationSearch`CreateDocumentationIndex[
  files,
@@ -43,9 +57,13 @@ ReinstallJava[]
 
 (* create paclet *)
 
+Print["\n================================================================================"];
+Print["Building Paclets"];
+Print["================================================================================\n"];
+
 DeleteFile /@ FileNames["*.paclet", ParentDirectory[build]];
 paclet = PackPaclet[build];
-Print["paclet: ", paclet];
+Print["Finished paclet: ", paclet];
 
 (* install paclet *)
 
