@@ -1,3 +1,5 @@
+start = SessionTime[];
+
 PacletUninstall["Prototypes"];
 
 (* copy source files to build directory *)
@@ -22,7 +24,8 @@ Print["=========================================================================
 
 PrependTo[$Path,"D:\\git\\pubs"];
 
-Get["DocumentationBuild`"];
+Quiet[ Get["DocumentationBuild`"], {RunProcess::pnfd, StringReplace::strse}];
+
 files = FileNames["*.nb", FileNameJoin[{build, "Documentation"}], Infinity];
 Print["Number of files: ", Length @ files];
 Scan[
@@ -30,7 +33,7 @@ Scan[
   Module[{source},
    Print["Processing file: ", file];
    source = RenameFile[file, file <> "-source"];
-   MakeNotebook[source, "RasterizeOutput" -> False, "outfile" -> file];
+   Quiet[ MakeNotebook[source, "RasterizeOutput" -> False, "outfile" -> file], {ReplaceAll::reps} ];
    DeleteFile[source];
    ]],
  files]
@@ -46,19 +49,22 @@ Needs["DocumentationSearch`"];
 index = FileNameJoin[{build, "Documentation", "English", "SearchIndex", "2"}];
 Print["Indexing: ", index];
 CreateDirectory[index];
-DocumentationSearch`CreateDocumentationIndex[
- files,
- FileNameDrop[index, -1],
- "2",
- OverwriteTarget -> True
- ]
+Quiet[
+  DocumentationSearch`CreateDocumentationIndex[
+    files,
+    FileNameDrop[index, -1],
+    "2",
+    OverwriteTarget -> True
+  ],
+  {CreateSearchIndex::uf}
+]
 
 ReinstallJava[]
 
 (* create paclet *)
 
 Print["\n================================================================================"];
-Print["Building Paclets"];
+Print["Building Paclet"];
 Print["================================================================================\n"];
 
 DeleteFile /@ FileNames["*.paclet", ParentDirectory[build]];
@@ -68,3 +74,6 @@ Print["Finished paclet: ", paclet];
 (* install paclet *)
 
 PacletInstall[paclet,"IgnoreVersion"->True];
+
+Print["\nElapsed time: ", N[ SessionTime[] - start ], " seconds" ];
+
