@@ -145,6 +145,12 @@ TranslationCell[text_, language_] :=
 SetOptions[$FrontEnd, InputAliases -> {"rg" -> "»"}];
 
 
+RasterizeLargeCells[nb_, style_: "Output"] := Module[{},
+  NotebookFind[nb, style, All, CellStyle, AutoScroll -> False];
+  FrontEndTokenExecute[nb, "SelectionConvert", "BitmapConditional"]
+  ]
+  
+
 (*
 
 DocumentWrite[nb_NotebookObject, e_ExpressionCell] := Module[{cell},

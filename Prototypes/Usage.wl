@@ -181,3 +181,5 @@ Grayer::usage = "Redder[color] makes 'color' a little grayer. Redder[color, frac
 Whiter::usage = "Redder[color] makes 'color' a little whiter. Redder[color, fraction] makes 'color' whiter using 'fraction' and Blend";
 
 AddCodeCompletion::usage = "AddCodeCompletion["function"][arg1, arg2, ...] adds code completions for \"function\" for each given argument";
+
+RasterizeLargeCells::usage = "RasterizeLargeCells[nb,style] uses the 'BitmapConditional' frontend token to rasterize large cells with 'style'. If 'style' is omitted large 'Output' cells will be rasterized.";
