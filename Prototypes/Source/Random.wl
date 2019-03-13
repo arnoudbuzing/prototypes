@@ -19,3 +19,8 @@ RandomDelete[expr_, pattern_, opts___] := Delete[expr, RandomChoice[Position[exp
 RandomPosition[expr_, pattern_, opts___] := RandomChoice[Position[expr, pattern, opts]]
 
 RandomGeoPosition[] := GeoPosition[{RandomReal[{-90, 90}], RandomReal[{-180, 180}]}];
+
+RandomDate[] := FromAbsoluteTime[ RandomInteger[{0, Round[AbsoluteTime[Now]]}] ] ;
+
+RandomDate[date1_DateObject, date2_DateObject] := FromAbsoluteTime[
+  RandomInteger[{Round[AbsoluteTime[date1]], Round[AbsoluteTime[date2]]}]]
