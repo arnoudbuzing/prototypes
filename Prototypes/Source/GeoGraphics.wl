@@ -21,6 +21,12 @@ GeoService = <|
      "http://a.tile.openstreetmap.fr/hot/`1`/`2`/`3`.png",
      "http://b.tile.openstreetmap.fr/hot/`1`/`2`/`3`.png"
      }],
+  "OpenTopoMap" :> RandomChoice[{
+    "http://a.tile.opentopomap.org/`1`/`2`/`3`.png",
+    "http://b.tile.opentopomap.org/`1`/`2`/`3`.png",
+    "http://c.tile.opentopomap.org/`1`/`2`/`3`.png"
+  }],
+  {"OpenTopoMap", "Attribution"} -> Row[{"Map tiles by ", Hyperlink["OpenTopoMap","https://wiki.openstreetmap.org/wiki/OpenTopoMap"], " under ", Hyperlink["CC-BY-SA","https://creativecommons.org/licenses/by-sa/2.0/"], "." }],
   "WikiMedia" -> "https://maps.wikimedia.org/osm-intl/`1`/`2`/`3`.png",
   "HikeAndBike" ->
    "http://toolserver.org/tiles/hikebike/`1`/`2`/`3`.png",
@@ -93,7 +99,7 @@ GeoService["Properties"] = Keys[GeoService];
 
 
 
-GeoContourMap[input_, contours_List] := Module[{geobounds, reliefmap, projection, geogridrange, 
+GeoContourMap[input_, contours_List] := Module[{geobounds, reliefmap, projection, geogridrange,
    geoelevationdata, contour},
   geobounds = GeoBounds[input];
   reliefmap =

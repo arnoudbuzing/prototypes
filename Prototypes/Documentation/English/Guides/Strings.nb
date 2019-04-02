@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19967,        494]
-NotebookOptionsPosition[     12930,        355]
-NotebookOutlinePosition[     13827,        380]
-CellTagsIndexPosition[     13784,        377]
+NotebookDataLength[     20557,        514]
+NotebookOptionsPosition[     13209,        367]
+NotebookOutlinePosition[     14106,        392]
+CellTagsIndexPosition[     14063,        389]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -167,6 +167,63 @@ Cell[TextData[ButtonBox["Test Drive",
 
 Cell[TextData[{
  Cell[BoxData[
+  ButtonBox["StringFirst",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Prototypes/ref/StringFirst"]], "InlineGuideFunction",
+  ExpressionUUID->"1b6dd88c-c8e2-4c8c-8a10-92d15f87384c"],
+ " \[LongDash] first character of a string"
+}], "GuideText",
+ CellChangeTimes->{{3.7446414228983874`*^9, 3.7446414414334817`*^9}, {
+  3.7446416336520953`*^9, 3.7446416337011395`*^9}, {3.7446439887222548`*^9, 
+  3.744643990514388*^9}, {3.744644136794812*^9, 3.7446441378901463`*^9}},
+ CellID->203374175,ExpressionUUID->"1e848500-524d-4b4d-a444-6645bbf482ba"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["StringLast",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Prototypes/ref/StringLast"]], "InlineGuideFunction",
+  ExpressionUUID->"3e9253dc-4e5d-4ed9-a022-1f07d2a141b6"],
+ " \[LongDash] give the last character of a string"
+}], "GuideText",
+ CellChangeTimes->{{3.7446414285535793`*^9, 3.744641448057496*^9}, {
+  3.744641643821317*^9, 3.74464164386981*^9}, {3.744643730282152*^9, 
+  3.744643731554347*^9}},
+ CellID->1463276848,ExpressionUUID->"0f56b3e7-0b10-413a-a6de-3c61fc3e3de2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["StringMost",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Prototypes/ref/StringMost"]], "InlineGuideFunction",
+  ExpressionUUID->"b9010720-da9d-4c90-91ab-b8e76b9df4f7"],
+ " \[LongDash] give string with the last character removed "
+}], "GuideText",
+ CellChangeTimes->{{3.7446438222753124`*^9, 3.7446438236594057`*^9}, {
+  3.744643909407441*^9, 3.7446439095035334`*^9}, {3.7446440422903504`*^9, 
+  3.7446440649782863`*^9}},
+ CellID->111894110,ExpressionUUID->"4b19c2c5-630c-48a5-b2ba-0415617a5100"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["StringRest",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Prototypes/ref/StringRest"]], "InlineGuideFunction",
+  ExpressionUUID->"415c0312-d14d-4e0c-ad0a-3307e3dbcf3f"],
+ " \[LongDash] give string with the first character removed"
+}], "GuideText",
+ CellChangeTimes->{{3.7446438260829186`*^9, 3.744643828098765*^9}, {
+  3.744643915817822*^9, 3.7446439159126244`*^9}, {3.744644074010893*^9, 
+  3.74464408140287*^9}},
+ CellID->173117116,ExpressionUUID->"1799127a-5148-4c1d-a4d2-8b04d5ddb804"],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->788205811,ExpressionUUID->"f54451d7-83e5-4dcb-bfea-c80be7692b17"],
+
+Cell[TextData[{
+ Cell[BoxData[
   ButtonBox["StringComplement",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/StringComplement"]], 
@@ -181,30 +238,44 @@ Cell[TextData[{
 
 Cell[TextData[{
  Cell[BoxData[
+  ButtonBox["StringIntersection",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Prototypes/ref/StringIntersection"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "9a65f5d4-a6f9-4b66-9b08-efdabc27a12d"],
+ " \[LongDash] give the common characters of strings"
+}], "GuideText",
+ CellChangeTimes->{{3.7446438152825785`*^9, 3.7446438185952396`*^9}, {
+  3.744643902281073*^9, 3.744643902395673*^9}, {3.7446440155864267`*^9, 
+  3.744644026089839*^9}},
+ CellID->5709922,ExpressionUUID->"6b4a137f-3af2-437a-ab88-7d2380abd7e7"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["StringUnion",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Prototypes/ref/StringUnion"]], "InlineGuideFunction",
+  ExpressionUUID->"e9710456-2bac-4a49-a4fd-3562a4b8699d"],
+ " \[LongDash] give the characters that appear in all strings"
+}], "GuideText",
+ CellChangeTimes->{{3.744643839362846*^9, 3.7446438432110415`*^9}, {
+  3.7446439319933453`*^9, 3.7446439320975738`*^9}, {3.7446441085543733`*^9, 
+  3.74464412972241*^9}},
+ CellID->9576956,ExpressionUUID->"67ffb5d1-8521-432c-9e19-7e71a0225652"],
+
+Cell[TextData[{
+ Cell[BoxData[
   ButtonBox["StringDisjointQ",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/StringDisjointQ"]], 
   "InlineGuideFunction",ExpressionUUID->
-  "96d98940-9544-412d-9b45-90c6a16e103b"],
+  "571d7d3f-7b8e-475e-8104-339afa0d4bb5"],
  " \[LongDash] test if strings are disjoint"
 }], "GuideText",
  CellChangeTimes->{{3.744643801658921*^9, 3.7446438054431524`*^9}, {
   3.744643888267003*^9, 3.7446438883633566`*^9}, {3.7446439616585283`*^9, 
   3.7446439752425733`*^9}},
- CellID->656349074,ExpressionUUID->"12f8217a-ff33-4e41-8b09-e40de691a392"],
-
-Cell[TextData[{
- Cell[BoxData[
-  ButtonBox["StringFirst",
-   BaseStyle->"Link",
-   ButtonData->"paclet:Prototypes/ref/StringFirst"]], "InlineGuideFunction",
-  ExpressionUUID->"7bd6c0ed-2fe2-4290-9069-d985b52dd61c"],
- " \[LongDash] first character of a string"
-}], "GuideText",
- CellChangeTimes->{{3.7446414228983874`*^9, 3.7446414414334817`*^9}, {
-  3.7446416336520953`*^9, 3.7446416337011395`*^9}, {3.7446439887222548`*^9, 
-  3.744643990514388*^9}, {3.744644136794812*^9, 3.7446441378901463`*^9}},
- CellID->203374175,ExpressionUUID->"64c43752-96b2-4b33-9617-27de1b4a0184"],
+ CellID->656349074,ExpressionUUID->"eb3c5997-a826-4a9e-9445-db67c612af37"],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -212,66 +283,19 @@ Cell[TextData[{
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/StringIntersectingQ"]], 
   "InlineGuideFunction",ExpressionUUID->
-  "0368e3fc-eb84-4c75-a733-82918a924855"],
+  "073e6d1e-e530-4a07-bc79-00a6a7ff3e89"],
  " \[LongDash] test if string have common characters"
 }], "GuideText",
  CellChangeTimes->{{3.7446438091788836`*^9, 3.7446438126107244`*^9}, {
   3.7446438948777866`*^9, 3.7446438949874372`*^9}, {3.7446439956985006`*^9, 
   3.7446440092024665`*^9}},
- CellID->528039123,ExpressionUUID->"c1cf7096-8e09-444b-9a84-2d49f0bf11bc"],
+ CellID->528039123,ExpressionUUID->"bdba6065-379e-4c87-bae9-d0db59217044"]
+}, Open  ]],
 
-Cell[TextData[{
- Cell[BoxData[
-  ButtonBox["StringIntersection",
-   BaseStyle->"Link",
-   ButtonData->"paclet:Prototypes/ref/StringIntersection"]], 
-  "InlineGuideFunction",ExpressionUUID->
-  "d1d8307a-1eaf-476a-8d59-aef4064dbf5f"],
- " \[LongDash] give the common characters of strings"
-}], "GuideText",
- CellChangeTimes->{{3.7446438152825785`*^9, 3.7446438185952396`*^9}, {
-  3.744643902281073*^9, 3.744643902395673*^9}, {3.7446440155864267`*^9, 
-  3.744644026089839*^9}},
- CellID->5709922,ExpressionUUID->"91411462-59b7-4586-8a9d-9fcdeb0cd7bd"],
+Cell[CellGroupData[{
 
-Cell[TextData[{
- Cell[BoxData[
-  ButtonBox["StringLast",
-   BaseStyle->"Link",
-   ButtonData->"paclet:Prototypes/ref/StringLast"]], "InlineGuideFunction",
-  ExpressionUUID->"73e4d433-c487-4f1d-b964-7ceddba29721"],
- " \[LongDash] give the last character of a string"
-}], "GuideText",
- CellChangeTimes->{{3.7446414285535793`*^9, 3.744641448057496*^9}, {
-  3.744641643821317*^9, 3.74464164386981*^9}, {3.744643730282152*^9, 
-  3.744643731554347*^9}},
- CellID->1463276848,ExpressionUUID->"ad5501e6-56e9-4ea3-a44b-33570fc93ed3"],
-
-Cell[TextData[{
- Cell[BoxData[
-  ButtonBox["StringMost",
-   BaseStyle->"Link",
-   ButtonData->"paclet:Prototypes/ref/StringMost"]], "InlineGuideFunction",
-  ExpressionUUID->"4642c472-20a8-47f0-bb6e-9ae0529518db"],
- " \[LongDash] give string with the last character removed "
-}], "GuideText",
- CellChangeTimes->{{3.7446438222753124`*^9, 3.7446438236594057`*^9}, {
-  3.744643909407441*^9, 3.7446439095035334`*^9}, {3.7446440422903504`*^9, 
-  3.7446440649782863`*^9}},
- CellID->111894110,ExpressionUUID->"4f699759-368c-4713-833e-e9b03c83610c"],
-
-Cell[TextData[{
- Cell[BoxData[
-  ButtonBox["StringRest",
-   BaseStyle->"Link",
-   ButtonData->"paclet:Prototypes/ref/StringRest"]], "InlineGuideFunction",
-  ExpressionUUID->"8de314b7-704f-46e3-8249-0dbb428c1995"],
- " \[LongDash] give string with the first character removed"
-}], "GuideText",
- CellChangeTimes->{{3.7446438260829186`*^9, 3.744643828098765*^9}, {
-  3.744643915817822*^9, 3.7446439159126244`*^9}, {3.744644074010893*^9, 
-  3.74464408140287*^9}},
- CellID->173117116,ExpressionUUID->"f5c40de0-465c-40f6-98d2-c4b75d3f081c"],
+Cell["\t", "GuideDelimiter",
+ CellID->32755284,ExpressionUUID->"c5211660-0bf1-4684-8fad-f0070c946f20"],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -297,20 +321,8 @@ Cell[TextData[{
  CellChangeTimes->{{3.744643834859372*^9, 3.7446438372912645`*^9}, {
   3.744643926905716*^9, 3.7446439269983044`*^9}, {3.744644098298293*^9, 
   3.744644104642434*^9}},
- CellID->28267636,ExpressionUUID->"4d9abdbf-511f-48f9-8c2c-972b21c8cd96"],
-
-Cell[TextData[{
- Cell[BoxData[
-  ButtonBox["StringUnion",
-   BaseStyle->"Link",
-   ButtonData->"paclet:Prototypes/ref/StringUnion"]], "InlineGuideFunction",
-  ExpressionUUID->"3baa414a-c9d7-4634-bb38-3731365f5c83"],
- " \[LongDash] give the characters that appear in all strings"
-}], "GuideText",
- CellChangeTimes->{{3.744643839362846*^9, 3.7446438432110415`*^9}, {
-  3.7446439319933453`*^9, 3.7446439320975738`*^9}, {3.7446441085543733`*^9, 
-  3.74464412972241*^9}},
- CellID->9576956,ExpressionUUID->"bbc68160-1a48-4bbe-af0f-d23fb9daab3f"]
+ CellID->28267636,ExpressionUUID->"4d9abdbf-511f-48f9-8c2c-972b21c8cd96"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -354,7 +366,7 @@ Cell["Related Links", "GuideRelatedLinksSection",
  CellID->415694148,ExpressionUUID->"45594b4f-2eba-4476-ad05-14c00c017cbc"]
 },
 WindowSize->{700, 770},
-WindowMargins->{{596, Automatic}, {Automatic, 42}},
+WindowMargins->{{596, Automatic}, {Automatic, 81}},
 TaggingRules->{
  "DocuToolsSettingsInternal" -> {
    "$PacletVersion" -> "0.10.2121", "$MVersion" -> "12", "$FlaggedVersion" -> 
@@ -449,52 +461,60 @@ Cell[5288, 159, 180, 2, 19, "GuideMainTutorial",ExpressionUUID->"3df801bc-abce-4
  CellID->1580956551],
 Cell[5471, 163, 162, 2, 19, "GuideTestDrive",ExpressionUUID->"ecd87e16-1e85-4a01-b309-6641a346af0b",
  CellID->321588326],
-Cell[5636, 167, 526, 12, 21, "GuideText",ExpressionUUID->"927b4267-0fdf-4a9e-aba1-75de64ebf9a2",
- CellID->2440883],
-Cell[6165, 181, 535, 12, 21, "GuideText",ExpressionUUID->"12f8217a-ff33-4e41-8b09-e40de691a392",
- CellID->656349074],
-Cell[6703, 195, 573, 11, 21, "GuideText",ExpressionUUID->"64c43752-96b2-4b33-9617-27de1b4a0184",
+Cell[5636, 167, 573, 11, 21, "GuideText",ExpressionUUID->"1e848500-524d-4b4d-a444-6645bbf482ba",
  CellID->203374175],
-Cell[7279, 208, 556, 12, 21, "GuideText",ExpressionUUID->"c1cf7096-8e09-444b-9a84-2d49f0bf11bc",
- CellID->528039123],
-Cell[7838, 222, 546, 12, 21, "GuideText",ExpressionUUID->"91411462-59b7-4586-8a9d-9fcdeb0cd7bd",
- CellID->5709922],
-Cell[8387, 236, 523, 11, 21, "GuideText",ExpressionUUID->"ad5501e6-56e9-4ea3-a44b-33570fc93ed3",
+Cell[6212, 180, 523, 11, 21, "GuideText",ExpressionUUID->"0f56b3e7-0b10-413a-a6de-3c61fc3e3de2",
  CellID->1463276848],
-Cell[8913, 249, 540, 11, 21, "GuideText",ExpressionUUID->"4f699759-368c-4713-833e-e9b03c83610c",
+Cell[6738, 193, 540, 11, 21, "GuideText",ExpressionUUID->"4b19c2c5-630c-48a5-b2ba-0415617a5100",
  CellID->111894110],
-Cell[9456, 262, 533, 11, 21, "GuideText",ExpressionUUID->"f5c40de0-465c-40f6-98d2-c4b75d3f081c",
+Cell[7281, 206, 533, 11, 21, "GuideText",ExpressionUUID->"1799127a-5148-4c1d-a4d2-8b04d5ddb804",
  CellID->173117116],
-Cell[9992, 275, 516, 11, 21, "GuideText",ExpressionUUID->"345e1ef5-3add-4043-85c1-bcba5dbcc26a",
- CellID->297697767],
-Cell[10511, 288, 504, 11, 21, "GuideText",ExpressionUUID->"4d9abdbf-511f-48f9-8c2c-972b21c8cd96",
- CellID->28267636],
-Cell[11018, 301, 539, 11, 21, "GuideText",ExpressionUUID->"bbc68160-1a48-4bbe-af0f-d23fb9daab3f",
- CellID->9576956]
+Cell[CellGroupData[{
+Cell[7839, 221, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"f54451d7-83e5-4dcb-bfea-c80be7692b17",
+ CellID->788205811],
+Cell[7945, 224, 526, 12, 21, "GuideText",ExpressionUUID->"927b4267-0fdf-4a9e-aba1-75de64ebf9a2",
+ CellID->2440883],
+Cell[8474, 238, 546, 12, 21, "GuideText",ExpressionUUID->"6b4a137f-3af2-437a-ab88-7d2380abd7e7",
+ CellID->5709922],
+Cell[9023, 252, 539, 11, 21, "GuideText",ExpressionUUID->"67ffb5d1-8521-432c-9e19-7e71a0225652",
+ CellID->9576956],
+Cell[9565, 265, 535, 12, 21, "GuideText",ExpressionUUID->"eb3c5997-a826-4a9e-9445-db67c612af37",
+ CellID->656349074],
+Cell[10103, 279, 556, 12, 21, "GuideText",ExpressionUUID->"bdba6065-379e-4c87-bae9-d0db59217044",
+ CellID->528039123]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11594, 317, 117, 1, 70, "GuideTutorialsSection",ExpressionUUID->"a3d9191b-5a60-4b5a-b67e-164157d85d3a",
+Cell[10696, 296, 102, 1, 26, "GuideDelimiter",ExpressionUUID->"c5211660-0bf1-4684-8fad-f0070c946f20",
+ CellID->32755284],
+Cell[10801, 299, 516, 11, 21, "GuideText",ExpressionUUID->"345e1ef5-3add-4043-85c1-bcba5dbcc26a",
+ CellID->297697767],
+Cell[11320, 312, 504, 11, 21, "GuideText",ExpressionUUID->"4d9abdbf-511f-48f9-8c2c-972b21c8cd96",
+ CellID->28267636]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11873, 329, 117, 1, 70, "GuideTutorialsSection",ExpressionUUID->"a3d9191b-5a60-4b5a-b67e-164157d85d3a",
  CellID->415694126],
-Cell[11714, 320, 104, 1, 20, "GuideTutorial",ExpressionUUID->"2865c3dc-d9eb-4324-ba17-956ca965284c",
+Cell[11993, 332, 104, 1, 20, "GuideTutorial",ExpressionUUID->"2865c3dc-d9eb-4324-ba17-956ca965284c",
  CellID->806871991],
-Cell[11821, 323, 105, 1, 20, "GuideTutorial",ExpressionUUID->"80f6ab1a-9d69-46bf-a617-823d7a0ff3c5",
+Cell[12100, 335, 105, 1, 20, "GuideTutorial",ExpressionUUID->"80f6ab1a-9d69-46bf-a617-823d7a0ff3c5",
  CellID->1885805579]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11963, 329, 127, 1, 70, "GuideWorkflowGuidesSection",ExpressionUUID->"a98cd77d-7b04-4134-b3dd-d36151cff9b0",
+Cell[12242, 341, 127, 1, 70, "GuideWorkflowGuidesSection",ExpressionUUID->"a98cd77d-7b04-4134-b3dd-d36151cff9b0",
  CellID->25329611],
-Cell[12093, 332, 109, 1, 20, "GuideWorkflowGuide",ExpressionUUID->"289696a3-54cc-4ce1-91ae-b2c1ab1748e8",
+Cell[12372, 344, 109, 1, 20, "GuideWorkflowGuide",ExpressionUUID->"289696a3-54cc-4ce1-91ae-b2c1ab1748e8",
  CellID->672144280],
-Cell[12205, 335, 108, 1, 20, "GuideWorkflowGuide",ExpressionUUID->"d9846a6d-176d-4744-aa8d-6ab8061f3e10",
+Cell[12484, 347, 108, 1, 20, "GuideWorkflowGuide",ExpressionUUID->"d9846a6d-176d-4744-aa8d-6ab8061f3e10",
  CellID->79611718]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12350, 341, 117, 1, 70, "GuideMoreAboutSection",ExpressionUUID->"85046e26-a7a1-4d48-82a2-74e2badc4739",
+Cell[12629, 353, 117, 1, 70, "GuideMoreAboutSection",ExpressionUUID->"85046e26-a7a1-4d48-82a2-74e2badc4739",
  CellID->23220180],
-Cell[12470, 344, 317, 5, 20, "GuideMoreAbout",ExpressionUUID->"b61ed7d6-2b19-4e03-aad0-993da595029b",
+Cell[12749, 356, 317, 5, 20, "GuideMoreAbout",ExpressionUUID->"b61ed7d6-2b19-4e03-aad0-993da595029b",
  CellID->1567025153]
 }, Open  ]],
-Cell[12802, 352, 124, 1, 70, "GuideRelatedLinksSection",ExpressionUUID->"45594b4f-2eba-4476-ad05-14c00c017cbc",
+Cell[13081, 364, 124, 1, 70, "GuideRelatedLinksSection",ExpressionUUID->"45594b4f-2eba-4476-ad05-14c00c017cbc",
  CellID->415694148]
 }
 ]
