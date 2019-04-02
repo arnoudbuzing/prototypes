@@ -1,0 +1,2521 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    124511,       2513]
+NotebookOptionsPosition[    114372,       2303]
+NotebookOutlinePosition[    115542,       2336]
+CellTagsIndexPosition[    115461,       2331]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["12", "HistoryData",
+  CellTags->"New",ExpressionUUID->"2f84e1ae-a747-4826-851f-0103411210fe"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"4dab500c-5494-49c8-96c4-2f279a973c66"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"4f2ea85d-21e0-4ad2-bbc8-18a828e25371"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised",ExpressionUUID->"960e6121-32da-4c2b-8903-3f9c288b942f"]
+}], "History",
+ CellID->341476719,ExpressionUUID->"23d88528-ac76-4f58-ab80-8ba08dc66fbf"],
+
+Cell["Created by: arnoudb on 04-02-2019 17:05:37", "AuthorDate",
+ CellID->712066545,ExpressionUUID->"d4f2b35f-359b-45be-85a8-61932ee8a94b"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449,ExpressionUUID->"aab346e5-c54e-4543-bfb6-055de9d33d30"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507,ExpressionUUID->"628529aa-75c0-47b0-aee1-60c78cad327e"],
+
+Cell["", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465,ExpressionUUID->"bef83001-b92a-4b47-91bf-718662946187"],
+
+Cell["", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828,ExpressionUUID->"bea189f9-73e0-4baf-b29f-7184e0cf366c"],
+
+Cell["XXXX", "Categorization",
+ CellLabel->"URI",ExpressionUUID->"e6d405af-40e0-4ab3-b0f9-eef9bc6a46a8"],
+
+Cell["XXXX", "Categorization",
+ CellLabel->"Title Modifier",
+ CellID->172747495,ExpressionUUID->"4a2472d2-19f5-4b9f-a0f2-c5a1708cd7bb"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Synonyms", "SynonymsSection",
+ CellID->1427418553,ExpressionUUID->"fb8acf4f-9285-4b8c-a747-4381fc0b9d41"],
+
+Cell["XXXX", "Synonyms",
+ CellID->1251652828,ExpressionUUID->"80d54c53-ee23-43f2-a45f-b1e852e781b1"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294,ExpressionUUID->"e9878159-9f99-4959-9826-e5a3f952bf23"],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360,ExpressionUUID->"612ce670-b22f-493d-b218-797337b1a463"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408,ExpressionUUID->"5cc15371-6f63-4f57-9207-32b25cb98ecc"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412,ExpressionUUID->"895d1c65-38f1-4125-baff-a225fcfc19c8"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909,ExpressionUUID->"170b786f-fb75-4556-a26a-6701da067cc2"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930,ExpressionUUID->"82a33b27-a8e0-4f8a-ba2a-5f2dee7b1bbf"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254,ExpressionUUID->"a0124f6d-7659-412c-a856-eefb69ed49a8"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771,ExpressionUUID->"8f9f96de-cdd4-415b-98c3-6a4a1d7a219e"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->49458704,ExpressionUUID->"4b2f2a6b-f93c-4868-9e10-5b6968909260"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985,ExpressionUUID->"6e4a3ae1-cdf6-47cc-ad1f-759e8fe45593"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->422270209,ExpressionUUID->"efc33df5-b775-495a-80e4-3521a78bc446"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->545239557,ExpressionUUID->"1a0db4eb-149a-46f3-b25b-b280d6264af5"],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->121292707,ExpressionUUID->"1050f771-3937-45cd-bf2a-bca989fc6c2c"],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->29314406,ExpressionUUID->"2d37259b-d19a-4265-94d9-1062a057d814"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->96001539,ExpressionUUID->"4e0c64af-4701-4221-b6a7-d115b2825a25"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->123278822,ExpressionUUID->"d0039a91-8ee2-4052-8ab0-325c85db884a"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365,ExpressionUUID->"02ff136a-5412-4c7d-9f54-fb44ec7c41f5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Security Details", "SecuritySection",
+ CellID->13551076,ExpressionUUID->"c4d92900-bc11-4614-8c83-407abdd45933"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{CheckboxBox[
+        Dynamic[
+         CurrentValue[
+          EvaluationNotebook[], {TaggingRules, "SecurityRisk"}, False]]],
+       StyleBox[
+       "\"   Potential security risk\"", FontFamily -> "Arial", FontSize -> 
+        10, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     DynamicBox[ToBoxes[
+       If[
+        TrueQ[
+         CurrentValue[
+          EvaluationNotebook[], {TaggingRules, "SecurityRisk"}]], 
+        InputField[
+         Dynamic[
+          CurrentValue[
+           EvaluationNotebook[], {TaggingRules, "SecurityExplanation"}, ""]], 
+         String, FieldHint -> "How so? (optional)", FieldSize -> {40, 5}, 
+         BaseStyle -> {FontFamily -> "Arial", FontSize -> 12}], ""], 
+       StandardForm],
+      ImageSizeCache->{0., {0., 5.}}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "SecurityDetails",
+ CellID->2488900,ExpressionUUID->"89fc8445-1353-4fa3-97dd-1be0f00a5de5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["$LocalResourceObjects", "ObjectName",
+ CellChangeTimes->{{3.7632315612111387`*^9, 3.7632315658583126`*^9}},
+ CellID->1224892054,ExpressionUUID->"9e65fd4a-3b79-48c0-af70-75bef669e834"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"2fdc3ed2-06fd-4227-b5c0-2a023c6c9737"],
+ Cell[BoxData[
+ "$LocalResourceObjects"], "InlineFormula",ExpressionUUID->
+  "f8ea538b-9d46-4953-98dc-da0c15517a97"],
+ " \[LineSeparator]gives the resource objects that are stored locally on the \
+machine."
+}], "Usage",
+ CellChangeTimes->{{3.7632315735805044`*^9, 3.7632316023148336`*^9}},
+ CellID->982511436,ExpressionUUID->"2f7b7357-db0a-477c-a3fa-e2cca7faa2b5"],
+
+Cell["XXXX", "Notes",
+ CellID->1067943069,ExpressionUUID->"c396774d-bb61-4976-8af9-595edbd6f735"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->250839057,ExpressionUUID->"b02d4013-fc03-46fd-91f5-418756d88d93"],
+
+Cell["XXXX", "Tutorials",
+ CellID->341631938,ExpressionUUID->"e5fbfac5-d780-4a61-9aa1-c2995b34e594"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Demonstrations", "RelatedDemonstrationsSection",
+ CellID->1268215905,ExpressionUUID->"2bafa20c-ad4d-4358-9b58-1c0fa094f645"],
+
+Cell["XXXX", "RelatedDemonstrations",
+ CellID->1129518860,ExpressionUUID->"ca787c01-e02b-4f0c-b52a-b5a25070bba2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "RelatedLinksSection",
+ CellID->1584193535,ExpressionUUID->"a98c198c-eaff-4f47-a52b-bde15cb67cfa"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->1038487239,ExpressionUUID->"ec84bd42-24ea-4c7d-a2df-bf8e73ab079b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704,ExpressionUUID->"d9364631-c239-4d65-b012-ba498b2ced33"],
+
+Cell["XXXX", "SeeAlso",
+ CellID->929782353,ExpressionUUID->"77ab00c7-f97f-445a-9882-c5a9482ccd27"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Workflows", "RelatedWorkflowsSection",
+ CellID->121236710,ExpressionUUID->"fc08db45-053b-4d9f-98c1-1ff4c0f2aaf6"],
+
+Cell["XXXX", "RelatedWorkflows",
+ CellID->294347949,ExpressionUUID->"0387d739-2698-4d59-91f8-023405a5f852"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "MoreAboutSection",
+ CellID->38303248,ExpressionUUID->"b2f57e8f-69ad-4769-b4dc-58a90c351f38"],
+
+Cell["Autogenerated", "MoreAbout",
+ CellID->1665078683,ExpressionUUID->"0862ec19-c5ba-4499-bc8f-b5b8b510794c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151,ExpressionUUID->"ff765981-7828-4382-a532-4eb8c1f0790e"],
+
+Cell["List the locally stored resource objects:", "ExampleText",
+ CellChangeTimes->{{3.7632316570524135`*^9, 3.7632316691399145`*^9}},
+ CellID->27136305,ExpressionUUID->"9f18615e-568f-4491-8475-69e25b16dee5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$LocalResourceObjects"], "Input",
+ CellChangeTimes->{{3.763231606174889*^9, 3.76323164487507*^9}},
+ CellLabel->"In[13]:=",
+ CellID->774120792,ExpressionUUID->"48d120a9-8c4a-481d-b3f1-a5417e7d8153"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{
+     TagBox["ResourceObject",
+      "SummaryHead"], "[", 
+     DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+      "Ready"}, 
+      TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquarePlusIconMedium"], 
+                 ImageSizeCache -> {12., {0., 12.}}], Appearance -> None, 
+                ButtonFunction :> (Typeset`open$$ = True), Evaluator -> 
+                Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztm+tvlFkdx4m+8aX/gv+FviKaaNyob9jV7KtNWGXXjREjGIkvNllIuaZI
+u0ADtNDLcGkRgYa2Kb3QNr2lF0rTexlIt4MDNFDIlmKZFDN+mF96PDm3Pk9n
+3Mq635TJzDxnzjnf3/13nofvffiHbR99a8uWLbu/w8u27Xt+uGvX9r+8+10+
+/HLn7k8+3rnjN+/s/NOOj3fs+v6H3+bLn/DvHf69eZ/9BoXAcuZpX6qifnpP
+c7Lodrp29V+Zzd5RYZBc7Dox8OOjvT9Qf5Uj7y8s393sfeUL9GXwUuzedt11
+z5fZvORvYqFhs3eXF/4+9Ucftbb7RzZ7dxvHyspKYuATH7WOuZLN3mBsPHny
+pL+/v6qq6tChQ2dv7v4aGOSDBw+am5tP5MCbubm5bC6MlPY4wkhJ+896+7u/
+mo0tLS2lc4j1K0xufHz8+vXrKKiiogJloTJ1dXV19cqVK0091X/t+pHO69it
+n36xMA798+fPv3jxotBU/oPnz5+zt9NrqKysnJmZWfcnsGBjMGLzd+7cgaMx
+hm8YAPE3A8YGRx9dJW7gX9jhzN0pLjEmmUyeOnWK1/8Gr0wmk0gkTltgt/Zg
+TK6trQ17KykpQeaBLaELfA2bFGr2gIaGhqGhIRkJTaZFxQXkBfr6+mxeAOt6
++fJlNmdUYnLFxcV82d3drZucE+iUkY8ePWLbKMVpckzLJTUV0/KTdWeOBUTq
+pAZaW1uRZ1FRkZhcRKeAEXuGnUyOWHwjsQE0q5QlPxRVFgTIykft0qVLcb2A
+8exW/M5nijo6clAfoYmhIk/bczcAPYAYmJ2djTUVmq2trZVdBUzRALJFffo3
+yAd3zj+2TE5O+nzt6NGjEZ0LEDCRkrKusCnqwHQhYsSQQsWWpqYmm9rly5eZ
+Vg+JmIpPkowhYKqPUUxRB+pGLPb3BYktTC7xhERw8+bNmpoaXpV1ZXOyxcH1
+qKIusSv2oKaKboo6WGt6etr+vuCxhY2hKWxVxQQFlQtI1uXl5QzTeWXjmKKx
+YiBNYDC6nLM5USP8ixcvUmDcuHEjlUpFX0uMRI/kBliorKyMFfUM7jPFuWf9
+lyd+R09aPrytfnrP4j+/sMfwcylRnECnLCR1KUTswE6Cjs6OhVgOXrCDo35J
+JWX1kTBSXV29b98+yEJQl3BfqsKojUv7t04/abVXVCWKE1LhtLS0OMsnEF13
+YpYrOTCniiEw4qPt3ehrZGREFIe5Mga+U6luZ0eDBmkKjBmMEsUJZ9ATYKIR
+qWW12AU7UQcmwZ5tE7VNkZFYacn17b5+7Xa61l7RKFFsDA8P+6jV1dVFp5Zd
+M8tsTqTnzp0TPRpjAkEAF/NRO9n06yoXSnJwXgJnz571UXNmkABUSpViA3sg
+ixljmNPZKWBaVT2/9VFrGDs458HJkycHBwedlyYmJnzUBgYGYlEDuPaZM2eU
+TIj2euFhRza+ISAgeWRS23HAR42wua48neIi6di8SASvX7+OS032KYFXIBpk
+aYyTPWCKvJG8TwCBKdIQf1zJvPy84xc2r7KWD8J1lLNE4UsiM8EKURum6MxQ
+AbA0FGSfhhhRDatcuHABOryBEfMbYV9C6/jMkHFk15wserX6Yt06Si9RmIqF
+WEL8ml/RThLtZ2Zmnj41I60OhjFmOAc1Uk4A1OQQRH3yXqLf4cOH9+7dW19f
+b5TuAqQBL3WJNE0uSy52ffnqoRoTrqNUdGISBCtFDuuSUwJcdNy7d49yRddv
+Z2fns2fP5ARADYMp3k1elpyFzEtLS+fn5/Xcre+ZMfb3NlSP5gywCJxVWEKu
+SuqJyEvqCtsrcVXZmH6oiKvS6cgqKiqqYxA1p+SmWMbvPP95E2CrqtiJqFX5
+dcQ58WVfLKXsNA4Vs2tmaURFdXiVzRV7dlEdBdKjsZZ4NHKDLFJSJUrcwhtF
++Kg1NjY6fZzEfezYMUN6cuR47do1iZxxeSlgIVTddFV6fhFfu3r1aqypDC/T
+0dvb6/wJXWpxcbG9/46ODjagn3VsAJgHzkWu0WMFts2Kra2OijqAQLWJGTAh
+0sPGjAStR0sBH4UUr3ELHgFL4B0YM/bAe/1sWXzZPkUJI51OO3kxD/7CzJKd
+aa55pSdCpPpyWS33qTn5CbuKZZYSMYyuVmILgpLSLlCi+MBODF6U0FNTUyJA
+NUyawSNHjvDKWvJRfN/u/fVTuygbkIhhX7p//z6RGdNSsSWuSTx+/BiNEBLZ
+89jYmBRjBH+9WlBRkW+kkDhw4MD+/ftv3brllKSdAhaW7+r5OrvWK+kRQ4eK
+jfid6uN8pyhxobppO6ewEP0F/k4Sx1z1ulFBEvc/Hqb02740oXJnDXtmzsA+
+9cKD5WDHR72BWlpaCldZYUAKdkRjvW0RhT7PQexfr/ZRvbIuBnze+iu7PE50
+/dkweAN24aFiC3ZVmYPyINqZDZT92Vy1g4spalIYKz8yoqUyV4muLSPnfE1N
+4PmKQOEhscWOexsIy2oVOW90Rj+j0BJIdD3dtsNHbeBBjW/RQOGBEfruU6DN
+WNT0UyYoUCHbYwJhOXCAcOhv730WH7QbvkRMII3OSzd4OOJEODIitVmgUONg
+QZrTM63eAwSn1uRsMJA1Asc+FI0RebF/dMFaUh8q3WEqxlmuQKoFidWqOW2/
+k3DyKu3f6vQ1p23r6OnpyV9rYorqmE6/ZGdk9kNtTBY4fvw4cUzPv42zn9rU
++lIV9oq26nVIJZZIJHy+Njk5GYWXmKL0Ys4bNMR/SnSirn6gCinn3rC9U0M/
+F1Llw9ucT4xIQvHVURiD3BHLem6cUW9E4SWm6Oug5RgcLgcPHoQUy+nqCxSx
+y5mnr1bdiSx8bozxGIfzqVSKalBIkeACeY2RnZ2dN3IghPLa3t5u3MhQT7zI
+zQvxCOPMPLtWNsRt2XwnHtLk4hrOCaFDLghM63wIAVHIaX/giRe1Os6o1yph
+l7HhO/HI884v+nK6JN4afuJFByKFvi726L2Vs/CQiJHns0CBVpQMEmsqPYZE
+N0u78NAjRj4IHCA0NjbGFZp+Zh7FLO3+S3q3KKd86yJw7EMIosRlITYZfS11
+Zp5dzyyNwiPcu20AgcM6CY+QYgx7kIcQorSBqjUIm6VeeKzbu20AvkLaNnV5
+CEGdk4QfbVI3wX1mqb7XT3sKyEuQTqeNu8PkuEBnx2YQ77oPpKkO3TZLVXg4
+T3sKi0wmg0kQEqlhYrXk4WdmpE4bHR1Fg3OLg7fTtZRYD7+clsIjcNrzPwXf
+MzNvypW64yc639Vr4+qe31+sqy5gxPhqoD8zg9X19neXD75nV/41Qx9t9k7z
+AsZ2of2zDdzwfStQP73HR617vmyzd5cXvq7/OwN0zJX4qDkfiXmLsLB8t7R/
+q82Lptt+kOmtA9qxz3ySi12bva/C4OHSeOPsp5Uj7ydGP2hOFjkfGvwG/+f4
+Nyy1wU8=
+                "], {{0, 0}, {73, 70}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TemplateBox[{"\"HiddenPitchDetectRaw\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/NeuralNetRepository/\
+resources/HiddenPitchDetectRaw"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"NeuralNet\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Transcribe an English speech audio recording\"", 
+                    "SummaryItem"]}], "\[SpanFromLeft]"}}, AutoDelete -> 
+               False, 
+               BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+            False, BaselinePosition -> {1, 1}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True -> 
+          GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquareMinusIconMedium"], 
+                 ImageSizeCache -> {12., {0., 12.}}], Appearance -> None, 
+                ButtonFunction :> (Typeset`open$$ = False), Evaluator -> 
+                Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztm+tvlFkdx4m+8aX/gv+FviKaaNyob9jV7KtNWGXXjREjGIkvNllIuaZI
+u0ADtNDLcGkRgYa2Kb3QNr2lF0rTexlIt4MDNFDIlmKZFDN+mF96PDm3Pk9n
+3Mq635TJzDxnzjnf3/13nofvffiHbR99a8uWLbu/w8u27Xt+uGvX9r+8+10+
+/HLn7k8+3rnjN+/s/NOOj3fs+v6H3+bLn/DvHf69eZ/9BoXAcuZpX6qifnpP
+c7Lodrp29V+Zzd5RYZBc7Dox8OOjvT9Qf5Uj7y8s393sfeUL9GXwUuzedt11
+z5fZvORvYqFhs3eXF/4+9Ucftbb7RzZ7dxvHyspKYuATH7WOuZLN3mBsPHny
+pL+/v6qq6tChQ2dv7v4aGOSDBw+am5tP5MCbubm5bC6MlPY4wkhJ+896+7u/
+mo0tLS2lc4j1K0xufHz8+vXrKKiiogJloTJ1dXV19cqVK0091X/t+pHO69it
+n36xMA798+fPv3jxotBU/oPnz5+zt9NrqKysnJmZWfcnsGBjMGLzd+7cgaMx
+hm8YAPE3A8YGRx9dJW7gX9jhzN0pLjEmmUyeOnWK1/8Gr0wmk0gkTltgt/Zg
+TK6trQ17KykpQeaBLaELfA2bFGr2gIaGhqGhIRkJTaZFxQXkBfr6+mxeAOt6
++fJlNmdUYnLFxcV82d3drZucE+iUkY8ePWLbKMVpckzLJTUV0/KTdWeOBUTq
+pAZaW1uRZ1FRkZhcRKeAEXuGnUyOWHwjsQE0q5QlPxRVFgTIykft0qVLcb2A
+8exW/M5nijo6clAfoYmhIk/bczcAPYAYmJ2djTUVmq2trZVdBUzRALJFffo3
+yAd3zj+2TE5O+nzt6NGjEZ0LEDCRkrKusCnqwHQhYsSQQsWWpqYmm9rly5eZ
+Vg+JmIpPkowhYKqPUUxRB+pGLPb3BYktTC7xhERw8+bNmpoaXpV1ZXOyxcH1
+qKIusSv2oKaKboo6WGt6etr+vuCxhY2hKWxVxQQFlQtI1uXl5QzTeWXjmKKx
+YiBNYDC6nLM5USP8ixcvUmDcuHEjlUpFX0uMRI/kBliorKyMFfUM7jPFuWf9
+lyd+R09aPrytfnrP4j+/sMfwcylRnECnLCR1KUTswE6Cjs6OhVgOXrCDo35J
+JWX1kTBSXV29b98+yEJQl3BfqsKojUv7t04/abVXVCWKE1LhtLS0OMsnEF13
+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
+Nyy1wU8=
+                "], {{0, 0}, {73, 70}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TemplateBox[{"\"HiddenPitchDetectRaw\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/NeuralNetRepository/\
+resources/HiddenPitchDetectRaw"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"NeuralNet\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Transcribe an English speech audio recording\"", 
+                    "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"ByteCount: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["89167656", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox[
+                   "\"TrainingSetInformation: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"An unreleased dataset of 11,940 hours of labeled speech \
+assembled from publicly available datasets and Baidu's internal data.\"", 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"InputDomains: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "\"Audio\""}, 
+                    "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"TaskType: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    RowBox[{"{", "\"Speech Recognition\"", "}"}], 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Keywords: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"speech to text\"", "\"ctc loss\"", 
+                    "\"beam search\""}, "RowWithSeparators"], Short], 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Data Location: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    
+                    DynamicModuleBox[{
+                    ResourceSystemClient`Private`typesetstorage$$ = 
+                    ResourceSystemClient`Private`typesetstorageLocation, 
+                    ResourceSystemClient`Private`info$$ = 
+                    Association[
+                    "Name" -> "HiddenPitchDetectRaw", "UUID" -> 
+                    "02acdda8-c19c-43cd-a25f-ae1e1ba4bd72", 
+                    "ContentElementLocations" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/objects/925f73bf-18d3-4d9e-\
+8b0d-0fb60d6ffbdc"], "EvaluationNet" -> 
+                    LocalObject[
+                    "file:///C:/Users/arnoudb.WRI/AppData/Roaming/Wolfram/\
+Objects/Resources/02a/02acdda8-c19c-43cd-a25f-ae1e1ba4bd72/download/\
+EvaluationNet/41f18e3b11f833a6/data"], "UninitializedEvaluationNet" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/objects/ff93b77a-a102-49c4-\
+aab6-d8c200e3ae68"]], "RepositoryLocation" -> 
+                    URL["https://www.wolframcloud.com/objects/resourcesystem/\
+api/1.0"], "ResourceLocations" -> {
+                    LocalObject[
+                    "file:///C:/Users/arnoudb.WRI/AppData/Roaming/Wolfram/\
+Objects/Resources/02a/02acdda8-c19c-43cd-a25f-ae1e1ba4bd72"]}, "ResourceType" -> 
+                    "NeuralNet", 
+                    "ContentElements" -> {
+                    "ConstructionNotebook", "ConstructionNotebookExpression", 
+                    "EvaluationNet", "UninitializedEvaluationNet"}, "Version" -> 
+                    "1.0.0", "Description" -> 
+                    "Transcribe an English speech audio recording", 
+                    "ByteCount" -> 89167656, "TrainingSetInformation" -> 
+                    "An unreleased dataset of 11,940 hours of labeled speech \
+assembled from publicly available datasets and Baidu's internal data.", 
+                    "InputDomains" -> {"Audio"}, 
+                    "TaskType" -> {"Speech Recognition"}, 
+                    "Keywords" -> {
+                    "speech to text", "ctc loss", "beam search"}, "MyAccount" -> 
+                    False, "Attributes" -> {
+                    "LocalCopyable", "CloudCopyable", "Multipart"}, 
+                    "LatestUpdate" -> 
+                    DateObject[{2018, 5, 9}, "Day", "Gregorian", 2.], 
+                    "DownloadedVersion" -> "1.0.0", "Format" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> "NB", "EvaluationNet" -> 
+                    "WLNet", "UninitializedEvaluationNet" -> "WLNet"], 
+                    "AutoUpdate" -> Automatic, "ContributorInformation" -> 
+                    Association[
+                    "PublisherID" -> "Wolfram", "DisplayName" -> 
+                    "Wolfram Research", "ContributedBy" -> 
+                    Missing["NoInput"]], "DefaultContentElement" -> 
+                    "EvaluationNet", "Details" -> 
+                    "Released in 2017, Baidu Research's Deep Speech 2 model \
+converts speech to text end-to-end from a normalized sound spectrogram to the \
+sequence of characters. It consists on a few convolution layers over both \
+time and frequencies, followed by gated recurrent unit (GRU) layers (modified \
+with an additional batch normalization). At evaluation time, the space of \
+possible output sequences is explored by the decoder using a beam search \
+algorithm. The same architecture has also been shown to train successfully on \
+Mandarin Chinese.", "Hash" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> 
+                    Missing["NotAvailable"], "EvaluationNet" -> 
+                    "3502055752ed8f74d66eebc6112f03bd", 
+                    "UninitializedEvaluationNet" -> 
+                    "9d982978d24b9582284d03eda4db4cb3"], 
+                    "InformationElements" -> Association[], "Originator" -> 
+                    Missing["NoInput"], "ReleaseDate" -> 
+                    DateObject[{2018, 5, 9}, "Day", "Gregorian", 2.], 
+                    "SeeAlso" -> {}, "ShortName" -> "HiddenPitchDetectRaw", 
+                    "SourceMetadata" -> 
+                    Association[
+                    "Citation" -> 
+                    "D. Amodei et al., \"Deep Speech 2: End-to-End Speech \
+Recognition in English and Mandarin\", arXiv:1512.02595", "Source" -> 
+                    Hyperlink["https://github.com/PaddlePaddle/DeepSpeech"], 
+                    "Rights" -> 
+                    Hyperlink[
+                    "Apache 2.0 License", 
+                    "https://www.apache.org/licenses/LICENSE-2.0"]], 
+                    "WolframLanguageVersionRequired" -> "11.3"]}, 
+                    DynamicBox[
+                    ToBoxes[
+                    ResourceSystemClient`Private`info$$ = 
+                    ResourceSystemClient`Private`resourceInfo[
+                    "02acdda8-c19c-43cd-a25f-ae1e1ba4bd72"]; If[
+                    AssociationQ[ResourceSystemClient`Private`info$$], 
+                    ResourceSystemClient`Private`typesetstorage$$[
+                    Lookup[
+                    ResourceSystemClient`Private`info$$, 
+                    "ContentElementLocations", None]], 
+                    Missing["NotAvailable"]], StandardForm], 
+                    ImageSizeCache -> {63., {1., 9.}}], 
+                    DynamicModuleValues :> {}], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"02acdda8-c19c-43cd-a25f-ae1e1ba4bd72\"", 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"1.0.0\"", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Elements: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"ConstructionNotebook\"", 
+                    "\"ConstructionNotebookExpression\"", "\"EvaluationNet\"",
+                     "\"UninitializedEvaluationNet\""}, "RowWithSeparators"], 
+                    Short[#, 2]& ], "SummaryItem"]}], ""}}, AutoDelete -> 
+               False, BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+            False, BaselinePosition -> {1, 1}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+         Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+       "SummaryPanel"],
+      DynamicModuleValues:>{}], "]"}],
+    ResourceObject[
+     Association[
+     "Name" -> "HiddenPitchDetectRaw", "UUID" -> 
+      "02acdda8-c19c-43cd-a25f-ae1e1ba4bd72", "ResourceType" -> "NeuralNet", 
+      "Version" -> "1.0.0", "Description" -> 
+      "Transcribe an English speech audio recording", "RepositoryLocation" -> 
+      URL["https://www.wolframcloud.com/objects/resourcesystem/api/1.0"], 
+      "WolframLanguageVersionRequired" -> "11.3", 
+      "ContentElements" -> {
+       "ConstructionNotebook", "ConstructionNotebookExpression", 
+        "EvaluationNet", "UninitializedEvaluationNet"}]],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     TagBox["ResourceObject",
+      "SummaryHead"], "[", 
+     DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+      "Ready"}, 
+      TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquarePlusIconMedium"]], 
+                ButtonFunction :> (Typeset`open$$ = True), Appearance -> None,
+                 Evaluator -> Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztmzFvEzEUxyNg6JiNtUysmRADQ7qA2KJWrEitCBUMAaVFiO0GRoZILIyV
++gGQGJkqBmZgR06FKoRQRRAghBA6/JI7al585+fzc85X50n/Km3vzu8X28/2
+s+/C1r3122dardbOivyxvvlwbTjcfLTRlr/cGOzc2R70b10f7Pa3+8PLW2fl
+H69kOieVpqkXiWsrHan7UntSB1KpQQfZtXBPx5dfzIy9zOcJgc+kSfasXt1c
+iLEtlUiNGRiLNM7KaNfMmjDVpU2dJzVwdj3XJ6W+uwtqu6MaObFGvtq4fO6q
+1JsAGLHAp1Vm1o5YbD+1FfjGMoY1gJWNuUGszsxi1l+bxKoyW/VnMYvDIcYm
+qsB3ctwWYY05VTUisnYD8JVLXQJvnfMmbo0NrEkAPnIrKYlRTYzHJgHTXOw6
+pXVbWMeC0G8/Prhq1OHG+bn7ju5eKrye4i8806Y8jcaItUcpl2I6hp/vXhVe
+TykXnmlTXoH+5UnELG9ivOfL/uNC33+8fjH9/4ebF428f75Ppn+D6ynlwjO/
+vdzXlm3Bu6fwkuMUtB9sv96/Lb1H9fP3p0Onvvj5Sb8q7yQ9WRNYlYnt6/On
+ZF747MKLv28L3lSc5EydeE3tUuU1fTe25Vvy5vnhhfFS+6wnXmou3Atv2ThT
+Nm458FqzcvKWjTPYmHid29OSd8m75OUrf8nLIxg7wFcQtnwuDDp+tlvKC/Ps
+JvDCnB3m+RTDazTO+ST44chLHoPh2ab61a2RVF74znRrKKpw+RXmG9bzSVzP
+Nv03N1gnUesa8gVwvc4qzCet1wvY/yq8uVHbVZFVWC9YrwdhjWPDG5Cme0vC
+Mi+JY0ZDeKfr/dQin6MKxp3c8jUtxGUYb8A4xh1mqfkcUr4OC3JKucFnHMcg
+9xIAZ67/zjWJivsouC87xBKfmttXEQ75duDK2zFu44FIl29n2U9xmUt4knY/
+xbWOA5Z2v8y1Hweq0v3QNML97jSy8wxK7IrmvErGHM15JIU5mvNmDWSO6Qwl
+GyvqzyHGMPbzwChuhzRWeTvvjbijOM+v4Y7ifQ1NG4/ifRwN+6l/36qEPcj3
+6f4CgLLCWA==
+                "], {{0, 0}, {60, 60}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TemplateBox[{"\"RandomString\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/FunctionRepository/\
+resources/RandomString"}, "HyperlinkURL"]}, "RowDefault"], "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"Function\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"Generates a random string\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+               False, GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+               BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            BaselinePosition -> {1, 1}], True -> GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquareMinusIconMedium"]], 
+                ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                None, Evaluator -> Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztmzFvEzEUxyNg6JiNtUysmRADQ7qA2KJWrEitCBUMAaVFiO0GRoZILIyV
++gGQGJkqBmZgR06FKoRQRRAghBA6/JI7al585+fzc85X50n/Km3vzu8X28/2
+s+/C1r3122dardbOivyxvvlwbTjcfLTRlr/cGOzc2R70b10f7Pa3+8PLW2fl
+H69kOieVpqkXiWsrHan7UntSB1KpQQfZtXBPx5dfzIy9zOcJgc+kSfasXt1c
+iLEtlUiNGRiLNM7KaNfMmjDVpU2dJzVwdj3XJ6W+uwtqu6MaObFGvtq4fO6q
+1JsAGLHAp1Vm1o5YbD+1FfjGMoY1gJWNuUGszsxi1l+bxKoyW/VnMYvDIcYm
+qsB3ctwWYY05VTUisnYD8JVLXQJvnfMmbo0NrEkAPnIrKYlRTYzHJgHTXOw6
+pXVbWMeC0G8/Prhq1OHG+bn7ju5eKrye4i8806Y8jcaItUcpl2I6hp/vXhVe
+TykXnmlTXoH+5UnELG9ivOfL/uNC33+8fjH9/4ebF428f75Ppn+D6ynlwjO/
+vdzXlm3Bu6fwkuMUtB9sv96/Lb1H9fP3p0Onvvj5Sb8q7yQ9WRNYlYnt6/On
+ZF747MKLv28L3lSc5EydeE3tUuU1fTe25Vvy5vnhhfFS+6wnXmou3Atv2ThT
+Nm458FqzcvKWjTPYmHid29OSd8m75OUrf8nLIxg7wFcQtnwuDDp+tlvKC/Ps
+JvDCnB3m+RTDazTO+ST44chLHoPh2ab61a2RVF74znRrKKpw+RXmG9bzSVzP
+Nv03N1gnUesa8gVwvc4qzCet1wvY/yq8uVHbVZFVWC9YrwdhjWPDG5Cme0vC
+Mi+JY0ZDeKfr/dQin6MKxp3c8jUtxGUYb8A4xh1mqfkcUr4OC3JKucFnHMcg
+9xIAZ67/zjWJivsouC87xBKfmttXEQ75duDK2zFu44FIl29n2U9xmUt4knY/
+xbWOA5Z2v8y1Hweq0v3QNML97jSy8wxK7IrmvErGHM15JIU5mvNmDWSO6Qwl
+GyvqzyHGMPbzwChuhzRWeTvvjbijOM+v4Y7ifQ1NG4/ifRwN+6l/36qEPcj3
+6f4CgLLCWA==
+                "], {{0, 0}, {60, 60}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TemplateBox[{"\"RandomString\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/FunctionRepository/\
+resources/RandomString"}, "HyperlinkURL"]}, "RowDefault"], "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"Function\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"Generates a random string\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Keywords: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"random string\"", "\"string generate\""},
+                     "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Documentation: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    
+                    TemplateBox[{
+                    "\"https://resources.wolframcloud.com/FunctionRepository/\
+resources/RandomString\"", 
+                    "https://resources.wolframcloud.com/FunctionRepository/\
+resources/RandomString"}, "HyperlinkURL"], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"1a33620f-54c3-4974-8784-57f001ab7b65\"", 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"1.0.0\"", "SummaryItem"]}], ""}}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+               False, GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+               BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            BaselinePosition -> {1, 1}]}, 
+         Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+       "SummaryPanel"],
+      DynamicModuleValues:>{}], "]"}],
+    ResourceObject[
+     Association[
+     "Name" -> "RandomString", "UUID" -> 
+      "1a33620f-54c3-4974-8784-57f001ab7b65", "ResourceType" -> "Function", 
+      "Version" -> "1.0.0", "Description" -> "Generates a random string", 
+      "RepositoryLocation" -> 
+      URL["https://www.wolframcloud.com/objects/resourcesystem/api/1.0"], 
+      "WolframLanguageVersionRequired" -> "10.0", "SymbolName" -> 
+      "FunctionRepository`$dc6c17c141d24394ae831ae12bec5059`RandomString", 
+      "FunctionLocation" -> 
+      LocalObject[
+       "file:///C:/Users/arnoudb.WRI/AppData/Roaming/Wolfram/Objects/\
+Resources/1a3/1a33620f-54c3-4974-8784-57f001ab7b65/download/DefinitionData"], 
+      "ShortName" -> "RandomString"]],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     TagBox["ResourceObject",
+      "SummaryHead"], "[", 
+     DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+      "Ready"}, 
+      TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquarePlusIconMedium"], 
+                 ImageSizeCache -> {12., {0., 12.}}], Appearance -> None, 
+                ButtonFunction :> (Typeset`open$$ = True), Evaluator -> 
+                Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztm+tvlFkdx4m+8aX/gv+FviKaaNyob9jV7KtNWGXXjREjGIkvNllIuaZI
+u0ADtNDLcGkRgYa2Kb3QNr2lF0rTexlIt4MDNFDIlmKZFDN+mF96PDm3Pk9n
+3Mq635TJzDxnzjnf3/13nofvffiHbR99a8uWLbu/w8u27Xt+uGvX9r+8+10+
+/HLn7k8+3rnjN+/s/NOOj3fs+v6H3+bLn/DvHf69eZ/9BoXAcuZpX6qifnpP
+c7Lodrp29V+Zzd5RYZBc7Dox8OOjvT9Qf5Uj7y8s393sfeUL9GXwUuzedt11
+z5fZvORvYqFhs3eXF/4+9Ucftbb7RzZ7dxvHyspKYuATH7WOuZLN3mBsPHny
+pL+/v6qq6tChQ2dv7v4aGOSDBw+am5tP5MCbubm5bC6MlPY4wkhJ+896+7u/
+mo0tLS2lc4j1K0xufHz8+vXrKKiiogJloTJ1dXV19cqVK0091X/t+pHO69it
+n36xMA798+fPv3jxotBU/oPnz5+zt9NrqKysnJmZWfcnsGBjMGLzd+7cgaMx
+hm8YAPE3A8YGRx9dJW7gX9jhzN0pLjEmmUyeOnWK1/8Gr0wmk0gkTltgt/Zg
+TK6trQ17KykpQeaBLaELfA2bFGr2gIaGhqGhIRkJTaZFxQXkBfr6+mxeAOt6
++fJlNmdUYnLFxcV82d3drZucE+iUkY8ePWLbKMVpckzLJTUV0/KTdWeOBUTq
+pAZaW1uRZ1FRkZhcRKeAEXuGnUyOWHwjsQE0q5QlPxRVFgTIykft0qVLcb2A
+8exW/M5nijo6clAfoYmhIk/bczcAPYAYmJ2djTUVmq2trZVdBUzRALJFffo3
+yAd3zj+2TE5O+nzt6NGjEZ0LEDCRkrKusCnqwHQhYsSQQsWWpqYmm9rly5eZ
+Vg+JmIpPkowhYKqPUUxRB+pGLPb3BYktTC7xhERw8+bNmpoaXpV1ZXOyxcH1
+qKIusSv2oKaKboo6WGt6etr+vuCxhY2hKWxVxQQFlQtI1uXl5QzTeWXjmKKx
+YiBNYDC6nLM5USP8ixcvUmDcuHEjlUpFX0uMRI/kBliorKyMFfUM7jPFuWf9
+lyd+R09aPrytfnrP4j+/sMfwcylRnECnLCR1KUTswE6Cjs6OhVgOXrCDo35J
+JWX1kTBSXV29b98+yEJQl3BfqsKojUv7t04/abVXVCWKE1LhtLS0OMsnEF13
+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
+Nyy1wU8=
+                "], {{0, 0}, {73, 70}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TemplateBox[{"\"HiddenCrepeSmall\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/NeuralNetRepository/\
+resources/HiddenCrepeSmall"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"NeuralNet\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Track the pitch of a monophonic signal\"", 
+                    "SummaryItem"]}], "\[SpanFromLeft]"}}, AutoDelete -> 
+               False, BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+            False, BaselinePosition -> {1, 1}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True -> 
+          GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquareMinusIconMedium"], 
+                 ImageSizeCache -> {12., {0., 12.}}], Appearance -> None, 
+                ButtonFunction :> (Typeset`open$$ = False), Evaluator -> 
+                Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztm+tvlFkdx4m+8aX/gv+FviKaaNyob9jV7KtNWGXXjREjGIkvNllIuaZI
+u0ADtNDLcGkRgYa2Kb3QNr2lF0rTexlIt4MDNFDIlmKZFDN+mF96PDm3Pk9n
+3Mq635TJzDxnzjnf3/13nofvffiHbR99a8uWLbu/w8u27Xt+uGvX9r+8+10+
+/HLn7k8+3rnjN+/s/NOOj3fs+v6H3+bLn/DvHf69eZ/9BoXAcuZpX6qifnpP
+c7Lodrp29V+Zzd5RYZBc7Dox8OOjvT9Qf5Uj7y8s393sfeUL9GXwUuzedt11
+z5fZvORvYqFhs3eXF/4+9Ucftbb7RzZ7dxvHyspKYuATH7WOuZLN3mBsPHny
+pL+/v6qq6tChQ2dv7v4aGOSDBw+am5tP5MCbubm5bC6MlPY4wkhJ+896+7u/
+mo0tLS2lc4j1K0xufHz8+vXrKKiiogJloTJ1dXV19cqVK0091X/t+pHO69it
+n36xMA798+fPv3jxotBU/oPnz5+zt9NrqKysnJmZWfcnsGBjMGLzd+7cgaMx
+hm8YAPE3A8YGRx9dJW7gX9jhzN0pLjEmmUyeOnWK1/8Gr0wmk0gkTltgt/Zg
+TK6trQ17KykpQeaBLaELfA2bFGr2gIaGhqGhIRkJTaZFxQXkBfr6+mxeAOt6
++fJlNmdUYnLFxcV82d3drZucE+iUkY8ePWLbKMVpckzLJTUV0/KTdWeOBUTq
+pAZaW1uRZ1FRkZhcRKeAEXuGnUyOWHwjsQE0q5QlPxRVFgTIykft0qVLcb2A
+8exW/M5nijo6clAfoYmhIk/bczcAPYAYmJ2djTUVmq2trZVdBUzRALJFffo3
+yAd3zj+2TE5O+nzt6NGjEZ0LEDCRkrKusCnqwHQhYsSQQsWWpqYmm9rly5eZ
+Vg+JmIpPkowhYKqPUUxRB+pGLPb3BYktTC7xhERw8+bNmpoaXpV1ZXOyxcH1
+qKIusSv2oKaKboo6WGt6etr+vuCxhY2hKWxVxQQFlQtI1uXl5QzTeWXjmKKx
+YiBNYDC6nLM5USP8ixcvUmDcuHEjlUpFX0uMRI/kBliorKyMFfUM7jPFuWf9
+lyd+R09aPrytfnrP4j+/sMfwcylRnECnLCR1KUTswE6Cjs6OhVgOXrCDo35J
+JWX1kTBSXV29b98+yEJQl3BfqsKojUv7t04/abVXVCWKE1LhtLS0OMsnEF13
+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
+Nyy1wU8=
+                "], {{0, 0}, {73, 70}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TemplateBox[{"\"HiddenCrepeSmall\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/NeuralNetRepository/\
+resources/HiddenCrepeSmall"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"NeuralNet\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Track the pitch of a monophonic signal\"", 
+                    "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"ByteCount: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["6679528", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox[
+                   "\"TrainingSetInformation: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"MIR-1K, consisting of 1000 song clips annotated with \
+the pitch contours of the melodies. Bach10, consisting of recordings of 10 \
+Bach chorales. For each of the chorales, the dataset contains of the audio \
+recordings of each part and the ensemble, as well as their MIDI scores, the \
+ground-truth alignment between the audio and the score, the ground-truth \
+pitch values of each part and the ground-truth notes of each piece. \
+RWC-Synth, which contains 6.16 hours of audio synthesized from the RWC Music \
+Database. MedleyDB, a collection of songs inclusing melody f0 annotations as \
+well as instrument activations for evaluating automatic instrument \
+recognition. NSynth is an audio dataset containing 305,979 musical notes, \
+each with a unique pitch, timbre, and envelope. MDB-STEM-Synth is a \
+collection of 230 monophonic stems taken from MedleyDB and re-synthesized \
+with an analysis/synthesis approach to generate a synthesized track with a \
+perfect f0 annotation that maintains the timbre and dynamics of the original \
+track. This dataset consists of 230 tracks with 25 instruments, totaling \
+15.56 hours of audio.\"", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"InputDomains: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "\"Audio\""}, 
+                    "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"TaskType: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    RowBox[{"{", "}"}], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Keywords: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"crepe\"", "\"pitch\"", 
+                    "\"hidden markov model\""}, "RowWithSeparators"], Short], 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Data Location: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    
+                    DynamicModuleBox[{
+                    ResourceSystemClient`Private`typesetstorage$$ = 
+                    ResourceSystemClient`Private`typesetstorageLocation, 
+                    ResourceSystemClient`Private`info$$ = 
+                    Association[
+                    "Name" -> "HiddenCrepeSmall", "UUID" -> 
+                    "65d3bb6d-7a1a-4bba-a6f5-f132d272ede7", 
+                    "ContentElementLocations" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/objects/0bf65e7f-8ebd-499a-\
+ade2-105eb395c1f6"], "EvaluationNet" -> 
+                    LocalObject[
+                    "file:///C:/Users/arnoudb.WRI/AppData/Roaming/Wolfram/\
+Objects/Resources/65d/65d3bb6d-7a1a-4bba-a6f5-f132d272ede7/download/\
+EvaluationNet/41f18e3b11f833a6/data"], "UninitializedEvaluationNet" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/objects/503eacf8-8143-447a-\
+b0d6-b7d7b6b7adfb"]], "RepositoryLocation" -> 
+                    URL["https://www.wolframcloud.com/objects/resourcesystem/\
+api/1.0"], "ResourceLocations" -> {
+                    LocalObject[
+                    "file:///C:/Users/arnoudb.WRI/AppData/Roaming/Wolfram/\
+Objects/Resources/65d/65d3bb6d-7a1a-4bba-a6f5-f132d272ede7"]}, "ResourceType" -> 
+                    "NeuralNet", 
+                    "ContentElements" -> {
+                    "ConstructionNotebook", "ConstructionNotebookExpression", 
+                    "EvaluationNet", "UninitializedEvaluationNet"}, "Version" -> 
+                    "1.0.0", "Description" -> 
+                    "Track the pitch of a monophonic signal", "ByteCount" -> 
+                    6679528, "TrainingSetInformation" -> 
+                    "MIR-1K, consisting of 1000 song clips annotated with the \
+pitch contours of the melodies. Bach10, consisting of recordings of 10 Bach \
+chorales. For each of the chorales, the dataset contains of the audio \
+recordings of each part and the ensemble, as well as their MIDI scores, the \
+ground-truth alignment between the audio and the score, the ground-truth \
+pitch values of each part and the ground-truth notes of each piece. \
+RWC-Synth, which contains 6.16 hours of audio synthesized from the RWC Music \
+Database. MedleyDB, a collection of songs inclusing melody f0 annotations as \
+well as instrument activations for evaluating automatic instrument \
+recognition. NSynth is an audio dataset containing 305,979 musical notes, \
+each with a unique pitch, timbre, and envelope. MDB-STEM-Synth is a \
+collection of 230 monophonic stems taken from MedleyDB and re-synthesized \
+with an analysis/synthesis approach to generate a synthesized track with a \
+perfect f0 annotation that maintains the timbre and dynamics of the original \
+track. This dataset consists of 230 tracks with 25 instruments, totaling \
+15.56 hours of audio.", "InputDomains" -> {"Audio"}, "TaskType" -> {}, 
+                    "Keywords" -> {"crepe", "pitch", "hidden markov model"}, 
+                    "MyAccount" -> False, 
+                    "Attributes" -> {
+                    "LocalCopyable", "CloudCopyable", "Multipart"}, 
+                    "LatestUpdate" -> 
+                    DateObject[{2018, 11, 13}, "Day", "Gregorian", 1.], 
+                    "DownloadedVersion" -> "1.0.0", "Format" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> "NB", "EvaluationNet" -> 
+                    "WLNet", "UninitializedEvaluationNet" -> "WLNet"], 
+                    "AutoUpdate" -> Automatic, "ContributorInformation" -> 
+                    Association[
+                    "PublisherID" -> "Wolfram", "DisplayName" -> 
+                    "Wolfram Research", "ContributedBy" -> 
+                    Missing["NoInput"]], "DefaultContentElement" -> 
+                    "EvaluationNet", "Details" -> 
+                    
+                    "Released in 2018, CREPE is a state of the art system \
+based on a deep convolutional neural network that operates directly on the \
+time-domain waveform. The architecture is based on a chain of six convolution \
+stacks, followed by a classifier. The net outputs a vector that represents \
+the probability of the pitch being in one of 360 frequency classes \
+non-linearly spaced.", "Hash" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> 
+                    Missing["NotAvailable"], "EvaluationNet" -> 
+                    "68527c7f299436f0913c6bc869bcc620", 
+                    "UninitializedEvaluationNet" -> 
+                    "9790727bade101a93a8a4fe7cb4cfc9b"], 
+                    "InformationElements" -> Association[], "Originator" -> 
+                    Missing["NoInput"], "ReleaseDate" -> 
+                    DateObject[{2018, 11, 13}, "Day", "Gregorian", 1.], 
+                    "SeeAlso" -> {}, "ShortName" -> "HiddenCrepeSmall", 
+                    "SourceMetadata" -> 
+                    Association[
+                    "Citation" -> 
+                    "J. W. Kim, J. Salamon, P. Li, J. P. Bello, \"CREPE: A \
+Convolutional Representation for Pitch Estimation\", arXiv:1802.06182 (2018)",
+                     "Source" -> Hyperlink["https://github.com/marl/crepe"], 
+                    "Rights" -> 
+                    Hyperlink[
+                    "MIT License", "https://opensource.org/licenses/MIT"]], 
+                    "WolframLanguageVersionRequired" -> "10.0"]}, 
+                    DynamicBox[
+                    ToBoxes[
+                    ResourceSystemClient`Private`info$$ = 
+                    ResourceSystemClient`Private`resourceInfo[
+                    "65d3bb6d-7a1a-4bba-a6f5-f132d272ede7"]; If[
+                    AssociationQ[ResourceSystemClient`Private`info$$], 
+                    ResourceSystemClient`Private`typesetstorage$$[
+                    Lookup[
+                    ResourceSystemClient`Private`info$$, 
+                    "ContentElementLocations", None]], 
+                    Missing["NotAvailable"]], StandardForm], 
+                    ImageSizeCache -> {63., {1., 9.}}], 
+                    DynamicModuleValues :> {}], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"65d3bb6d-7a1a-4bba-a6f5-f132d272ede7\"", 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"1.0.0\"", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Elements: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"ConstructionNotebook\"", 
+                    "\"ConstructionNotebookExpression\"", "\"EvaluationNet\"",
+                     "\"UninitializedEvaluationNet\""}, "RowWithSeparators"], 
+                    Short[#, 2]& ], "SummaryItem"]}], ""}}, AutoDelete -> 
+               False, BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+            False, BaselinePosition -> {1, 1}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+         Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+       "SummaryPanel"],
+      DynamicModuleValues:>{}], "]"}],
+    ResourceObject[
+     Association[
+     "Name" -> "HiddenCrepeSmall", "UUID" -> 
+      "65d3bb6d-7a1a-4bba-a6f5-f132d272ede7", "ResourceType" -> "NeuralNet", 
+      "Version" -> "1.0.0", "Description" -> 
+      "Track the pitch of a monophonic signal", "RepositoryLocation" -> 
+      URL["https://www.wolframcloud.com/objects/resourcesystem/api/1.0"], 
+      "WolframLanguageVersionRequired" -> "10.0", 
+      "ContentElements" -> {
+       "ConstructionNotebook", "ConstructionNotebookExpression", 
+        "EvaluationNet", "UninitializedEvaluationNet"}]],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     TagBox["ResourceObject",
+      "SummaryHead"], "[", 
+     DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+      "Ready"}, 
+      TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquarePlusIconMedium"]], 
+                ButtonFunction :> (Typeset`open$$ = True), Appearance -> None,
+                 Evaluator -> Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztm+tvlFkdx4m+8aX/gv+FviKaaNyob9jV7KtNWGXXjREjGIkvNllIuaZI
+u0ADtNDLcGkRgYa2Kb3QNr2lF0rTexlIt4MDNFDIlmKZFDN+mF96PDm3Pk9n
+3Mq635TJzDxnzjnf3/13nofvffiHbR99a8uWLbu/w8u27Xt+uGvX9r+8+10+
+/HLn7k8+3rnjN+/s/NOOj3fs+v6H3+bLn/DvHf69eZ/9BoXAcuZpX6qifnpP
+c7Lodrp29V+Zzd5RYZBc7Dox8OOjvT9Qf5Uj7y8s393sfeUL9GXwUuzedt11
+z5fZvORvYqFhs3eXF/4+9Ucftbb7RzZ7dxvHyspKYuATH7WOuZLN3mBsPHny
+pL+/v6qq6tChQ2dv7v4aGOSDBw+am5tP5MCbubm5bC6MlPY4wkhJ+896+7u/
+mo0tLS2lc4j1K0xufHz8+vXrKKiiogJloTJ1dXV19cqVK0091X/t+pHO69it
+n36xMA798+fPv3jxotBU/oPnz5+zt9NrqKysnJmZWfcnsGBjMGLzd+7cgaMx
+hm8YAPE3A8YGRx9dJW7gX9jhzN0pLjEmmUyeOnWK1/8Gr0wmk0gkTltgt/Zg
+TK6trQ17KykpQeaBLaELfA2bFGr2gIaGhqGhIRkJTaZFxQXkBfr6+mxeAOt6
++fJlNmdUYnLFxcV82d3drZucE+iUkY8ePWLbKMVpckzLJTUV0/KTdWeOBUTq
+pAZaW1uRZ1FRkZhcRKeAEXuGnUyOWHwjsQE0q5QlPxRVFgTIykft0qVLcb2A
+8exW/M5nijo6clAfoYmhIk/bczcAPYAYmJ2djTUVmq2trZVdBUzRALJFffo3
+yAd3zj+2TE5O+nzt6NGjEZ0LEDCRkrKusCnqwHQhYsSQQsWWpqYmm9rly5eZ
+Vg+JmIpPkowhYKqPUUxRB+pGLPb3BYktTC7xhERw8+bNmpoaXpV1ZXOyxcH1
+qKIusSv2oKaKboo6WGt6etr+vuCxhY2hKWxVxQQFlQtI1uXl5QzTeWXjmKKx
+YiBNYDC6nLM5USP8ixcvUmDcuHEjlUpFX0uMRI/kBliorKyMFfUM7jPFuWf9
+lyd+R09aPrytfnrP4j+/sMfwcylRnECnLCR1KUTswE6Cjs6OhVgOXrCDo35J
+JWX1kTBSXV29b98+yEJQl3BfqsKojUv7t04/abVXVCWKE1LhtLS0OMsnEF13
+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
+Nyy1wU8=
+                "], {{0, 0}, {73, 70}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TemplateBox[{"\"Wolfram Face Discriminator V1\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/NeuralNetRepository/\
+resources/Wolfram-Face-Discriminator-V1"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"NeuralNet\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Discriminate between faces and other objects\"", 
+                    "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+               False, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+               BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            BaselinePosition -> {1, 1}], True -> GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquareMinusIconMedium"]], 
+                ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                None, Evaluator -> Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztm+tvlFkdx4m+8aX/gv+FviKaaNyob9jV7KtNWGXXjREjGIkvNllIuaZI
+u0ADtNDLcGkRgYa2Kb3QNr2lF0rTexlIt4MDNFDIlmKZFDN+mF96PDm3Pk9n
+3Mq635TJzDxnzjnf3/13nofvffiHbR99a8uWLbu/w8u27Xt+uGvX9r+8+10+
+/HLn7k8+3rnjN+/s/NOOj3fs+v6H3+bLn/DvHf69eZ/9BoXAcuZpX6qifnpP
+c7Lodrp29V+Zzd5RYZBc7Dox8OOjvT9Qf5Uj7y8s393sfeUL9GXwUuzedt11
+z5fZvORvYqFhs3eXF/4+9Ucftbb7RzZ7dxvHyspKYuATH7WOuZLN3mBsPHny
+pL+/v6qq6tChQ2dv7v4aGOSDBw+am5tP5MCbubm5bC6MlPY4wkhJ+896+7u/
+mo0tLS2lc4j1K0xufHz8+vXrKKiiogJloTJ1dXV19cqVK0091X/t+pHO69it
+n36xMA798+fPv3jxotBU/oPnz5+zt9NrqKysnJmZWfcnsGBjMGLzd+7cgaMx
+hm8YAPE3A8YGRx9dJW7gX9jhzN0pLjEmmUyeOnWK1/8Gr0wmk0gkTltgt/Zg
+TK6trQ17KykpQeaBLaELfA2bFGr2gIaGhqGhIRkJTaZFxQXkBfr6+mxeAOt6
++fJlNmdUYnLFxcV82d3drZucE+iUkY8ePWLbKMVpckzLJTUV0/KTdWeOBUTq
+pAZaW1uRZ1FRkZhcRKeAEXuGnUyOWHwjsQE0q5QlPxRVFgTIykft0qVLcb2A
+8exW/M5nijo6clAfoYmhIk/bczcAPYAYmJ2djTUVmq2trZVdBUzRALJFffo3
+yAd3zj+2TE5O+nzt6NGjEZ0LEDCRkrKusCnqwHQhYsSQQsWWpqYmm9rly5eZ
+Vg+JmIpPkowhYKqPUUxRB+pGLPb3BYktTC7xhERw8+bNmpoaXpV1ZXOyxcH1
+qKIusSv2oKaKboo6WGt6etr+vuCxhY2hKWxVxQQFlQtI1uXl5QzTeWXjmKKx
+YiBNYDC6nLM5USP8ixcvUmDcuHEjlUpFX0uMRI/kBliorKyMFfUM7jPFuWf9
+lyd+R09aPrytfnrP4j+/sMfwcylRnECnLCR1KUTswE6Cjs6OhVgOXrCDo35J
+JWX1kTBSXV29b98+yEJQl3BfqsKojUv7t04/abVXVCWKE1LhtLS0OMsnEF13
+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
+Nyy1wU8=
+                "], {{0, 0}, {73, 70}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TemplateBox[{"\"Wolfram Face Discriminator V1\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/NeuralNetRepository/\
+resources/Wolfram-Face-Discriminator-V1"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"NeuralNet\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Discriminate between faces and other objects\"", 
+                    "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"ByteCount: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["857408", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox[
+                   "\"TrainingSetInformation: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"WIDER FACE, a face detection benchmark dataset \
+consisting of 32,203 images with 393,703 labeled faces. CelebFaces Attributes \
+Dataset (CelebA), a large-scale face attributes dataset with more than 200K \
+celebrity images.\\n\"", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"InputDomains: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "\"Image\""}, 
+                    "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"TaskType: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    RowBox[{"{", "\"Classification\"", "}"}], 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Keywords: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"face classification\"", 
+                    "\"face classifier\""}, "RowWithSeparators"], Short], 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Data Location: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    
+                    DynamicModuleBox[{
+                    ResourceSystemClient`Private`typesetstorage$$ = 
+                    ResourceSystemClient`Private`typesetstorageLocation, 
+                    ResourceSystemClient`Private`info$$}, 
+                    DynamicBox[
+                    ToBoxes[
+                    ResourceSystemClient`Private`info$$ = 
+                    ResourceSystemClient`Private`resourceInfo[
+                    "ac0cb540-6c02-4ba3-8138-bccecf80a835"]; If[
+                    AssociationQ[ResourceSystemClient`Private`info$$], 
+                    ResourceSystemClient`Private`typesetstorage$$[
+                    Lookup[
+                    ResourceSystemClient`Private`info$$, 
+                    "ContentElementLocations", None]], 
+                    Missing["NotAvailable"]], StandardForm]], 
+                    DynamicModuleValues :> {}], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"ac0cb540-6c02-4ba3-8138-bccecf80a835\"", 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"1.2.0\"", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Elements: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"EvaluationNet\"", 
+                    "\"UninitializedEvaluationNet\""}, "RowWithSeparators"], 
+                    Short[#, 2]& ], "SummaryItem"]}], ""}}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+               False, GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+               BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            BaselinePosition -> {1, 1}]}, 
+         Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+       "SummaryPanel"],
+      DynamicModuleValues:>{}], "]"}],
+    ResourceObject[
+     Association[
+     "Name" -> "Wolfram Face Discriminator V1", "UUID" -> 
+      "ac0cb540-6c02-4ba3-8138-bccecf80a835", "ResourceType" -> "NeuralNet", 
+      "Version" -> "1.2.0", "Description" -> 
+      "Discriminate between faces and other objects", "RepositoryLocation" -> 
+      URL["https://www.wolframcloud.com/objects/resourcesystem/api/1.0"], 
+      "WolframLanguageVersionRequired" -> "12.0", 
+      "ContentElements" -> {"EvaluationNet", "UninitializedEvaluationNet"}]],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], ",", 
+   InterpretationBox[
+    RowBox[{
+     TagBox["ResourceObject",
+      "SummaryHead"], "[", 
+     DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+      "Ready"}, 
+      TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquarePlusIconMedium"], 
+                 ImageSizeCache -> {12., {0., 12.}}], Appearance -> None, 
+                ButtonFunction :> (Typeset`open$$ = True), Evaluator -> 
+                Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztm+tvlFkdx4m+8aX/gv+FviKaaNyob9jV7KtNWGXXjREjGIkvNllIuaZI
+u0ADtNDLcGkRgYa2Kb3QNr2lF0rTexlIt4MDNFDIlmKZFDN+mF96PDm3Pk9n
+3Mq635TJzDxnzjnf3/13nofvffiHbR99a8uWLbu/w8u27Xt+uGvX9r+8+10+
+/HLn7k8+3rnjN+/s/NOOj3fs+v6H3+bLn/DvHf69eZ/9BoXAcuZpX6qifnpP
+c7Lodrp29V+Zzd5RYZBc7Dox8OOjvT9Qf5Uj7y8s393sfeUL9GXwUuzedt11
+z5fZvORvYqFhs3eXF/4+9Ucftbb7RzZ7dxvHyspKYuATH7WOuZLN3mBsPHny
+pL+/v6qq6tChQ2dv7v4aGOSDBw+am5tP5MCbubm5bC6MlPY4wkhJ+896+7u/
+mo0tLS2lc4j1K0xufHz8+vXrKKiiogJloTJ1dXV19cqVK0091X/t+pHO69it
+n36xMA798+fPv3jxotBU/oPnz5+zt9NrqKysnJmZWfcnsGBjMGLzd+7cgaMx
+hm8YAPE3A8YGRx9dJW7gX9jhzN0pLjEmmUyeOnWK1/8Gr0wmk0gkTltgt/Zg
+TK6trQ17KykpQeaBLaELfA2bFGr2gIaGhqGhIRkJTaZFxQXkBfr6+mxeAOt6
++fJlNmdUYnLFxcV82d3drZucE+iUkY8ePWLbKMVpckzLJTUV0/KTdWeOBUTq
+pAZaW1uRZ1FRkZhcRKeAEXuGnUyOWHwjsQE0q5QlPxRVFgTIykft0qVLcb2A
+8exW/M5nijo6clAfoYmhIk/bczcAPYAYmJ2djTUVmq2trZVdBUzRALJFffo3
+yAd3zj+2TE5O+nzt6NGjEZ0LEDCRkrKusCnqwHQhYsSQQsWWpqYmm9rly5eZ
+Vg+JmIpPkowhYKqPUUxRB+pGLPb3BYktTC7xhERw8+bNmpoaXpV1ZXOyxcH1
+qKIusSv2oKaKboo6WGt6etr+vuCxhY2hKWxVxQQFlQtI1uXl5QzTeWXjmKKx
+YiBNYDC6nLM5USP8ixcvUmDcuHEjlUpFX0uMRI/kBliorKyMFfUM7jPFuWf9
+lyd+R09aPrytfnrP4j+/sMfwcylRnECnLCR1KUTswE6Cjs6OhVgOXrCDo35J
+JWX1kTBSXV29b98+yEJQl3BfqsKojUv7t04/abVXVCWKE1LhtLS0OMsnEF13
+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
+Nyy1wU8=
+                "], {{0, 0}, {73, 70}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    
+                    TemplateBox[{
+                    "\"CREPE Pitch Detection Net Trained on Monophonic Signal \
+Data\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/NeuralNetRepository/\
+resources/CREPE-Pitch-Detection-Net-Trained-on-Monophonic-Signals"}, 
+                    "HyperlinkURL"]}, "RowDefault"], "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"NeuralNet\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Track the pitch of a monophonic signal\"", 
+                    "SummaryItem"]}], "\[SpanFromLeft]"}}, AutoDelete -> 
+               False, BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+            False, BaselinePosition -> {1, 1}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True -> 
+          GridBox[{{
+              PaneBox[
+               ButtonBox[
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "SquareMinusIconMedium"], 
+                 ImageSizeCache -> {12., {0., 12.}}], Appearance -> None, 
+                ButtonFunction :> (Typeset`open$$ = False), Evaluator -> 
+                Automatic, Method -> "Preemptive"], 
+               Alignment -> {Center, Center}, ImageSize -> 
+               Dynamic[{
+                 Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                  AbsoluteCurrentValue[Magnification]}]], 
+              GraphicsBox[
+               RasterBox[CompressedData["
+1:eJztm+tvlFkdx4m+8aX/gv+FviKaaNyob9jV7KtNWGXXjREjGIkvNllIuaZI
+u0ADtNDLcGkRgYa2Kb3QNr2lF0rTexlIt4MDNFDIlmKZFDN+mF96PDm3Pk9n
+3Mq635TJzDxnzjnf3/13nofvffiHbR99a8uWLbu/w8u27Xt+uGvX9r+8+10+
+/HLn7k8+3rnjN+/s/NOOj3fs+v6H3+bLn/DvHf69eZ/9BoXAcuZpX6qifnpP
+c7Lodrp29V+Zzd5RYZBc7Dox8OOjvT9Qf5Uj7y8s393sfeUL9GXwUuzedt11
+z5fZvORvYqFhs3eXF/4+9Ucftbb7RzZ7dxvHyspKYuATH7WOuZLN3mBsPHny
+pL+/v6qq6tChQ2dv7v4aGOSDBw+am5tP5MCbubm5bC6MlPY4wkhJ+896+7u/
+mo0tLS2lc4j1K0xufHz8+vXrKKiiogJloTJ1dXV19cqVK0091X/t+pHO69it
+n36xMA798+fPv3jxotBU/oPnz5+zt9NrqKysnJmZWfcnsGBjMGLzd+7cgaMx
+hm8YAPE3A8YGRx9dJW7gX9jhzN0pLjEmmUyeOnWK1/8Gr0wmk0gkTltgt/Zg
+TK6trQ17KykpQeaBLaELfA2bFGr2gIaGhqGhIRkJTaZFxQXkBfr6+mxeAOt6
++fJlNmdUYnLFxcV82d3drZucE+iUkY8ePWLbKMVpckzLJTUV0/KTdWeOBUTq
+pAZaW1uRZ1FRkZhcRKeAEXuGnUyOWHwjsQE0q5QlPxRVFgTIykft0qVLcb2A
+8exW/M5nijo6clAfoYmhIk/bczcAPYAYmJ2djTUVmq2trZVdBUzRALJFffo3
+yAd3zj+2TE5O+nzt6NGjEZ0LEDCRkrKusCnqwHQhYsSQQsWWpqYmm9rly5eZ
+Vg+JmIpPkowhYKqPUUxRB+pGLPb3BYktTC7xhERw8+bNmpoaXpV1ZXOyxcH1
+qKIusSv2oKaKboo6WGt6etr+vuCxhY2hKWxVxQQFlQtI1uXl5QzTeWXjmKKx
+YiBNYDC6nLM5USP8ixcvUmDcuHEjlUpFX0uMRI/kBliorKyMFfUM7jPFuWf9
+lyd+R09aPrytfnrP4j+/sMfwcylRnECnLCR1KUTswE6Cjs6OhVgOXrCDo35J
+JWX1kTBSXV29b98+yEJQl3BfqsKojUv7t04/abVXVCWKE1LhtLS0OMsnEF13
+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
+Nyy1wU8=
+                "], {{0, 0}, {73, 70}}, {0, 255}, ColorFunction -> RGBColor], 
+               AspectRatio -> 1, Axes -> False, Background -> None, Frame -> 
+               None, FrameTicks -> None, ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    
+                    TemplateBox[{
+                    "\"CREPE Pitch Detection Net Trained on Monophonic Signal \
+Data\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://resources.wolframcloud.com/NeuralNetRepository/\
+resources/CREPE-Pitch-Detection-Net-Trained-on-Monophonic-Signals"}, 
+                    "HyperlinkURL"]}, "RowDefault"], "SummaryItem"]}], 
+                 TagBox["\"\"", "SummaryItem"]}, {
+                 RowBox[{
+                   TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"NeuralNet\"", "SummaryItem"]}], 
+                 "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Track the pitch of a monophonic signal\"", 
+                    "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                 RowBox[{
+                   TagBox["\"ByteCount: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["89166968", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox[
+                   "\"TrainingSetInformation: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"MIR-1K, consisting of 1,000 song clips annotated with \
+the pitch contours of the melodies. Bach10, consisting of recordings of 10 \
+Bach chorales. RWC-Synth, an unreleased dataset that contains 6.16 hours of \
+audio synthesized from the RWC Music Database. MedleyDB, a collection of \
+songs including melody f0 annotations as well as instrument activations for \
+evaluating automatic instrument recognition. NSynth, an audio dataset \
+containing 305,979 musical notes, each with a unique pitch, timbre and \
+envelope. MDB-STEM-Synth, an unreleased collection of 230 monophonic stems \
+taken from MedleyDB and resynthesized with an analysis/synthesis approach to \
+generate a synthesized track with a perfect f0 annotation that maintains the \
+timbre and dynamics of the original track. This dataset consists of 230 \
+tracks with 25 instruments, totaling 15.56 hours of audio.\"", 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"InputDomains: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "\"Audio\""}, 
+                    "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"TaskType: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    RowBox[{"{", "\"Audio Analysis\"", "}"}], 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Keywords: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    RowBox[{
+                    "\"crepe\"", ",", "\"pitch\"", ",", 
+                    "\"hidden markov model\"", ",", 
+                    RowBox[{"\[LeftSkeleton]", "3", "\[RightSkeleton]"}], ",",
+                     "\"medleydb\"", ",", "\"nsynth\"", ",", 
+                    "\"mdb-stem-synth\""}], Short], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Data Location: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    
+                    DynamicModuleBox[{
+                    ResourceSystemClient`Private`typesetstorage$$ = 
+                    ResourceSystemClient`Private`typesetstorageLocation, 
+                    ResourceSystemClient`Private`info$$ = 
+                    Association[
+                    "Name" -> 
+                    "CREPE Pitch Detection Net Trained on Monophonic Signal \
+Data", "UUID" -> "f59651b3-c8a0-453f-9a1a-8f63dc14c37c", 
+                    "ContentElementLocations" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/objects/4d5cc35d-e836-443f-\
+8713-bc3c399078bc"], "EvaluationNet" -> 
+                    LocalObject[
+                    "file:///C:/Users/arnoudb.WRI/AppData/Roaming/Wolfram/\
+Objects/Resources/f59/f59651b3-c8a0-453f-9a1a-8f63dc14c37c/download/\
+EvaluationNet/41f18e3b11f833a6/data"], "UninitializedEvaluationNet" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/objects/a51a9873-861b-42d1-\
+91f2-4a103f273991"], "EvaluationExample" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/objects/b5f5bbad-15a8-4fed-\
+8701-ed57af88e984"]], "RepositoryLocation" -> 
+                    URL["https://www.wolframcloud.com/objects/resourcesystem/\
+api/1.0"], "ResourceLocations" -> {
+                    LocalObject[
+                    "file:///C:/Users/arnoudb.WRI/AppData/Roaming/Wolfram/\
+Objects/Resources/f59/f59651b3-c8a0-453f-9a1a-8f63dc14c37c"]}, "ResourceType" -> 
+                    "NeuralNet", 
+                    "ContentElements" -> {
+                    "ConstructionNotebook", "ConstructionNotebookExpression", 
+                    "EvaluationNet", "UninitializedEvaluationNet", 
+                    "EvaluationExample"}, "Version" -> "1.12.0", 
+                    "Description" -> "Track the pitch of a monophonic signal",
+                     "ByteCount" -> 89166968, "TrainingSetInformation" -> 
+                    "MIR-1K, consisting of 1,000 song clips annotated with \
+the pitch contours of the melodies. Bach10, consisting of recordings of 10 \
+Bach chorales. RWC-Synth, an unreleased dataset that contains 6.16 hours of \
+audio synthesized from the RWC Music Database. MedleyDB, a collection of \
+songs including melody f0 annotations as well as instrument activations for \
+evaluating automatic instrument recognition. NSynth, an audio dataset \
+containing 305,979 musical notes, each with a unique pitch, timbre and \
+envelope. MDB-STEM-Synth, an unreleased collection of 230 monophonic stems \
+taken from MedleyDB and resynthesized with an analysis/synthesis approach to \
+generate a synthesized track with a perfect f0 annotation that maintains the \
+timbre and dynamics of the original track. This dataset consists of 230 \
+tracks with 25 instruments, totaling 15.56 hours of audio.", "Performance" -> 
+                    "This model achieves, respectively, 0.999, 0.999, 0.995 \
+average RPA (raw pitch accuracy) at the 50-cent, 25-cent and 10-cent \
+thresholds, and 0.999 average RCA (raw chroma accuracy) at the 50-cent \
+threshold on the RWC-Synth dataset; and, respectively, 0.967, 0.953, 0.909 \
+average RPA (raw pitch accuracy) at the 50-cent, 25-cent and 10-cent \
+thresholds, and 0.970 average RCA (raw chroma accuracy) at the 50-cent \
+threshold on the MDB-STEM-Synth dataset.", "InputDomains" -> {"Audio"}, 
+                    "TaskType" -> {"Audio Analysis"}, 
+                    "Keywords" -> {
+                    "crepe", "pitch", "hidden markov model", "mir-1k", 
+                    "bach10", "rwc-synth", "medleydb", "nsynth", 
+                    "mdb-stem-synth"}, "MyAccount" -> False, 
+                    "Attributes" -> {
+                    "LocalCopyable", "CloudCopyable", "Multipart"}, 
+                    "LatestUpdate" -> 
+                    DateObject[{2018, 11, 12}, "Day", "Gregorian", 1.], 
+                    "DownloadedVersion" -> "1.12.0", "Format" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> "NB", "EvaluationNet" -> 
+                    "WLNet", "UninitializedEvaluationNet" -> "WLNet", 
+                    "EvaluationExample" -> "MX"], "AutoUpdate" -> Automatic, 
+                    "ContributorInformation" -> 
+                    Association[
+                    "PublisherID" -> "Wolfram", "DisplayName" -> 
+                    "Wolfram Research", "ContributedBy" -> 
+                    Missing["NoInput"]], "DefaultContentElement" -> 
+                    "EvaluationNet", "Details" -> 
+                    "Released in 2018, CREPE is a state-of-the-art system \
+based on a deep convolutional neural network that operates directly on the \
+time-domain waveform. The architecture is based on a chain of six convolution \
+stacks, followed by a classifier. The net outputs a vector that represents \
+the probability of the pitch being in one of 360 frequency classes \
+nonlinearly spaced.", "Hash" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> 
+                    Missing["NotAvailable"], "EvaluationNet" -> 
+                    Missing["NotAvailable"], "UninitializedEvaluationNet" -> 
+                    "55838a6f9522de609652e07dbf42824d", "EvaluationExample" -> 
+                    Missing["NotAvailable"]], "InformationElements" -> 
+                    Association[], "Originator" -> Missing["NoInput"], 
+                    "ReleaseDate" -> 
+                    DateObject[{2018, 5, 16}, "Day", "Gregorian", -4.], 
+                    "SeeAlso" -> {}, "ShortName" -> 
+                    "CREPE-Pitch-Detection-Net-Trained-on-Monophonic-Signals",
+                     "SourceMetadata" -> 
+                    Association[
+                    "Citation" -> 
+                    "J. W. Kim, J. Salamon, P. Li, J. P. Bello, \"CREPE: A \
+Convolutional Representation for Pitch Estimation,\" arXiv:1802.06182 (2018)",
+                     "Source" -> 
+                    Hyperlink[
+                    "https://github.com/marl/crepe", 
+                    "https://github.com/marl/crepe"], "Rights" -> 
+                    Hyperlink[
+                    "MIT License", "https://opensource.org/licenses/MIT"], 
+                    "Date" -> DateObject[{2018}, "Year", "Gregorian", -4.]], 
+                    "WolframLanguageVersionRequired" -> 
+                    Association[
+                    "ConstructionNotebookExpression" -> 
+                    Missing["NotAvailable"], "EvaluationNet" -> "12.0", 
+                    "UninitializedEvaluationNet" -> "12.0", 
+                    "EvaluationExample" -> Missing["NotAvailable"]]]}, 
+                    DynamicBox[
+                    ToBoxes[
+                    ResourceSystemClient`Private`info$$ = 
+                    ResourceSystemClient`Private`resourceInfo[
+                    "f59651b3-c8a0-453f-9a1a-8f63dc14c37c"]; If[
+                    AssociationQ[ResourceSystemClient`Private`info$$], 
+                    ResourceSystemClient`Private`typesetstorage$$[
+                    Lookup[
+                    ResourceSystemClient`Private`info$$, 
+                    "ContentElementLocations", None]], 
+                    Missing["NotAvailable"]], StandardForm], 
+                    ImageSizeCache -> {63., {1., 9.}}], 
+                    DynamicModuleValues :> {}], "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"f59651b3-c8a0-453f-9a1a-8f63dc14c37c\"", 
+                    "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"1.12.0\"", "SummaryItem"]}], ""}, {
+                 RowBox[{
+                   TagBox["\"Elements: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                    TagBox[
+                    
+                    RowBox[{
+                    "\"ConstructionNotebook\"", ",", 
+                    "\"ConstructionNotebookExpression\"", ",", 
+                    RowBox[{"\"Ev\"", "\[Ellipsis]", "\"Net\""}], ",", 
+                    "\"UninitializedEvaluationNet\"", ",", 
+                    "\"EvaluationExample\""}], Short[#, 2]& ], 
+                    "SummaryItem"]}], ""}}, AutoDelete -> False, 
+               BaseStyle -> {
+                ShowStringCharacters -> False, NumberMarks -> False, 
+                 PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+               GridBoxSpacings -> {
+                "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+            False, BaselinePosition -> {1, 1}, 
+            GridBoxAlignment -> {"Rows" -> {{Top}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+         Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+       "SummaryPanel"],
+      DynamicModuleValues:>{}], "]"}],
+    ResourceObject[
+     Association[
+     "Name" -> "CREPE Pitch Detection Net Trained on Monophonic Signal Data", 
+      "UUID" -> "f59651b3-c8a0-453f-9a1a-8f63dc14c37c", "ResourceType" -> 
+      "NeuralNet", "Version" -> "1.12.0", "Description" -> 
+      "Track the pitch of a monophonic signal", "RepositoryLocation" -> 
+      URL["https://www.wolframcloud.com/objects/resourcesystem/api/1.0"], 
+      "WolframLanguageVersionRequired" -> 
+      Association[
+       "ConstructionNotebookExpression" -> Missing["NotAvailable"], 
+        "EvaluationNet" -> "12.0", "UninitializedEvaluationNet" -> "12.0", 
+        "EvaluationExample" -> Missing["NotAvailable"]], 
+      "ContentElements" -> {
+       "ConstructionNotebook", "ConstructionNotebookExpression", 
+        "EvaluationNet", "UninitializedEvaluationNet", "EvaluationExample"}]],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False]}], "}"}]], "Output",
+ CellChangeTimes->{{3.763231608394929*^9, 3.7632316463063316`*^9}},
+ CellLabel->"Out[13]=",
+ CellID->189331177,ExpressionUUID->"cb235850-6da8-4dbb-87cd-5705ecaec1ec"]
+}, Open  ]],
+
+Cell["\<\
+Compute the sizes of locally stored \"NeuralNet\" resource objects, in MB:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.7632319097491274`*^9, 3.763231947978718*^9}},
+ CellID->188749227,ExpressionUUID->"5503af49-1fd1-4ea3-89f5-6f54545fb6d4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"UnitConvert", "[", 
+     RowBox[{
+      RowBox[{"Quantity", "[", 
+       RowBox[{
+        RowBox[{"N", "[", 
+         RowBox[{"#", "[", "\"\<ByteCount\>\"", "]"}], "]"}], ",", 
+        "\"\<Bytes\>\""}], "]"}], ",", "\"\<MB\>\""}], "]"}], "&"}], ",", 
+   RowBox[{"Select", "[", 
+    RowBox[{"$LocalResourceObjects", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", "\"\<ResourceType\>\"", "]"}], "===", 
+       "\"\<NeuralNet\>\""}], "&"}]}], "]"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.763231706121116*^9, 3.763231715903577*^9}, {
+  3.7632317702040634`*^9, 3.7632319026116533`*^9}},
+ CellLabel->"In[22]:=",
+ CellID->184921187,ExpressionUUID->"91ab7fbd-a3c3-445b-b7c2-9e22cc908d8e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"89.167656`","\"MB\"","megabytes","\"Megabytes\""},
+    "Quantity"], ",", 
+   TemplateBox[{"6.6795279999999995`","\"MB\"","megabytes","\"Megabytes\""},
+    "Quantity"], ",", 
+   TemplateBox[{"0.857408`","\"MB\"","megabytes","\"Megabytes\""},
+    "Quantity"], ",", 
+   TemplateBox[{"89.166968`","\"MB\"","megabytes","\"Megabytes\""},
+    "Quantity"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7632317163831973`*^9, 3.763231785797744*^9, {3.763231842430084*^9, 
+   3.763231903082979*^9}},
+ CellLabel->"Out[22]=",
+ CellID->208426957,ExpressionUUID->"ee10b0b4-6234-4658-99b5-c7326efc2847"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968,ExpressionUUID->"456fe121-758f-4ad6-9d96-2e57a0bcf8b5"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "0fbd8662-e240-41ca-bcd9-7ca71f46b749"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1293636265,ExpressionUUID->"3d9280dd-6661-4a8d-bbde-1d8e7123b08d"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "9ea84794-8b60-479b-be45-8e0f5d33bd38"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1020263627,ExpressionUUID->"1c6d89dc-e871-4fe5-a81e-b2c660875ccb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "4b2873af-4134-4d2b-8f7f-431a8606315f"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2061341341,ExpressionUUID->"04ca60dd-a4a6-49b7-9f2b-b9fa2adf971b"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "fb822cb5-ebb0-4a37-a294-dd80ea66e928"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1757724783,ExpressionUUID->"f91cb45f-63bb-4f64-86a3-b4bba17fec52"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "6c8839f6-b7d7-43e8-87cf-f5ef5eb18a58"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1295379749,ExpressionUUID->"24525614-b8ce-4134-becc-672f4a53b772"]
+}, Closed]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "1f73b08b-4b74-4417-a449-babb541d2fc9"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->258228157,ExpressionUUID->"8008c9d4-0511-49ea-9b70-6e997048933c"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "c1901e4c-e3d6-4047-a765-21cc4751e6fa"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2123667759,ExpressionUUID->"168b6ea6-0048-4952-a928-8589747d3f82"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "39788d3e-4b45-4f5e-bcb5-6a4faa8b0106"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1305812373,ExpressionUUID->"a34bdd3c-150d-4dff-bab1-1495c611ad50"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "7aab9189-8700-4946-b0b1-b34d44ab3559"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1653164318,ExpressionUUID->"3cb57427-e229-4946-a7f6-52d8568e9329"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "99e7c285-de10-4553-b4ba-551b440d0f77"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740,ExpressionUUID->"beada140-18bc-41a2-9272-843f037106ea"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Design Discussion", "DesignDiscussionSection",
+ CellID->1775809863,ExpressionUUID->"b6da41e9-8313-437d-80d4-645f5ac55afd"],
+
+Cell["XXXX", "DesignDiscussion",
+ CellID->308641435,ExpressionUUID->"47bd38d8-ad14-498a-b415-e633874b557b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Application Notes", "ApplicationNotesSection",
+ CellID->1163590540,ExpressionUUID->"1d63aa1c-c7e7-4d4a-ad87-c70abe264c40"],
+
+Cell["XXXX", "ApplicationNotes",
+ CellID->1480116198,ExpressionUUID->"63187b85-4f87-4a3e-bd26-2bbd7fd363a6"]
+}, Open  ]],
+
+Cell["Test Cases", "TestCasesSection",
+ CellID->725748110,ExpressionUUID->"864855e0-b22b-4280-bbbf-40c5e86c317d"],
+
+Cell[CellGroupData[{
+
+Cell["Function Essay", "FunctionEssaySection",
+ CellID->37427227,ExpressionUUID->"36a784ce-ae99-4eb9-b37b-89fbe71c4eb2"],
+
+Cell["XXXX", "FunctionEssay",
+ CellID->356990964,ExpressionUUID->"a08c1f65-c8d3-4041-b769-0fb7c3b60c2a"]
+}, Open  ]]
+},
+WindowSize->{700, 732},
+WindowMargins->{{Automatic, 370}, {60, Automatic}},
+TaggingRules->{
+ "DocuToolsSettingsInternal" -> {
+   "$PacletVersion" -> "0.9.1871", "$MVersion" -> "11", "$FlaggedVersion" -> 
+    10.4, "$ApplicationName" -> "Pubs", "$LinkBase" -> "Pubs", 
+    "$ApplicationDirectory" -> "C:\\Workspace\\Pubs\\", 
+    "$DocumentationDirectory" -> 
+    "C:\\Workspace\\Pubs\\Documentation\\English\\", "$UseNewPageDialog" -> 
+    ""}, "SecurityRisk" -> False, "SecurityExplanation" -> "", "Author" -> 
+  "arnoudb", "CreationDate" -> "04-02-2019 17:05:37"},
+CellContext->"Global`",
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (March 31, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[110696, 2195, 155, 2, 54, "ExtendedExamplesSection",ExpressionUUID->"456fe121-758f-4ad6-9d96-2e57a0bcf8b5",
+   CellTags->"ExtendedExamples",
+   CellID->1854448968]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 115265, 2324}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 598, 14, 22, "History",ExpressionUUID->"23d88528-ac76-4f58-ab80-8ba08dc66fbf",
+ CellID->341476719],
+Cell[1159, 36, 139, 1, 20, "AuthorDate",ExpressionUUID->"d4f2b35f-359b-45be-85a8-61932ee8a94b",
+ CellID->712066545],
+Cell[CellGroupData[{
+Cell[1323, 41, 123, 1, 27, "CategorizationSection",ExpressionUUID->"aab346e5-c54e-4543-bfb6-055de9d33d30",
+ CellID->1122911449],
+Cell[1449, 44, 134, 2, 70, "Categorization",ExpressionUUID->"628529aa-75c0-47b0-aee1-60c78cad327e",
+ CellID->686433507],
+Cell[1586, 48, 128, 2, 70, "Categorization",ExpressionUUID->"bef83001-b92a-4b47-91bf-718662946187",
+ CellID->605800465],
+Cell[1717, 52, 124, 2, 70, "Categorization",ExpressionUUID->"bea189f9-73e0-4baf-b29f-7184e0cf366c",
+ CellID->468444828],
+Cell[1844, 56, 104, 1, 70, "Categorization",ExpressionUUID->"e6d405af-40e0-4ab3-b0f9-eef9bc6a46a8"],
+Cell[1951, 59, 135, 2, 70, "Categorization",ExpressionUUID->"4a2472d2-19f5-4b9f-a0f2-c5a1708cd7bb",
+ CellID->172747495]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2123, 66, 111, 1, 17, "SynonymsSection",ExpressionUUID->"fb8acf4f-9285-4b8c-a747-4381fc0b9d41",
+ CellID->1427418553],
+Cell[2237, 69, 100, 1, 70, "Synonyms",ExpressionUUID->"80d54c53-ee23-43f2-a45f-b1e852e781b1",
+ CellID->1251652828]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2374, 75, 110, 1, 17, "KeywordsSection",ExpressionUUID->"e9878159-9f99-4959-9826-e5a3f952bf23",
+ CellID->477174294],
+Cell[2487, 78, 100, 1, 70, "Keywords",ExpressionUUID->"612ce670-b22f-493d-b218-797337b1a463",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2624, 84, 120, 1, 17, "TemplatesSection",ExpressionUUID->"5cc15371-6f63-4f57-9207-32b25cb98ecc",
+ CellID->1872225408],
+Cell[2747, 87, 149, 2, 70, "Template",ExpressionUUID->"895d1c65-38f1-4125-baff-a225fcfc19c8",
+ CellID->1562036412],
+Cell[2899, 91, 137, 2, 70, "Template",ExpressionUUID->"170b786f-fb75-4556-a26a-6701da067cc2",
+ CellID->158391909],
+Cell[3039, 95, 136, 2, 70, "Template",ExpressionUUID->"82a33b27-a8e0-4f8a-ba2a-5f2dee7b1bbf",
+ CellID->1360575930],
+Cell[3178, 99, 137, 2, 70, "Template",ExpressionUUID->"a0124f6d-7659-412c-a856-eefb69ed49a8",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3352, 106, 108, 1, 17, "DetailsSection",ExpressionUUID->"8f9f96de-cdd4-415b-98c3-6a4a1d7a219e",
+ CellID->307771771],
+Cell[3463, 109, 117, 2, 70, "Details",ExpressionUUID->"4b2f2a6b-f93c-4868-9e10-5b6968909260",
+ CellID->49458704],
+Cell[3583, 113, 124, 2, 70, "Details",ExpressionUUID->"6e4a3ae1-cdf6-47cc-ad1f-759e8fe45593",
+ CellID->350963985],
+Cell[3710, 117, 121, 2, 70, "Details",ExpressionUUID->"efc33df5-b775-495a-80e4-3521a78bc446",
+ CellID->422270209],
+Cell[3834, 121, 126, 2, 70, "Details",ExpressionUUID->"1a0db4eb-149a-46f3-b25b-b280d6264af5",
+ CellID->545239557],
+Cell[3963, 125, 116, 2, 70, "Details",ExpressionUUID->"1050f771-3937-45cd-bf2a-bca989fc6c2c",
+ CellID->121292707],
+Cell[4082, 129, 115, 2, 70, "Details",ExpressionUUID->"2d37259b-d19a-4265-94d9-1062a057d814",
+ CellID->29314406],
+Cell[4200, 133, 117, 2, 70, "Details",ExpressionUUID->"4e0c64af-4701-4221-b6a7-d115b2825a25",
+ CellID->96001539],
+Cell[4320, 137, 133, 2, 70, "Details",ExpressionUUID->"d0039a91-8ee2-4052-8ab0-325c85db884a",
+ CellID->123278822],
+Cell[4456, 141, 122, 2, 70, "Details",ExpressionUUID->"02ff136a-5412-4c7d-9f54-fb44ec7c41f5",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4615, 148, 117, 1, 17, "SecuritySection",ExpressionUUID->"c4d92900-bc11-4614-8c83-407abdd45933",
+ CellID->13551076],
+Cell[4735, 151, 1094, 30, 70, "SecurityDetails",ExpressionUUID->"89fc8445-1353-4fa3-97dd-1be0f00a5de5",
+ CellID->2488900]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5866, 186, 189, 2, 62, "ObjectName",ExpressionUUID->"9e65fd4a-3b79-48c0-af70-75bef669e834",
+ CellID->1224892054],
+Cell[6058, 190, 460, 9, 72, "Usage",ExpressionUUID->"2f7b7357-db0a-477c-a3fa-e2cca7faa2b5",
+ CellID->982511436],
+Cell[6521, 201, 97, 1, 23, "Notes",ExpressionUUID->"c396774d-bb61-4976-8af9-595edbd6f735",
+ CellID->1067943069]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6655, 207, 112, 1, 44, "TutorialsSection",ExpressionUUID->"b02d4013-fc03-46fd-91f5-418756d88d93",
+ CellID->250839057],
+Cell[6770, 210, 100, 1, 16, "Tutorials",ExpressionUUID->"e5fbfac5-d780-4a61-9aa1-c2995b34e594",
+ CellID->341631938]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6907, 216, 138, 1, 31, "RelatedDemonstrationsSection",ExpressionUUID->"2bafa20c-ad4d-4358-9b58-1c0fa094f645",
+ CellID->1268215905],
+Cell[7048, 219, 113, 1, 16, "RelatedDemonstrations",ExpressionUUID->"ca787c01-e02b-4f0c-b52a-b5a25070bba2",
+ CellID->1129518860]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7198, 225, 120, 1, 31, "RelatedLinksSection",ExpressionUUID->"a98c198c-eaff-4f47-a52b-bde15cb67cfa",
+ CellID->1584193535],
+Cell[7321, 228, 104, 1, 16, "RelatedLinks",ExpressionUUID->"ec84bd42-24ea-4c7d-a2df-bf8e73ab079b",
+ CellID->1038487239]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7462, 234, 110, 1, 31, "SeeAlsoSection",ExpressionUUID->"d9364631-c239-4d65-b012-ba498b2ced33",
+ CellID->1255426704],
+Cell[7575, 237, 98, 1, 16, "SeeAlso",ExpressionUUID->"77ab00c7-f97f-445a-9882-c5a9482ccd27",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7710, 243, 127, 1, 31, "RelatedWorkflowsSection",ExpressionUUID->"fc08db45-053b-4d9f-98c1-1ff4c0f2aaf6",
+ CellID->121236710],
+Cell[7840, 246, 107, 1, 16, "RelatedWorkflows",ExpressionUUID->"0387d739-2698-4d59-91f8-023405a5f852",
+ CellID->294347949]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7984, 252, 112, 1, 31, "MoreAboutSection",ExpressionUUID->"b2f57e8f-69ad-4769-b4dc-58a90c351f38",
+ CellID->38303248],
+Cell[8099, 255, 110, 1, 16, "MoreAbout",ExpressionUUID->"0862ec19-c5ba-4499-bc8f-b5b8b510794c",
+ CellID->1665078683]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8246, 261, 411, 11, 68, "PrimaryExamplesSection",ExpressionUUID->"ff765981-7828-4382-a532-4eb8c1f0790e",
+ CellID->880084151],
+Cell[8660, 274, 208, 2, 20, "ExampleText",ExpressionUUID->"9f18615e-568f-4491-8475-69e25b16dee5",
+ CellID->27136305],
+Cell[CellGroupData[{
+Cell[8893, 280, 211, 3, 25, "Input",ExpressionUUID->"48d120a9-8c4a-481d-b3f1-a5417e7d8153",
+ CellID->774120792],
+Cell[9107, 285, 99811, 1855, 463, "Output",ExpressionUUID->"cb235850-6da8-4dbb-87cd-5705ecaec1ec",
+ CellID->189331177]
+}, Open  ]],
+Cell[108933, 2143, 248, 4, 20, "ExampleText",ExpressionUUID->"5503af49-1fd1-4ea3-89f5-6f54545fb6d4",
+ CellID->188749227],
+Cell[CellGroupData[{
+Cell[109206, 2151, 795, 21, 62, "Input",ExpressionUUID->"91ab7fbd-a3c3-445b-b7c2-9e22cc908d8e",
+ CellID->184921187],
+Cell[110004, 2174, 643, 15, 33, "Output",ExpressionUUID->"ee10b0b4-6234-4658-99b5-c7326efc2847",
+ CellID->208426957]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[110696, 2195, 155, 2, 54, "ExtendedExamplesSection",ExpressionUUID->"456fe121-758f-4ad6-9d96-2e57a0bcf8b5",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+Cell[110854, 2199, 242, 5, 31, "ExampleSection",ExpressionUUID->"3d9280dd-6661-4a8d-bbde-1d8e7123b08d",
+ CellID->1293636265],
+Cell[111099, 2206, 265, 5, 19, "ExampleSection",ExpressionUUID->"1c6d89dc-e871-4fe5-a81e-b2c660875ccb",
+ CellID->1020263627],
+Cell[CellGroupData[{
+Cell[111389, 2215, 244, 5, 19, "ExampleSection",ExpressionUUID->"04ca60dd-a4a6-49b7-9f2b-b9fa2adf971b",
+ CellID->2061341341],
+Cell[111636, 2222, 247, 5, 70, "ExampleSubsection",ExpressionUUID->"f91cb45f-63bb-4f64-86a3-b4bba17fec52",
+ CellID->1757724783],
+Cell[111886, 2229, 247, 5, 70, "ExampleSubsection",ExpressionUUID->"24525614-b8ce-4134-becc-672f4a53b772",
+ CellID->1295379749]
+}, Closed]],
+Cell[112148, 2237, 248, 5, 19, "ExampleSection",ExpressionUUID->"8008c9d4-0511-49ea-9b70-6e997048933c",
+ CellID->258228157],
+Cell[112399, 2244, 259, 5, 19, "ExampleSection",ExpressionUUID->"168b6ea6-0048-4952-a928-8589747d3f82",
+ CellID->2123667759],
+Cell[112661, 2251, 252, 5, 19, "ExampleSection",ExpressionUUID->"a34bdd3c-150d-4dff-bab1-1495c611ad50",
+ CellID->1305812373],
+Cell[112916, 2258, 257, 5, 19, "ExampleSection",ExpressionUUID->"3cb57427-e229-4946-a7f6-52d8568e9329",
+ CellID->1653164318],
+Cell[113176, 2265, 249, 5, 19, "ExampleSection",ExpressionUUID->"beada140-18bc-41a2-9272-843f037106ea",
+ CellID->589267740]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[113462, 2275, 128, 1, 79, "DesignDiscussionSection",ExpressionUUID->"b6da41e9-8313-437d-80d4-645f5ac55afd",
+ CellID->1775809863],
+Cell[113593, 2278, 107, 1, 16, "DesignDiscussion",ExpressionUUID->"47bd38d8-ad14-498a-b415-e633874b557b",
+ CellID->308641435]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[113737, 2284, 128, 1, 31, "ApplicationNotesSection",ExpressionUUID->"1d63aa1c-c7e7-4d4a-ad87-c70abe264c40",
+ CellID->1163590540],
+Cell[113868, 2287, 108, 1, 16, "ApplicationNotes",ExpressionUUID->"63187b85-4f87-4a3e-bd26-2bbd7fd363a6",
+ CellID->1480116198]
+}, Open  ]],
+Cell[113991, 2291, 113, 1, 31, "TestCasesSection",ExpressionUUID->"864855e0-b22b-4280-bbbf-40c5e86c317d",
+ CellID->725748110],
+Cell[CellGroupData[{
+Cell[114129, 2296, 120, 1, 31, "FunctionEssaySection",ExpressionUUID->"36a784ce-ae99-4eb9-b37b-89fbe71c4eb2",
+ CellID->37427227],
+Cell[114252, 2299, 104, 1, 20, "FunctionEssay",ExpressionUUID->"a08c1f65-c8d3-4041-b769-0fb7c3b60c2a",
+ CellID->356990964]
+}, Open  ]]
+}
+]
+*)
+
