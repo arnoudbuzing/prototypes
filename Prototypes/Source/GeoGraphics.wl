@@ -27,6 +27,7 @@ GeoService = <|
     "http://c.tile.opentopomap.org/`1`/`2`/`3`.png"
   }],
   {"OpenTopoMap", "Attribution"} -> Row[{"Map tiles by ", Hyperlink["OpenTopoMap","https://wiki.openstreetmap.org/wiki/OpenTopoMap"], " under ", Hyperlink["CC-BY-SA","https://creativecommons.org/licenses/by-sa/2.0/"], "." }],
+  {"MapsForFree", "Relief"} :> "https://maps-for-free.com/layer/relief/z`1`/row`3`/`1`_`2`-`3`.jpg",
   "WikiMedia" -> "https://maps.wikimedia.org/osm-intl/`1`/`2`/`3`.png",
   "HikeAndBike" ->
    "http://toolserver.org/tiles/hikebike/`1`/`2`/`3`.png",
