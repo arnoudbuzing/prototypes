@@ -11,7 +11,7 @@ AdverbQ[word_String] := MemberQ[Union[WordData[word][[All, 2]]], "Adverb"];
 
 
 
-$EnglishWords := Module[ {file,words},
+$EnglishWords := Module[ {file},
   file = FileNameJoin[{$UserBaseDirectory, "ApplicationData", "Prototypes", "EnglishWords.mx"}];
   If[ FileType[file] === None,
     $EnglishWords = Import["https://github.com/dwyl/english-words/blob/master/words.txt?raw=true", "Lines"];

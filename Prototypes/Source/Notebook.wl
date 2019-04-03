@@ -113,7 +113,7 @@ buttonfunction1 = Function[{source, data},
 ]
 
 buttonfunction2 = Function[{source, data},
-  Module[{selection, tag, cell, language, original, translation},
+  Module[{selection, tag, cell, language, original},
    tag = data;
    NotebookLocate[tag];
    selection = NotebookSelection[];
@@ -129,7 +129,7 @@ buttonfunction2 = Function[{source, data},
 ]
 
 TranslationCell[text_, language_] :=
- Module[{selection, cell, label, tag},
+ Module[{selection, cell, tag},
   tag = First@StringSplit[CreateUUID[], "-"];
   cell = Cell[text, "Text", CellTags -> tag,
     TaggingRules -> {"language" -> language}];
@@ -149,7 +149,7 @@ RasterizeLargeCells[nb_, style_: "Output"] := Module[{},
   NotebookFind[nb, style, All, CellStyle, AutoScroll -> False];
   FrontEndTokenExecute[nb, "SelectionConvert", "BitmapConditional"]
   ]
-  
+
 
 (*
 

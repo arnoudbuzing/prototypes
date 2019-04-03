@@ -44,7 +44,7 @@ If[ $SystemID === "Windows-x86-64",
 
 
 FilePartition[file_String, size_] :=
- Module[{n, dir, filesize, count, in, uuid, partdir, out, bytes, done},
+ Module[{dir, count, in, uuid, partdir, out, bytes},
   count =
    If[IntegerQ[size], size,
     QuantityMagnitude[UnitConvert[size, "Bytes"]]];
@@ -82,7 +82,7 @@ Map[
 
 
 
-FileJoin[partdir_String, name_String, OptionsPattern[] ] := Module[{parts, dir, file, out, in, bytes,pattern},
+FileJoin[partdir_String, name_String, OptionsPattern[] ] := Module[{parts, dir, file, pattern},
   pattern = OptionValue[FilePattern];
   If[ pattern === Automatic, pattern = "part-*.data"];
   parts = Sort[FileNames[pattern, partdir]];
