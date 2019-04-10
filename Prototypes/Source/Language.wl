@@ -48,5 +48,5 @@ ElapsedTime[unit_,expr_] := UnitConvert[ Quantity[First[AbsoluteTiming[expr]], "
 
 Deconstruct[e_] := Level[e, {-1}, Heads -> True]
 
-Attributes[FailureBlock] = {HoldAllComplete};
-FailureBlock[expr_, failexpr_] := Check[Block[{$Messages = {}}, expr], failexpr]
+Attributes[MessageBlock] = {HoldAllComplete};
+MessageBlock[expr_, failexpr_] := Check[Block[{$Messages = {}}, expr], failexpr]
