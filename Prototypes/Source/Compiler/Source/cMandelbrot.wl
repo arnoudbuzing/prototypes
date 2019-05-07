@@ -1,5 +1,5 @@
 Function[{
-  Typed[array, TypeSpecifier["PackedArray"]["Complex128", 2]]
+  Typed[array, TypeSpecifier["PackedArray"]["ComplexReal64", 2]]
   },
   Module[{
     width = Length[array],
