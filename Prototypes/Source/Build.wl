@@ -37,3 +37,4 @@ If[ Head[$FrontEnd]===FrontEndObject,
 BuildInfo[] := Module[ {},
   ClickToCopy[ Dataset[SystemInformation["Small"] //. {List[a : Repeated[_String -> _]] :> Association[a]}], $BuildInfo ]
   ];
+
