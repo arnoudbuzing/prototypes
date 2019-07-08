@@ -10,7 +10,7 @@ SatelliteImage[assoc_Association] := Module[{satellite, size, band, date },
 
 
 SatelliteImageList[assoc_Association] := Module[{dates},
-  dates = DateRange[assoc["DateStart"], assoc["DateEnd"], Quantity[15,"Minutes"]];
+  dates = DateRange[assoc["DateStart"], assoc["DateEnd"], Quantity[10,"Minutes"]];
   Map[ SatelliteImage[ <|
     "Satellite"->assoc["Satellite"],
     "Size"->assoc["Size"],
