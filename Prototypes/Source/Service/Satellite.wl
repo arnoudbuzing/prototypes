@@ -6,8 +6,7 @@ SatelliteImage[assoc_Association] := Module[{satellite, size, band, date },
   file = CacheDownload[ "https://cdn.star.nesdis.noaa.gov/"<>satellite<>"/ABI/FD/" <> band <>
         "/" <> date <> "_" <> satellite <> "-ABI-FD-" <> band <> "-" <> size <> ".jpg"];
   Import[file]
-  ]
-
+  ];
 
 SatelliteImageList[assoc_Association] := Module[{dates},
   dates = DateRange[assoc["DateStart"], assoc["DateEnd"], Quantity[10,"Minutes"]];

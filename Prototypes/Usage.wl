@@ -185,4 +185,4 @@ AddCodeCompletion::usage = "AddCodeCompletion[\"function\"][arg1, arg2, ...] add
 RasterizeLargeCells::usage = "RasterizeLargeCells[nb,style] uses the 'BitmapConditional' frontend token to rasterize large cells with 'style'. If 'style' is omitted large 'Output' cells will be rasterized.";
 RandomDate::usage = "RandomDate[] generates a random date between 1/1/1900 and today. RandomDate[date1,date2] generates a random date between 'date1' and date2'.";
 
-MessageBlock::usage = "MessageBlock[expr,failexpr] suppresses all message output during the evaluation of 'expr'. If 'expr' generates messages, then 'failexpr' is evaluated without suppressing message output.";
+MessageBlock::usage = "MessageBlock[expr,failure] suppresses all message output during the evaluation of 'expr'. If 'expr' generates messages, then 'failure' is evaluated without suppressing message output.";
