@@ -3,8 +3,8 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.5.4",
-  MathematicaVersion -> "11.2+",
+  Version -> "0.5.5",
+  MathematicaVersion -> "11.3+",
   Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
   Extensions -> {
@@ -60,7 +60,8 @@ Paclet[
       "Prototypes`CacheClear", "Prototypes`SatelliteImage","Prototypes`PlaceholderImage","Prototypes`ResourceFunctionSearch",
       "Prototypes`Redder","Prototypes`Bluer", "Prototypes`Greener", "Prototypes`Yellower", "Prototypes`Oranger",
       "Prototypes`Pinker", "Prototypes`Purpler", "Prototypes`Blacker", "Prototypes`Grayer", "Prototypes`Whiter",
-      "Prototypes`AddCodeCompletion", "Prototypes`RasterizeLargeCells", "Prototypes`RandomDate", "Prototypes`MessageBlock"}
+      "Prototypes`AddCodeCompletion", "Prototypes`RasterizeLargeCells", "Prototypes`RandomDate", "Prototypes`MessageBlock",
+      "Prototypes`IPStack"}
     }
   }
 ]

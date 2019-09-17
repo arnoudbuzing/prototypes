@@ -186,3 +186,5 @@ RasterizeLargeCells::usage = "RasterizeLargeCells[nb,style] uses the 'BitmapCond
 RandomDate::usage = "RandomDate[] generates a random date between 1/1/1900 and today. RandomDate[date1,date2] generates a random date between 'date1' and date2'.";
 
 MessageBlock::usage = "MessageBlock[expr,failure] suppresses all message output during the evaluation of 'expr'. If 'expr' generates messages, then 'failure' is evaluated without suppressing message output.";
+
+IPStack::usage = "IPStack[ip,key] gives geographical information for IP address 'ip' using API access 'key' from https://ipstack.com (not included)";

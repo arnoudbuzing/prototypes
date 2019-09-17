@@ -22,7 +22,7 @@ Print["\n=======================================================================
 Print["Building Documentation"];
 Print["================================================================================\n"];
 
-PrependTo[$Path,"D:\\git\\pubs"];
+PrependTo[$Path,"D:\\git"];
 
 Quiet[ Get["DocumentationBuild`"], {RunProcess::pnfd, StringReplace::strse}];
 
