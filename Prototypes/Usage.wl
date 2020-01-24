@@ -188,3 +188,5 @@ RandomDate::usage = "RandomDate[] generates a random date between 1/1/1900 and t
 MessageBlock::usage = "MessageBlock[expr,failure] suppresses all message output during the evaluation of 'expr'. If 'expr' generates messages, then 'failure' is evaluated without suppressing message output.";
 
 IPStack::usage = "IPStack[ip,key] gives geographical information for IP address 'ip' using API access 'key' from https://ipstack.com (not included)";
+
+$PrototypesLibraryDirectory::usage = "$PrototypesLibraryDirectory gives the directory for the compiled libraries of the Prototypes package";
