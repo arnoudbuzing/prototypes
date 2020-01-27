@@ -190,3 +190,6 @@ MessageBlock::usage = "MessageBlock[expr,failure] suppresses all message output 
 IPStack::usage = "IPStack[ip,key] gives geographical information for IP address 'ip' using API access 'key' from https://ipstack.com (not included)";
 
 $PrototypesLibraryDirectory::usage = "$PrototypesLibraryDirectory gives the directory for the compiled libraries of the Prototypes package";
+
+JavaInstall::usage = "JavaInstall[package] installs a java package, such as \"Batik\"";
+JavaImport::usage = "JavaImport[file,format] uses Java to import file";
