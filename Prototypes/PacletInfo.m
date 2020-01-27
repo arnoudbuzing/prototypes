@@ -61,7 +61,7 @@ Paclet[
       "Prototypes`Redder","Prototypes`Bluer", "Prototypes`Greener", "Prototypes`Yellower", "Prototypes`Oranger",
       "Prototypes`Pinker", "Prototypes`Purpler", "Prototypes`Blacker", "Prototypes`Grayer", "Prototypes`Whiter",
       "Prototypes`AddCodeCompletion", "Prototypes`RasterizeLargeCells", "Prototypes`RandomDate", "Prototypes`MessageBlock",
-      "Prototypes`IPStack","Prototypes`$PrototypesLibraryDirectory","JavaInstall","JavaImport"}
+      "Prototypes`IPStack","Prototypes`$PrototypesLibraryDirectory","Prototypes`JavaInstall","Prototypes`JavaImport"}
     }
   }
 ]
