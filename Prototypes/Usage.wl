@@ -174,15 +174,15 @@ SatelliteImageList::usage = "SatelliteImageList[ assoc ] give a list of satellit
 ResourceFunctionSearch::usage = "ResourceFunctionSearch[query] searches the resource system for resource functions matching 'query'";
 
 Redder::usage = "Redder[color] makes 'color' a little redder. Redder[color, fraction] makes 'color' redder using 'fraction' and Blend";
-Bluer::usage = "Redder[color] makes 'color' a little bluer. Redder[color, fraction] makes 'color' bluer using 'fraction' and Blend";
-Greener::usage = "Redder[color] makes 'color' a little greener. Redder[color, fraction] makes 'color' greener using 'fraction' and Blend";
-Yellower::usage = "Redder[color] makes 'color' a little yellower. Redder[color, fraction] makes 'color' yellower using 'fraction' and Blend";
-Oranger::usage = "Redder[color] makes 'color' a little oranger. Redder[color, fraction] makes 'color' oranger using 'fraction' and Blend";
-Pinker::usage = "Redder[color] makes 'color' a little pinker. Redder[color, fraction] makes 'color' pinker using 'fraction' and Blend";
-Purpler::usage = "Redder[color] makes 'color' a little purpler. Redder[color, fraction] makes 'color' purpler using 'fraction' and Blend";
-Blacker::usage = "Redder[color] makes 'color' a little blacker. Redder[color, fraction] makes 'color' blacker using 'fraction' and Blend";
-Grayer::usage = "Redder[color] makes 'color' a little grayer. Redder[color, fraction] makes 'color' grayer using 'fraction' and Blend";
-Whiter::usage = "Redder[color] makes 'color' a little whiter. Redder[color, fraction] makes 'color' whiter using 'fraction' and Blend";
+Bluer::usage = "Bluer[color] makes 'color' a little bluer. Bluer[color, fraction] makes 'color' bluer using 'fraction' and Blend";
+Greener::usage = "Greener[color] makes 'color' a little greener. Greener[color, fraction] makes 'color' greener using 'fraction' and Blend";
+Yellower::usage = "Yellower[color] makes 'color' a little yellower. Yellower[color, fraction] makes 'color' yellower using 'fraction' and Blend";
+Oranger::usage = "Oranger[color] makes 'color' a little oranger. Oranger[color, fraction] makes 'color' oranger using 'fraction' and Blend";
+Pinker::usage = "Pinker[color] makes 'color' a little pinker. Pinker[color, fraction] makes 'color' pinker using 'fraction' and Blend";
+Purpler::usage = "Purpler[color] makes 'color' a little purpler. Purpler[color, fraction] makes 'color' purpler using 'fraction' and Blend";
+Blacker::usage = "Blacker[color] makes 'color' a little blacker. Blacker[color, fraction] makes 'color' blacker using 'fraction' and Blend";
+Grayer::usage = "Grayer[color] makes 'color' a little grayer. Grayer[color, fraction] makes 'color' grayer using 'fraction' and Blend";
+Whiter::usage = "Whiter[color] makes 'color' a little whiter. Whiter[color, fraction] makes 'color' whiter using 'fraction' and Blend";
 
 AddCodeCompletion::usage = "AddCodeCompletion[\"function\"][arg1, arg2, ...] adds code completions for \"function\" for each given argument";
 
