@@ -19,6 +19,7 @@ JavaImport[in_String, "SVG", Method -> "ApacheBatik"] := Module[{file, input, st
     stream = JavaNew["java.io.FileOutputStream", tmp];
     output = JavaNew["org.apache.batik.transcoder.TranscoderOutput", stream];
     transcoder = JavaNew["org.apache.batik.transcoder.image.PNGTranscoder"];
+    (* transcoder@addTranscodingHint[PNGTranscoder`KEYUWIDTH, JavaNew["java.lang.Float", 2000.0]]; *)
     transcoder@transcode[input, output];
     stream@flush[];
     stream@close[];
