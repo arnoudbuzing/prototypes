@@ -42,7 +42,9 @@ CapitalizeSentences::usage = "CapitalizeSentences[string] capitalizes sentences 
 StringSwap::usage = "StringSwap[string, a \[TwoWayRule] b] swaps 'a' and 'b' in 'string'";
 $UUIDStringPattern::usage = "$UUIDStringPattern will StringMatchQ a valid UUID";
 (* geographics *)
+(*
 RandomGeoPosition::usage = "RandomGeoPosition[] picks a random geo position";
+*)
 (* color *)
 RGBColor255::usage = "RGBColor[r,g,b] specifies color using RGB values from the range 0-255";
 (* image processing *)
@@ -119,8 +121,10 @@ Prototype::usage = "Prototype[\"symbol\"] modifies System 'symbol' in a custom w
 FilePartition::usage = "FilePartition[file,size] partitions 'file' into chunks with the given 'size' and places them in a new directory";
 FileJoin::usage = "FileJoin[dir,file] combines binary part files in 'dir' into a single 'file'";
 FilePattern::usage = "FilePattern is an option to FileJoin which specifies which files to include";
+(*
 Antonyms::usage = "Antonyms[word] gives the list of antonyms for 'word'";
 Synonyms::usage = "Synonyms[word] gives the list of synonyms for 'word'";
+*)
 NounQ::usage = "NounQ[word] gives True if 'word' is a noun and False otherwise";
 VerbQ::usage = "VerbQ[word] gives True if 'word' is a verb and False otherwise";
 AdjectiveQ::usage = "AdjectiveQ[word] gives True if 'word' is an adjective and False otherwise";
@@ -192,4 +196,4 @@ IPStack::usage = "IPStack[ip,key] gives geographical information for IP address 
 $PrototypesLibraryDirectory::usage = "$PrototypesLibraryDirectory gives the directory for the compiled libraries of the Prototypes package";
 
 JavaInstall::usage = "JavaInstall[package] installs a java package, such as \"Batik\"";
-JavaImport::usage = "JavaImport[file,format] uses Java to import file";
+JavaImport::usage = "JavaImport[file,format] import SVG file";

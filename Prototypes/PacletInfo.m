@@ -18,7 +18,7 @@ Paclet[
       Context -> {"Prototypes`"},
       Symbols ->
       {"Prototypes`AdjectiveQ","Prototypes`AdverbQ","Prototypes`AlphaChannelQ","Prototypes`Antepenultimate",
-      "Prototypes`Antonyms","Prototypes`BoxSyntaxQ","Prototypes`BuildCompilerLibraries",
+      "Prototypes`BoxSyntaxQ","Prototypes`BuildCompilerLibraries",
       "Prototypes`BuildInfo","Prototypes`BuildWikiDocumentation","Prototypes`By",
       "Prototypes`CapitalizeSentences","Prototypes`CaptureFromIPCamera","Prototypes`ClickToCopy",
       "Prototypes`CommonestBy","Prototypes`CopyAsBitmap","Prototypes`CreateDock",
@@ -40,14 +40,14 @@ Paclet[
       "Prototypes`NotebookTranslate","Prototypes`NounQ","Prototypes`OpenSky",
       "Prototypes`PacletInformationDataset","Prototypes`Penultimate","Prototypes`PrimeCount",
       "Prototypes`PrimeSum","Prototypes`Prototype","Prototypes`QuickSearch","Prototypes`RandomDelete",
-      "Prototypes`RandomGeoPosition", "Prototypes`RandomPosition","Prototypes`RandomRomanNumeral",
+      "Prototypes`RandomPosition","Prototypes`RandomRomanNumeral",
       "Prototypes`RandomWikipediaData","Prototypes`Rarest","Prototypes`RarestBy",
       "Prototypes`RenderOnlineNotebook","Prototypes`ResourceObjectDataset","Prototypes`ResourceObjectManager",
       "Prototypes`RGBColor255","Prototypes`Runtime","Prototypes`Second","Prototypes`SetAutoStyleOptions",
       "Prototypes`Seventh","Prototypes`Sixth","Prototypes`StandardDeviationBy","Prototypes`StringComplement",
       "Prototypes`StringDisjointQ","Prototypes`StringFirst","Prototypes`StringIntersectingQ",
       "Prototypes`StringIntersection","Prototypes`StringLast","Prototypes`StringMost","Prototypes`StringRest",
-      "Prototypes`StringSort","Prototypes`StringSwap","Prototypes`StringUnion","Prototypes`Synonyms",
+      "Prototypes`StringSort","Prototypes`StringSwap","Prototypes`StringUnion",
       "Prototypes`SystemStringOpen","Prototypes`Tenth","Prototypes`Third","Prototypes`ToStringFileName",
       "Prototypes`TranslationCell","Prototypes`Ultimate","Prototypes`Uniconize","Prototypes`UnmatchQ",
       "Prototypes`URLHash","Prototypes`VarianceBy","Prototypes`VerbQ","Prototypes`What3Words",
@@ -65,3 +65,10 @@ Paclet[
     }
   }
 ]
+
+(*
+These functions have been adopted in the System` context:
+"Prototypes`Synonyms"
+"Prototypes`Antonyms"
+"Prototypes`RandomGeoPosition"
+*)

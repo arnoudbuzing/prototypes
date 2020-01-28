@@ -1,3 +1,5 @@
+
+(*
 JavaInstall["Batik"] := Module[{source, zip, dir, jar},
   source = "http://www.apache.org/dyn/closer.cgi?filename=/xmlgraphics/batik/binaries/batik-bin-1.12.zip&action=download";
   zip = FileNameJoin[{$HomeDirectory, "Downloads", "batik-bin-1.12.zip"}];
@@ -9,11 +11,14 @@ JavaInstall["Batik"] := Module[{source, zip, dir, jar},
   jar = FileNameJoin[{dir, "batik-1.12"}]; AddToClassPath[jar];
   jar
 ];
+*)
 
-JavaImport[in_String, "SVG", Method -> "ApacheBatik"] := Module[{file, input, stream, output, tmp, transcoder, res},
+$JavaSourceDirectory = DirectoryName[$InputFileName];
+AddToClassPath[ FileNameJoin[{$JavaSourceDirectory,"Apache-Batik"}] ];
+
+JavaImport[filename_String, options___] := Module[{batikDirectory, file, input, stream, output, tmp, transcoder, res},
   JavaBlock[
-    If[Length[Select[JavaClassPath[], StringContainsQ["batik-1.12"]]] == 0, AddToClassPath[ FileNameJoin[{$UserBaseDirectory, "ApplicationData", "Java", "batik-1.12"}]]];
-    file = JavaNew["java.io.File", in]@toURL[]@toString[];
+    file = JavaNew["java.io.File", filename]@toURL[]@toString[];
     input = JavaNew["org.apache.batik.transcoder.TranscoderInput", file];
     tmp = CreateFile[];
     stream = JavaNew["java.io.FileOutputStream", tmp];
@@ -25,6 +30,6 @@ JavaImport[in_String, "SVG", Method -> "ApacheBatik"] := Module[{file, input, st
     stream@close[];
     res = Import[tmp];
     DeleteFile[tmp];
-    res
+    {"Image" -> res}
   ]
 ];

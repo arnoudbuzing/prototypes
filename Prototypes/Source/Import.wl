@@ -1,0 +1,1 @@
+ImportExport`RegisterImport["SVG",Prototypes`JavaImport,"DefaultElement" -> "Image"];

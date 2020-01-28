@@ -17,7 +17,7 @@ Module[ {files},
 
     (* load in any session *)
     files = {"Build.wl", "Dataset.wl", "Files.wl", "Cloud.wl",
-    "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl",
+    "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl", "Import.wl",
     "Resources.wl", "Search.wl", "String.wl", "System.wl", "Color.wl", "Styles.wl",
     "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl", "Words.wl", "Packages.wl", "Random.wl",
     "Cryptography.wl", "External.wl", "Service/What3Words.wl", "Service/OpenSky.wl", "Service/Satellite.wl", "Service/IPStack.wl",
@@ -44,6 +44,7 @@ Module[ {files},
   ];
 ];
 
+(*
 If[
   $VersionNumber > 11.3,
   (* functions which have become System functions *)
@@ -51,7 +52,7 @@ If[
   Prototypes`Antonyms=System`Antonyms;
   Prototypes`Synonyms=System`Synonyms;
 ]
-
+*)
 
 AppendTo[ timings, "End" ->N@SessionTime[] ];
 
