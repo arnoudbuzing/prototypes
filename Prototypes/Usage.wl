@@ -197,3 +197,8 @@ $PrototypesLibraryDirectory::usage = "$PrototypesLibraryDirectory gives the dire
 
 JavaInstall::usage = "JavaInstall[package] installs a java package, such as \"Batik\"";
 JavaImport::usage = "JavaImport[file,format] import SVG file";
+
+BlockApply::usage = "BlockApply[f,list,...] works like BlockMap[ Apply[f,#]&, list, ...]";
+StringTakeDrop::usage = "StringTakeDrop[string,n] gives {StringTake[string,n],StringDrop[string,n]}";
+
+Disable::usage = "Disable[feature] disables a feature";

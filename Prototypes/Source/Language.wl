@@ -50,3 +50,5 @@ Deconstruct[e_] := Level[e, {-1}, Heads -> True]
 
 Attributes[MessageBlock] = {HoldAllComplete};
 MessageBlock[expr_, failure_] := Check[Block[{$Messages = {}}, expr], failure]
+
+BlockApply[f_, args__] := BlockMap[Apply[f, #] &, args]

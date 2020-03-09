@@ -1,3 +1,4 @@
+Needs["PacletManager`"];
 Print[];
 directory = DirectoryName[ First @ $ScriptCommandLine ];
 Print["Directory: ", directory];

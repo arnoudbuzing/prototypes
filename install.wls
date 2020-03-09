@@ -1,3 +1,4 @@
+Needs["PacletManager`"];
 Print[];
 
 (* uninstall old paclets first *)

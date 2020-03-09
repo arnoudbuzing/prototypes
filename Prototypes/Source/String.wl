@@ -1,15 +1,15 @@
 (* strings *)
 
 Attributes[MakeString] = {HoldAllComplete};
-MakeString[e_] := ToString[Unevaluated[e],InputForm]
+MakeString[e_] := ToString[Unevaluated[e],InputForm];
 
-StringFirst[string_String] := StringTake[string,1]
+StringFirst[string_String] := StringTake[string,1];
 
-StringLast[string_String] := StringTake[string,-1]
+StringLast[string_String] := StringTake[string,-1];
 
-StringRest[string_String] := StringTake[string,{2,-1}]
+StringRest[string_String] := StringTake[string,{2,-1}];
 
-StringMost[string_String] := StringTake[string,{1,-2}]
+StringMost[string_String] := StringTake[string,{1,-2}];
 
 
 $UUIDStringPattern =
@@ -20,7 +20,7 @@ $UUIDStringPattern =
   Repeated[HexadecimalCharacter, 12];
 
 
-CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, TextSentences[string]]]
+CapitalizeSentences[string_] := StringReplace[string, Map[# -> Capitalize[#] &, TextSentences[string]]];
 
 StringSwap::noswap = "Unable to swap, because \"`1`\" and \"`2`\" were found in overlapping positions in \"`3`\".";
 
@@ -36,17 +36,16 @@ StringSwap[string_String, a_String <-> b_String] :=  Module[{i1,i2,ok},
   ]
 ]
 
-StringComplement[args___String] := StringJoin[Complement @@ Map[Characters, {args}]]
+StringComplement[args___String] := StringJoin[Complement @@ Map[Characters, {args}]];
 
-StringIntersection[args___String] := StringJoin[Intersection @@ Map[Characters, {args}]]
+StringIntersection[args___String] := StringJoin[Intersection @@ Map[Characters, {args}]];
 
-StringUnion[args___String] := StringJoin[Union @@ Map[Characters, {args}]]
+StringUnion[args___String] := StringJoin[Union @@ Map[Characters, {args}]];
 
-StringDisjointQ[s1_String, s2_String] := DisjointQ[Characters[s1],Characters[s2]]
+StringDisjointQ[s1_String, s2_String] := DisjointQ[Characters[s1],Characters[s2]];
 
-StringIntersectingQ[s1_String, s2_String] :=IntersectingQ[Characters[s1],Characters[s2]]
+StringIntersectingQ[s1_String, s2_String] :=IntersectingQ[Characters[s1],Characters[s2]];
 
-StringSort[s1_String] := StringJoin@Sort[Characters[s1]]
+StringSort[s1_String] := StringJoin@Sort[Characters[s1]];
 
-
-(* TODO: StringContainsAll, etc. *)
+StringTakeDrop[string_String, n_Integer] := {StringTake[string, n], StringDrop[string, n]};

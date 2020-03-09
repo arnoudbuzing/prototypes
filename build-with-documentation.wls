@@ -1,3 +1,5 @@
+Needs["PacletManager`"];
+
 start = SessionTime[];
 
 PacletUninstall["Prototypes"];

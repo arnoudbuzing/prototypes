@@ -3,7 +3,7 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.5.6",
+  Version -> "0.5.7",
   MathematicaVersion -> "11.3+",
   Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
@@ -61,7 +61,8 @@ Paclet[
       "Prototypes`Redder","Prototypes`Bluer", "Prototypes`Greener", "Prototypes`Yellower", "Prototypes`Oranger",
       "Prototypes`Pinker", "Prototypes`Purpler", "Prototypes`Blacker", "Prototypes`Grayer", "Prototypes`Whiter",
       "Prototypes`AddCodeCompletion", "Prototypes`RasterizeLargeCells", "Prototypes`RandomDate", "Prototypes`MessageBlock",
-      "Prototypes`IPStack","Prototypes`$PrototypesLibraryDirectory","Prototypes`JavaInstall","Prototypes`JavaImport"}
+      "Prototypes`IPStack","Prototypes`$PrototypesLibraryDirectory","Prototypes`JavaInstall","Prototypes`JavaImport",
+      "Prototypes`BlockApply","Prototypes`StringTakeDrop", "Prototypes`Disable"}
     }
   }
 ]

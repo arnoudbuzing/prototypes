@@ -20,7 +20,7 @@ Module[ {files},
     "Image.wl", "Language.wl", "Paclet.wl", "Formats.wl", "Import.wl",
     "Resources.wl", "Search.wl", "String.wl", "System.wl", "Color.wl", "Styles.wl",
     "Entities.wl", "WolframAlpha.wl", "Translation.wl","GeoGraphics.wl", "Words.wl", "Packages.wl", "Random.wl",
-    "Cryptography.wl", "External.wl", "Service/What3Words.wl", "Service/OpenSky.wl", "Service/Satellite.wl", "Service/IPStack.wl",
+    "Cryptography.wl", "External.wl", "Disable.wl", "Service/What3Words.wl", "Service/OpenSky.wl", "Service/Satellite.wl", "Service/IPStack.wl",
     "Primes/Primes.wl", "Java/Runtime.wl", "Java/Import.wl", "Compiler/Build.wl"};
     Map[
       Function[ {file},
