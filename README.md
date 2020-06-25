@@ -1,5 +1,7 @@
 # Prototypes
 
+[![Wolfram Language](https://wolfr.am/NyiJ4BVJ)](https://www.wolfram.com/language/)
+
 A wide collection of functions which extend the Wolfram Language.
 
 Install with the following command (replace 0.0.0 with the [latest version digits](https://github.com/arnoudbuzing/prototypes/releases)):
