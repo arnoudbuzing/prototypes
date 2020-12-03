@@ -13,7 +13,7 @@ Print["=========================================================================
 
 source = FileNameJoin[{ DirectoryName[ First @ $ScriptCommandLine ], "Prototypes"}];
 Print["Source directory: ", source];
-build = "D:\\output\\Prototypes";
+build = "C:\\output\\Prototypes";
 Print["Build directory: ", build];
 DeleteDirectory[build, DeleteContents->True];
 CopyDirectory[source, build];
@@ -24,7 +24,7 @@ Print["\n=======================================================================
 Print["Building Documentation"];
 Print["================================================================================\n"];
 
-PrependTo[$Path,"D:\\git"];
+PrependTo[$Path,"C:\\git"];
 
 Quiet[ Get["DocumentationBuild`"], {RunProcess::pnfd, StringReplace::strse}];
 

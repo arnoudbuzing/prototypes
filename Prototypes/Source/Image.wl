@@ -21,8 +21,7 @@ Image3DCubeQ[___] := False
 ImageCropResize[image_Image, dims_List] := First[ ConformImages[ {image}, dims, "Fill"]]
 ImageCropResize[___] := $Failed
 
-AlphaChannelQ[image_Image] := If[RemoveAlphaChannel[image] == image, False, True]
-AlphaChannelQ[image_Image3D] := If[RemoveAlphaChannel[image] == image, False, True]
+AlphaChannelQ[image:(_Image|_Image3D] := Information[image,"Transparency"];
 AlphaChannelQ[___] := False
 
 

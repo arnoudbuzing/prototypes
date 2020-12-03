@@ -141,9 +141,9 @@ TranslationCell[text_, language_] :=
   SelectionMove[EvaluationNotebook[], After, Cell];
 ]
 
-
+(*
 SetOptions[$FrontEnd, InputAliases -> {"rg" -> "»"}];
-
+*)
 
 RasterizeLargeCells[nb_, style_: "Output"] := Module[{},
   NotebookFind[nb, style, All, CellStyle, AutoScroll -> False];
