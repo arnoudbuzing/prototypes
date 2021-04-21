@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30176,        826]
-NotebookOptionsPosition[     23892,        691]
-NotebookOutlinePosition[     24760,        719]
-CellTagsIndexPosition[     24681,        714]
+NotebookDataLength[     30742,        836]
+NotebookOptionsPosition[     24153,        695]
+NotebookOutlinePosition[     25325,        729]
+CellTagsIndexPosition[     25246,        724]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,7 +21,7 @@ Notebook[{
 Cell[TextData[{
  "New in: ",
  Cell["12.3", "HistoryData",
-  CellTags->"New",ExpressionUUID->"f98bf1bd-d908-4e94-ad52-114ebc3da5ed"],
+  CellTags->"New",ExpressionUUID->"23e4825e-1fc9-4322-be47-e947fe5555e0"],
  " | Modified in: ",
  Cell[" ", "HistoryData",
   CellTags->"Modified",ExpressionUUID->"41c26adb-fd78-4209-a4d5-4f24b475c869"],
@@ -32,11 +32,11 @@ Cell[TextData[{
  Cell[" ", "HistoryData",
   CellTags->"Excised",ExpressionUUID->"63b55cf2-94f6-4520-8a46-7378df3560b7"]
 }], "History",
- CellChangeTimes->{{3.828006533593953*^9, 3.8280065340508413`*^9}},
+ CellChangeTimes->{{3.8280072134418573`*^9, 3.8280072137717524`*^9}},
  CellID->1247902091,ExpressionUUID->"41ad31a0-26a3-4ff8-927a-44db3e715f95"],
 
-Cell["Created by: arnoudb on 04-20-2021 16:46:32", "AuthorDate",
- CellID->1444793074,ExpressionUUID->"9a282d3b-da2b-4da9-a5e9-0a37b0361968"],
+Cell["Created by: arnoudb on 04-21-2021 10:12:24", "AuthorDate",
+ CellID->1906580856,ExpressionUUID->"6cb8d56a-3323-4fed-bb86-c24d8a10ac08"],
 
 Cell[CellGroupData[{
 
@@ -55,7 +55,7 @@ Cell["Prototypes`", "Categorization",
  CellLabel->"Context",
  CellID->468444828,ExpressionUUID->"a09e9c4d-8ab9-4ae7-b585-c517016e8191"],
 
-Cell["Prototypes/ref/Blacker", "Categorization",
+Cell["Prototypes/ref/Redder", "Categorization",
  CellLabel->"URI",ExpressionUUID->"f4c50626-70ea-4938-af51-c60e63c76466"]
 }, Open  ]],
 
@@ -92,77 +92,75 @@ Cell[BoxData[""], "Template",
 
 Cell[CellGroupData[{
 
-Cell["Blacker", "ObjectName",
+Cell["Redder", "ObjectName",
  CellID->1224892054,ExpressionUUID->"8393d601-4014-44ba-afc9-60862df940ec"],
 
 Cell[TextData[{
- Cell["   ", "ModInfo",ExpressionUUID->"45c63153-70af-46ff-a7b5-054a61e7c179"],
+ Cell["   ", "ModInfo",ExpressionUUID->"e0b65604-33ed-4782-94c8-dac0c7840f62"],
  Cell[BoxData[
-  RowBox[{"Blacker", "[", 
+  RowBox[{"Redder", "[", 
    StyleBox[
     ButtonBox["color",
      BaseStyle->"Link",
      ButtonData->"paclet:Prototypes/ref/color"], "TI"], "]"}]], 
-  "InlineFormula",ExpressionUUID->"92452f42-72bc-4ccf-a830-996f8bc9999a"],
+  "InlineFormula",ExpressionUUID->"379e6f22-d5d7-49cd-82b9-550711c31bcd"],
  " \[LineSeparator]blends ",
  Cell[BoxData[
   StyleBox[
    ButtonBox["color",
     BaseStyle->"Link",
     ButtonData->"paclet:Prototypes/ref/color"], "TI"]], "InlineFormula",
-  ExpressionUUID->"ff96d764-4f23-4e79-a2da-7b39f4a5aa00"],
+  ExpressionUUID->"75b40b70-7600-40e8-8956-bbc409eb8faf"],
  " with ",
  Cell[BoxData[
-  ButtonBox["Black",
+  ButtonBox["Red",
    BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
-  "ffc4f478-f5e3-4fa6-bcbc-d96d84931e8a"],
- " to make it blacker.\n",
- Cell["   ", "ModInfo",ExpressionUUID->"d011d3de-f51a-41f5-a92d-8765dfe71ed8"],
+  "03bb5d33-e3a9-4930-b60b-b497bd683491"],
+ " to make it redder.\n",
+ Cell["   ", "ModInfo",ExpressionUUID->"d482b169-e4b4-4d3c-abdf-2db4e7f556cf"],
  Cell[BoxData[
-  RowBox[{"Blacker", "[", 
+  RowBox[{
+   ButtonBox["Redder",
+    BaseStyle->"Link",
+    ButtonData->"paclet:Prototypes/ref/Redder"], "[", 
    RowBox[{
-    StyleBox[
-     ButtonBox["color",
-      BaseStyle->"Link",
-      ButtonData->"paclet:Prototypes/ref/color"], "TI"], ",", 
-    StyleBox[
-     ButtonBox["frac",
-      BaseStyle->"Link",
-      ButtonData->"paclet:Prototypes/ref/frac"], "TI"]}], "]"}]], 
-  "InlineFormula",ExpressionUUID->"0c1f2f6d-e83f-411b-b176-6f59ca570e5a"],
+    StyleBox["color", "TI"], ",", 
+    StyleBox["frac", "TI"]}], "]"}]], "InlineFormula",ExpressionUUID->
+  "bae488f2-f9a3-4197-b723-25496b8dd5aa"],
  "\[LineSeparator]blends ",
  Cell[BoxData[
   StyleBox[
    ButtonBox["color",
     BaseStyle->"Link",
     ButtonData->"paclet:Prototypes/ref/color"], "TI"]], "InlineFormula",
-  ExpressionUUID->"500f0895-2192-4934-aa18-344d6a909772"],
+  ExpressionUUID->"cebb3cf1-74ef-4ae4-b878-45a149c46a1a"],
  " with ",
  Cell[BoxData[
-  ButtonBox["Black",
+  ButtonBox["Red",
    BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
-  "a83a08a7-11af-458d-bbc1-d1e0d231b30a"],
+  "806d75c0-1926-4d70-9a5c-a82ef913bfca"],
  " with the specified fraction ",
  Cell[BoxData[
   StyleBox[
    ButtonBox["frac",
     BaseStyle->"Link",
     ButtonData->"paclet:Prototypes/ref/frac"], "TI"]], "InlineFormula",
-  ExpressionUUID->"368083f4-81a9-47a4-9a63-d32ffd1dc629"],
+  ExpressionUUID->"9be197ab-005f-4667-8a0f-9bb708e67cb9"],
  "."
 }], "Usage",
  CellChangeTimes->{{3.8280045587753267`*^9, 3.8280047065744658`*^9}, {
-  3.828007725564603*^9, 3.828007730179097*^9}},
- CellID->982511436,ExpressionUUID->"36d294c7-65ad-4677-b95e-6ff5e6e47ce3"],
+  3.82800722840736*^9, 3.828007247260314*^9}, {3.828010430975053*^9, 
+  3.828010430975095*^9}},
+ CellID->982511436,ExpressionUUID->"df44813b-5263-4377-8873-d28556acbe21"],
 
 Cell[TextData[{
  Cell[BoxData[
   RowBox[{
-   ButtonBox["Blacker",
+   ButtonBox["Redder",
     BaseStyle->"Link",
-    ButtonData->"paclet:Prototypes/ref/Blacker"], "[", 
+    ButtonData->"paclet:Prototypes/ref/Redder"], "[", 
    StyleBox["color", "TI"], "]"}]], "InlineFormula",ExpressionUUID->
-  "d7681c29-7a6f-430b-a6bb-dfd3faa5fac9"],
+  "daf7686e-6a6b-4ad3-9303-8cf35e3d3672"],
  " is equivalent to ",
  Cell[BoxData[
   RowBox[{
@@ -171,15 +169,16 @@ Cell[TextData[{
    RowBox[{
     RowBox[{"{", 
      RowBox[{
-      ButtonBox["Black",
+      ButtonBox["Red",
        BaseStyle->"Link"], ",", 
       StyleBox["color", "TI"]}], "}"}], ",", 
     RowBox[{"1", "/", "3"}]}], "]"}]], "InlineFormula",ExpressionUUID->
-  "89d292ad-82ae-4d91-91d1-7e03e3b847d2"],
+  "62576931-f5ac-47dc-bcee-1c34f5f9ad45"],
  "."
 }], "Notes",
- CellChangeTimes->{{3.8280048343705263`*^9, 3.828004876188136*^9}},
- CellID->1067943069,ExpressionUUID->"f9730bf9-a3df-4498-9028-b1614e86f36a"]
+ CellChangeTimes->{{3.8280048343705263`*^9, 3.828004876188136*^9}, {
+  3.828007251018176*^9, 3.8280072669464493`*^9}},
+ CellID->1067943069,ExpressionUUID->"566deef5-1c06-4c8e-9215-711de0be27c1"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -219,64 +218,64 @@ Cell[TextData[{
   ButtonBox["Blacker",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Blacker"]], "InlineFormula",
-  ExpressionUUID->"2c171d72-1f97-430d-b8d6-3600fe86a4c8"],
+  ExpressionUUID->"ff7509a3-182d-412d-946d-e4ab384dc441"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Bluer",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Bluer"]], "InlineFormula",
-  ExpressionUUID->"cf202f64-04d4-493c-9ea7-3a1f8d4d67c3"],
+  ExpressionUUID->"5091ec1c-3cc5-41b8-9798-a707c68de4d7"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Grayer",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Grayer"]], "InlineFormula",
-  ExpressionUUID->"54a5c8fb-7159-414b-8f12-125d798aa8de"],
+  ExpressionUUID->"367e2203-56af-4b5c-9ec3-ac6690b63b70"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Greener",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Greener"]], "InlineFormula",
-  ExpressionUUID->"87686f13-dbeb-46c7-8273-0fe7d6b58922"],
+  ExpressionUUID->"29a4c4c5-87eb-4cc1-9c3d-adce2ffb6510"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Oranger",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Oranger"]], "InlineFormula",
-  ExpressionUUID->"c9c7b9f8-40eb-4d50-bad4-4640b801c78f"],
+  ExpressionUUID->"5655e5d8-9e91-42c0-b9d2-c01709e37064"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Pinker",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Pinker"]], "InlineFormula",
-  ExpressionUUID->"50db9df7-1936-4342-b591-52050240e662"],
+  ExpressionUUID->"3608ca53-6f16-42e2-b1e7-8a8ac755b099"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Purpler",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Purpler"]], "InlineFormula",
-  ExpressionUUID->"74e735d2-7a79-4c7c-b9bb-34014e100f1b"],
+  ExpressionUUID->"303d3dec-71e3-4776-bb38-cfb52a5df678"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Redder",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Redder"]], "InlineFormula",
-  ExpressionUUID->"d86ec9ec-e01a-496b-a3f0-f11f3c339ea2"],
+  ExpressionUUID->"2493f87c-3c61-4284-b57b-4887bfbfe0e5"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Whiter",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Whiter"]], "InlineFormula",
-  ExpressionUUID->"95635f58-9381-4540-85b7-0f5c8b38644d"],
+  ExpressionUUID->"571ad9cc-ec01-4674-ad37-fd24ad141434"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["Yellower",
    BaseStyle->"Link",
    ButtonData->"paclet:Prototypes/ref/Yellower"]], "InlineFormula",
-  ExpressionUUID->"7ca8a045-fa24-4df3-8e5b-1bb20b22f376"]
+  ExpressionUUID->"ec38d97b-e614-4976-9d30-77be9615d73f"]
 }], "SeeAlso",
  CellChangeTimes->{{3.828010484335821*^9, 3.828010515565508*^9}},
- CellID->929782353,ExpressionUUID->"0f93c66e-e49d-49d3-9db2-ee262472e6f1"]
+ CellID->929782353,ExpressionUUID->"6a965fd5-dd5e-4b3c-aeda-aa73a8ab1dda"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -306,24 +305,26 @@ Cell[BoxData[
 Cell[TextData[{
  "Blend various colors with ",
  Cell[BoxData[
-  ButtonBox["Black",
+  ButtonBox["Red",
    BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
-  "8f086dba-dbab-4cc0-a69e-2863fdc14c63"],
+  "63cb4440-1ec7-4236-a3ef-61ace507e2bd"],
  ":"
 }], "ExampleText",
- CellChangeTimes->{{3.828004777412812*^9, 3.828004799553646*^9}},
- CellID->352052385,ExpressionUUID->"47cb18f6-8f31-4fff-a68d-e1ef417b073f"],
+ CellChangeTimes->{{3.828004777412812*^9, 3.828004799553646*^9}, {
+  3.8280072786019287`*^9, 3.828007281164897*^9}},
+ CellID->352052385,ExpressionUUID->"9d4ff808-af1b-431f-b2ff-57b014eeb2d2"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"AssociationMap", "[", 
-  RowBox[{"Blacker", ",", 
+  RowBox[{"Redder", ",", 
    RowBox[{"{", 
-    RowBox[{"Red", ",", "White", ",", "Blue"}], "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.828004721982737*^9, 3.828004750490485*^9}},
- CellLabel->"In[2]:=",
- CellID->1512834444,ExpressionUUID->"78a79a22-19ad-43ed-90e4-4106956e0d18"],
+    RowBox[{"Black", ",", "White", ",", "Yellow"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.828004721982737*^9, 3.828004750490485*^9}, {
+  3.828007283075884*^9, 3.828007290645473*^9}},
+ CellLabel->"In[10]:=",
+ CellID->1512834444,ExpressionUUID->"615f4f9e-759c-482d-a3ff-6306651e084f"],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -335,11 +336,11 @@ Cell[BoxData[
        GraphicsBox[{
          {GrayLevel[0], RectangleBox[{0, 0}]}, 
          {GrayLevel[0], RectangleBox[{1, -1}]}, 
-         {RGBColor[1, 0, 0], RectangleBox[{0, -1}, {2, 1}]}},
+         {GrayLevel[0], RectangleBox[{0, -1}, {2, 1}]}},
         AspectRatio->1,
         DefaultBaseStyle->"ColorSwatchGraphics",
         Frame->True,
-        FrameStyle->RGBColor[0.6666666666666666, 0., 0.],
+        FrameStyle->GrayLevel[0.],
         FrameTicks->None,
         ImageSize->
          Dynamic[{
@@ -348,8 +349,7 @@ Cell[BoxData[
             Magnification])}],
         PlotRangePadding->None],
        StyleBox[
-        RowBox[{"RGBColor", "[", 
-          RowBox[{"1", ",", "0", ",", "0"}], "]"}], NumberMarks -> False]],
+        RowBox[{"GrayLevel", "[", "0", "]"}], NumberMarks -> False]],
       Appearance->None,
       BaseStyle->{},
       BaselinePosition->Baseline,
@@ -359,18 +359,18 @@ Cell[BoxData[
           AbsoluteCurrentValue["Deployed"]], 
          SelectionMove[Typeset`box$, All, Expression]; 
          FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
-         FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[1, 0, 0]; 
+         FrontEnd`Private`$ColorSelectorInitialColor = GrayLevel[0]; 
          FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
          MathLink`CallFrontEnd[
            FrontEnd`AttachCell[Typeset`box$, 
-            FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
-            Left, Top}, 
+            FrontEndResource["GrayLevelColorValueSelector"], {
+            0, {Left, Bottom}}, {Left, Top}, 
             "ClosingActions" -> {
              "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
       DefaultBaseStyle->{},
       Evaluator->Automatic,
       Method->"Preemptive"],
-     RGBColor[1, 0, 0],
+     GrayLevel[0],
      Editable->False,
      Selectable->False], "\[Rule]", 
     InterpretationBox[
@@ -379,12 +379,12 @@ Cell[BoxData[
        GraphicsBox[{
          {GrayLevel[0], RectangleBox[{0, 0}]}, 
          {GrayLevel[0], RectangleBox[{1, -1}]}, 
-         {RGBColor[0.6666666666666667, 0., 0.], 
+         {RGBColor[0.3333333333333333, 0., 0.], 
           RectangleBox[{0, -1}, {2, 1}]}},
         AspectRatio->1,
         DefaultBaseStyle->"ColorSwatchGraphics",
         Frame->True,
-        FrameStyle->RGBColor[0.44444444444444453`, 0., 0.],
+        FrameStyle->RGBColor[0.2222222222222222, 0., 0.],
         FrameTicks->None,
         ImageSize->
          Dynamic[{
@@ -394,7 +394,7 @@ Cell[BoxData[
         PlotRangePadding->None],
        StyleBox[
         RowBox[{"RGBColor", "[", 
-          RowBox[{"0.6666666666666667`", ",", "0.`", ",", "0.`"}], "]"}], 
+          RowBox[{"0.3333333333333333`", ",", "0.`", ",", "0.`"}], "]"}], 
         NumberMarks -> False]],
       Appearance->None,
       BaseStyle->{},
@@ -406,7 +406,7 @@ Cell[BoxData[
          SelectionMove[Typeset`box$, All, Expression]; 
          FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
          FrontEnd`Private`$ColorSelectorInitialColor = 
-          RGBColor[0.6666666666666667, 0., 0.]; 
+          RGBColor[0.3333333333333333, 0., 0.]; 
          FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
          MathLink`CallFrontEnd[
            FrontEnd`AttachCell[Typeset`box$, 
@@ -417,7 +417,7 @@ Cell[BoxData[
       DefaultBaseStyle->{},
       Evaluator->Automatic,
       Method->"Preemptive"],
-     RGBColor[0.6666666666666667, 0., 0.],
+     RGBColor[0.3333333333333333, 0., 0.],
      Editable->False,
      Selectable->False]}], ",", 
    RowBox[{
@@ -470,104 +470,13 @@ Cell[BoxData[
        GraphicsBox[{
          {GrayLevel[0], RectangleBox[{0, 0}]}, 
          {GrayLevel[0], RectangleBox[{1, -1}]}, 
-         {GrayLevel[
-           Rational[2, 3]], RectangleBox[{0, -1}, {2, 1}]}},
-        AspectRatio->1,
-        DefaultBaseStyle->"ColorSwatchGraphics",
-        Frame->True,
-        FrameStyle->GrayLevel[0.4444444444444444],
-        FrameTicks->None,
-        ImageSize->
-         Dynamic[{
-          Automatic, 
-           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-            Magnification])}],
-        PlotRangePadding->None],
-       StyleBox[
-        RowBox[{"GrayLevel", "[", 
-          FractionBox["2", "3"], "]"}], NumberMarks -> False]],
-      Appearance->None,
-      BaseStyle->{},
-      BaselinePosition->Baseline,
-      ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
-        If[
-         Not[
-          AbsoluteCurrentValue["Deployed"]], 
-         SelectionMove[Typeset`box$, All, Expression]; 
-         FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
-         FrontEnd`Private`$ColorSelectorInitialColor = GrayLevel[
-            Rational[2, 3]]; 
-         FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
-         MathLink`CallFrontEnd[
-           FrontEnd`AttachCell[Typeset`box$, 
-            FrontEndResource["GrayLevelColorValueSelector"], {
-            0, {Left, Bottom}}, {Left, Top}, 
-            "ClosingActions" -> {
-             "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
-      DefaultBaseStyle->{},
-      Evaluator->Automatic,
-      Method->"Preemptive"],
-     GrayLevel[
-      Rational[2, 3]],
-     Editable->False,
-     Selectable->False]}], ",", 
-   RowBox[{
-    InterpretationBox[
-     ButtonBox[
-      TooltipBox[
-       GraphicsBox[{
-         {GrayLevel[0], RectangleBox[{0, 0}]}, 
-         {GrayLevel[0], RectangleBox[{1, -1}]}, 
-         {RGBColor[0, 0, 1], RectangleBox[{0, -1}, {2, 1}]}},
-        AspectRatio->1,
-        DefaultBaseStyle->"ColorSwatchGraphics",
-        Frame->True,
-        FrameStyle->RGBColor[0., 0., 0.6666666666666666],
-        FrameTicks->None,
-        ImageSize->
-         Dynamic[{
-          Automatic, 
-           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-            Magnification])}],
-        PlotRangePadding->None],
-       StyleBox[
-        RowBox[{"RGBColor", "[", 
-          RowBox[{"0", ",", "0", ",", "1"}], "]"}], NumberMarks -> False]],
-      Appearance->None,
-      BaseStyle->{},
-      BaselinePosition->Baseline,
-      ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
-        If[
-         Not[
-          AbsoluteCurrentValue["Deployed"]], 
-         SelectionMove[Typeset`box$, All, Expression]; 
-         FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
-         FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[0, 0, 1]; 
-         FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
-         MathLink`CallFrontEnd[
-           FrontEnd`AttachCell[Typeset`box$, 
-            FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
-            Left, Top}, 
-            "ClosingActions" -> {
-             "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
-      DefaultBaseStyle->{},
-      Evaluator->Automatic,
-      Method->"Preemptive"],
-     RGBColor[0, 0, 1],
-     Editable->False,
-     Selectable->False], "\[Rule]", 
-    InterpretationBox[
-     ButtonBox[
-      TooltipBox[
-       GraphicsBox[{
-         {GrayLevel[0], RectangleBox[{0, 0}]}, 
-         {GrayLevel[0], RectangleBox[{1, -1}]}, 
-         {RGBColor[0., 0., 0.6666666666666667], 
+         {RGBColor[1., 0.6666666666666667, 0.6666666666666667], 
           RectangleBox[{0, -1}, {2, 1}]}},
         AspectRatio->1,
         DefaultBaseStyle->"ColorSwatchGraphics",
         Frame->True,
-        FrameStyle->RGBColor[0., 0., 0.44444444444444453`],
+        FrameStyle->RGBColor[
+         0.6666666666666667, 0.44444444444444453`, 0.44444444444444453`],
         FrameTicks->None,
         ImageSize->
          Dynamic[{
@@ -577,8 +486,9 @@ Cell[BoxData[
         PlotRangePadding->None],
        StyleBox[
         RowBox[{"RGBColor", "[", 
-          RowBox[{"0.`", ",", "0.`", ",", "0.6666666666666667`"}], "]"}], 
-        NumberMarks -> False]],
+          
+          RowBox[{"1.`", ",", "0.6666666666666667`", ",", 
+            "0.6666666666666667`"}], "]"}], NumberMarks -> False]],
       Appearance->None,
       BaseStyle->{},
       BaselinePosition->Baseline,
@@ -589,7 +499,7 @@ Cell[BoxData[
          SelectionMove[Typeset`box$, All, Expression]; 
          FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
          FrontEnd`Private`$ColorSelectorInitialColor = 
-          RGBColor[0., 0., 0.6666666666666667]; 
+          RGBColor[1., 0.6666666666666667, 0.6666666666666667]; 
          FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
          MathLink`CallFrontEnd[
            FrontEnd`AttachCell[Typeset`box$, 
@@ -600,12 +510,106 @@ Cell[BoxData[
       DefaultBaseStyle->{},
       Evaluator->Automatic,
       Method->"Preemptive"],
-     RGBColor[0., 0., 0.6666666666666667],
+     RGBColor[1., 0.6666666666666667, 0.6666666666666667],
+     Editable->False,
+     Selectable->False]}], ",", 
+   RowBox[{
+    InterpretationBox[
+     ButtonBox[
+      TooltipBox[
+       GraphicsBox[{
+         {GrayLevel[0], RectangleBox[{0, 0}]}, 
+         {GrayLevel[0], RectangleBox[{1, -1}]}, 
+         {RGBColor[1, 1, 0], RectangleBox[{0, -1}, {2, 1}]}},
+        AspectRatio->1,
+        DefaultBaseStyle->"ColorSwatchGraphics",
+        Frame->True,
+        FrameStyle->RGBColor[0.6666666666666666, 0.6666666666666666, 0.],
+        FrameTicks->None,
+        ImageSize->
+         Dynamic[{
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
+        PlotRangePadding->None],
+       StyleBox[
+        RowBox[{"RGBColor", "[", 
+          RowBox[{"1", ",", "1", ",", "0"}], "]"}], NumberMarks -> False]],
+      Appearance->None,
+      BaseStyle->{},
+      BaselinePosition->Baseline,
+      ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+        If[
+         Not[
+          AbsoluteCurrentValue["Deployed"]], 
+         SelectionMove[Typeset`box$, All, Expression]; 
+         FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+         FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[1, 1, 0]; 
+         FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+         MathLink`CallFrontEnd[
+           FrontEnd`AttachCell[Typeset`box$, 
+            FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+            Left, Top}, 
+            "ClosingActions" -> {
+             "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+      DefaultBaseStyle->{},
+      Evaluator->Automatic,
+      Method->"Preemptive"],
+     RGBColor[1, 1, 0],
+     Editable->False,
+     Selectable->False], "\[Rule]", 
+    InterpretationBox[
+     ButtonBox[
+      TooltipBox[
+       GraphicsBox[{
+         {GrayLevel[0], RectangleBox[{0, 0}]}, 
+         {GrayLevel[0], RectangleBox[{1, -1}]}, 
+         {RGBColor[1, 
+           Rational[2, 3], 0], RectangleBox[{0, -1}, {2, 1}]}},
+        AspectRatio->1,
+        DefaultBaseStyle->"ColorSwatchGraphics",
+        Frame->True,
+        FrameStyle->RGBColor[0.6666666666666666, 0.4444444444444444, 0.],
+        FrameTicks->None,
+        ImageSize->
+         Dynamic[{
+          Automatic, 
+           1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+            Magnification])}],
+        PlotRangePadding->None],
+       StyleBox[
+        RowBox[{"RGBColor", "[", 
+          RowBox[{"1", ",", 
+            FractionBox["2", "3"], ",", "0"}], "]"}], NumberMarks -> False]],
+      Appearance->None,
+      BaseStyle->{},
+      BaselinePosition->Baseline,
+      ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+        If[
+         Not[
+          AbsoluteCurrentValue["Deployed"]], 
+         SelectionMove[Typeset`box$, All, Expression]; 
+         FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+         FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[1, 
+            Rational[2, 3], 0]; 
+         FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+         MathLink`CallFrontEnd[
+           FrontEnd`AttachCell[Typeset`box$, 
+            FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+            Left, Top}, 
+            "ClosingActions" -> {
+             "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+      DefaultBaseStyle->{},
+      Evaluator->Automatic,
+      Method->"Preemptive"],
+     RGBColor[1, 
+      Rational[2, 3], 0],
      Editable->False,
      Selectable->False]}]}], "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{{3.8280047268657303`*^9, 3.8280047509182377`*^9}},
- CellLabel->"Out[2]=",
- CellID->567396377,ExpressionUUID->"fac2c452-55d9-46cc-8fc4-dae4852aeb53"]
+ CellChangeTimes->{{3.8280047268657303`*^9, 3.8280047509182377`*^9}, 
+   3.828007290976396*^9},
+ CellLabel->"Out[10]=",
+ CellID->114681885,ExpressionUUID->"d8327f2c-c22e-4886-9738-140b72c86707"]
 }, Open  ]]
 }, Open  ]],
 
@@ -690,15 +694,21 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{700, 770},
-WindowMargins->{{366, Automatic}, {-202, Automatic}},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
 TaggingRules->{
- "WelcomeScreenSettings" -> {"FEStarting" -> False}, "Author" -> "arnoudb", 
-  "CreationDate" -> "04-20-2021 16:46:32"},
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, 
+  "DocuToolsSettingsInternal" -> {
+   "$ApplicationName" -> "Pubs", "$LinkBase" -> "Pubs", 
+    "$ApplicationDirectory" -> "/Users/arnoudb/docs/Pubs/", 
+    "$DocumentationDirectory" -> 
+    "/Users/arnoudb/docs/Pubs/Documentation/English/", "$UseNewPageDialog" -> 
+    "", "$PacletVersion" -> "0.10.2252"}, "Author" -> "arnoudb", 
+  "CreationDate" -> "04-21-2021 10:12:24"},
 CellContext->"Global`",
 FrontEndVersion->"12.3 for Mac OS X ARM (64-bit) (April 20, 2021)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
   CharacterEncoding -> "UTF-8"],
-ExpressionUUID->"79cead9c-bc8d-4a22-8b2d-3cad8c56ff98"
+ExpressionUUID->"1d1dd869-b516-4fa3-b207-74e8e5afb38b"
 ]
 (* End of Notebook Content *)
 
@@ -706,126 +716,126 @@ ExpressionUUID->"79cead9c-bc8d-4a22-8b2d-3cad8c56ff98"
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[21147, 613, 155, 2, 56, "ExtendedExamplesSection",ExpressionUUID->"425196a0-6ab6-461d-bba1-ce867ef01354",
+  Cell[21408, 617, 155, 2, 56, "ExtendedExamplesSection",ExpressionUUID->"425196a0-6ab6-461d-bba1-ce867ef01354",
    CellTags->"ExtendedExamples",
    CellID->1854448968]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 24487, 707}
+ {"ExtendedExamples", 25052, 717}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 669, 15, 24, "History",ExpressionUUID->"41ad31a0-26a3-4ff8-927a-44db3e715f95",
+Cell[558, 20, 671, 15, 24, "History",ExpressionUUID->"41ad31a0-26a3-4ff8-927a-44db3e715f95",
  CellID->1247902091],
-Cell[1230, 37, 140, 1, 20, "AuthorDate",ExpressionUUID->"9a282d3b-da2b-4da9-a5e9-0a37b0361968",
- CellID->1444793074],
+Cell[1232, 37, 140, 1, 20, "AuthorDate",ExpressionUUID->"6cb8d56a-3323-4fed-bb86-c24d8a10ac08",
+ CellID->1906580856],
 Cell[CellGroupData[{
-Cell[1395, 42, 123, 1, 29, "CategorizationSection",ExpressionUUID->"cafb9ccb-a6be-4c86-85f0-5849c5345f3a",
+Cell[1397, 42, 123, 1, 29, "CategorizationSection",ExpressionUUID->"cafb9ccb-a6be-4c86-85f0-5849c5345f3a",
  CellID->1122911449],
-Cell[1521, 45, 134, 2, 30, "Categorization",ExpressionUUID->"d3672960-eef7-49f2-a47e-fce423fec36a",
+Cell[1523, 45, 134, 2, 30, "Categorization",ExpressionUUID->"d3672960-eef7-49f2-a47e-fce423fec36a",
  CellID->686433507],
-Cell[1658, 49, 138, 2, 30, "Categorization",ExpressionUUID->"e9337bb6-80d8-4427-9444-53c8416845ec",
+Cell[1660, 49, 138, 2, 30, "Categorization",ExpressionUUID->"e9337bb6-80d8-4427-9444-53c8416845ec",
  CellID->605800465],
-Cell[1799, 53, 135, 2, 30, "Categorization",ExpressionUUID->"a09e9c4d-8ab9-4ae7-b585-c517016e8191",
+Cell[1801, 53, 135, 2, 30, "Categorization",ExpressionUUID->"a09e9c4d-8ab9-4ae7-b585-c517016e8191",
  CellID->468444828],
-Cell[1937, 57, 122, 1, 30, "Categorization",ExpressionUUID->"f4c50626-70ea-4938-af51-c60e63c76466"]
+Cell[1939, 57, 121, 1, 30, "Categorization",ExpressionUUID->"f4c50626-70ea-4938-af51-c60e63c76466"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2096, 63, 110, 1, 29, "KeywordsSection",ExpressionUUID->"ef06640c-42c9-4c00-9a6c-9b632e3752b6",
+Cell[2097, 63, 110, 1, 29, "KeywordsSection",ExpressionUUID->"ef06640c-42c9-4c00-9a6c-9b632e3752b6",
  CellID->477174294],
-Cell[2209, 66, 100, 1, 19, "Keywords",ExpressionUUID->"5526fed3-9f52-4745-8ea1-58ff8c36c14d",
+Cell[2210, 66, 100, 1, 19, "Keywords",ExpressionUUID->"5526fed3-9f52-4745-8ea1-58ff8c36c14d",
  CellID->1164421360]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2346, 72, 120, 1, 29, "TemplatesSection",ExpressionUUID->"119176c2-887f-409f-a0c9-b72561b7624c",
+Cell[2347, 72, 120, 1, 29, "TemplatesSection",ExpressionUUID->"119176c2-887f-409f-a0c9-b72561b7624c",
  CellID->1872225408],
-Cell[2469, 75, 149, 2, 27, "Template",ExpressionUUID->"1b15e1f4-90c6-45fb-bbe0-ea52939f5d72",
+Cell[2470, 75, 149, 2, 27, "Template",ExpressionUUID->"1b15e1f4-90c6-45fb-bbe0-ea52939f5d72",
  CellID->1562036412],
-Cell[2621, 79, 137, 2, 27, "Template",ExpressionUUID->"9e18a772-50d9-48d2-8436-649cdc9f97ec",
+Cell[2622, 79, 137, 2, 27, "Template",ExpressionUUID->"9e18a772-50d9-48d2-8436-649cdc9f97ec",
  CellID->158391909],
-Cell[2761, 83, 136, 2, 27, "Template",ExpressionUUID->"1e946dbb-3373-40d7-b302-c6d742eac1b9",
+Cell[2762, 83, 136, 2, 27, "Template",ExpressionUUID->"1e946dbb-3373-40d7-b302-c6d742eac1b9",
  CellID->1360575930],
-Cell[2900, 87, 137, 2, 27, "Template",ExpressionUUID->"aee0c783-3703-4eff-afcc-bcf11e35c648",
+Cell[2901, 87, 137, 2, 27, "Template",ExpressionUUID->"aee0c783-3703-4eff-afcc-bcf11e35c648",
  CellID->793782254]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3074, 94, 105, 1, 63, "ObjectName",ExpressionUUID->"8393d601-4014-44ba-afc9-60862df940ec",
+Cell[3075, 94, 104, 1, 63, "ObjectName",ExpressionUUID->"8393d601-4014-44ba-afc9-60862df940ec",
  CellID->1224892054],
-Cell[3182, 97, 2035, 58, 119, "Usage",ExpressionUUID->"36d294c7-65ad-4677-b95e-6ff5e6e47ce3",
+Cell[3182, 97, 1981, 56, 120, "Usage",ExpressionUUID->"df44813b-5263-4377-8873-d28556acbe21",
  CellID->982511436],
-Cell[5220, 157, 782, 24, 28, "Notes",ExpressionUUID->"f9730bf9-a3df-4498-9028-b1614e86f36a",
+Cell[5166, 155, 829, 25, 28, "Notes",ExpressionUUID->"566deef5-1c06-4c8e-9215-711de0be27c1",
  CellID->1067943069]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6039, 186, 113, 1, 44, "TechNotesSection",ExpressionUUID->"da8de6e2-f50e-4466-8f74-1195bf5a89d0",
+Cell[6032, 185, 113, 1, 44, "TechNotesSection",ExpressionUUID->"da8de6e2-f50e-4466-8f74-1195bf5a89d0",
  CellID->250839057],
-Cell[6155, 189, 100, 1, 16, "Tutorials",ExpressionUUID->"e1edaba6-14d4-493d-967e-ab2b49e2f61b",
+Cell[6148, 188, 100, 1, 16, "Tutorials",ExpressionUUID->"e1edaba6-14d4-493d-967e-ab2b49e2f61b",
  CellID->341631938]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6292, 195, 138, 1, 31, "RelatedDemonstrationsSection",ExpressionUUID->"8d2e4b42-3f1f-4fda-9065-bdb5de742079",
+Cell[6285, 194, 138, 1, 31, "RelatedDemonstrationsSection",ExpressionUUID->"8d2e4b42-3f1f-4fda-9065-bdb5de742079",
  CellID->1268215905],
-Cell[6433, 198, 113, 1, 16, "RelatedDemonstrations",ExpressionUUID->"549370f2-2a22-4244-90b3-6ae31eea748a",
+Cell[6426, 197, 113, 1, 16, "RelatedDemonstrations",ExpressionUUID->"549370f2-2a22-4244-90b3-6ae31eea748a",
  CellID->1129518860]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6583, 204, 120, 1, 31, "RelatedLinksSection",ExpressionUUID->"1218faa7-c18d-4eff-9a36-a4048d7b6b51",
+Cell[6576, 203, 120, 1, 31, "RelatedLinksSection",ExpressionUUID->"1218faa7-c18d-4eff-9a36-a4048d7b6b51",
  CellID->1584193535],
-Cell[6706, 207, 104, 1, 16, "RelatedLinks",ExpressionUUID->"dfccd913-5621-47e5-ac70-28b83aef4a2d",
+Cell[6699, 206, 104, 1, 16, "RelatedLinks",ExpressionUUID->"dfccd913-5621-47e5-ac70-28b83aef4a2d",
  CellID->1038487239]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6847, 213, 110, 1, 31, "SeeAlsoSection",ExpressionUUID->"e1b77b9c-87a2-4d83-b69a-076fc77c8bb2",
+Cell[6840, 212, 110, 1, 31, "SeeAlsoSection",ExpressionUUID->"e1b77b9c-87a2-4d83-b69a-076fc77c8bb2",
  CellID->1255426704],
-Cell[6960, 216, 2290, 62, 40, "SeeAlso",ExpressionUUID->"0f93c66e-e49d-49d3-9db2-ee262472e6f1",
+Cell[6953, 215, 2290, 62, 40, "SeeAlso",ExpressionUUID->"6a965fd5-dd5e-4b3c-aeda-aa73a8ab1dda",
  CellID->929782353]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9287, 283, 112, 1, 31, "MoreAboutSection",ExpressionUUID->"090ecd4e-77ab-48e0-ba7a-1f9acccd0dd5",
+Cell[9280, 282, 112, 1, 31, "MoreAboutSection",ExpressionUUID->"090ecd4e-77ab-48e0-ba7a-1f9acccd0dd5",
  CellID->38303248],
-Cell[9402, 286, 101, 1, 16, "MoreAbout",ExpressionUUID->"4cde9453-fd13-4c75-8f97-91cc14ef1142",
+Cell[9395, 285, 101, 1, 16, "MoreAbout",ExpressionUUID->"4cde9453-fd13-4c75-8f97-91cc14ef1142",
  CellID->1665078683]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9540, 292, 411, 11, 70, "PrimaryExamplesSection",ExpressionUUID->"4d971e0b-a467-44b1-b908-78f8a7482a42",
+Cell[9533, 291, 411, 11, 70, "PrimaryExamplesSection",ExpressionUUID->"4d971e0b-a467-44b1-b908-78f8a7482a42",
  CellID->880084151],
-Cell[9954, 305, 347, 9, 26, "ExampleText",ExpressionUUID->"47cb18f6-8f31-4fff-a68d-e1ef417b073f",
+Cell[9947, 304, 396, 10, 26, "ExampleText",ExpressionUUID->"9d4ff808-af1b-431f-b2ff-57b014eeb2d2",
  CellID->352052385],
 Cell[CellGroupData[{
-Cell[10326, 318, 329, 7, 27, "Input",ExpressionUUID->"78a79a22-19ad-43ed-90e4-4106956e0d18",
+Cell[10368, 318, 382, 8, 27, "Input",ExpressionUUID->"615f4f9e-759c-482d-a3ff-6306651e084f",
  CellID->1512834444],
-Cell[10658, 327, 10440, 280, 26, "Output",ExpressionUUID->"fac2c452-55d9-46cc-8fc4-dae4852aeb53",
- CellID->567396377]
+Cell[10753, 328, 10606, 283, 26, "Output",ExpressionUUID->"d8327f2c-c22e-4886-9738-140b72c86707",
+ CellID->114681885]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21147, 613, 155, 2, 56, "ExtendedExamplesSection",ExpressionUUID->"425196a0-6ab6-461d-bba1-ce867ef01354",
+Cell[21408, 617, 155, 2, 56, "ExtendedExamplesSection",ExpressionUUID->"425196a0-6ab6-461d-bba1-ce867ef01354",
  CellTags->"ExtendedExamples",
  CellID->1854448968],
-Cell[21305, 617, 242, 5, 33, "ExampleSection",ExpressionUUID->"6d08f999-4c69-4709-9b28-82906be6ee75",
+Cell[21566, 621, 242, 5, 33, "ExampleSection",ExpressionUUID->"6d08f999-4c69-4709-9b28-82906be6ee75",
  CellID->1293636265],
-Cell[21550, 624, 265, 5, 21, "ExampleSection",ExpressionUUID->"85bb6475-fccb-4f83-9c4c-95411a492aa7",
+Cell[21811, 628, 265, 5, 21, "ExampleSection",ExpressionUUID->"85bb6475-fccb-4f83-9c4c-95411a492aa7",
  CellID->1020263627],
 Cell[CellGroupData[{
-Cell[21840, 633, 244, 5, 21, "ExampleSection",ExpressionUUID->"3276b1d7-cf51-4f3b-970a-56b0e7c469f0",
+Cell[22101, 637, 244, 5, 21, "ExampleSection",ExpressionUUID->"3276b1d7-cf51-4f3b-970a-56b0e7c469f0",
  CellID->2061341341],
-Cell[22087, 640, 247, 5, 24, "ExampleSubsection",ExpressionUUID->"f43b442d-f23e-485c-8f19-d9411a527753",
+Cell[22348, 644, 247, 5, 24, "ExampleSubsection",ExpressionUUID->"f43b442d-f23e-485c-8f19-d9411a527753",
  CellID->1757724783],
-Cell[22337, 647, 247, 5, 20, "ExampleSubsection",ExpressionUUID->"7118f2cb-cf49-4930-a588-b368e1d6d7eb",
+Cell[22598, 651, 247, 5, 20, "ExampleSubsection",ExpressionUUID->"7118f2cb-cf49-4930-a588-b368e1d6d7eb",
  CellID->1295379749]
 }, Open  ]],
-Cell[22599, 655, 248, 5, 33, "ExampleSection",ExpressionUUID->"1cd6234d-1e3c-431d-9989-71f3025eee95",
+Cell[22860, 659, 248, 5, 33, "ExampleSection",ExpressionUUID->"1cd6234d-1e3c-431d-9989-71f3025eee95",
  CellID->258228157],
-Cell[22850, 662, 259, 5, 21, "ExampleSection",ExpressionUUID->"0e0d5f37-f3c9-4474-a22b-9f10dcc8b438",
+Cell[23111, 666, 259, 5, 21, "ExampleSection",ExpressionUUID->"0e0d5f37-f3c9-4474-a22b-9f10dcc8b438",
  CellID->2123667759],
-Cell[23112, 669, 252, 5, 21, "ExampleSection",ExpressionUUID->"9397dd0b-9de4-443a-9371-be2b75148f2f",
+Cell[23373, 673, 252, 5, 21, "ExampleSection",ExpressionUUID->"9397dd0b-9de4-443a-9371-be2b75148f2f",
  CellID->1305812373],
-Cell[23367, 676, 257, 5, 21, "ExampleSection",ExpressionUUID->"c5507407-1b71-491f-84b6-3f5747264ef7",
+Cell[23628, 680, 257, 5, 21, "ExampleSection",ExpressionUUID->"c5507407-1b71-491f-84b6-3f5747264ef7",
  CellID->1653164318],
-Cell[23627, 683, 249, 5, 21, "ExampleSection",ExpressionUUID->"ce9d5678-57c6-4712-bdd3-87904919f71e",
+Cell[23888, 687, 249, 5, 21, "ExampleSection",ExpressionUUID->"ce9d5678-57c6-4712-bdd3-87904919f71e",
  CellID->589267740]
 }, Open  ]]
 }
