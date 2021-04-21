@@ -3,11 +3,12 @@ Paclet[
   Description -> "A paclet for prototype functions",
   Creator -> "Arnoud Buzing",
   Publisher -> "Wolfram Research",
-  Version -> "0.5.8",
+  Version -> "0.5.9",
   MathematicaVersion -> "11.3+",
   Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
   Extensions -> {
+    {"Asset", "Assets" -> {{"Icons", "./icons"}}},
     {
       "Documentation",
       MainPage -> "Guides/Prototypes",
@@ -15,6 +16,7 @@ Paclet[
     },
     {
       "Kernel",
+      "Root" -> "Source",
       Context -> {"Prototypes`"},
       Symbols ->
       {"Prototypes`AdjectiveQ","Prototypes`AdverbQ","Prototypes`AlphaChannelQ","Prototypes`Antepenultimate",

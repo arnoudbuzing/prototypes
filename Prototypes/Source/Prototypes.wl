@@ -25,7 +25,7 @@ Module[ {files},
     Map[
       Function[ {file},
         AppendTo[ timings, file<>"-Before" -> N@SessionTime[] ];
-        Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", file}] ];
+        Get[ FileNameJoin[{DirectoryName[$InputFileName], file}] ];
         AppendTo[ timings, file<>"-After" -> N@SessionTime[] ];
         ], files ];
 
@@ -36,7 +36,7 @@ Module[ {files},
       Map[
         Function[ {file},
           AppendTo[ timings, file<>"-Before" -> N@SessionTime[] ];
-          Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", file}] ];
+          Get[ FileNameJoin[{DirectoryName[$InputFileName], file}] ];
           AppendTo[ timings, file<>"-After" -> N@SessionTime[] ];
           ], files
       ];
