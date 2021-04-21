@@ -1,4 +1,4 @@
-plane = Import[ FileNameJoin[ { ParentDirectory[$InputDirectoryName,2], "icons", "plane.png"} ] ];
+plane = Import[ FileNameJoin[ { ParentDirectory[$InputDirectoryName,2], "Icons", "plane.png"} ] ];
 
 
 OpenSky[location_, range_, opts___] := Module[{latlongs, response, result, geopos},

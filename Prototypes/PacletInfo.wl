@@ -8,7 +8,7 @@ Paclet[
   Loading -> Automatic,
   Thumbnail -> "icons/icon.png",
   Extensions -> {
-    {"Asset", "Assets" -> {{"Icons", "./icons"}}},
+    {"Asset", "Assets" -> {{"Icons", "Icons"}}},
     {
       "Documentation",
       MainPage -> "Guides/Prototypes",

@@ -6,7 +6,7 @@ CreateDockButton[ assoc_Association ] := Module[{db},
   db
 ]
 
-iconsdir = FileNameJoin[{ $InputDirectoryName, "icons" }];
+iconsdir = FileNameJoin[{ $InputDirectoryName, "Icons" }];
 
 buttons := Map[
   CreateDockButton,

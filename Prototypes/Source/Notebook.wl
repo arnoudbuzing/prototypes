@@ -21,7 +21,7 @@ QuickSearch[] := DynamicModule[{index, input = "", result = ConstantArray["",5],
   }]
 ];
 
-file = FileNameJoin[{ ParentDirectory[$InputDirectoryName], "icons", "click-to-copy.png" }];
+file = FileNameJoin[{ ParentDirectory[$InputDirectoryName], "Icons", "click-to-copy.png" }];
 icon := ( icon = Import[ file, "PNG" ] );
 
 
