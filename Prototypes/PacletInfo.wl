@@ -6,7 +6,7 @@ Paclet[
   Version -> "0.5.9",
   MathematicaVersion -> "11.3+",
   Loading -> Automatic,
-  Thumbnail -> "icons/icon.png",
+  Thumbnail -> "Icons/icon.png",
   Extensions -> {
     {"Asset", "Assets" -> {{"Icons", "Icons"}}},
     {
