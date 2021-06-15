@@ -6,6 +6,10 @@ Paclet[
   Version -> "0.5.9",
   MathematicaVersion -> "11.3+",
   Loading -> Automatic,
+  Category -> "Development",
+  Keywords -> { "prototypes", "experiments", "goofy stuff"},
+  URL -> "https://www.linkedin.com/in/arnoudbuzing/",
+  UUID -> "1c8a89d6-a3ba-4773-9cf7-77873b65cd1a",
   Icon -> "Icons/icon.png",
   Extensions -> {
     {"Asset", "Assets" -> {{"Icons", "Icons"}}},
